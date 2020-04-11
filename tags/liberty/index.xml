@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>liberty on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/liberty/</link>
+    <description>Recent content in liberty on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Apr 2020 21:17:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/liberty/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSL TLS Diffie Hellman Modulus 1024 Bits</title>
+      <link>https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</link>
+      <pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</guid>
+      <description>Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34; keyStoreRef=&amp;#34;defaultKeyStore&amp;#34; securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &amp;lt;768</description>
+    </item>
+    
+  </channel>
+</rss>

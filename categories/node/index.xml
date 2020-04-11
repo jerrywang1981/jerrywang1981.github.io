@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>node on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/node/</link>
+    <description>Recent content in node on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Apr 2020 21:15:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Phone Nest</title>
+      <link>https://jerrywang1981.github.io/post/phone-nest/</link>
+      <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/phone-nest/</guid>
+      <description>背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调</description>
+    </item>
+    
+  </channel>
+</rss>

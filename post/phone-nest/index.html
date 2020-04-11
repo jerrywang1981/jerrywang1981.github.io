@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Phone Nest | 村边的池塘</title>
+    <meta property="og:title" content="Phone Nest - 村边的池塘">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-04-11T21:15:14&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-04-11T21:15:14&#43;08:00'>
+        
+    <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
+    <meta name="description" content="Phone Nest">
+        
+    <meta name="author" content="Jerry Wang&lt;wangjianjun@gmail.com&gt;">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/phone-nest/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://jerrywang1981.github.io/">
+                        村边的池塘
+                    </a>
+                
+                <p class="description">Software Engineer，Java、Go语言(golang)、node.js, Web开发, 云服务</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
+                    
+                    <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
+                    
+                    <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://jerrywang1981.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-latest-version">Install latest version</a></li>
+    <li><a href="#the-microservices-server">The microservices server</a>
+      <ul>
+        <li><a href="#in-your-nest_serverpy">in your nest_server.py</a></li>
+        <li><a href="#to-have-handler-function-to-process-the-pattern-you-have-two-options">to have handler function to process the pattern, you have two options</a></li>
+        <li><a href="#startrun-it">start/run it</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-microservices-client">The microservices client</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">Phone Nest</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月11日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <h1 id="背景">背景</h1>
+<p>最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调用nest 微服务来取得一些数据。这就比较尴尬了，在网上由于没有找到对应的python库，所以自己实现了一个。</p>
+<p>代码放到github上 <a href="https://github.com/jerrywang1981/python-nest">python-nest</a></p>
+<h1 id="python-nest">python-nest</h1>
+<p>Python library for nest style Microservices</p>
+<h1 id="description">Description</h1>
+<p>There is one nodejs framework named <a href="https://nestjs.com">nestjs</a> which is perfect to develop microservices. but we wanted to
+implement some microservices in python to work together with nestjs framework, I didn't find a solution, so I developed this
+package to do that, for now, it only implemented the <a href="https://docs.nestjs.com/microservices/basics#request-response">MessagePattern</a>
+so in nestjs, it is @MessagePattern and we can have same function in python with this lib/package.</p>
+<h1 id="how-to-use">How to use</h1>
+<h2 id="install-latest-version">Install latest version</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pip install python<span style="color:#000;font-weight:bold">-</span>nestjs
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="the-microservices-server">The microservices server</h2>
+<p>in nestjs, you can do it with @MessagePattern, and the pattern can be string or object in nestjs, similarly
+in python the pattern can also be str or dict, you can find sample code <a href="test/test_server.py">test_server.py</a>
+here is sample code, e.g.</p>
+<h3 id="in-your-nest_serverpy">in your <code>nest_server.py</code></h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#998;font-style:italic">#!/usr/bin/env python</span>
+<span style="color:#998;font-style:italic"># -*- coding:utf-8 -*-</span>
+
+<span style="color:#000;font-weight:bold">from</span> <span style="color:#555">nest</span> <span style="color:#000;font-weight:bold">import</span> NestMsServer, MessagePatternBaseHandler
+
+app <span style="color:#000;font-weight:bold">=</span> NestMsServer()
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="to-have-handler-function-to-process-the-pattern-you-have-two-options">to have handler function to process the pattern, you have two options</h3>
+<ul>
+<li>have a class which extends <code>MessagePatternBaseHandler</code></li>
+</ul>
+<ol>
+<li>have the class</li>
+</ol>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">TestDictHanlder</span>(MessagePatternBaseHandler):
+    <span style="color:#000;font-weight:bold">def</span> __init__(<span style="color:#999">self</span>):
+        <span style="color:#000;font-weight:bold">pass</span>
+
+    <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">get_message_pattern</span>(<span style="color:#999">self</span>):
+        <span style="color:#d14"></span><span style="color:#d14">&#39;&#39;&#39;</span><span style="color:#d14">return the message pattern</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        it can be string or dict</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        e.g. </span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST</span><span style="color:#d14">&#39;</span><span style="color:#d14"> or {</span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span><span style="color:#d14">: </span><span style="color:#d14">&#39;</span><span style="color:#d14">test</span><span style="color:#d14">&#39;</span><span style="color:#d14">}</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        </span><span style="color:#d14">&#39;&#39;&#39;</span>
+        <span style="color:#000;font-weight:bold">return</span> {<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span>: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST_PATTERN</span><span style="color:#d14">&#39;</span> }
+
+    <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">handle</span>(<span style="color:#999">self</span>, payload):
+        <span style="color:#d14"></span><span style="color:#d14">&#39;&#39;&#39;</span><span style="color:#d14">handler function to process payload</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        It should returns</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        err - any error or None</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        result - the processed result</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">        </span><span style="color:#d14">&#39;&#39;&#39;</span>
+        <span style="color:#000;font-weight:bold">print</span>(payload)
+        <span style="color:#000;font-weight:bold">return</span> <span style="color:#999">None</span>, [<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">this is test dict</span><span style="color:#d14">&#39;</span>, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">another test dict result</span><span style="color:#d14">&#39;</span>]
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>add/register the handler class</li>
+</ol>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">app<span style="color:#000;font-weight:bold">.</span>add_handler(TestDictHanlder)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>have a function decorated with decorator <code>message_pattern</code></li>
+</ul>
+<ol>
+<li>write a function and decorate it</li>
+</ol>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#3c5d5d;font-weight:bold">@app.message_pattern</span>({<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span>: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">test_decorator</span><span style="color:#d14">&#39;</span>})
+<span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">test_decorator</span>(payload):
+    <span style="color:#d14"></span><span style="color:#d14">&#39;&#39;&#39;</span><span style="color:#d14">test decorator function</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">    the function accepts one parameter payload</span><span style="color:#d14">
+</span><span style="color:#d14"></span><span style="color:#d14">    </span><span style="color:#d14">&#39;&#39;&#39;</span>
+    <span style="color:#000;font-weight:bold">print</span>(payload)
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#999">None</span>, payload
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="startrun-it">start/run it</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    HOST <span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">localhost</span><span style="color:#d14">&#39;</span>
+    PORT <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">7086</span>
+    <span style="color:#000;font-weight:bold">print</span>(f<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">started to run and listed to port {PORT}</span><span style="color:#d14">&#39;</span>)
+    app<span style="color:#000;font-weight:bold">.</span>run(HOST, PORT)
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="the-microservices-client">The microservices client</h2>
+<p>if you want to call microservices which was implemented in nestjs, it is also simple, find in <a href="test/test_client.py">test_client.py</a>
+or sample code here.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#998;font-style:italic">#!/usr/bin/env python</span>
+<span style="color:#998;font-style:italic"># -*- coding:utf-8 -*-</span>
+
+<span style="color:#000;font-weight:bold">from</span> <span style="color:#555">nest</span> <span style="color:#000;font-weight:bold">import</span> NestMsClient
+
+<span style="color:#000;font-weight:bold">if</span> __name__ <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">__main__</span><span style="color:#d14">&#39;</span>:
+    HOST <span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">localhost</span><span style="color:#d14">&#39;</span>
+    PORT <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">7086</span>
+    client <span style="color:#000;font-weight:bold">=</span> NestMsClient(HOST, PORT)
+    pattern <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST_PATTERN</span><span style="color:#d14">&#39;</span>
+    res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#999">None</span>)
+    <span style="color:#000;font-weight:bold">print</span>(res)
+    pattern <span style="color:#000;font-weight:bold">=</span> { <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span> :<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST_PATTERN</span><span style="color:#d14">&#39;</span> }
+    res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#999">None</span>)
+    <span style="color:#000;font-weight:bold">print</span>(res)
+    pattern <span style="color:#000;font-weight:bold">=</span> { <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span> :<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">test_decorator</span><span style="color:#d14">&#39;</span> }
+    res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">this is ok</span><span style="color:#d14">&#39;</span>)
+    <span style="color:#000;font-weight:bold">print</span>(res)
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="maintainers">Maintainers</h1>
+<p><a href="https://github.com/jerrywang1981">@jerrywang1981</a></p>
+<h1 id="contributors">Contributors</h1>
+<p><a href="https://github.com/jerrywang1981"><img src="https://github.com/jerrywang1981.png?size=50" alt=""></a></p>
+<h1 id="license">License</h1>
+<p>MIT License</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/vim-online-video/">Vim Online Video</a></li>
+        
+        <li><a href="/about/">个人简介</a></li>
+        
+        <li><a href="/archives/">归档</a></li>
+        
+        <li><a href="/search/">搜索</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/node'>node</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/python'>python</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://jerrywang1981.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://jerrywang1981.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/phone-nest/" title="Phone Nest">Phone Nest</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/vim-online-video/" title="Vim Online Video">Vim Online Video</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (4)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (1)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://jerrywang1981.github.io/tags/it/">it</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/node/">node</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://jerrywang1981.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang&lt;wangjianjun@gmail.com&gt;</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

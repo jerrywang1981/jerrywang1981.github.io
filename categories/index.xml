@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/</link>
+    <description>Recent content in Categories on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Apr 2020 21:22:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/categories/it/</link>
+      <pubDate>Sat, 11 Apr 2020 21:22:26 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>liberty</title>
+      <link>https://jerrywang1981.github.io/categories/liberty/</link>
+      <pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/liberty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>node</title>
+      <link>https://jerrywang1981.github.io/categories/node/</link>
+      <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://jerrywang1981.github.io/categories/python/</link>
+      <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://jerrywang1981.github.io/categories/vim/</link>
+      <pubDate>Sat, 11 Apr 2020 21:09:42 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/vim/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

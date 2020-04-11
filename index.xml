@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>村边的池塘</title>
+    <link>https://jerrywang1981.github.io/</link>
+    <description>Recent content on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Apr 2020 21:22:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello</title>
+      <link>https://jerrywang1981.github.io/life/hello/</link>
+      <pubDate>Sat, 11 Apr 2020 21:22:26 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/life/hello/</guid>
+      <description>this is test</description>
+    </item>
+    
+    <item>
+      <title>SSL TLS Diffie Hellman Modulus 1024 Bits</title>
+      <link>https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</link>
+      <pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</guid>
+      <description>Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34; keyStoreRef=&amp;#34;defaultKeyStore&amp;#34; securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &amp;lt;768</description>
+    </item>
+    
+    <item>
+      <title>Phone Nest</title>
+      <link>https://jerrywang1981.github.io/post/phone-nest/</link>
+      <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/phone-nest/</guid>
+      <description>背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调</description>
+    </item>
+    
+    <item>
+      <title>Vim Online Video</title>
+      <link>https://jerrywang1981.github.io/post/vim-online-video/</link>
+      <pubDate>Sat, 11 Apr 2020 21:09:42 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/vim-online-video/</guid>
+      <description>在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video</description>
+    </item>
+    
+    <item>
+      <title>个人简介</title>
+      <link>https://jerrywang1981.github.io/about/</link>
+      <pubDate>Sat, 11 Apr 2020 19:52:18 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/about/</guid>
+      <description>个人简介 现居住大连, 自1998年来大连求学，一直在大连生活，慢慢的适应，喜欢上了这里的生活。从大连海事大学毕业后，一直从事软件开发，项目管理方面的工作。 个人爱好 对新的事物，比如技术，科技方面的，都比较感兴趣。 工作经历 从2005年开始参加工作，做过很多类型的工作。 技术能力 目前主要有</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://jerrywang1981.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>https://jerrywang1981.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
