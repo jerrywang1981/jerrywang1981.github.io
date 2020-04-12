@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>村边的池塘 | Software Engineer，Java、Go语言(golang)、node.js, Web开发, 云服务</title>
-    <meta property="og:title" content="村边的池塘 | Software Engineer，Java、Go语言(golang)、node.js, Web开发, 云服务">
+    <title>村边的池塘 | 程序猿</title>
+    <meta property="og:title" content="村边的池塘 | 程序猿">
     <meta property="og:type" content="website">
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="">
+    <meta name="description" content="自由自在的地方">
     <meta property="og:url" content="https://jerrywang1981.github.io/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
@@ -44,7 +44,7 @@
                         </a>
                     </h1>
                 
-                <p class="description">Software Engineer，Java、Go语言(golang)、node.js, Web开发, 云服务</p>
+                <p class="description">程序猿</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
@@ -69,6 +69,31 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
+    </article>
     
     <article class="post">
         <header>
@@ -172,6 +197,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
     </li>
     
@@ -192,7 +221,9 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (5)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -208,6 +239,8 @@
     <section class="widget">
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
+    
+    <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
     <a href="https://jerrywang1981.github.io/tags/it/">it</a>
     
@@ -236,7 +269,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang&lt;wangjianjun@gmail.com&gt;</a>.
+        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
         

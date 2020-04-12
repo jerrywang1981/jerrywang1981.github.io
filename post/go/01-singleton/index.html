@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>个人简介 | 村边的池塘</title>
-    <meta property="og:title" content="个人简介 - 村边的池塘">
+    <title>01 单例模式 | 村边的池塘</title>
+    <meta property="og:title" content="01 单例模式 - 村边的池塘">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-04-11T19:52:18&#43;08:00'>
+    <meta property="article:published_time" content='2020-04-12T12:26:51&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-04-11T19:52:18&#43;08:00'>
+    <meta property="article:modified_time" content='2020-04-12T12:26:51&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="个人简介">
+    <meta name="description" content="01 单例模式">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/about/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/go/01-singleton/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -52,13 +52,13 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
-                    <a class="current" href="https://jerrywang1981.github.io/about/" title="关于">关于</a>
+                    <a  href="https://jerrywang1981.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -137,7 +137,12 @@
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#单例模式">单例模式</a></li>
+    <li><a href="#golang实现">golang实现</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -169,37 +174,74 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">个人简介</h1>
+            <h1 class="post-title">01 单例模式</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年4月11日
+            2020年4月12日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+        </div>
         
         
         
         <div class="post-content">
-            <h1 id="个人简介">个人简介</h1>
-<p>现居住大连, 自1998年来大连求学，一直在大连生活，慢慢的适应，喜欢上了这里的生活。从大连海事大学毕业后，一直从事软件开发，项目管理方面的工作。
-　</p>
-<h1 id="个人爱好">个人爱好</h1>
-<p>对新的事物，比如技术，科技方面的，都比较感兴趣。</p>
-<h1 id="工作经历">工作经历</h1>
-<p>从2005年开始参加工作，做IT相关的工作。</p>
-<h1 id="技术能力">技术能力</h1>
-<p>目前主要有这些方面的技术能力</p>
-<ul>
-<li>node/express/loopback/nestjs</li>
-<li>angular/typescript</li>
-<li>react</li>
-<li>vue</li>
-<li>python/pandas/numpy/etl/opencv</li>
-<li>java/spring framework/cloud</li>
-<li>golang</li>
-<li>db2/postgresql/mysql</li>
-<li>html/css</li>
-<li>c/c++</li>
-</ul>
+            <h2 id="单例模式">单例模式</h2>
+<p>从网上找的 <a href="https://www.runoob.com/design-pattern/singleton-pattern.html">单例模式</a></p>
+<h2 id="golang实现">golang实现</h2>
+<p>参考的文章<a href="https://www.liwenzhou.com/posts/Go/singleton_in_go/">Go语言中的单例模式</a></p>
+<p>代码：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">
+<span style="color:#000;font-weight:bold">package</span> example
 
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;sync&#34;</span>
+)
+
+<span style="color:#998;font-style:italic">// the singleton struct/object
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">type</span> singleton <span style="color:#000;font-weight:bold">struct</span>{}
+
+<span style="color:#000;font-weight:bold">var</span> instance <span style="color:#000;font-weight:bold">*</span>singleton
+<span style="color:#000;font-weight:bold">var</span> once sync.Once
+
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">GetSingleInstance</span>() <span style="color:#000;font-weight:bold">*</span>singleton {
+	once.<span style="color:#900;font-weight:bold">Do</span>(<span style="color:#000;font-weight:bold">func</span>() {
+		instance = <span style="color:#000;font-weight:bold">&amp;</span>singleton{}
+	})
+	<span style="color:#000;font-weight:bold">return</span> instance
+}
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
 
         
@@ -211,9 +253,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/life/hello/">Hello</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/">SSL TLS Diffie Hellman Modulus 1024 Bits</a></li>
+        
+        <li><a href="/post/phone-nest/">Phone Nest</a></li>
+        
+        <li><a href="/post/vim-online-video/">Vim Online Video</a></li>
+        
+        <li><a href="/about/">个人简介</a></li>
         
     </ul>
 </div>
@@ -221,7 +269,13 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/golang'>golang</a></li>
+                
+            </ul>
             
         </div>
     </article>

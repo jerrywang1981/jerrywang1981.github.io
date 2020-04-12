@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/golang/</link>
+    <description>Recent content in golang on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 12 Apr 2020 12:26:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01 单例模式</title>
+      <link>https://jerrywang1981.github.io/post/go/01-singleton/</link>
+      <pubDate>Sun, 12 Apr 2020 12:26:51 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/01-singleton/</guid>
+      <description>单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &amp;#34;sync&amp;#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;amp;singleton{} }) return instance }</description>
+    </item>
+    
+  </channel>
+</rss>
