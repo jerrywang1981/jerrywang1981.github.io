@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Apr 2020 12:26:51 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 13:22:43 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>02 原型模式</title>
+      <link>https://jerrywang1981.github.io/post/go/02-prototype/</link>
+      <pubDate>Sun, 12 Apr 2020 13:22:43 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/02-prototype/</guid>
+      <description>原型模式 参考文章 原型模式 package prototype_pattern type Person struct { Name string Age int } type Cloner interface { Clone() interface{} } func (s *Person) Clone() interface{} { var n Person n.Name = s.Name n.Age = s.Age return n }</description>
+    </item>
     
     <item>
       <title>01 单例模式</title>

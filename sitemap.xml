@@ -3,47 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jerrywang1981.github.io/post/go/01-singleton/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/post/go/02-prototype/</loc>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/categories/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/categories/golang/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/tags/golang/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/tags/it/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/categories/it/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/post/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/tags/</loc>
-    <lastmod>2020-04-12T12:26:51+08:00</lastmod>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/</loc>
+    <lastmod>2020-04-12T13:22:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/post/go/01-singleton/</loc>
     <lastmod>2020-04-12T12:26:51+08:00</lastmod>
   </url>
   
@@ -98,12 +103,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/vim/</loc>
+    <loc>https://jerrywang1981.github.io/categories/vim/</loc>
     <lastmod>2020-04-11T21:09:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/vim/</loc>
+    <loc>https://jerrywang1981.github.io/tags/vim/</loc>
     <lastmod>2020-04-11T21:09:42+08:00</lastmod>
   </url>
   
