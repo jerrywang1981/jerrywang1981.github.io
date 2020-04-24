@@ -6,10 +6,28 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 23 Apr 2020 14:23:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Apr 2020 21:54:58 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>04 Python Tuple</title>
+      <link>https://jerrywang1981.github.io/post/python/04-python-tuple/</link>
+      <pubDate>Fri, 24 Apr 2020 21:54:58 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/04-python-tuple/</guid>
+      <description>Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算</description>
+    </item>
+    
+    <item>
+      <title>03 Python List</title>
+      <link>https://jerrywang1981.github.io/post/python/03-python-list/</link>
+      <pubDate>Fri, 24 Apr 2020 21:05:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/03-python-list/</guid>
+      <description>列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6]) In [23]: a Out[23]: [1, 2, 3, 4, 5, 6] In [24]: pop In [25]: a Out[25]: [1, 2, 3, 4, 5, 6] In [26]: a.pop(2) Out[26]: 3 In [27]: a</description>
+    </item>
     
     <item>
       <title>02 Python Variable</title>
