@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SSL TLS Diffie Hellman Modulus 1024 Bits | 村边的池塘</title>
-    <meta property="og:title" content="SSL TLS Diffie Hellman Modulus 1024 Bits - 村边的池塘">
+    <title>01 Python Data Type | 村边的池塘</title>
+    <meta property="og:title" content="01 Python Data Type - 村边的池塘">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-04-11T21:17:25&#43;08:00'>
+    <meta property="article:published_time" content='2020-04-23T13:51:39&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-04-11T21:17:25&#43;08:00'>
+    <meta property="article:modified_time" content='2020-04-23T13:51:39&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="SSL TLS Diffie Hellman Modulus 1024 Bits">
+    <meta name="description" content="01 Python Data Type">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/python/01-python-data-type/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -141,7 +141,7 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#基本数据类型">基本数据类型</a></li>
       </ul>
     </li>
   </ul>
@@ -177,10 +177,10 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">SSL TLS Diffie Hellman Modulus 1024 Bits</h1>
+            <h1 class="post-title">01 Python Data Type</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年4月11日
+            2020年4月23日
         </date>
         
         <div class="post-meta">
@@ -188,34 +188,97 @@
             
             <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
             
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/liberty'>liberty</a></span>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
             
         </div>
         
         
         
         <div class="post-content">
-            <h4 id="liberty-profile-这个要修复可能要修改两个地方">Liberty Profile 这个要修复，可能要修改两个地方。</h4>
+            <h3 id="基本数据类型">基本数据类型</h3>
+<h4 id="整数">整数</h4>
 <ul>
-<li>server.xml 加入</li>
+<li>
+<p>int</p>
+</li>
+<li>
+<p>十进制： <code>-1, 0, 1000, -8000, 88</code></p>
+</li>
+<li>
+<p>八进制：<code>0o10, 0o27</code></p>
+</li>
+<li>
+<p>十六进制：<code>0x10, 0xff</code></p>
+</li>
+<li>
+<p>数学运算 <code>+ - * / // %</code></p>
+</li>
 </ul>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000080">&lt;ssl</span> <span style="color:#008080">id=</span><span style="color:#d14">&#34;defaultSSLConfig&#34;</span>
-     <span style="color:#008080">keyStoreRef=</span><span style="color:#d14">&#34;defaultKeyStore&#34;</span>
-     <span style="color:#008080">securityLevel=</span><span style="color:#d14">&#34;CUSTOM&#34;</span> <span style="color:#008080">enabledCiphers=</span><span style="color:#d14">&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;</span><span style="color:#000080">/&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>jvm.options加入</li>
+<h4 id="浮点数">浮点数</h4>
+<ul>
+<li>
+<p>float</p>
+</li>
+<li>
+<p>比如：<code>1.23, 2.6e3</code></p>
+</li>
 </ul>
-<pre><code>-Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768
-</code></pre>
+<h4 id="字符串">字符串</h4>
+<ul>
+<li>
+<p>str</p>
+</li>
+<li>
+<p>字符串是以单引号'或双引号&quot;括起来的任意文本</p>
+</li>
+<li>
+<p>如果字符串内部包含&rsquo;,&quot;, 可以用转义字符\来标识</p>
+</li>
+<li>
+<p>转义 \</p>
+</li>
+<li>
+<p>不转义 &lsquo;&lsquo;&lsquo;text&rsquo;'', &ldquo;&ldquo;&ldquo;text&rdquo;&quot;&quot;, r'text\n&rsquo;</p>
+</li>
+</ul>
+<h4 id="布尔值">布尔值</h4>
+<ul>
+<li>
+<p>bool</p>
+</li>
+<li>
+<p>True, False</p>
+</li>
+<li>
+<p>比较</p>
+<ul>
+<li><code>== != &gt; &lt; &lt;= &gt;=</code></li>
+<li>is</li>
+</ul>
+</li>
+<li>
+<p>逻辑运算</p>
+<ul>
+<li>and, or, not</li>
+</ul>
+</li>
+<li>
+<p>短路</p>
+</li>
+<li>
+<p><code>is vs ==</code></p>
+</li>
+</ul>
+<h4 id="空值">空值</h4>
+<ul>
+<li>
+<p>NoneType</p>
+</li>
+<li>
+<p>None</p>
+</li>
+</ul>
+
         </div>
 
         
@@ -229,13 +292,13 @@
         
         <li><a href="/post/phone-nest/">Phone Nest</a></li>
         
-        <li><a href="/post/vim-online-video/">Vim Online Video</a></li>
+        <li><a href="/post/go/02-prototype/">02 原型模式</a></li>
         
-        <li><a href="/about/">个人简介</a></li>
+        <li><a href="/post/go/01-singleton/">01 单例模式</a></li>
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/life/hello/">Hello</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/">SSL TLS Diffie Hellman Modulus 1024 Bits</a></li>
         
     </ul>
 </div>
@@ -247,7 +310,7 @@
                 
                 <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
                 
-                <li><a href='https://jerrywang1981.github.io/tags/liberty'>liberty</a></li>
+                <li><a href='https://jerrywang1981.github.io/tags/python'>python</a></li>
                 
             </ul>
             
