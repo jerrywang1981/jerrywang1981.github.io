@@ -6,15 +6,33 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 24 Apr 2020 21:54:58 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 20:28:35 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>db2</title>
+      <link>https://jerrywang1981.github.io/categories/db2/</link>
+      <pubDate>Sat, 25 Apr 2020 20:28:35 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/db2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://jerrywang1981.github.io/categories/golang/</link>
+      <pubDate>Sat, 25 Apr 2020 20:28:35 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>it</title>
       <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Fri, 24 Apr 2020 21:54:58 +0800</pubDate>
+      <pubDate>Sat, 25 Apr 2020 20:28:35 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/it/</guid>
       <description></description>
@@ -23,18 +41,9 @@
     <item>
       <title>python</title>
       <link>https://jerrywang1981.github.io/categories/python/</link>
-      <pubDate>Fri, 24 Apr 2020 21:54:58 +0800</pubDate>
+      <pubDate>Sat, 25 Apr 2020 18:35:30 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://jerrywang1981.github.io/categories/golang/</link>
-      <pubDate>Sun, 12 Apr 2020 13:22:43 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/golang/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>db2 on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/db2/</link>
+    <description>Recent content in db2 on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 25 Apr 2020 20:28:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/db2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Db2 Backup Tool</title>
+      <link>https://jerrywang1981.github.io/post/go/db2-backup-tool/</link>
+      <pubDate>Sat, 25 Apr 2020 20:28:35 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/db2-backup-tool/</guid>
+      <description>为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de</description>
+    </item>
+    
+  </channel>
+</rss>
