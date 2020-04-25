@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Phone Nest</title>
-      <link>https://jerrywang1981.github.io/post/phone-nest/</link>
+      <title>Python Nest</title>
+      <link>https://jerrywang1981.github.io/post/python/python-nest/</link>
       <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
       
-      <guid>https://jerrywang1981.github.io/post/phone-nest/</guid>
+      <guid>https://jerrywang1981.github.io/post/python/python-nest/</guid>
       <description>背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调</description>
     </item>
     

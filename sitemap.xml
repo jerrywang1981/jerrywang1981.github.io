@@ -23,22 +23,22 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/golang/</loc>
-    <lastmod>2020-04-25T20:28:35+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jerrywang1981.github.io/categories/golang/</loc>
     <lastmod>2020-04-25T20:28:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/it/</loc>
+    <loc>https://jerrywang1981.github.io/tags/golang/</loc>
     <lastmod>2020-04-25T20:28:35+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/categories/it/</loc>
+    <lastmod>2020-04-25T20:28:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/tags/it/</loc>
     <lastmod>2020-04-25T20:28:35+08:00</lastmod>
   </url>
   
@@ -123,13 +123,8 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/post/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</loc>
+    <loc>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</loc>
     <lastmod>2020-04-11T21:17:25+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/categories/node/</loc>
-    <lastmod>2020-04-11T21:15:14+08:00</lastmod>
   </url>
   
   <url>
@@ -138,13 +133,13 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/post/phone-nest/</loc>
+    <loc>https://jerrywang1981.github.io/categories/node/</loc>
     <lastmod>2020-04-11T21:15:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/vim/</loc>
-    <lastmod>2020-04-11T21:09:42+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/post/python/python-nest/</loc>
+    <lastmod>2020-04-11T21:15:14+08:00</lastmod>
   </url>
   
   <url>
@@ -153,7 +148,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/post/vim-online-video/</loc>
+    <loc>https://jerrywang1981.github.io/categories/vim/</loc>
+    <lastmod>2020-04-11T21:09:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/post/vim/vim-online-video/</loc>
     <lastmod>2020-04-11T21:09:42+08:00</lastmod>
   </url>
   
