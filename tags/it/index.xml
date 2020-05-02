@@ -6,10 +6,19 @@
     <description>Recent content in it on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 25 Apr 2020 20:28:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 21:59:33 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Class Object Method</title>
+      <link>https://jerrywang1981.github.io/post/python/class-object-method/</link>
+      <pubDate>Sat, 02 May 2020 21:59:33 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/class-object-method/</guid>
+      <description>对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor</description>
+    </item>
     
     <item>
       <title>Db2 Backup Tool</title>
@@ -81,15 +90,6 @@
       
       <guid>https://jerrywang1981.github.io/post/go/01-singleton/</guid>
       <description>单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &amp;#34;sync&amp;#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;amp;singleton{} }) return instance }</description>
-    </item>
-    
-    <item>
-      <title>Hello</title>
-      <link>https://jerrywang1981.github.io/life/hello/</link>
-      <pubDate>Sat, 11 Apr 2020 21:22:26 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/life/hello/</guid>
-      <description>this is test</description>
     </item>
     
     <item>

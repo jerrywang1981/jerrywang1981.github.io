@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>neovim on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/neovim/</link>
+    <description>Recent content in neovim on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 02 May 2020 21:23:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/categories/neovim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Neovim Docker</title>
+      <link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
+      <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
+      <description>推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other</description>
+    </item>
+    
+  </channel>
+</rss>

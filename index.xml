@@ -6,10 +6,37 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 25 Apr 2020 20:28:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 21:59:33 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Class Object Method</title>
+      <link>https://jerrywang1981.github.io/post/python/class-object-method/</link>
+      <pubDate>Sat, 02 May 2020 21:59:33 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/class-object-method/</guid>
+      <description>对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor</description>
+    </item>
+    
+    <item>
+      <title>Neovim Docker</title>
+      <link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
+      <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
+      <description>推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other</description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>https://jerrywang1981.github.io/life/stay-at-hotel/</link>
+      <pubDate>Sat, 02 May 2020 21:22:26 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/life/stay-at-hotel/</guid>
+      <description>终于有机会住酒店了，孩子从外地回来，需要居家隔离，自己只好先在酒店凑和几天了</description>
+    </item>
     
     <item>
       <title>Db2 Backup Tool</title>
@@ -84,15 +111,6 @@
     </item>
     
     <item>
-      <title>Hello</title>
-      <link>https://jerrywang1981.github.io/life/hello/</link>
-      <pubDate>Sat, 11 Apr 2020 21:22:26 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/life/hello/</guid>
-      <description>this is test</description>
-    </item>
-    
-    <item>
       <title>SSL TLS Diffie Hellman Modulus 1024 Bits</title>
       <link>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</link>
       <pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
@@ -125,7 +143,7 @@
       <pubDate>Sat, 11 Apr 2020 19:52:18 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/about/</guid>
-      <description>个人简介 现居住大连, 自1998年来大连求学，一直在大连生活，慢慢的适应，喜欢上了这里的生活。从大连海事大学毕业后，一直从事软件开发，项目管理方面的工作。 个人爱好 对新的事物，比如技术，科技方面的，都比较感兴趣。 工作经历 从2005年开始参加工作，做IT相关的工作。 技术能力 目前主要有这</description>
+      <description>个人简介 现居住大连, 自1998年来大连求学，一直在大连生活，慢慢的适应，喜欢上了这里的生活。从大连海事大学毕业后，一直从事软件开发，项目管理方面的工作。 个人爱好 对新的事物，比如技术，科技方面的，都比较感兴趣。 工作经历 从2005年开始参加工作，做IT相关的工作。做过Team Leader, 做过项</description>
     </item>
     
     <item>

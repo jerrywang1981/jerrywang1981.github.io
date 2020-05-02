@@ -82,6 +82,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月2日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">Db2 Backup Tool</a>
             </h1>
         </header>
@@ -284,29 +309,6 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/life/hello/">Hello</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-        </div>
-        
-        <div class="post-content">
-            this is test……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/life/hello/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
             </h1>
         </header>
@@ -375,6 +377,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker">Neovim Docker</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/" title="Db2 Backup Tool">Db2 Backup Tool</a>
     </li>
     
@@ -406,14 +416,6 @@
         <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/python-nest/" title="Python Nest">Python Nest</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -431,11 +433,15 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (7)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     
 </ul>
     </section>
@@ -451,6 +457,10 @@
     <a href="https://jerrywang1981.github.io/tags/it/">it</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/life/">life</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     

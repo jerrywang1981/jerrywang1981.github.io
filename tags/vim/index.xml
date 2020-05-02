@@ -6,10 +6,19 @@
     <description>Recent content in vim on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Apr 2020 21:09:42 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 21:23:53 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Neovim Docker</title>
+      <link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
+      <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
+      <description>推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other</description>
+    </item>
     
     <item>
       <title>Vim Online Video</title>
