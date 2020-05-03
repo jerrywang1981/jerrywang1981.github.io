@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @package Maupassant
  * @author cho
  * @version 1.3
@@ -81,7 +81,7 @@ img{
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 100%;	
+    max-height: 100%;
 }
 a, button.submit {
     color:#6E7173;
@@ -133,9 +133,9 @@ blockquote::before{
     font-weight: bold;
     line-height: 30px;
     margin-left: -50px;
-    position: absolute; 
+    position: absolute;
 }
-  
+
 /**
 h1, h2, h3 {
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -604,7 +604,7 @@ textarea.textarea {
 }
 .widget .tagcloud a {
     line-height: 1.5;
-    padding: 5px; 
+    padding: 5px;
 }
 #footer {
     padding:.8em 0 3.6em;
@@ -908,14 +908,14 @@ img.alignright {
 .post-archive {
     font-size: 15px;
     line-height: 2;
-    padding-bottom: .8em; 
+    padding-bottom: .8em;
 }
 .post-archive h2 {
       margin: 0;
-      font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif; 
+      font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 .post-archive .date {
-      padding-right: .7em; 
+      padding-right: .7em;
 }
 /* for archive page ends*/
 
@@ -933,7 +933,7 @@ img.alignright {
       opacity: 0;
       -webkit-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
       -moz-transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-      transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335); 
+      transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
     }
     #rocket i {
         display: block;
@@ -946,20 +946,20 @@ img.alignright {
         transition: transform .2s;
         -webkit-transform-origin: 50% 0;
         -moz-transform-origin: 50% 0;
-        transform-origin: 50% 0; 
+        transform-origin: 50% 0;
     }
     #rocket:hover {
-      background-position: 50% -62px; 
+      background-position: 50% -62px;
     }
     #rocket:hover i {
         background-position: 50% 100%;
         -webkit-animation: flaming .7s infinite;
         -moz-animation: flaming .7s infinite;
-        animation: flaming .7s infinite; 
+        animation: flaming .7s infinite;
     }
     #rocket.show {
       visibility: visible;
-      opacity: 1; 
+      opacity: 1;
     }
     #rocket.launch {
       background-position: 50% -62px;
@@ -968,14 +968,14 @@ img.alignright {
       -moz-transform: translateY(-500px);
       -ms-transform: translateY(-500px);
       transform: translateY(-500px);
-      pointer-events: none; 
+      pointer-events: none;
     }
       #rocket.launch i {
         background-position: 50% 100%;
         -webkit-transform: scale(1.4, 3.2);
         -moz-transform: scale(1.4, 3.2);
-        transform: scale(1.4, 3.2); 
-    } 
+        transform: scale(1.4, 3.2);
+    }
 }
 
 /* read more*/
@@ -986,11 +986,11 @@ img.alignright {
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    float: right; 
+    float: right;
 }
 .readmore a:hover {
     background: #F8F8F8;
-    border-bottom-color: #D26911; 
+    border-bottom-color: #D26911;
 }
 /* 版权声明 */
 .post-copyright {
@@ -1020,7 +1020,7 @@ table {
     background: transparent;
     border-collapse: collapse;
     border-spacing: 0;
-    text-align: left; 
+    text-align: left;
 }
 tbody {
     border: 0;
@@ -1028,14 +1028,14 @@ tbody {
 table tr th {
     font-weight: bold;
     padding: 5px 10px;
-    border-bottom: 2px solid #909ba2; 
+    border-bottom: 2px solid #909ba2;
     background-color: #F0F0F0;
 }
 table td {
-    padding: 5px 10px; 
+    padding: 5px 10px;
 }
 table tr:nth-child(2n) {
-    background: #f7f8f8; 
+    background: #f7f8f8;
 }
 
 table tr {
@@ -1043,10 +1043,29 @@ table tr {
     border-top: 1px solid #CCC;
     background-color: white;
 }
-  
+
 table tr th, table tr td {
     font-size: 1em;
     border: 1px solid #CCC;
     padding: 0.5em 1em;
     text-align: left;
+}
+
+.widget .card {
+    margin: 0 auto;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 5px 20px #999;
+}
+
+.widget .card-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px 7px 0 0;
+}
+
+.widget .card-body {
+  box-sizing: border-box;
+  padding: 5px 20px;
+  text-align: center;
 }
