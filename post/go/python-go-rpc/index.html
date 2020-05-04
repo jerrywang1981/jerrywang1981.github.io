@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello | 村边的池塘</title>
-    <meta property="og:title" content="Hello - 村边的池塘">
+    <title>Golang 中通过gRPC调用Python实现的功能 | 村边的池塘</title>
+    <meta property="og:title" content="Golang 中通过gRPC调用Python实现的功能 - 村边的池塘">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-05-02T21:22:26&#43;08:00'>
+    <meta property="article:published_time" content='2020-05-04T00:11:12&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-05-02T21:22:26&#43;08:00'>
+    <meta property="article:modified_time" content='2020-05-04T00:11:12&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="Hello">
+    <meta name="description" content="Golang 中通过gRPC调用Python实现的功能">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/life/stay-at-hotel/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/go/python-go-rpc/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -52,7 +52,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -76,24 +76,111 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Hello</h1>
+            <h1 class="post-title">Golang 中通过gRPC调用Python实现的功能</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月2日
+            2020年5月4日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/life'>life</a></span>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/go'>go</a></span>
             
         </div>
         
         
         
         <div class="post-content">
-            <p>终于有机会住酒店了，孩子从外地回来，需要居家隔离，自己只好先在酒店凑和几天了</p>
+            <h3 id="背景">背景</h3>
+<p>有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。
+方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个
+选择就是gRPC</p>
+<h3 id="python-实现-rpc-server">python 实现 rpc server</h3>
+<p>这个网上资料比较多，通过protobuf生成代码，实现server端的功能。</p>
+<h3 id="golang-实现-rpc-client">golang 实现 rpc client</h3>
+<p>同样的，根据proto文件，生成go code, 可以通过client连接rpc server</p>
+<h3 id="目前的一个小实现">目前的一个小实现</h3>
+<ul>
+<li>主要功能用python实现，同时python实现了 rpc server功能，在gin里面，通过client来调用</li>
+</ul>
+<pre><code>package main
 
+import (
+        &quot;context&quot;
+        &quot;fmt&quot;
+        &quot;io/ioutil&quot;
+        &quot;log&quot;
+        &quot;net/http&quot;
+        &quot;os&quot;
+        &quot;path/filepath&quot;
+
+        pb &quot;github.ibm.com/assetharvest/text-detection-tf/proto&quot;
+
+        &quot;github.com/gin-gonic/gin&quot;
+        &quot;google.golang.org/grpc&quot;
+)
+
+const (
+        address = &quot;localhost:50501&quot;
+)
+
+func main() {
+
+        r := gin.Default()
+        r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+                c.JSON(200, gin.H{
+                        &quot;message&quot;: &quot;pong&quot;,
+                })
+        })
+        r.POST(&quot;/&quot;, func(c *gin.Context) {
+                // single file
+                file, err := c.FormFile(&quot;file&quot;)
+                                if err != nil {
+                        c.String(http.StatusBadRequest, fmt.Sprintf(&quot;get form err: %s&quot;, err.Error()))
+                        return
+                }
+                filename := filepath.Base(file.Filename)
+
+                // create temp directory
+                dname, err := ioutil.TempDir(&quot;&quot;, &quot;textdetector&quot;)
+                if err != nil {
+                        c.String(http.StatusBadRequest, fmt.Sprintf(&quot;get form err: %s&quot;, err.Error()))
+                        return
+                }
+                defer os.RemoveAll(dname)
+
+                fname := filepath.Join(dname, filename)
+
+                // Upload the file to specific dst.
+                c.SaveUploadedFile(file, fname)
+
+                conn, err := grpc.Dial(address, grpc.WithInsecure())
+                if err != nil {
+                        log.Fatalf(&quot;did not connect: %v&quot;, err)
+                }
+                defer conn.Close()
+                client := pb.NewTextDetecterClient(conn)
+
+                // Contact the server and print out its response.
+                r, err := client.TextDetect(context.Background(), &amp;pb.TextDetectRequest{Filename: fname})
+                if err != nil {
+                        log.Fatalf(&quot;could not connect: %v&quot;, err)
+                }
+                log.Printf(&quot;%+v\n&quot;, r.Result)
+                // c.JSON(200, r.Result)
+                c.Writer.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+                c.Writer.WriteHeader(200)
+                c.Writer.WriteString(r.Result)
+        })
+
+        r.Run(&quot;:3000&quot;)
+}
+</code></pre>
         </div>
 
         
@@ -105,7 +192,7 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/go/db2-backup-tool/">Db2 Backup Tool</a></li>
+        <li><a href="/post/python/class-object-method/">Class Object Method</a></li>
         
         <li><a href="/post/python/05-Python-Dictionary/">05 Python Dictionary</a></li>
         
@@ -123,7 +210,11 @@
             
             <ul class="clearfix">
                 
-                <li><a href='https://jerrywang1981.github.io/tags/life'>life</a></li>
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/python'>python</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/go'>go</a></li>
                 
             </ul>
             

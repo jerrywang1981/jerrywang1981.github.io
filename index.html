@@ -73,6 +73,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能">Golang 中通过gRPC调用Python实现的功能</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月4日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/go'>go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
             </h1>
         </header>
@@ -297,31 +324,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/02-prototype/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -395,6 +397,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能">Golang 中通过gRPC调用Python实现的功能</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
     </li>
     
@@ -430,10 +436,6 @@
         <a href="https://jerrywang1981.github.io/post/go/02-prototype/" title="02 原型模式">02 原型模式</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -445,9 +447,11 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/db2/">db2 (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/go/">go (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (12)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -457,7 +461,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (7)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (8)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     
@@ -469,6 +473,8 @@
 <div class="tagcloud">
     
     <a href="https://jerrywang1981.github.io/tags/db2/">db2</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/go/">go</a>
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     

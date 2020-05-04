@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/go/</link>
+    <description>Recent content in go on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 May 2020 00:11:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Golang 中通过gRPC调用Python实现的功能</title>
+      <link>https://jerrywang1981.github.io/post/go/python-go-rpc/</link>
+      <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/python-go-rpc/</guid>
+      <description>背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就</description>
+    </item>
+    
+  </channel>
+</rss>
