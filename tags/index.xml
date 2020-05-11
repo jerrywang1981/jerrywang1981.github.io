@@ -6,10 +6,55 @@
     <description>Recent content in Tags on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 04 May 2020 00:11:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 21:51:52 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>golang</title>
+      <link>https://jerrywang1981.github.io/tags/golang/</link>
+      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/tags/it/</link>
+      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ocr</title>
+      <link>https://jerrywang1981.github.io/tags/ocr/</link>
+      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/ocr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pdf</title>
+      <link>https://jerrywang1981.github.io/tags/pdf/</link>
+      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/pdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://jerrywang1981.github.io/tags/python/</link>
+      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>go</title>
@@ -17,24 +62,6 @@
       <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/tags/it/</link>
-      <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/it/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://jerrywang1981.github.io/tags/python/</link>
-      <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/python/</guid>
       <description></description>
     </item>
     
@@ -71,15 +98,6 @@
       <pubDate>Sat, 25 Apr 2020 20:28:35 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/tags/db2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://jerrywang1981.github.io/tags/golang/</link>
-      <pubDate>Sat, 25 Apr 2020 20:28:35 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/golang/</guid>
       <description></description>
     </item>
     

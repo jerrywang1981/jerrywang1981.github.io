@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ocr on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/ocr/</link>
+    <description>Recent content in ocr on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 11 May 2020 21:51:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/ocr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>转换Pdf成图片</title>
+      <link>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</link>
+      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</guid>
+      <description>背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&amp;gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</description>
+    </item>
+    
+  </channel>
+</rss>
