@@ -82,6 +82,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月12日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/csv'>csv</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/encoding'>encoding</a>
+            
+        </div>
+        
+        <div class="post-content">
+            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&quot;data.csv&quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&quot;\xEF\xBB\xBF&quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&quot;col 1&quot;, &quot;col 2&quot;, &quot;col 3&quot;}) writer.Flush()……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">转换Pdf成图片</a>
             </h1>
         </header>
@@ -241,6 +270,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题">Golang 导出 csv 乱码的问题</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片">转换Pdf成图片</a>
     </li>
     
@@ -276,10 +309,6 @@
         <a href="https://jerrywang1981.github.io/post/python/02-python-variable/" title="02 Python Variable">02 Python Variable</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/01-python-data-type/" title="01 Python Data Type">01 Python Data Type</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -289,13 +318,17 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
+    <li><a href="https://jerrywang1981.github.io/categories/csv/">csv (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/db2/">db2 (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/go/">go (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (15)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -320,7 +353,11 @@
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     
+    <a href="https://jerrywang1981.github.io/tags/csv/">csv</a>
+    
     <a href="https://jerrywang1981.github.io/tags/db2/">db2</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
     
     <a href="https://jerrywang1981.github.io/tags/go/">go</a>
     

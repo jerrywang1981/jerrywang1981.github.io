@@ -6,10 +6,19 @@
     <description>Recent content in golang on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 11 May 2020 21:51:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang 导出 csv 乱码的问题</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-export-csv/</link>
+      <pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/golang-export-csv/</guid>
+      <description>问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&amp;quot;data.csv&amp;quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&amp;quot;\xEF\xBB\xBF&amp;quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&amp;quot;col 1&amp;quot;, &amp;quot;col 2&amp;quot;, &amp;quot;col 3&amp;quot;}) writer.Flush()</description>
+    </item>
     
     <item>
       <title>转换Pdf成图片</title>
