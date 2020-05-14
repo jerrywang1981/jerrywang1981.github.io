@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 21:20:50 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>angular</title>
+      <link>https://jerrywang1981.github.io/tags/angular/</link>
+      <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/tags/it/</link>
+      <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>node</title>
+      <link>https://jerrywang1981.github.io/tags/node/</link>
+      <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/node/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>csv</title>
@@ -35,15 +62,6 @@
       <pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/tags/it/</link>
-      <pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/it/</guid>
       <description></description>
     </item>
     
@@ -125,15 +143,6 @@
       <pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/tags/liberty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>node</title>
-      <link>https://jerrywang1981.github.io/tags/node/</link>
-      <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/node/</guid>
       <description></description>
     </item>
     

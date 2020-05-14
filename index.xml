@@ -6,10 +6,19 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 21:20:50 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular Javascript Heap Out of Memory</title>
+      <link>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</link>
+      <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</guid>
+      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;</description>
+    </item>
     
     <item>
       <title>Golang 导出 csv 乱码的问题</title>
