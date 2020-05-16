@@ -73,6 +73,56 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/7-function/" title="07 Python 函数">07 Python 函数</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print('a') # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f'x = {x}') print(f'y = {y}') print(f'args = {args} ') # kwargs # def add_number_1(x, y, *args, **kwargs): print(f'x = {x}') print(f'y = {y}') # f-string f'this is string, {x}' print(f'args = {args} ') print(f'kwargs = {kwargs} ') # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == '__main__': # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/7-function/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/6-condition-loop/" title="06 Python 控制，循环">06 Python 控制，循环</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': a = 5 if a &gt; 0: print('a &gt; 0') else: print('a &lt; 0') if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print('a &gt; 5') 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print('------------------') for i in range(10): print(i) else: # print('done') # continue the loop print('------------------') for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &quot; 小于 5&quot;) count……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/6-condition-loop/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
             </h1>
         </header>
@@ -286,56 +336,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/04-python-tuple/" title="04 Python Tuple">04 Python Tuple</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月24日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算 元组在参数中的应用 创建tuple的方式……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/04-python-tuple/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/03-python-list/" title="03 Python List">03 Python List</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月24日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False 创建列表的方式 a = [] a = [1,2,3] a = list() a = list('abcdefg') a = list(range(10)) a = [ x for x in range(20) ] append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6])……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/03-python-list/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -409,6 +409,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/7-function/" title="07 Python 函数">07 Python 函数</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/6-condition-loop/" title="06 Python 控制，循环">06 Python 控制，循环</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
     </li>
     
@@ -440,14 +448,6 @@
         <a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/" title="05 Python Dictionary">05 Python Dictionary</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/04-python-tuple/" title="04 Python Tuple">04 Python Tuple</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/03-python-list/" title="03 Python List">03 Python List</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -469,7 +469,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (16)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (18)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -483,7 +483,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (11)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     

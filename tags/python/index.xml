@@ -6,10 +6,28 @@
     <description>Recent content in python on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 11 May 2020 21:51:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 09:17:08 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>07 Python 函数</title>
+      <link>https://jerrywang1981.github.io/post/python/7-function/</link>
+      <pubDate>Sat, 16 May 2020 09:17:08 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/7-function/</guid>
+      <description>函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&#39;a&#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) print(f&#39;args = {args} &#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39; print(f&#39;args = {args} &#39;) print(f&#39;kwargs = {kwargs} &#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &#39;__main__&#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,</description>
+    </item>
+    
+    <item>
+      <title>06 Python 控制，循环</title>
+      <link>https://jerrywang1981.github.io/post/python/6-condition-loop/</link>
+      <pubDate>Sat, 16 May 2020 09:14:28 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/6-condition-loop/</guid>
+      <description>条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: a = 5 if a &amp;gt; 0: print(&#39;a &amp;gt; 0&#39;) else: print(&#39;a &amp;lt; 0&#39;) if a &amp;gt; 0: pass elif a &amp;lt; 5: pass elif a &amp;lt; 10: pass else: pass if a &amp;gt; 0: if a &amp;lt; 5: print(a) else: print(&#39;a &amp;gt; 5&#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: # while condition a = 5 while a &amp;gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&#39;------------------&#39;) for i in range(10): print(i) else: # print(&#39;done&#39;) # continue the loop print(&#39;------------------&#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &amp;lt; 5: print (count, &amp;quot; 小于 5&amp;quot;) count</description>
+    </item>
     
     <item>
       <title>转换Pdf成图片</title>
