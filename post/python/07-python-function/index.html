@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>vim | 村边的池塘</title>
-    <meta property="og:title" content="vim - 村边的池塘">
+    <title>07 Python 函数 | 村边的池塘</title>
+    <meta property="og:title" content="07 Python 函数 - 村边的池塘">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-05-16T09:17:08&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-05-16T09:17:08&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="vim">
+    <meta name="description" content="07 Python 函数">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/tags/vim/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/python/07-python-function/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://jerrywang1981.github.io/tags/vim/index.xml" title="村边的池塘" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -49,7 +52,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -71,71 +74,180 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        包含标签
-        <span class="keyword">vim</span>
-        的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/">Neovim Docker</a>
-            </h1>
+            <h1 class="post-title">07 Python 函数</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月2日
+            2020年5月16日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='https://jerrywang1981.github.io/categories/vim'>vim</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
             
-            <a href='https://jerrywang1981.github.io/categories/neovim'>neovim</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
             
         </div>
         
+        
+        
         <div class="post-content">
-            推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/">阅读全文</a></p>
+            <h2 id="函数">函数</h2>
+<pre><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# def func, snake case
+# return value
+
+# no args, no return
+def add_two_number():
+    print('a')
+
+# 1 arg
+def add_two_number_1(x):
+    return x + 5 # return value
+
+# return multiple value 
+def two_number_2(x, y):
+    c = x + y
+    d = x - y
+    return c, d
+
+# args
+def add_number(x, y, *args):
+    print(f'x = {x}')
+    print(f'y = {y}')
+    print(f'args = {args} ')
+
+# kwargs
+# 
+def add_number_1(x, y, *args, **kwargs):
+    print(f'x = {x}')
+    print(f'y = {y}') # f-string f'this is string, {x}'
+    print(f'args = {args} ')
+    print(f'kwargs = {kwargs} ')
+# wrong
+# def add_number_2(**kwargs, *args, x, y)
+    # pass
+
+# default
+def add_number_3(x, y, c=10, d = True):
+    print(c)
+
+if __name__ == '__main__':
+    # add_two_number()
+    # print(add_two_number_1(6))
+    # print(two_number_2(10, 5))
+    # add_number(1,2, 3, 4, 5, 6)
+    # add_number_1(1,2,3,4,5, total=5, ok=6)
+    add_number_3(1,2, 20)
+
+</code></pre><p>##高级用法</p>
+<pre><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from datetime import datetime
+
+# lambda
+b1 = lambda  :  print('ok')
+b2 = lambda x :  print('ok')
+b3 = lambda x, y :  x * y
+sum_1 = lambda x, y: x+y
+sub_1 = lambda x, y:x-y
+
+# 函数作为参数
+def call_func_demo(func, *args, **kwargs):
+    ''' call another function
+
+    Args:
+        func the function
+        args arguments
+        kwargs key work arguments
+    Returns:
+        new function
+    '''
+    return func(*args, **kwargs)
+
+# 偏函数
+def sum_5(y):
+    '''add 5 to y
+
+    '''
+    return sum_1(5, y)
+
+# 函数作为返回值
+def log_time(func):
+    ''' the decorator to log the function spent time
+    '''
+    # 1 define a function
+    def inner(*args, **kwargs):
+        t1 = datetime.now()
+        res = func(*args, **kwargs)
+        t2 = datetime.now()
+        print(t2 - t1)
+        return res
+    # 2 return it
+    return inner
+
+# decorator
+@log_time
+def call_func(func, *args, **kwargs):
+    return func(*args, **kwargs)
+
+
+
+
+if __name__ == '__main__':
+    a = [5, 7]
+    print(call_func(sum_1, *tuple(a)))
+    print(call_func(sub_1, *tuple(a)))
+
+
+</code></pre>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/python/06-condition-loop/">06 Python 控制，循环</a></li>
+        
+        <li><a href="/post/go/convert-pdf-to-images/">转换Pdf成图片</a></li>
+        
+        <li><a href="/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a></li>
+        
+        <li><a href="/post/python/class-object-method/">Class Object Method</a></li>
+        
+        <li><a href="/post/python/05-Python-Dictionary/">05 Python Dictionary</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/python'>python</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/vim-online-video/">Vim Online Video</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/vim'>vim</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-        </div>
-        
-        <div class="post-content">
-            在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/vim-online-video/">阅读全文</a></p>
-        </div>
-    </article>
     
 
     
-
-
-
-
-
+    
 </div>
 
                 </div>
@@ -323,6 +435,17 @@
     </div>
 </footer>
 
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
