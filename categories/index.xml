@@ -6,7 +6,7 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 19 May 2020 20:00:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>it</title>
       <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Tue, 19 May 2020 20:00:37 +0800</pubDate>
+      <pubDate>Tue, 19 May 2020 21:00:00 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://jerrywang1981.github.io/categories/python/</link>
+      <pubDate>Tue, 19 May 2020 21:00:00 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/python/</guid>
       <description></description>
     </item>
     
@@ -44,15 +53,6 @@
       <pubDate>Tue, 19 May 2020 20:00:37 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/sequelize/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://jerrywang1981.github.io/categories/python/</link>
-      <pubDate>Sat, 16 May 2020 09:17:08 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/python/</guid>
       <description></description>
     </item>
     

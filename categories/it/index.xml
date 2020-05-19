@@ -6,10 +6,21 @@
     <description>Recent content in it on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 19 May 2020 20:00:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 21:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>08 Python Virtual Environment</title>
+      <link>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</link>
+      <pubDate>Tue, 19 May 2020 21:00:00 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</guid>
+      <description>Details refer to offical document
+Virtual environment To create new virtual environment usually in folder venv
+python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &amp;gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt </description>
+    </item>
     
     <item>
       <title>Sequelize Bulk Create to return with primary key in Postgre</title>

@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>csv | 村边的池塘</title>
-    <meta property="og:title" content="csv - 村边的池塘">
+    <title>08 Python Virtual Environment | 村边的池塘</title>
+    <meta property="og:title" content="08 Python Virtual Environment - 村边的池塘">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-05-19T21:00:00&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-05-19T21:00:00&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="csv">
+    <meta name="description" content="08 Python Virtual Environment">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/categories/csv/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://jerrywang1981.github.io/categories/csv/index.xml" title="村边的池塘" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -49,7 +52,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -71,50 +74,88 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        分类
-        <span class="keyword">csv</span>
-        中的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a>
-            </h1>
+            <h1 class="post-title">08 Python Virtual Environment</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月12日
+            2020年5月19日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
             
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/csv'>csv</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/encoding'>encoding</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
             
         </div>
         
+        
+        
         <div class="post-content">
-            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&quot;data.csv&quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&quot;\xEF\xBB\xBF&quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&quot;col 1&quot;, &quot;col 2&quot;, &quot;col 3&quot;}) writer.Flush()……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">阅读全文</a></p>
+            <h2 id="details">Details</h2>
+<p>refer to <a href="https://docs.python.org/3/tutorial/venv.html">offical document</a></p>
+<h2 id="virtual-environment">Virtual environment</h2>
+<h3 id="to-create-new-virtual-environment">To create new virtual environment</h3>
+<p>usually in folder venv</p>
+<pre><code>python -m venv yourfoldername
+</code></pre><h3 id="enter-virtual-environment">enter virtual environment</h3>
+<pre><code>source venv/bin/activate
+</code></pre><h3 id="exit-virtual-environment">exit virtual environment</h3>
+<pre><code>deactivate
+</code></pre><h2 id="pip-usage">Pip usage</h2>
+<h3 id="install-package">install package</h3>
+<pre><code>pip install packagename
+</code></pre><h3 id="list-installed-packages">list installed packages</h3>
+<pre><code>pip list
+</code></pre><h3 id="save-installed-packages-to-requirementstxt">save installed packages to requirements.txt</h3>
+<pre><code>pip freeze &gt; requirements.txt
+</code></pre><h3 id="install-packages-from-requirementstxt">install packages from requirements.txt</h3>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/python/07-python-function/">07 Python 函数</a></li>
+        
+        <li><a href="/post/python/06-condition-loop/">06 Python 控制，循环</a></li>
+        
+        <li><a href="/post/go/convert-pdf-to-images/">转换Pdf成图片</a></li>
+        
+        <li><a href="/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a></li>
+        
+        <li><a href="/post/python/class-object-method/">Class Object Method</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/python'>python</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-
     
 
-
-
-
-
+    
+    
 </div>
 
                 </div>
@@ -310,6 +351,17 @@
     </div>
 </footer>
 
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
