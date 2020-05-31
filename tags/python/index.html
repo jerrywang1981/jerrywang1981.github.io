@@ -82,6 +82,106 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">13 Python Context Manager</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            python context manager use contextlib/yield @contextmanager def send_mail_context(): '''context manager with send_mail_context() ''' try: # 1 doing work BEFORE the code goes into with block print('before yield') server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print('in finally') use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): ''' 1. override __enter__ __exit__ 2. in __enter__, return value ''' def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print('in enter') self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print('in exit') self.smtp_server.quit() ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">12 Python Smtp</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = ['your smtp servers'] def _format_addr(s): ''' format the address ''' name, addr = parseaddr(s) return formataddr((Header(name, 'utf-8').encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type='plain'): '''plain/text text/html ''' msg = MIMEText(body, mime_type, 'utf-8') msg['From'] = _format_addr(from_addr) msg['To'] = &quot;,&quot;.join([_format_addr(x) for x in to_addr]) msg['Cc'] = &quot;,&quot;.join([_format_addr(x) for x in cc_addr]) msg['Subject'] = Header(subject, 'utf-8').encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type='plain'): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): '''context manager with send_mail_context() ''' try: # 1 doing work BEFORE the code goes into with block print('before yield') server = smtplib.……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/">11 Python Mro</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print('class A says hello') class B(A): pass class C(A): # class variable BP_URL = 'https://xxxxx' def __init__(self): self.name = 'ok' @staticmethod def print_hello(name, age): ''' staticmethod cannot access any class or self variabel/method ''' pass @classmethod def say(cls): '''class method can access class level variable/method ''' print(cls.BP_URL) def hello(self): print('class C says hello') class D(C, B): pass if __name__ == '__main__': d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">10 Dunder Methods</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): ''' a == b ''' return super().__eq__(value) def __ge__(self, value): ''' a &gt;= b ''' return super().__ge__(value) def __gt__(self, value): ''' a &gt; b ''' return super().__gt__(value) def __le__(self, value): ''' a &lt; b ''' return super().__le__(value) def __ne__(self, value): ''' a != b ''' return super().__ne__(value) def __str__(self): '''print(a) ''' return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): ''' len(a) ''' return self.number * 10 def __lt__(self, other): '''less than a &lt; b ''' return self.number &lt; other.number def __getattribute__(self, name): ''' print(a[the_key]) ''' return super().__getattribute__(name) def __setattr__(self, name, value): ''' a[the_key] = 5 ''' return super().__setattr__(name, value) def __delattr__(self, name): ''' delete a['the_key'] ''' return super().__delattr__(name) if __name__ == '__main__': ''' ''' # a = A(5) # b = A(6) # print(a &lt; b) # print(len(a)) # a['b'] = 10 # c = a['c'] pass ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">09 Python Decorators</a>
             </h1>
         </header>
@@ -239,106 +339,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月2日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">05 Python Dictionary</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月25日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            Dictionary ###创建方式 a = dict() a = {} a = {'a': 1, 'b': 2} a = dict(a=1,b=2) a = [('a', 1), ('b', 2)] b = dict(a) a = zip('abc', [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), 'y')……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/04-python-tuple/">04 Python Tuple</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月24日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算 元组在参数中的应用 创建tuple的方式……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/04-python-tuple/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/03-python-list/">03 Python List</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月24日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False 创建列表的方式 a = [] a = [1,2,3] a = list() a = list('abcdefg') a = list(range(10)) a = [ x for x in range(20) ] append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6])……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/03-python-list/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -413,6 +413,22 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/11-python-mro/" title="11 Python Mro">11 Python Mro</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods">10 Dunder Methods</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
     </li>
     
@@ -436,22 +452,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题">Golang 导出 csv 乱码的问题</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片">转换Pdf成图片</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能">Golang 中通过gRPC调用Python实现的功能</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -473,7 +473,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (22)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (26)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -491,7 +491,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (13)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (17)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     

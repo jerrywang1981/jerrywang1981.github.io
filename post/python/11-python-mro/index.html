@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Lives | 村边的池塘</title>
-    <meta property="og:title" content="Lives - 村边的池塘">
+    <title>11 Python Mro | 村边的池塘</title>
+    <meta property="og:title" content="11 Python Mro - 村边的池塘">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-05-31T13:50:50&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-05-31T13:50:50&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="Lives">
+    <meta name="description" content="11 Python Mro">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/life/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/python/11-python-mro/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://jerrywang1981.github.io/life/index.xml" title="村边的池塘" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -49,9 +52,9 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
-                    <a class="current" href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
+                    <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
@@ -71,37 +74,119 @@
                     
 <div class="res-cons">
     
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/life/stay-at-hotel/" title="Hello">Hello</a>
-            </h1>
+            <h1 class="post-title">11 Python Mro</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月2日
+            2020年5月31日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/life'>life</a></span>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
             
         </div>
         
+        
+        
         <div class="post-content">
-            终于有机会住酒店了，孩子从外地回来，需要居家隔离，自己只好先在酒店凑和几天了……
+            <h2 id="method-resolution-order">method resolution order</h2>
+<pre><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# method resolution order
+# mro
+
+class A(object):
+    def hello(self):
+        print('class A says hello')
+
+class B(A):
+    pass
+
+class C(A):
+
+    # class variable
+    BP_URL = 'https://xxxxx'
+
+    def __init__(self):
+        self.name = 'ok'
+
+    @staticmethod
+    def print_hello(name, age):
+        ''' staticmethod
+
+        cannot access any class or self variabel/method
+        '''
+        pass
+
+    @classmethod
+    def say(cls):
+        '''class method
+
+        can access class level variable/method
+        '''
+        print(cls.BP_URL)
+
+
+    def hello(self):
+        print('class C says hello')
+
+class D(C, B):
+    pass
+
+if __name__ == '__main__':
+    d = D()
+    d.hello()
+    # to print the mro of one class
+    print(d.__class__.__mro__)
+</code></pre>
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/life/stay-at-hotel/">阅读全文</a></p>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/python/10-dunder-methods/">10 Dunder Methods</a></li>
+        
+        <li><a href="/post/python/09-python-decorators/">09 Python Decorators</a></li>
+        
+        <li><a href="/post/python/08-python-virtual-environment/">08 Python Virtual Environment</a></li>
+        
+        <li><a href="/post/python/07-python-function/">07 Python 函数</a></li>
+        
+        <li><a href="/post/python/06-condition-loop/">06 Python 控制，循环</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/python'>python</a></li>
+                
+            </ul>
+            
+        </div>
     </article>
     
     
+
     
-
-
-
-
-
+    
 </div>
 
                 </div>
@@ -301,6 +386,17 @@
     </div>
 </footer>
 
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>

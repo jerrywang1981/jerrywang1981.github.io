@@ -82,6 +82,106 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">13 Python Context Manager</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            python context manager use contextlib/yield @contextmanager def send_mail_context(): '''context manager with send_mail_context() ''' try: # 1 doing work BEFORE the code goes into with block print('before yield') server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print('in finally') use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): ''' 1. override __enter__ __exit__ 2. in __enter__, return value ''' def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print('in enter') self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print('in exit') self.smtp_server.quit() ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">12 Python Smtp</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = ['your smtp servers'] def _format_addr(s): ''' format the address ''' name, addr = parseaddr(s) return formataddr((Header(name, 'utf-8').encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type='plain'): '''plain/text text/html ''' msg = MIMEText(body, mime_type, 'utf-8') msg['From'] = _format_addr(from_addr) msg['To'] = &quot;,&quot;.join([_format_addr(x) for x in to_addr]) msg['Cc'] = &quot;,&quot;.join([_format_addr(x) for x in cc_addr]) msg['Subject'] = Header(subject, 'utf-8').encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type='plain'): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): '''context manager with send_mail_context() ''' try: # 1 doing work BEFORE the code goes into with block print('before yield') server = smtplib.……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/">11 Python Mro</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print('class A says hello') class B(A): pass class C(A): # class variable BP_URL = 'https://xxxxx' def __init__(self): self.name = 'ok' @staticmethod def print_hello(name, age): ''' staticmethod cannot access any class or self variabel/method ''' pass @classmethod def say(cls): '''class method can access class level variable/method ''' print(cls.BP_URL) def hello(self): print('class C says hello') class D(C, B): pass if __name__ == '__main__': d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">10 Dunder Methods</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): ''' a == b ''' return super().__eq__(value) def __ge__(self, value): ''' a &gt;= b ''' return super().__ge__(value) def __gt__(self, value): ''' a &gt; b ''' return super().__gt__(value) def __le__(self, value): ''' a &lt; b ''' return super().__le__(value) def __ne__(self, value): ''' a != b ''' return super().__ne__(value) def __str__(self): '''print(a) ''' return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): ''' len(a) ''' return self.number * 10 def __lt__(self, other): '''less than a &lt; b ''' return self.number &lt; other.number def __getattribute__(self, name): ''' print(a[the_key]) ''' return super().__getattribute__(name) def __setattr__(self, name, value): ''' a[the_key] = 5 ''' return super().__setattr__(name, value) def __delattr__(self, name): ''' delete a['the_key'] ''' return super().__delattr__(name) if __name__ == '__main__': ''' ''' # a = A(5) # b = A(6) # print(a &lt; b) # print(len(a)) # a['b'] = 10 # c = a['c'] pass ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/content/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
             </h1>
         </header>
@@ -235,120 +335,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">Angular Javascript Heap Out of Memory</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月14日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/angular'>angular</a>
-            
-        </div>
-        
-        <div class="post-content">
-            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 'use strict';……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月12日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/csv'>csv</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/encoding'>encoding</a>
-            
-        </div>
-        
-        <div class="post-content">
-            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&quot;data.csv&quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&quot;\xEF\xBB\xBF&quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&quot;col 1&quot;, &quot;col 2&quot;, &quot;col 3&quot;}) writer.Flush()……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">转换Pdf成图片</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/ocr'>ocr</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/pdf'>pdf</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月4日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/go'>go</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -427,6 +413,22 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/11-python-mro/" title="11 Python Mro">11 Python Mro</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods">10 Dunder Methods</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
     </li>
     
@@ -450,22 +452,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题">Golang 导出 csv 乱码的问题</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片">转换Pdf成图片</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能">Golang 中通过gRPC调用Python实现的功能</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -487,7 +473,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (22)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (26)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -505,7 +491,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (13)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (17)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     

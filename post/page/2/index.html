@@ -75,6 +75,126 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题">Golang 导出 csv 乱码的问题</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/csv'>csv</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/encoding'>encoding</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&quot;data.csv&quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&quot;\xEF\xBB\xBF&quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&quot;col 1&quot;, &quot;col 2&quot;, &quot;col 3&quot;}) writer.Flush()……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片">转换Pdf成图片</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月11日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/ocr'>ocr</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/pdf'>pdf</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能">Golang 中通过gRPC调用Python实现的功能</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月4日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/go'>go</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月2日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker">Neovim Docker</a>
             </h1>
         </header>
@@ -236,114 +356,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/01-python-data-type/" title="01 Python Data Type">01 Python Data Type</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月23日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号'或双引号&quot;括起来的任意文本 如果字符串内部包含&rsquo;,&quot;, 可以用转义字符\来标识 转义 \ 不转义 &lsquo;&lsquo;&lsquo;text&rsquo;'', &ldquo;&ldquo;&ldquo;text&rdquo;&quot;&quot;, r'text\n&rsquo; 布尔值……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/01-python-data-type/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/02-prototype/" title="02 原型模式">02 原型模式</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            原型模式 参考文章 原型模式 package prototype_pattern type Person struct { Name string Age int } type Cloner interface { Clone() interface{} } func (s *Person) Clone() interface{} { var n Person n.Name = s.Name n.Age = s.Age return n }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/02-prototype/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/liberty'>liberty</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &lt;ssl id=&#34;defaultSSLConfig&#34; keyStoreRef=&#34;defaultKeyStore&#34; securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -424,6 +436,22 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/11-python-mro/" title="11 Python Mro">11 Python Mro</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods">10 Dunder Methods</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
     </li>
     
@@ -447,22 +475,6 @@
         <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题">Golang 导出 csv 乱码的问题</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片">转换Pdf成图片</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能">Golang 中通过gRPC调用Python实现的功能</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -484,7 +496,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (22)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (26)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -502,7 +514,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (13)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (17)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
