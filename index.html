@@ -73,6 +73,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月3日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/javascript'>javascript</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/hugo'>hugo</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/theme'>theme</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&quot;script&quot;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &quot;zIndex&quot;, -1), o: n(i, &quot;opacity&quot;, .5), c: n(i, &quot;color&quot;, &quot;0,0,0&quot;), n: n(i, &quot;count&quot;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/" title="16 Pandas Demo part 1">16 Pandas Demo part 1</a>
             </h1>
         </header>
@@ -301,35 +330,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" title="Sequelize Bulk Create to return with primary key in Postgre">Sequelize Bulk Create to return with primary key in Postgre</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月19日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/sequelize'>sequelize</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/postgresql'>postgresql</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &quot;users&quot; users 比如这是两个table……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -407,6 +407,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/" title="16 Pandas Demo part 1">16 Pandas Demo part 1</a>
     </li>
     
@@ -442,10 +446,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" title="Sequelize Bulk Create to return with primary key in Postgre">Sequelize Bulk Create to return with primary key in Postgre</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -467,7 +467,11 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (30)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -493,6 +497,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     
 </ul>
@@ -514,7 +520,11 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
+    <a href="https://jerrywang1981.github.io/tags/hugo/">hugo</a>
+    
     <a href="https://jerrywang1981.github.io/tags/it/">it</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
     
@@ -540,6 +550,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
     
+    <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
+    
     <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
     
 </div>
@@ -561,9 +573,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <footer id="footer">
     <div class="container">
         &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
-        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
-        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
-        
     </div>
 </footer>
 
