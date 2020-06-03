@@ -82,6 +82,89 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">06 Python 控制，循环</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': a = 5 if a &gt; 0: print('a &gt; 0') else: print('a &lt; 0') if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print('a &gt; 5') 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print('------------------') for i in range(10): print(i) else: # print('done') # continue the loop print('------------------') for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &quot; 小于 5&quot;) count……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">转换Pdf成图片</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月11日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/ocr'>ocr</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/pdf'>pdf</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月4日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/go'>go</a>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
             </h1>
         </header>
@@ -330,6 +413,18 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/" title="16 Pandas Demo part 1">16 Pandas Demo part 1</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/" title="15 Numpy Demo">15 Numpy Demo</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/14-anaconda/" title="14 Anaconda">14 Anaconda</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
     </li>
     
@@ -357,18 +452,6 @@
         <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" title="Sequelize Bulk Create to return with primary key in Postgre">Sequelize Bulk Create to return with primary key in Postgre</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/07-python-function/" title="07 Python 函数">07 Python 函数</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/" title="06 Python 控制，循环">06 Python 控制，循环</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -390,7 +473,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (26)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (29)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -402,13 +485,17 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (17)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (20)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
@@ -445,7 +532,11 @@
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     
+    <a href="https://jerrywang1981.github.io/tags/numpy/">numpy</a>
+    
     <a href="https://jerrywang1981.github.io/tags/ocr/">ocr</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/pandas/">pandas</a>
     
     <a href="https://jerrywang1981.github.io/tags/pdf/">pdf</a>
     

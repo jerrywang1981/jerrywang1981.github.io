@@ -82,6 +82,85 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">16 Pandas Demo part 1</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月3日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a>
+            
+        </div>
+        
+        <div class="post-content">
+            the code in jupyter notebook refer to file pandas_demo.ipynb……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">15 Numpy Demo</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月3日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/numpy'>numpy</a>
+            
+        </div>
+        
+        <div class="post-content">
+            the code in jupyter notebook the file numpy_demo.ipynb……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/14-anaconda/">14 Anaconda</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月3日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            How to install new package conda install xxx list env conda env list activate one env conda activate xx deactivate env conda deactivate ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/14-anaconda/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">13 Python Context Manager</a>
             </h1>
         </header>
@@ -256,85 +335,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/">Sequelize Bulk Create to return with primary key in Postgre</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月19日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/sequelize'>sequelize</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/postgresql'>postgresql</a>
-            
-        </div>
-        
-        <div class="post-content">
-            Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &quot;users&quot; users 比如这是两个table……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/07-python-function/">07 Python 函数</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月16日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print('a') # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f'x = {x}') print(f'y = {y}') print(f'args = {args} ') # kwargs # def add_number_1(x, y, *args, **kwargs): print(f'x = {x}') print(f'y = {y}') # f-string f'this is string, {x}' print(f'args = {args} ') print(f'kwargs = {kwargs} ') # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == '__main__': # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">06 Python 控制，循环</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月16日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': a = 5 if a &gt; 0: print('a &gt; 0') else: print('a &lt; 0') if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print('a &gt; 5') 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print('------------------') for i in range(10): print(i) else: # print('done') # continue the loop print('------------------') for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &quot; 小于 5&quot;) count……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -413,6 +413,18 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/" title="16 Pandas Demo part 1">16 Pandas Demo part 1</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/" title="15 Numpy Demo">15 Numpy Demo</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/14-anaconda/" title="14 Anaconda">14 Anaconda</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
     </li>
     
@@ -440,18 +452,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" title="Sequelize Bulk Create to return with primary key in Postgre">Sequelize Bulk Create to return with primary key in Postgre</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/07-python-function/" title="07 Python 函数">07 Python 函数</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/" title="06 Python 控制，循环">06 Python 控制，循环</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -473,7 +473,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (26)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (29)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
@@ -485,13 +485,17 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (17)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (20)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
@@ -528,7 +532,11 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     
+    <a href="https://jerrywang1981.github.io/tags/numpy/">numpy</a>
+    
     <a href="https://jerrywang1981.github.io/tags/ocr/">ocr</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/pandas/">pandas</a>
     
     <a href="https://jerrywang1981.github.io/tags/pdf/">pdf</a>
     

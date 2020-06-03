@@ -6,10 +6,37 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 31 May 2020 13:58:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 16:30:03 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>16 Pandas Demo part 1</title>
+      <link>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</link>
+      <pubDate>Wed, 03 Jun 2020 16:30:03 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</guid>
+      <description>the code in jupyter notebook refer to file pandas_demo.ipynb</description>
+    </item>
+    
+    <item>
+      <title>15 Numpy Demo</title>
+      <link>https://jerrywang1981.github.io/post/python/15-numpy-demo/</link>
+      <pubDate>Wed, 03 Jun 2020 16:28:51 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/15-numpy-demo/</guid>
+      <description>the code in jupyter notebook the file numpy_demo.ipynb</description>
+    </item>
+    
+    <item>
+      <title>14 Anaconda</title>
+      <link>https://jerrywang1981.github.io/post/python/14-anaconda/</link>
+      <pubDate>Wed, 03 Jun 2020 16:27:28 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/14-anaconda/</guid>
+      <description>How to install new package conda install xxx list env conda env list activate one env conda activate xx deactivate env conda deactivate </description>
+    </item>
     
     <item>
       <title>13 Python Context Manager</title>
