@@ -75,6 +75,64 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月9日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/matplotlib'>matplotlib</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            the code in jupyter notebook matplot_demo……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月9日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            the code in jupyter notebook pandas_demo.ipynb……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
             </h1>
         </header>
@@ -296,62 +354,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月27日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月19日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Details refer to offical document
-Virtual environment To create new virtual environment usually in folder venv
-python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt ……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -369,6 +371,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li >
         <a href="https://jerrywang1981.github.io/post/page/3/">3</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/post/page/4/">4</a>
     </li>
     
 
@@ -428,6 +434,14 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
     </li>
     
@@ -459,14 +473,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods">10 Dunder Methods</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -490,7 +496,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (30)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (32)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -500,6 +506,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">machine learning (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
@@ -508,13 +516,13 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (20)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
@@ -552,6 +560,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <a href="https://jerrywang1981.github.io/tags/life/">life</a>
     
     <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     

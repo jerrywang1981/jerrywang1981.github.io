@@ -82,6 +82,58 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月2日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">Db2 Backup Tool</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月25日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/db2'>db2</a>
+            
+        </div>
+        
+        <div class="post-content">
+            为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">05 Python Dictionary</a>
             </h1>
         </header>
@@ -279,58 +331,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/python-nest/">Python Nest</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/vim-online-video/">Vim Online Video</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/vim'>vim</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-        </div>
-        
-        <div class="post-content">
-            在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/vim-online-video/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -356,7 +356,15 @@
         <a href="https://jerrywang1981.github.io/categories/it/page/3/">3</a>
     </li>
     
+    <li >
+        <a href="https://jerrywang1981.github.io/categories/it/page/4/">4</a>
+    </li>
+    
 
+    
+    <li class="next">
+        <a href="https://jerrywang1981.github.io/categories/it/page/4/">下一页</a>
+    </li>
     
 </ol>
 
@@ -409,6 +417,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
     </li>
     
@@ -440,14 +456,6 @@
         <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods">10 Dunder Methods</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -471,7 +479,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (30)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (32)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -481,6 +489,8 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">machine learning (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
@@ -489,13 +499,13 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (20)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
@@ -533,6 +543,8 @@
     <a href="https://jerrywang1981.github.io/tags/life/">life</a>
     
     <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     

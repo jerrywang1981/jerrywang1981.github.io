@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 03 Jun 2020 21:30:06 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 09:08:07 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>18 Matplotlib Demo</title>
+      <link>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</link>
+      <pubDate>Tue, 09 Jun 2020 09:08:07 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</guid>
+      <description>the code in jupyter notebook matplot_demo</description>
+    </item>
+    
+    <item>
+      <title>17 Pandas Demo</title>
+      <link>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</link>
+      <pubDate>Tue, 09 Jun 2020 09:05:34 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</guid>
+      <description>the code in jupyter notebook pandas_demo.ipynb</description>
+    </item>
     
     <item>
       <title>Hugo Theme 背景图形鼠标跟随效果</title>

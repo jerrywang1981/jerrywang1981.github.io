@@ -82,6 +82,58 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">08 Python Virtual Environment</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月19日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Details refer to offical document
+Virtual environment To create new virtual environment usually in folder venv
+python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/07-python-function/">07 Python 函数</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print('a') # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f'x = {x}') print(f'y = {y}') print(f'args = {args} ') # kwargs # def add_number_1(x, y, *args, **kwargs): print(f'x = {x}') print(f'y = {y}') # f-string f'this is string, {x}' print(f'args = {args} ') print(f'kwargs = {kwargs} ') # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == '__main__': # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">06 Python 控制，循环</a>
             </h1>
         </header>
@@ -287,58 +339,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/01-python-data-type/">01 Python Data Type</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月23日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号'或双引号&quot;括起来的任意文本 如果字符串内部包含&rsquo;,&quot;, 可以用转义字符\来标识 转义 \ 不转义 &lsquo;&lsquo;&lsquo;text&rsquo;'', &ldquo;&ldquo;&ldquo;text&rdquo;&quot;&quot;, r'text\n&rsquo; 布尔值……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/01-python-data-type/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/python-nest/">Python Nest</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -360,7 +360,15 @@
         <a href="https://jerrywang1981.github.io/categories/python/page/2/">2</a>
     </li>
     
+    <li >
+        <a href="https://jerrywang1981.github.io/categories/python/page/3/">3</a>
+    </li>
+    
 
+    
+    <li class="next">
+        <a href="https://jerrywang1981.github.io/categories/python/page/3/">下一页</a>
+    </li>
     
 </ol>
 
@@ -413,6 +421,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
     </li>
     
@@ -444,14 +460,6 @@
         <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods">10 Dunder Methods</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -475,7 +483,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (30)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (32)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -485,6 +493,8 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">machine learning (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
@@ -493,13 +503,13 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (20)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
@@ -537,6 +547,8 @@
     <a href="https://jerrywang1981.github.io/tags/life/">life</a>
     
     <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     
