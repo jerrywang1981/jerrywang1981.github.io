@@ -6,15 +6,24 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jun 2020 09:08:07 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 08:26:03 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>angular</title>
+      <link>https://jerrywang1981.github.io/categories/angular/</link>
+      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>it</title>
       <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Tue, 09 Jun 2020 09:08:07 +0800</pubDate>
+      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/it/</guid>
       <description></description>
@@ -116,15 +125,6 @@
       <pubDate>Tue, 19 May 2020 20:00:37 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/sequelize/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>angular</title>
-      <link>https://jerrywang1981.github.io/categories/angular/</link>
-      <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/angular/</guid>
       <description></description>
     </item>
     

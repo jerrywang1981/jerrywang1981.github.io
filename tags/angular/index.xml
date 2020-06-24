@@ -6,10 +6,19 @@
     <description>Recent content in angular on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 14 May 2020 21:20:50 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 08:26:03 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multiple Line in Mat Tooltip</title>
+      <link>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</link>
+      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</guid>
+      <description>angular material matTooltip 如果想多行显示，可以把tooltip的内容用空格分开，同时样式 ::ng-deep .mat-tooltip { white-space: pre-line !important; }</description>
+    </item>
     
     <item>
       <title>Angular Javascript Heap Out of Memory</title>

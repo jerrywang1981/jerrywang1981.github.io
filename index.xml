@@ -6,10 +6,19 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jun 2020 09:08:07 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 08:26:03 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multiple Line in Mat Tooltip</title>
+      <link>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</link>
+      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</guid>
+      <description>angular material matTooltip 如果想多行显示，可以把tooltip的内容用空格分开，同时样式 ::ng-deep .mat-tooltip { white-space: pre-line !important; }</description>
+    </item>
     
     <item>
       <title>18 Matplotlib Demo</title>
@@ -103,10 +112,10 @@
     
     <item>
       <title>Darknet Too Many or Too Few Labels</title>
-      <link>https://jerrywang1981.github.io/content/post/ml/darknet-too-many-or-too-few-labels/</link>
+      <link>https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/</link>
       <pubDate>Wed, 27 May 2020 10:27:04 +0800</pubDate>
       
-      <guid>https://jerrywang1981.github.io/content/post/ml/darknet-too-many-or-too-few-labels/</guid>
+      <guid>https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/</guid>
       <description>Too many or too few labels 如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题 label之间要不包含 label 名字不要出现在train/test的路径中 所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。</description>
     </item>
     
