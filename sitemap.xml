@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/it/</loc>
+    <loc>https://jerrywang1981.github.io/tags/it/</loc>
     <lastmod>2020-06-24T08:26:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/it/</loc>
+    <loc>https://jerrywang1981.github.io/categories/it/</loc>
     <lastmod>2020-06-24T08:26:03+08:00</lastmod>
   </url>
   
@@ -63,12 +63,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/python/</loc>
+    <loc>https://jerrywang1981.github.io/categories/python/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/python/</loc>
+    <loc>https://jerrywang1981.github.io/tags/python/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
   </url>
   
@@ -78,22 +78,22 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/pandas/</loc>
-    <lastmod>2020-06-09T09:05:34+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jerrywang1981.github.io/tags/pandas/</loc>
     <lastmod>2020-06-09T09:05:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/hugo/</loc>
-    <lastmod>2020-06-03T21:30:06+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/categories/pandas/</loc>
+    <lastmod>2020-06-09T09:05:34+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/tags/hugo/</loc>
+    <lastmod>2020-06-03T21:30:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/categories/hugo/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
   </url>
   
@@ -173,12 +173,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/machine-learning/</loc>
+    <loc>https://jerrywang1981.github.io/tags/machine-learning/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/machine-learning/</loc>
+    <loc>https://jerrywang1981.github.io/categories/machine-learning/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
   </url>
   
@@ -193,12 +193,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/node/</loc>
+    <loc>https://jerrywang1981.github.io/categories/node/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/node/</loc>
+    <loc>https://jerrywang1981.github.io/tags/node/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
   </url>
   
@@ -243,17 +243,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/csv/</loc>
-    <lastmod>2020-05-12T22:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jerrywang1981.github.io/tags/csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/encoding/</loc>
+    <loc>https://jerrywang1981.github.io/categories/csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
@@ -263,7 +258,7 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/golang/</loc>
+    <loc>https://jerrywang1981.github.io/categories/encoding/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
@@ -273,13 +268,13 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/post/go/golang-export-csv/</loc>
+    <loc>https://jerrywang1981.github.io/tags/golang/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/ocr/</loc>
-    <lastmod>2020-05-11T21:51:52+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/post/go/golang-export-csv/</loc>
+    <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
   <url>
@@ -288,7 +283,7 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/pdf/</loc>
+    <loc>https://jerrywang1981.github.io/categories/ocr/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
   </url>
   
@@ -298,17 +293,22 @@
   </url>
   
   <url>
+    <loc>https://jerrywang1981.github.io/categories/pdf/</loc>
+    <lastmod>2020-05-11T21:51:52+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/go/</loc>
+    <loc>https://jerrywang1981.github.io/tags/go/</loc>
     <lastmod>2020-05-04T00:11:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/go/</loc>
+    <loc>https://jerrywang1981.github.io/categories/go/</loc>
     <lastmod>2020-05-04T00:11:12+08:00</lastmod>
   </url>
   
