@@ -6,10 +6,46 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 24 Jun 2020 08:26:03 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 08:25:59 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>go</title>
+      <link>https://jerrywang1981.github.io/categories/go/</link>
+      <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gorm</title>
+      <link>https://jerrywang1981.github.io/categories/gorm/</link>
+      <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/gorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/categories/it/</link>
+      <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgres</title>
+      <link>https://jerrywang1981.github.io/categories/postgres/</link>
+      <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/postgres/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>angular</title>
@@ -17,15 +53,6 @@
       <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/angular/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/it/</guid>
       <description></description>
     </item>
     
@@ -170,15 +197,6 @@
       <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/pdf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://jerrywang1981.github.io/categories/go/</link>
-      <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/go/</guid>
       <description></description>
     </item>
     

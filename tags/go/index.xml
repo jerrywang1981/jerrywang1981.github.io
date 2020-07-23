@@ -6,10 +6,19 @@
     <description>Recent content in go on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 04 May 2020 00:11:12 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 08:25:59 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Gorm 操作数据库</title>
+      <link>https://jerrywang1981.github.io/post/go/go-gorm/</link>
+      <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/go-gorm/</guid>
+      <description>Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙</description>
+    </item>
     
     <item>
       <title>Golang 中通过gRPC调用Python实现的功能</title>
