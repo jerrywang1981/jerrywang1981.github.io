@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/docker/</link>
+    <description>Recent content in docker on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 24 Jul 2020 08:33:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Download From Private Repo in Docker</title>
+      <link>https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/</link>
+      <pubDate>Fri, 24 Jul 2020 08:33:43 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/</guid>
+      <description>问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke</description>
+    </item>
+    
+  </channel>
+</rss>
