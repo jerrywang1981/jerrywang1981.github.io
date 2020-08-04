@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Angular Javascript Heap Out of Memory | 村边的池塘</title>
-    <meta property="og:title" content="Angular Javascript Heap Out of Memory - 村边的池塘">
+    <title>Multiple Angular Material Table Sort | 村边的池塘</title>
+    <meta property="og:title" content="Multiple Angular Material Table Sort - 村边的池塘">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-05-14T21:20:50&#43;08:00'>
+    <meta property="article:published_time" content='2020-08-04T15:44:13&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-05-14T21:20:50&#43;08:00'>
+    <meta property="article:modified_time" content='2020-08-04T15:44:13&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="Angular Javascript Heap Out of Memory">
+    <meta name="description" content="Multiple Angular Material Table Sort">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -76,18 +76,16 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Angular Javascript Heap Out of Memory</h1>
+            <h1 class="post-title">Multiple Angular Material Table Sort</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月14日
+            2020年8月4日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
             <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
             
             <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
             
@@ -96,11 +94,13 @@
         
         
         <div class="post-content">
-            <p>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改</p>
-<pre><code>node_modules/.bin/ng
-</code></pre><p>加上 <code>--max_old_space_size</code></p>
-<pre><code>#!/usr/bin/env node --max_old_space_size=4096
-'use strict';
+            <h2 id="问题">问题</h2>
+<p>在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild</p>
+<h2 id="方案">方案</h2>
+<p>使用ViewChild的时候，需要使用id</p>
+<pre><code>@ViewChild('sort1') sort1: MatSort;
+</code></pre><p>在页面中，需要</p>
+<pre><code>    &lt;mat-table #table [dataSource]=&quot;dataSource&quot; #sort1=&quot;matSort&quot; matSort&gt;
 </code></pre>
         </div>
 
@@ -113,15 +113,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/python/python-nest/">Python Nest</a></li>
+        <li><a href="/post/angular/angular-material-table-paginator-ngif/">Angular Material Table Paginator ngIf</a></li>
         
-        <li><a href="/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a></li>
+        <li><a href="/post/angular/multiple-line-in-mat-tooltip/">Multiple Line in Mat Tooltip</a></li>
         
-        <li><a href="/post/go/convert-pdf-to-images/">转换Pdf成图片</a></li>
+        <li><a href="/post/node/angular-javascript-heap-out-of-memory/">Angular Javascript Heap Out of Memory</a></li>
         
-        <li><a href="/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a></li>
+        <li><a href="/post/go/go-download-from-private-repo-in-docker/">Go Download From Private Repo in Docker</a></li>
         
-        <li><a href="/post/python/class-object-method/">Class Object Method</a></li>
+        <li><a href="/post/go/go-gorm/">Go Gorm 操作数据库</a></li>
         
     </ul>
 </div>
@@ -132,8 +132,6 @@
             <ul class="clearfix">
                 
                 <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
-                
-                <li><a href='https://jerrywang1981.github.io/tags/node'>node</a></li>
                 
                 <li><a href='https://jerrywang1981.github.io/tags/angular'>angular</a></li>
                 

@@ -73,6 +73,56 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/14-anaconda/" title="14 Anaconda">14 Anaconda</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月3日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            How to install new package conda install xxx list env conda env list activate one env conda activate xx deactivate env conda deactivate ……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/14-anaconda/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            python context manager use contextlib/yield @contextmanager def send_mail_context(): '''context manager with send_mail_context() ''' try: # 1 doing work BEFORE the code goes into with block print('before yield') server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print('in finally') use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): ''' 1. override __enter__ __exit__ 2. in __enter__, return value ''' def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print('in enter') self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print('in exit') self.smtp_server.quit() ……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
             </h1>
         </header>
@@ -276,58 +326,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/" title="06 Python 控制，循环">06 Python 控制，循环</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月16日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': a = 5 if a &gt; 0: print('a &gt; 0') else: print('a &lt; 0') if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print('a &gt; 5') 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print('------------------') for i in range(10): print(i) else: # print('done') # continue the loop print('------------------') for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &quot; 小于 5&quot;) count……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月14日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 'use strict';……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -413,6 +411,14 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/" title="Multiple Angular Material Table Sort">Multiple Angular Material Table Sort</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf">Angular Material Table Paginator ngIf</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
     </li>
     
@@ -444,14 +450,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/" title="15 Numpy Demo">15 Numpy Demo</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/14-anaconda/" title="14 Anaconda">14 Anaconda</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -461,7 +459,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://jerrywang1981.github.io/categories/angular/">angular (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/angular/">angular (4)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/csv/">csv (1)</a></li>
     
@@ -479,7 +477,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (35)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (37)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     

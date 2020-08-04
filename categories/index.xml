@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 24 Jul 2020 08:33:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>angular</title>
+      <link>https://jerrywang1981.github.io/categories/angular/</link>
+      <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/categories/it/</link>
+      <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
@@ -26,15 +44,6 @@
       <pubDate>Fri, 24 Jul 2020 08:33:43 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Fri, 24 Jul 2020 08:33:43 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/it/</guid>
       <description></description>
     </item>
     
@@ -62,15 +71,6 @@
       <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/postgres/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>angular</title>
-      <link>https://jerrywang1981.github.io/categories/angular/</link>
-      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/angular/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,28 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 24 Jul 2020 08:33:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multiple Angular Material Table Sort</title>
+      <link>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</link>
+      <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</guid>
+      <description>问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&#39;sort1&#39;) sort1: MatSort; 在页面中，需要 &amp;lt;mat-table #table [dataSource]=&amp;quot;dataSource&amp;quot; #sort1=&amp;quot;matSort&amp;quot; matSort&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular Material Table Paginator ngIf</title>
+      <link>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</link>
+      <pubDate>Tue, 04 Aug 2020 15:26:25 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</guid>
+      <description>问题 一般来说，按angular material的官方文档, 在afterViewInit里面 可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的 @ViewChild(MatPaginator) paginator: MatPaginator; 可能就不好用了。因为还没有渲染，对应</description>
+    </item>
     
     <item>
       <title>Go Download From Private Repo in Docker</title>
