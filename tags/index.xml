@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 18:41:04 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/tags/it/</link>
+      <pubDate>Sat, 15 Aug 2020 18:41:04 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sdk</title>
+      <link>https://jerrywang1981.github.io/tags/sdk/</link>
+      <pubDate>Sat, 15 Aug 2020 18:41:04 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/sdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>watson</title>
+      <link>https://jerrywang1981.github.io/tags/watson/</link>
+      <pubDate>Sat, 15 Aug 2020 18:41:04 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/watson/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>angular</title>
@@ -17,15 +44,6 @@
       <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/tags/angular/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/tags/it/</link>
-      <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/it/</guid>
       <description></description>
     </item>
     

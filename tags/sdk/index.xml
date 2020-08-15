@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sdk on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/sdk/</link>
+    <description>Recent content in sdk on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 15 Aug 2020 18:41:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Watson Assistant Easy Tool</title>
+      <link>https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/</link>
+      <pubDate>Sat, 15 Aug 2020 18:41:04 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/</guid>
+      <description>Watson assistant 根据官方文档，已经提供了sdk, 自己的这个package只是使用 官方的sdk基础上，做了小小的封闭。代码托管在github上 watson 目前只有一个assitant package,提供方法来开始一个session并且发送message从而得到结果。 使用方法也比较简单，NewSessio</description>
+    </item>
+    
+  </channel>
+</rss>
