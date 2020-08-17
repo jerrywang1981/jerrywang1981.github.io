@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Aug 2020 18:41:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2020 20:53:08 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang Panic 的时候通过defer更新返回值</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/</link>
+      <pubDate>Mon, 17 Aug 2020 20:53:08 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/</guid>
+      <description>在panic的函数中更新返回值 在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出 有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。 func test() (r int) { defer func() { if</description>
+    </item>
     
     <item>
       <title>Watson Assistant Easy Tool</title>

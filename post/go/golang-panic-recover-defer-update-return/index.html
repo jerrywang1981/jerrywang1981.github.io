@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>machine learning | 村边的池塘</title>
-    <meta property="og:title" content="machine learning - 村边的池塘">
+    <title>Golang Panic 的时候通过defer更新返回值 | 村边的池塘</title>
+    <meta property="og:title" content="Golang Panic 的时候通过defer更新返回值 - 村边的池塘">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2020-08-17T20:53:08&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-08-17T20:53:08&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="machine learning">
+    <meta name="description" content="Golang Panic 的时候通过defer更新返回值">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/categories/machine-learning/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://jerrywang1981.github.io/categories/machine-learning/index.xml" title="村边的池塘" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -49,7 +52,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -71,46 +74,84 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        分类
-        <span class="keyword">machine learning</span>
-        中的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
-            </h1>
+            <h1 class="post-title">Golang Panic 的时候通过defer更新返回值</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月27日
+            2020年8月17日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
             
-            <a href='https://jerrywang1981.github.io/categories/machine-learning'>machine learning</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
             
         </div>
         
+        
+        
         <div class="post-content">
-            Too many or too few labels 如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题 label之间要不包含 label 名字不要出现在train/test的路径中 所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">阅读全文</a></p>
+            <h2 id="在panic的函数中更新返回值">在panic的函数中更新返回值</h2>
+<p>在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出
+有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。</p>
+<pre><code>func test() (r int) {
+  defer func() {
+		if err := recover(); err != nil {
+			log.Println(&quot;Error:&quot;, err)
+      r = -1
+		}
+  }()
+  panic(&quot;error&quot;)
+  return 1;
+}
+</code></pre><p>比如这个代码，肯定会有个panic,当然如果没有那行panic代码的话，全部正确处理，应该是返回1， 但是有了panic后，在返回之前
+会通过recover来得到这个panic, 最后更新返回值变量r为-1，从而在即使这个函数有了panic也会返回一个-1给调用者。</p>
+
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/go/go-download-from-private-repo-in-docker/">Go Download From Private Repo in Docker</a></li>
+        
+        <li><a href="/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a></li>
+        
+        <li><a href="/post/go/convert-pdf-to-images/">转换Pdf成图片</a></li>
+        
+        <li><a href="/post/go/db2-backup-tool/">Db2 Backup Tool</a></li>
+        
+        <li><a href="/post/go/02-prototype/">02 原型模式</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/golang'>golang</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-
     
 
-
-
-
-
+    
+    
 </div>
 
                 </div>
@@ -351,6 +392,17 @@
     </div>
 </footer>
 
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>
