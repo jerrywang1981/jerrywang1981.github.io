@@ -73,6 +73,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月9日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            the code in jupyter notebook pandas_demo.ipynb……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/" title="Hugo Theme 背景图形鼠标跟随效果">Hugo Theme 背景图形鼠标跟随效果</a>
             </h1>
         </header>
@@ -303,31 +330,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月27日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -417,6 +419,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
     </li>
     
@@ -452,10 +458,6 @@
         <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -483,7 +485,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (40)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (41)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     

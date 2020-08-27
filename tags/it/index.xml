@@ -6,10 +6,19 @@
     <description>Recent content in it on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 18 Aug 2020 09:09:46 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 21:27:22 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Port Forwarding - Mac</title>
+      <link>https://jerrywang1981.github.io/post/other/port-forwarding/</link>
+      <pubDate>Thu, 27 Aug 2020 21:27:22 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/other/port-forwarding/</guid>
+      <description>Mac下端口转发 有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口 ###设置转发 echo &amp;quot;rdr pass inet proto tcp from any to any port 443 -&amp;gt; 127.0.0.1 port 9443&amp;quot; | sudo pfctl -ef - 取消转发 sudo pfctl -s nat sudo pfctl -F all -f /etc/pf.conf</description>
+    </item>
     
     <item>
       <title>Golang 中的零值</title>

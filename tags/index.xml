@@ -6,10 +6,19 @@
     <description>Recent content in Tags on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 18 Aug 2020 09:09:46 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 21:27:22 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/tags/it/</link>
+      <pubDate>Thu, 27 Aug 2020 21:27:22 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/tags/it/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>golang</title>
@@ -17,15 +26,6 @@
       <pubDate>Tue, 18 Aug 2020 09:09:46 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/tags/it/</link>
-      <pubDate>Tue, 18 Aug 2020 09:09:46 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/tags/it/</guid>
       <description></description>
     </item>
     

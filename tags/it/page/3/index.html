@@ -82,6 +82,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">09 Python Decorators</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">08 Python Virtual Environment</a>
             </h1>
         </header>
@@ -324,33 +349,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">Db2 Backup Tool</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月25日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/db2'>db2</a>
-            
-        </div>
-        
-        <div class="post-content">
-            为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -378,6 +376,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li >
         <a href="https://jerrywang1981.github.io/tags/it/page/4/">4</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/tags/it/page/5/">5</a>
     </li>
     
 
@@ -437,6 +439,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
     </li>
     
@@ -472,10 +478,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -503,7 +505,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (40)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (41)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     

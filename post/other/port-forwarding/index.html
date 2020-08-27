@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Darknet Too Many or Too Few Labels | 村边的池塘</title>
-    <meta property="og:title" content="Darknet Too Many or Too Few Labels - 村边的池塘">
+    <title>Port Forwarding - Mac | 村边的池塘</title>
+    <meta property="og:title" content="Port Forwarding - Mac - 村边的池塘">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-05-27T10:27:04&#43;08:00'>
+    <meta property="article:published_time" content='2020-08-27T21:27:22&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-05-27T10:27:04&#43;08:00'>
+    <meta property="article:modified_time" content='2020-08-27T21:27:22&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="Darknet Too Many or Too Few Labels">
+    <meta name="description" content="Port Forwarding - Mac">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/other/port-forwarding/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -76,10 +76,10 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Darknet Too Many or Too Few Labels</h1>
+            <h1 class="post-title">Port Forwarding - Mac</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月27日
+            2020年8月27日
         </date>
         
         <div class="post-meta">
@@ -87,21 +87,19 @@
             
             <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
             
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/machine-learning'>machine learning</a></span>
-            
         </div>
         
         
         
         <div class="post-content">
-            <h2 id="too-many-or-too-few-labels">Too many or too few labels</h2>
-<p>如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题</p>
-<ul>
-<li>label之间要不包含</li>
-<li>label 名字不要出现在train/test的路径中</li>
-</ul>
-<p>所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。</p>
-
+            <h2 id="mac下端口转发">Mac下端口转发</h2>
+<p>有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口</p>
+<p>###设置转发</p>
+<pre><code>echo &quot;rdr pass inet proto tcp from any to any port 443 -&gt; 127.0.0.1 port 9443&quot; | sudo pfctl -ef -
+</code></pre><h3 id="取消转发">取消转发</h3>
+<pre><code>sudo pfctl -s nat
+sudo pfctl -F all -f /etc/pf.conf
+</code></pre>
         </div>
 
         
@@ -113,15 +111,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/python/09-python-decorators/">09 Python Decorators</a></li>
+        <li><a href="/post/go/zero-value-in-golang/">Golang 中的零值</a></li>
         
-        <li><a href="/post/python/08-python-virtual-environment/">08 Python Virtual Environment</a></li>
+        <li><a href="/post/go/golang-panic-recover-defer-update-return/">Golang Panic 的时候通过defer更新返回值</a></li>
         
-        <li><a href="/post/node/sequelize-bulk-create-postgre/">Sequelize Bulk Create to return with primary key in Postgre</a></li>
+        <li><a href="/post/go/watson-assistant-easy-tool/">Watson Assistant Easy Tool</a></li>
         
-        <li><a href="/post/python/07-python-function/">07 Python 函数</a></li>
+        <li><a href="/post/angular/multiple-angular-material-table-sort/">Multiple Angular Material Table Sort</a></li>
         
-        <li><a href="/post/python/06-condition-loop/">06 Python 控制，循环</a></li>
+        <li><a href="/post/angular/angular-material-table-paginator-ngif/">Angular Material Table Paginator ngIf</a></li>
         
     </ul>
 </div>
@@ -132,8 +130,6 @@
             <ul class="clearfix">
                 
                 <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
-                
-                <li><a href='https://jerrywang1981.github.io/tags/machine-learning'>machine learning</a></li>
                 
             </ul>
             
