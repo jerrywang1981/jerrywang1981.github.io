@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sso on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/sso/</link>
+    <description>Recent content in sso on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 27 Aug 2020 22:05:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/sso/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure AD SAML SSO with Node Application</title>
+      <link>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</link>
+      <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</guid>
+      <description>Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现 entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &#39;cobeedev&#39;, // basic saml configuration -&amp;gt; Identifier (Entity ID) cert: &#39;&#39;, // refer later signatureAlgorithm: &#39;sha256&#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,17 +6,44 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 27 Aug 2020 21:27:22 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 22:05:59 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>azure</title>
+      <link>https://jerrywang1981.github.io/categories/azure/</link>
+      <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>it</title>
       <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Thu, 27 Aug 2020 21:27:22 +0800</pubDate>
+      <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>saml</title>
+      <link>https://jerrywang1981.github.io/categories/saml/</link>
+      <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/saml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sso</title>
+      <link>https://jerrywang1981.github.io/categories/sso/</link>
+      <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/sso/</guid>
       <description></description>
     </item>
     

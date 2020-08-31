@@ -82,6 +82,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/machine-learning'>machine learning</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Too many or too few labels 如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题 label之间要不包含 label 名字不要出现在train/test的路径中 所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">09 Python Decorators</a>
             </h1>
         </header>
@@ -324,31 +349,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月2日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -439,6 +439,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
     </li>
     
@@ -474,10 +478,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip">Multiple Line in Mat Tooltip</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -488,6 +488,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li><a href="https://jerrywang1981.github.io/categories/angular/">angular (4)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/azure/">azure (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/csv/">csv (1)</a></li>
     
@@ -505,7 +507,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (41)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (42)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -535,9 +537,13 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/sdk/">sdk (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
@@ -553,6 +559,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <div class="tagcloud">
     
     <a href="https://jerrywang1981.github.io/tags/angular/">angular</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/azure/">azure</a>
     
     <a href="https://jerrywang1981.github.io/tags/csv/">csv</a>
     
@@ -600,9 +608,13 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <a href="https://jerrywang1981.github.io/tags/python/">python</a>
     
+    <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
+    
     <a href="https://jerrywang1981.github.io/tags/sdk/">sdk</a>
     
     <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/sso/">sso</a>
     
     <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
     
