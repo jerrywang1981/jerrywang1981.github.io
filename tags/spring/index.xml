@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/spring/</link>
+    <description>Recent content in spring on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 10 Sep 2020 07:52:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vue File Download From Spring Boot</title>
+      <link>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</link>
+      <pubDate>Thu, 10 Sep 2020 07:52:49 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</guid>
+      <description>File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&amp;gt; { // response is Blob &amp;lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&#39;a&#39;) a.style.display = &#39;none&#39; a.href = url a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot File Download</title>
+      <link>https://jerrywang1981.github.io/post/java/spring-boot-file-download/</link>
+      <pubDate>Thu, 10 Sep 2020 07:52:13 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/java/spring-boot-file-download/</guid>
+      <description>spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&amp;quot;/api&amp;quot;) public class ReportController { @GetMapping(value = &amp;quot;/filedownload&amp;quot;) public ResponseEntity&amp;lt;InputStreamResource&amp;gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &amp;quot;attachment; filename=file.xlsx&amp;quot;) .body(new InputStreamResource(stream)); } }</description>
+    </item>
+    
+  </channel>
+</rss>

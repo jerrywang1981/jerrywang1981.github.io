@@ -82,6 +82,56 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/">11 Python Mro</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print('class A says hello') class B(A): pass class C(A): # class variable BP_URL = 'https://xxxxx' def __init__(self): self.name = 'ok' @staticmethod def print_hello(name, age): ''' staticmethod cannot access any class or self variabel/method ''' pass @classmethod def say(cls): '''class method can access class level variable/method ''' print(cls.BP_URL) def hello(self): print('class C says hello') class D(C, B): pass if __name__ == '__main__': d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">10 Dunder Methods</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): ''' a == b ''' return super().__eq__(value) def __ge__(self, value): ''' a &gt;= b ''' return super().__ge__(value) def __gt__(self, value): ''' a &gt; b ''' return super().__gt__(value) def __le__(self, value): ''' a &lt; b ''' return super().__le__(value) def __ne__(self, value): ''' a != b ''' return super().__ne__(value) def __str__(self): '''print(a) ''' return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): ''' len(a) ''' return self.number * 10 def __lt__(self, other): '''less than a &lt; b ''' return self.number &lt; other.number def __getattribute__(self, name): ''' print(a[the_key]) ''' return super().__getattribute__(name) def __setattr__(self, name, value): ''' a[the_key] = 5 ''' return super().__setattr__(name, value) def __delattr__(self, name): ''' delete a['the_key'] ''' return super().__delattr__(name) if __name__ == '__main__': ''' ''' # a = A(5) # b = A(6) # print(a &lt; b) # print(len(a)) # a['b'] = 10 # c = a['c'] pass ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
             </h1>
         </header>
@@ -291,64 +341,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">转换Pdf成图片</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月11日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/ocr'>ocr</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/pdf'>pdf</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月4日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/go'>go</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -439,6 +431,14 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot">Vue File Download From Spring Boot</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
     </li>
     
@@ -470,14 +470,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/go-gorm/" title="Go Gorm 操作数据库">Go Gorm 操作数据库</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip">Multiple Line in Mat Tooltip</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -507,7 +499,9 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (42)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (44)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -543,11 +537,15 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (2)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
@@ -579,6 +577,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <a href="https://jerrywang1981.github.io/tags/hugo/">hugo</a>
     
     <a href="https://jerrywang1981.github.io/tags/it/">it</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
     
@@ -614,11 +614,15 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
     
+    <a href="https://jerrywang1981.github.io/tags/spring/">spring</a>
+    
     <a href="https://jerrywang1981.github.io/tags/sso/">sso</a>
     
     <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
     
     <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
     
     <a href="https://jerrywang1981.github.io/tags/watson/">watson</a>
     

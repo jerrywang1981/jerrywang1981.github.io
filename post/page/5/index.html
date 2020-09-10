@@ -75,6 +75,60 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/02-prototype/" title="02 原型模式">02 原型模式</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            原型模式 参考文章 原型模式 package prototype_pattern type Person struct { Name string Age int } type Cloner interface { Clone() interface{} } func (s *Person) Clone() interface{} { var n Person n.Name = s.Name n.Age = s.Age return n }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/02-prototype/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
             </h1>
         </header>
@@ -239,6 +293,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot">Vue File Download From Spring Boot</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
     </li>
     
@@ -270,14 +332,6 @@
         <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/go-gorm/" title="Go Gorm 操作数据库">Go Gorm 操作数据库</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip">Multiple Line in Mat Tooltip</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -307,7 +361,9 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (42)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (44)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -343,11 +399,15 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (2)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
@@ -379,6 +439,8 @@
     <a href="https://jerrywang1981.github.io/tags/hugo/">hugo</a>
     
     <a href="https://jerrywang1981.github.io/tags/it/">it</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
     
@@ -414,11 +476,15 @@
     
     <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
     
+    <a href="https://jerrywang1981.github.io/tags/spring/">spring</a>
+    
     <a href="https://jerrywang1981.github.io/tags/sso/">sso</a>
     
     <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
     
     <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
     
     <a href="https://jerrywang1981.github.io/tags/watson/">watson</a>
     
