@@ -6,10 +6,19 @@
     <description>Recent content in postgres on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 23 Jul 2020 08:25:59 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 15:14:50 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/postgres/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Postgres 备份与恢复</title>
+      <link>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</link>
+      <pubDate>Fri, 11 Sep 2020 15:14:50 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</guid>
+      <description>背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &amp;ndash;schema-only 只备份schema. pg_dump --file &amp;quot;/root/repo/uat-copy.tar&amp;quot; --host &amp;quot;db host name&amp;quot; --port &amp;quot;23123&amp;quot; --username &amp;quot;admin&amp;quot; --password --verbose --format=t --blobs --schema-only &amp;quot;compose&amp;quot; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &amp;quot;hostname here&amp;quot; --port &amp;quot;31090&amp;quot; --username &amp;quot;usernamehere&amp;quot; --password --dbname &amp;quot;ibmclouddb&amp;quot; --verbose &amp;quot;/root/repo/uat-copy.tar&amp;quot; 不管备份还是恢复，都会要求输入密</description>
+    </item>
     
     <item>
       <title>Go Gorm 操作数据库</title>

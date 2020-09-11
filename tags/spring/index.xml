@@ -6,10 +6,19 @@
     <description>Recent content in spring on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2020 07:52:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 15:55:30 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>添加第三方jar到Spring Boot application</title>
+      <link>https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/</link>
+      <pubDate>Fri, 11 Sep 2020 15:55:30 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/</guid>
+      <description>背景 有时候需要添加第三方的jar包到spring boot工程中，因为不能从maven repository直接下载，所以需要包含在代码库中。 一般需要在 src/main 目录下，可以建个新目录 lib, 然后把jar文件放到这个目录下，也就是 src/main/lib下. 然后在pom.xml中需要添加 group</description>
+    </item>
     
     <item>
       <title>Vue File Download From Spring Boot</title>

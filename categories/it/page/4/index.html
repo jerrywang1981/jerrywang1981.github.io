@@ -82,6 +82,58 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">06 Python 控制，循环</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': a = 5 if a &gt; 0: print('a &gt; 0') else: print('a &lt; 0') if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print('a &gt; 5') 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == '__main__': # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print('------------------') for i in range(10): print(i) else: # print('done') # continue the loop print('------------------') for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &quot; 小于 5&quot;) count……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">Angular Javascript Heap Out of Memory</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月14日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/angular'>angular</a>
+            
+        </div>
+        
+        <div class="post-content">
+            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 'use strict';……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a>
             </h1>
         </header>
@@ -293,56 +345,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/02-python-variable/">02 Python Variable</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月23日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            变量 命名 变量名必须是大小写英文、数字和_的组合，且不能用数字开头 允许的变量名：a, a1, B_5, ____5, _C 静态语言，动态语言 大小写敏感 Dunder 规范 snake_case e.g. a_b, total_count 变量 函数名 模块 包 CamelCase e.g. Person, TeamMember 类名 常量 一般用大写, PI=3.14……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/02-python-variable/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/01-python-data-type/">01 Python Data Type</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月23日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号'或双引号&quot;括起来的任意文本 如果字符串内部包含&rsquo;,&quot;, 可以用转义字符\来标识 转义 \ 不转义 &lsquo;&lsquo;&lsquo;text&rsquo;'', &ldquo;&ldquo;&ldquo;text&rdquo;&quot;&quot;, r'text\n&rsquo; 布尔值……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/01-python-data-type/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -433,6 +435,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/" title="添加第三方jar到Spring Boot application">添加第三方jar到Spring Boot application</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/" title="Postgres 备份与恢复">Postgres 备份与恢复</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
     </li>
     
@@ -464,14 +474,6 @@
         <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/" title="Multiple Angular Material Table Sort">Multiple Angular Material Table Sort</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf">Angular Material Table Paginator ngIf</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -501,9 +503,9 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (45)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (47)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
@@ -517,6 +519,8 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
+    
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
@@ -529,7 +533,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/postgres/">postgres (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/postgres/">postgres (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
@@ -541,7 +545,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/ssh/">ssh (1)</a></li>
     
@@ -597,6 +601,8 @@
     <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
     
     <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     

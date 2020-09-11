@@ -6,10 +6,28 @@
     <description>Recent content in it on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2020 10:38:33 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 15:55:30 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/tags/it/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>添加第三方jar到Spring Boot application</title>
+      <link>https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/</link>
+      <pubDate>Fri, 11 Sep 2020 15:55:30 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/</guid>
+      <description>背景 有时候需要添加第三方的jar包到spring boot工程中，因为不能从maven repository直接下载，所以需要包含在代码库中。 一般需要在 src/main 目录下，可以建个新目录 lib, 然后把jar文件放到这个目录下，也就是 src/main/lib下. 然后在pom.xml中需要添加 group</description>
+    </item>
+    
+    <item>
+      <title>Postgres 备份与恢复</title>
+      <link>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</link>
+      <pubDate>Fri, 11 Sep 2020 15:14:50 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</guid>
+      <description>背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &amp;ndash;schema-only 只备份schema. pg_dump --file &amp;quot;/root/repo/uat-copy.tar&amp;quot; --host &amp;quot;db host name&amp;quot; --port &amp;quot;23123&amp;quot; --username &amp;quot;admin&amp;quot; --password --verbose --format=t --blobs --schema-only &amp;quot;compose&amp;quot; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &amp;quot;hostname here&amp;quot; --port &amp;quot;31090&amp;quot; --username &amp;quot;usernamehere&amp;quot; --password --dbname &amp;quot;ibmclouddb&amp;quot; --verbose &amp;quot;/root/repo/uat-copy.tar&amp;quot; 不管备份还是恢复，都会要求输入密</description>
+    </item>
     
     <item>
       <title>Auto Login Server Without Password</title>
