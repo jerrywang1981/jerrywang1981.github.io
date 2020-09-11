@@ -75,6 +75,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = ['your smtp servers'] def _format_addr(s): ''' format the address ''' name, addr = parseaddr(s) return formataddr((Header(name, 'utf-8').encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type='plain'): '''plain/text text/html ''' msg = MIMEText(body, mime_type, 'utf-8') msg['From'] = _format_addr(from_addr) msg['To'] = &quot;,&quot;.join([_format_addr(x) for x in to_addr]) msg['Cc'] = &quot;,&quot;.join([_format_addr(x) for x in cc_addr]) msg['Subject'] = Header(subject, 'utf-8').encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type='plain'): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): '''context manager with send_mail_context() ''' try: # 1 doing work BEFORE the code goes into with block print('before yield') server = smtplib.……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/11-python-mro/" title="11 Python Mro">11 Python Mro</a>
             </h1>
         </header>
@@ -323,37 +350,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题">Golang 导出 csv 乱码的问题</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/csv'>csv</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/encoding'>encoding</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&quot;data.csv&quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&quot;\xEF\xBB\xBF&quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&quot;col 1&quot;, &quot;col 2&quot;, &quot;col 3&quot;}) writer.Flush()……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -442,6 +438,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot">Vue File Download From Spring Boot</a>
     </li>
     
@@ -477,10 +477,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf">Angular Material Table Paginator ngIf</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -510,7 +506,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (44)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (45)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (1)</a></li>
     
@@ -519,6 +515,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/linux/">linux (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">machine learning (1)</a></li>
     
@@ -549,6 +547,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (2)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/ssh/">ssh (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
@@ -597,6 +597,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <a href="https://jerrywang1981.github.io/tags/life/">life</a>
     
+    <a href="https://jerrywang1981.github.io/tags/linux/">linux</a>
+    
     <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
     
     <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
@@ -626,6 +628,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
     
     <a href="https://jerrywang1981.github.io/tags/spring/">spring</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/ssh/">ssh</a>
     
     <a href="https://jerrywang1981.github.io/tags/sso/">sso</a>
     

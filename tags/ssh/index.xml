@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/ssh/</link>
+    <description>Recent content in ssh on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 11 Sep 2020 10:38:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://jerrywang1981.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Auto Login Server Without Password</title>
+      <link>https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/</link>
+      <pubDate>Fri, 11 Sep 2020 10:38:33 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/</guid>
+      <description>配置方法，做个小记录 server 上要配置允许 用户电脑 在 .ssh/config 文件中 Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_rsa Host xxx HostName xx.xx.xx.xx User jerry 把pub key传到server ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x 可以了</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,23 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/</loc>
-    <lastmod>2020-09-10T07:52:49+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/it/</loc>
-    <lastmod>2020-09-10T07:52:49+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/categories/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/tags/it/</loc>
-    <lastmod>2020-09-10T07:52:49+08:00</lastmod>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/categories/it/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/tags/linux/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/categories/linux/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/post/</loc>
-    <lastmod>2020-09-10T07:52:49+08:00</lastmod>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/categories/ssh/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/tags/ssh/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/tags/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/</loc>
+    <lastmod>2020-09-11T10:38:33+08:00</lastmod>
   </url>
   
   <url>
@@ -29,11 +64,6 @@
   
   <url>
     <loc>https://jerrywang1981.github.io/categories/spring/</loc>
-    <lastmod>2020-09-10T07:52:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/tags/</loc>
     <lastmod>2020-09-10T07:52:49+08:00</lastmod>
   </url>
   
@@ -49,11 +79,6 @@
   
   <url>
     <loc>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</loc>
-    <lastmod>2020-09-10T07:52:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/</loc>
     <lastmod>2020-09-10T07:52:49+08:00</lastmod>
   </url>
   
@@ -88,12 +113,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/saml/</loc>
+    <loc>https://jerrywang1981.github.io/categories/saml/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/saml/</loc>
+    <loc>https://jerrywang1981.github.io/tags/saml/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
   </url>
   
@@ -133,12 +158,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/sdk/</loc>
+    <loc>https://jerrywang1981.github.io/tags/sdk/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/sdk/</loc>
+    <loc>https://jerrywang1981.github.io/categories/sdk/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
   </url>
   
@@ -158,12 +183,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/angular/</loc>
+    <loc>https://jerrywang1981.github.io/categories/angular/</loc>
     <lastmod>2020-08-04T15:44:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/angular/</loc>
+    <loc>https://jerrywang1981.github.io/tags/angular/</loc>
     <lastmod>2020-08-04T15:44:13+08:00</lastmod>
   </url>
   
@@ -193,12 +218,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/go/</loc>
+    <loc>https://jerrywang1981.github.io/categories/go/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/go/</loc>
+    <loc>https://jerrywang1981.github.io/tags/go/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
   </url>
   
@@ -208,12 +233,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/gorm/</loc>
+    <loc>https://jerrywang1981.github.io/categories/gorm/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/gorm/</loc>
+    <loc>https://jerrywang1981.github.io/tags/gorm/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
   </url>
   
@@ -238,22 +263,22 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/matplotlib/</loc>
-    <lastmod>2020-06-09T09:08:07+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jerrywang1981.github.io/tags/matplotlib/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/python/</loc>
+    <loc>https://jerrywang1981.github.io/categories/matplotlib/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jerrywang1981.github.io/tags/python/</loc>
+    <lastmod>2020-06-09T09:08:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jerrywang1981.github.io/categories/python/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
   </url>
   
@@ -273,12 +298,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/hugo/</loc>
+    <loc>https://jerrywang1981.github.io/tags/hugo/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/hugo/</loc>
+    <loc>https://jerrywang1981.github.io/categories/hugo/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
   </url>
   
@@ -358,12 +383,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/machine-learning/</loc>
+    <loc>https://jerrywang1981.github.io/tags/machine-learning/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/machine-learning/</loc>
+    <loc>https://jerrywang1981.github.io/categories/machine-learning/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
   </url>
   
@@ -378,12 +403,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/node/</loc>
+    <loc>https://jerrywang1981.github.io/tags/node/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/node/</loc>
+    <loc>https://jerrywang1981.github.io/categories/node/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
   </url>
   
@@ -398,12 +423,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/sequelize/</loc>
+    <loc>https://jerrywang1981.github.io/tags/sequelize/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/sequelize/</loc>
+    <loc>https://jerrywang1981.github.io/categories/sequelize/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
   </url>
   
@@ -428,12 +453,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/csv/</loc>
+    <loc>https://jerrywang1981.github.io/tags/csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/csv/</loc>
+    <loc>https://jerrywang1981.github.io/categories/csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
   </url>
   
@@ -453,12 +478,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/ocr/</loc>
+    <loc>https://jerrywang1981.github.io/categories/ocr/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/ocr/</loc>
+    <loc>https://jerrywang1981.github.io/tags/ocr/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
   </url>
   
@@ -488,12 +513,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/neovim/</loc>
+    <loc>https://jerrywang1981.github.io/categories/neovim/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/neovim/</loc>
+    <loc>https://jerrywang1981.github.io/tags/neovim/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
   </url>
   
@@ -518,12 +543,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/life/</loc>
+    <loc>https://jerrywang1981.github.io/categories/life/</loc>
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/life/</loc>
+    <loc>https://jerrywang1981.github.io/tags/life/</loc>
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
   </url>
   
@@ -583,12 +608,12 @@
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/categories/liberty/</loc>
+    <loc>https://jerrywang1981.github.io/tags/liberty/</loc>
     <lastmod>2020-04-11T21:17:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jerrywang1981.github.io/tags/liberty/</loc>
+    <loc>https://jerrywang1981.github.io/categories/liberty/</loc>
     <lastmod>2020-04-11T21:17:25+08:00</lastmod>
   </url>
   

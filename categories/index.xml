@@ -6,7 +6,7 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2020 07:52:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 10:38:33 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>it</title>
       <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Thu, 10 Sep 2020 07:52:49 +0800</pubDate>
+      <pubDate>Fri, 11 Sep 2020 10:38:33 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://jerrywang1981.github.io/categories/linux/</link>
+      <pubDate>Fri, 11 Sep 2020 10:38:33 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://jerrywang1981.github.io/categories/ssh/</link>
+      <pubDate>Fri, 11 Sep 2020 10:38:33 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/ssh/</guid>
       <description></description>
     </item>
     
