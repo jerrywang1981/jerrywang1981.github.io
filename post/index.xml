@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2020 15:55:30 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2020 19:31:52 +0800</lastBuildDate>
     
 	<atom:link href="https://jerrywang1981.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Liberty Profile Tls V1 Gaps</title>
+      <link>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</link>
+      <pubDate>Thu, 12 Nov 2020 19:31:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</guid>
+      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;quot;defaultSSLConfig&amp;quot; sslProtocol=&amp;quot;TLSv1.2&amp;quot; keyStoreRef=&amp;quot;defaultKeyStore&amp;quot; securityLevel=&amp;quot;CUSTOM&amp;quot; enabledCiphers=&amp;quot;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;quot;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
+    </item>
+    
+    <item>
+      <title>React for Beginners</title>
+      <link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
+      <pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
+      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;quot;this is demo&amp;quot;, products: [ { id: 1, name: &amp;quot;ok&amp;quot;, }, { id: 2, name: &amp;quot;bad&amp;quot;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
+    </item>
     
     <item>
       <title>添加第三方jar到Spring Boot application</title>
