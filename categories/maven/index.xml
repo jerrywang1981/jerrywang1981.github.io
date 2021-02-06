@@ -6,11 +6,7 @@
     <description>Recent content in maven on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2020 15:55:30 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/categories/maven/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 11 Sep 2020 15:55:30 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>添加第三方jar到Spring Boot application</title>
       <link>https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/</link>

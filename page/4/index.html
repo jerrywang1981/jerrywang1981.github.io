@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.62.2" />
+	<meta name="generator" content="Hugo 0.80.0" />
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,6 +69,137 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/" title="Darknet Too Many or Too Few Labels">Darknet Too Many or Too Few Labels</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月27日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/machine-learning'>machine learning</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Too many or too few labels 如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题 label之间要不包含 label 名字不要出现在train/test的路径中 所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月27日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f'in {func.__name__}, it took {t2-t1}') else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Details refer to offical document
+Virtual environment To create new virtual environment usually in folder venv
+python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt ……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" title="Sequelize Bulk Create to return with primary key in Postgre">Sequelize Bulk Create to return with primary key in Postgre</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/sequelize'>sequelize</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/postgresql'>postgresql</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &quot;users&quot; users 比如这是两个table……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/07-python-function/" title="07 Python 函数">07 Python 函数</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print('a') # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f'x = {x}') print(f'y = {y}') print(f'args = {args} ') # kwargs # def add_number_1(x, y, *args, **kwargs): print(f'x = {x}') print(f'y = {y}') # f-string f'this is string, {x}' print(f'args = {args} ') print(f'kwargs = {kwargs} ') # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == '__main__': # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/">阅读全文</a></p>
+    </article>
     
     <article class="post">
         <header>
@@ -199,7 +330,7 @@
             
             <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
             
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/go'>go</a></span>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
             
         </div>
         
@@ -207,133 +338,6 @@
             背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月2日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker">Neovim Docker</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月2日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vim'>vim</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/neovim'>neovim</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/" title="Db2 Backup Tool">Db2 Backup Tool</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月25日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/db2'>db2</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/" title="05 Python Dictionary">05 Python Dictionary</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月25日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Dictionary ###创建方式 a = dict() a = {} a = {'a': 1, 'b': 2} a = dict(a=1,b=2) a = [('a', 1), ('b', 2)] b = dict(a) a = zip('abc', [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), 'y')……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/04-python-tuple/" title="04 Python Tuple">04 Python Tuple</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月24日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算 元组在参数中的应用 创建tuple的方式……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/04-python-tuple/">阅读全文</a></p>
     </article>
     
     
@@ -366,6 +370,10 @@
     
     <li >
         <a href="https://jerrywang1981.github.io/page/5/">5</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/6/">6</a>
     </li>
     
 
@@ -425,6 +433,26 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs">Golang Cron Jobs</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" title="Gin Jwt Middleware">Gin Jwt Middleware</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps">Liberty Profile Tls V1 Gaps</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" title="React for Beginners">React for Beginners</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/" title="添加第三方jar到Spring Boot application">添加第三方jar到Spring Boot application</a>
     </li>
     
@@ -442,26 +470,6 @@
     
     <li>
         <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值">Golang Panic 的时候通过defer更新返回值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
     </li>
     
 </ul>
@@ -485,21 +493,23 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/go/">go (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (47)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (52)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
     
@@ -513,7 +523,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (4)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -528,6 +538,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
     
@@ -568,7 +580,7 @@
     
     <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/go/">go</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
@@ -581,6 +593,8 @@
     <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
     
@@ -611,6 +625,8 @@
     <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
     
     <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
     
     <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
     
@@ -650,7 +666,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
     </div>
 </footer>
 

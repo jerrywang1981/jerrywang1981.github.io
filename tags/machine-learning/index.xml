@@ -6,11 +6,7 @@
     <description>Recent content in machine learning on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 May 2020 10:27:04 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 May 2020 10:27:04 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Darknet Too Many or Too Few Labels</title>
       <link>https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/</link>

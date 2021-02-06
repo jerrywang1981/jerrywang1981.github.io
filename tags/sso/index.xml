@@ -6,11 +6,7 @@
     <description>Recent content in sso on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 27 Aug 2020 22:05:59 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/tags/sso/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 27 Aug 2020 22:05:59 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/sso/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure AD SAML SSO with Node Application</title>
       <link>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</link>

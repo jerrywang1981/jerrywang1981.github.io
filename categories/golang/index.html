@@ -82,6 +82,85 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/">Terminate Golang App</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年2月6日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+        </div>
+        
+        <div class="post-content">
+            channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &lt;-sigChan log.Info(&quot;exit&quot;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/">Golang Cron Jobs</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年2月6日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+        </div>
+        
+        <div class="post-content">
+            cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &quot;0 2 * * ?&quot; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&quot;Send reminder for org member expiration job started&quot;) defer func() { log.Info(&quot;Send reminder for org member expiration job finished&quot;) }() log.Info(&quot;started to remind expired org members&quot;) err = task.RemindExpiredOrgMember(14) if err !=……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">Gin Jwt Middleware</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年2月6日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/jwt'>jwt</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/gin'>gin</a>
+            
+        </div>
+        
+        <div class="post-content">
+            JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&quot;error: %v&quot;, err) return nil, fmt.Errorf(&quot;failed to parse the token string: %s&quot;, tokenString) } log.Printf(&quot;claims: %v&quot;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&quot;failed to valiate the token&quot;), &quot;failed&quot;) } }……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">Golang 中的零值</a>
             </h1>
         </header>
@@ -99,7 +178,7 @@
         </div>
         
         <div class="post-content">
-            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&rdquo; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&rdquo; ,不是 str == nil nil interface, slices,……
+            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">阅读全文</a></p>
         </div>
     </article>
@@ -153,6 +232,35 @@
         <div class="post-content">
             问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/go-gorm/">Go Gorm 操作数据库</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年7月23日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/gorm'>gorm</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/postgres'>postgres</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/">阅读全文</a></p>
         </div>
     </article>
     
@@ -219,11 +327,11 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">Db2 Backup Tool</a>
+                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年4月25日
+            2020年5月4日
         </date>
         
         <div class="post-meta meta-category">
@@ -231,65 +339,15 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/db2'>db2</a>
-            
-        </div>
-        
-        <div class="post-content">
-            为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/02-prototype/">02 原型模式</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月12日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
             <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
             
         </div>
         
         <div class="post-content">
-            原型模式 参考文章 原型模式 package prototype_pattern type Person struct { Name string Age int } type Cloner interface { Clone() interface{} } func (s *Person) Clone() interface{} { var n Person n.Name = s.Name n.Age = s.Age return n }……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/02-prototype/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/01-singleton/">01 单例模式</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月12日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-        </div>
-        
-        <div class="post-content">
-            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
+            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
         </div>
     </article>
     
@@ -297,6 +355,26 @@
     
 
 
+
+<ol class="page-navigator">
+    
+
+    
+    <li  class="current">
+        <a href="https://jerrywang1981.github.io/categories/golang/">1</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/categories/golang/page/2/">2</a>
+    </li>
+    
+
+    
+    <li class="next">
+        <a href="https://jerrywang1981.github.io/categories/golang/page/2/">下一页</a>
+    </li>
+    
+</ol>
 
 
 
@@ -347,6 +425,26 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs">Golang Cron Jobs</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" title="Gin Jwt Middleware">Gin Jwt Middleware</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps">Liberty Profile Tls V1 Gaps</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" title="React for Beginners">React for Beginners</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/" title="添加第三方jar到Spring Boot application">添加第三方jar到Spring Boot application</a>
     </li>
     
@@ -364,26 +462,6 @@
     
     <li>
         <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值">Golang Panic 的时候通过defer更新返回值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
     </li>
     
 </ul>
@@ -407,21 +485,23 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/go/">go (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (47)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (52)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
     
@@ -435,7 +515,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (4)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -450,6 +530,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
     
@@ -490,7 +572,7 @@
     
     <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/go/">go</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
@@ -503,6 +585,8 @@
     <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
     
@@ -533,6 +617,8 @@
     <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
     
     <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
     
     <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
     
@@ -572,7 +658,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
     </div>
 </footer>
 

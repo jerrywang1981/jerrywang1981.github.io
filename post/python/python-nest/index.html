@@ -103,7 +103,7 @@
 <p>Python library for nest style Microservices</p>
 <h1 id="description">Description</h1>
 <p>There is one nodejs framework named <a href="https://nestjs.com">nestjs</a> which is perfect to develop microservices. but we wanted to
-implement some microservices in python to work together with nestjs framework, I didn't find a solution, so I developed this
+implement some microservices in python to work together with nestjs framework, I didn&rsquo;t find a solution, so I developed this
 package to do that, for now, it only implemented the <a href="https://docs.nestjs.com/microservices/basics#request-response">MessagePattern</a>
 so in nestjs, it is @MessagePattern and we can have same function in python with this lib/package.</p>
 <h1 id="how-to-use">How to use</h1>
@@ -178,22 +178,22 @@ app <span style="color:#000;font-weight:bold">=</span> NestMsServer()
         <span style="color:#000;font-weight:bold">pass</span>
 
     <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">get_message_pattern</span>(<span style="color:#999">self</span>):
-        <span style="color:#d14"></span><span style="color:#d14">&#39;&#39;&#39;</span><span style="color:#d14">return the message pattern</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        it can be string or dict</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        e.g. </span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST</span><span style="color:#d14">&#39;</span><span style="color:#d14"> or {</span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span><span style="color:#d14">: </span><span style="color:#d14">&#39;</span><span style="color:#d14">test</span><span style="color:#d14">&#39;</span><span style="color:#d14">}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        </span><span style="color:#d14">&#39;&#39;&#39;</span>
-        <span style="color:#000;font-weight:bold">return</span> {<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span>: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST_PATTERN</span><span style="color:#d14">&#39;</span> }
+        <span style="color:#d14">&#39;&#39;&#39;return the message pattern
+</span><span style="color:#d14">
+</span><span style="color:#d14">        it can be string or dict
+</span><span style="color:#d14">        e.g. &#39;TEST&#39; or {&#39;cmd&#39;: &#39;test&#39;}
+</span><span style="color:#d14">        &#39;&#39;&#39;</span>
+        <span style="color:#000;font-weight:bold">return</span> {<span style="color:#d14">&#39;cmd&#39;</span>: <span style="color:#d14">&#39;TEST_PATTERN&#39;</span> }
 
     <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">handle</span>(<span style="color:#999">self</span>, payload):
-        <span style="color:#d14"></span><span style="color:#d14">&#39;&#39;&#39;</span><span style="color:#d14">handler function to process payload</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        It should returns</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        err - any error or None</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        result - the processed result</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">        </span><span style="color:#d14">&#39;&#39;&#39;</span>
+        <span style="color:#d14">&#39;&#39;&#39;handler function to process payload
+</span><span style="color:#d14">
+</span><span style="color:#d14">        It should returns
+</span><span style="color:#d14">        err - any error or None
+</span><span style="color:#d14">        result - the processed result
+</span><span style="color:#d14">        &#39;&#39;&#39;</span>
         <span style="color:#000;font-weight:bold">print</span>(payload)
-        <span style="color:#000;font-weight:bold">return</span> <span style="color:#999">None</span>, [<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">this is test dict</span><span style="color:#d14">&#39;</span>, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">another test dict result</span><span style="color:#d14">&#39;</span>]
+        <span style="color:#000;font-weight:bold">return</span> <span style="color:#999">None</span>, [<span style="color:#d14">&#39;this is test dict&#39;</span>, <span style="color:#d14">&#39;another test dict result&#39;</span>]
 </code></pre></td></tr></table>
 </div>
 </div><ol start="2">
@@ -225,12 +225,12 @@ app <span style="color:#000;font-weight:bold">=</span> NestMsServer()
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#3c5d5d;font-weight:bold">@app.message_pattern</span>({<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span>: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">test_decorator</span><span style="color:#d14">&#39;</span>})
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#3c5d5d;font-weight:bold">@app.message_pattern</span>({<span style="color:#d14">&#39;cmd&#39;</span>: <span style="color:#d14">&#39;test_decorator&#39;</span>})
 <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">test_decorator</span>(payload):
-    <span style="color:#d14"></span><span style="color:#d14">&#39;&#39;&#39;</span><span style="color:#d14">test decorator function</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">    the function accepts one parameter payload</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">    </span><span style="color:#d14">&#39;&#39;&#39;</span>
+    <span style="color:#d14">&#39;&#39;&#39;test decorator function
+</span><span style="color:#d14">
+</span><span style="color:#d14">    the function accepts one parameter payload
+</span><span style="color:#d14">    &#39;&#39;&#39;</span>
     <span style="color:#000;font-weight:bold">print</span>(payload)
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#999">None</span>, payload
 </code></pre></td></tr></table>
@@ -244,9 +244,9 @@ app <span style="color:#000;font-weight:bold">=</span> NestMsServer()
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    HOST <span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">localhost</span><span style="color:#d14">&#39;</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    HOST <span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;localhost&#39;</span>
     PORT <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">7086</span>
-    <span style="color:#000;font-weight:bold">print</span>(f<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">started to run and listed to port {PORT}</span><span style="color:#d14">&#39;</span>)
+    <span style="color:#000;font-weight:bold">print</span>(f<span style="color:#d14">&#39;started to run and listed to port {PORT}&#39;</span>)
     app<span style="color:#000;font-weight:bold">.</span>run(HOST, PORT)
 </code></pre></td></tr></table>
 </div>
@@ -280,18 +280,18 @@ or sample code here.</p>
 
 <span style="color:#000;font-weight:bold">from</span> <span style="color:#555">nest</span> <span style="color:#000;font-weight:bold">import</span> NestMsClient
 
-<span style="color:#000;font-weight:bold">if</span> __name__ <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">__main__</span><span style="color:#d14">&#39;</span>:
-    HOST <span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">localhost</span><span style="color:#d14">&#39;</span>
+<span style="color:#000;font-weight:bold">if</span> __name__ <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#39;__main__&#39;</span>:
+    HOST <span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;localhost&#39;</span>
     PORT <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">7086</span>
     client <span style="color:#000;font-weight:bold">=</span> NestMsClient(HOST, PORT)
-    pattern <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST_PATTERN</span><span style="color:#d14">&#39;</span>
+    pattern <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;TEST_PATTERN&#39;</span>
     res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#999">None</span>)
     <span style="color:#000;font-weight:bold">print</span>(res)
-    pattern <span style="color:#000;font-weight:bold">=</span> { <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span> :<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">TEST_PATTERN</span><span style="color:#d14">&#39;</span> }
+    pattern <span style="color:#000;font-weight:bold">=</span> { <span style="color:#d14">&#39;cmd&#39;</span> :<span style="color:#d14">&#39;TEST_PATTERN&#39;</span> }
     res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#999">None</span>)
     <span style="color:#000;font-weight:bold">print</span>(res)
-    pattern <span style="color:#000;font-weight:bold">=</span> { <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">cmd</span><span style="color:#d14">&#39;</span> :<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">test_decorator</span><span style="color:#d14">&#39;</span> }
-    res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">this is ok</span><span style="color:#d14">&#39;</span>)
+    pattern <span style="color:#000;font-weight:bold">=</span> { <span style="color:#d14">&#39;cmd&#39;</span> :<span style="color:#d14">&#39;test_decorator&#39;</span> }
+    res <span style="color:#000;font-weight:bold">=</span> client<span style="color:#000;font-weight:bold">.</span>send(pattern, <span style="color:#d14">&#39;this is ok&#39;</span>)
     <span style="color:#000;font-weight:bold">print</span>(res)
 </code></pre></td></tr></table>
 </div>
@@ -391,6 +391,26 @@ or sample code here.</p>
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs">Golang Cron Jobs</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" title="Gin Jwt Middleware">Gin Jwt Middleware</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps">Liberty Profile Tls V1 Gaps</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" title="React for Beginners">React for Beginners</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/" title="添加第三方jar到Spring Boot application">添加第三方jar到Spring Boot application</a>
     </li>
     
@@ -408,26 +428,6 @@ or sample code here.</p>
     
     <li>
         <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值">Golang Panic 的时候通过defer更新返回值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
     </li>
     
 </ul>
@@ -451,21 +451,23 @@ or sample code here.</p>
     
     <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/go/">go (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (47)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (52)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
     
@@ -479,7 +481,7 @@ or sample code here.</p>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (4)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -494,6 +496,8 @@ or sample code here.</p>
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
     
@@ -534,7 +538,7 @@ or sample code here.</p>
     
     <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/go/">go</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
@@ -547,6 +551,8 @@ or sample code here.</p>
     <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
     
@@ -577,6 +583,8 @@ or sample code here.</p>
     <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
     
     <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
     
     <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
     
@@ -616,7 +624,7 @@ or sample code here.</p>
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
     </div>
 </footer>
 

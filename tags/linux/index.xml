@@ -6,11 +6,7 @@
     <description>Recent content in linux on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2020 10:38:33 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 11 Sep 2020 10:38:33 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Auto Login Server Without Password</title>
       <link>https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/</link>

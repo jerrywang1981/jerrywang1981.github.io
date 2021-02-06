@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/react/</link>
+    <description>Recent content in react on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Sep 2020 07:56:47 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React for Beginners</title>
+      <link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
+      <pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
+      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;quot;this is demo&amp;quot;, products: [ { id: 1, name: &amp;quot;ok&amp;quot;, }, { id: 2, name: &amp;quot;bad&amp;quot;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
+    </item>
+    
+  </channel>
+</rss>

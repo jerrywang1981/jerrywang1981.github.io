@@ -6,10 +6,33 @@
     <description>Recent content in golang on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 18 Aug 2020 09:09:46 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Feb 2021 16:10:08 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminate Golang App</title>
+      <link>https://jerrywang1981.github.io/post/go/terminate-golang-app/</link>
+      <pubDate>Sat, 06 Feb 2021 16:10:08 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/terminate-golang-app/</guid>
+      <description>channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&amp;gt;SIGINT, kill -9 -&amp;gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &amp;lt;-sigChan log.Info(&amp;quot;exit&amp;quot;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</description>
+    </item>
     
-	<atom:link href="https://jerrywang1981.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Cron Jobs</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-cron-jobs/</link>
+      <pubDate>Sat, 06 Feb 2021 16:06:53 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/golang-cron-jobs/</guid>
+      <description>cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &amp;quot;0 2 * * ?&amp;quot; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&amp;quot;Send reminder for org member expiration job started&amp;quot;) defer func() { log.Info(&amp;quot;Send reminder for org member expiration job finished&amp;quot;) }() log.Info(&amp;quot;started to remind expired org members&amp;quot;) err = task.RemindExpiredOrgMember(14) if err !=</description>
+    </item>
     
+    <item>
+      <title>Gin Jwt Middleware</title>
+      <link>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</link>
+      <pubDate>Sat, 06 Feb 2021 14:56:43 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</guid>
+      <description>JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&amp;quot;error: %v&amp;quot;, err) return nil, fmt.Errorf(&amp;quot;failed to parse the token string: %s&amp;quot;, tokenString) } log.Printf(&amp;quot;claims: %v&amp;quot;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;amp;&amp;amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&amp;quot;failed to valiate the token&amp;quot;), &amp;quot;failed&amp;quot;) } }</description>
+    </item>
     
     <item>
       <title>Golang 中的零值</title>
@@ -17,7 +40,7 @@
       <pubDate>Tue, 18 Aug 2020 09:09:46 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/zero-value-in-golang/</guid>
-      <description>zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&amp;hellip;) 0.0 所有的float类型 (float32/float64/&amp;hellip;) false boolean类型 &amp;quot;&amp;rdquo; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &amp;quot;&amp;rdquo; ,不是 str == nil nil interface, slices,</description>
+      <description>zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&amp;hellip;) 0.0 所有的float类型 (float32/float64/&amp;hellip;) false boolean类型 &amp;quot;&amp;quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &amp;quot;&amp;quot; ,不是 str == nil nil interface, slices,</description>
     </item>
     
     <item>
@@ -39,6 +62,15 @@
     </item>
     
     <item>
+      <title>Go Gorm 操作数据库</title>
+      <link>https://jerrywang1981.github.io/post/go/go-gorm/</link>
+      <pubDate>Thu, 23 Jul 2020 08:25:59 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/go-gorm/</guid>
+      <description>Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙</description>
+    </item>
+    
+    <item>
       <title>Golang 导出 csv 乱码的问题</title>
       <link>https://jerrywang1981.github.io/post/go/golang-export-csv/</link>
       <pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
@@ -54,6 +86,15 @@
       
       <guid>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</guid>
       <description>背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&amp;gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</description>
+    </item>
+    
+    <item>
+      <title>Golang 中通过gRPC调用Python实现的功能</title>
+      <link>https://jerrywang1981.github.io/post/go/python-go-rpc/</link>
+      <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/python-go-rpc/</guid>
+      <description>背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就</description>
     </item>
     
     <item>

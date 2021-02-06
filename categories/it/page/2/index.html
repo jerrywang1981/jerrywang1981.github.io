@@ -82,6 +82,135 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">Azure AD SAML SSO with Node Application</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/saml'>saml</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/sso'>sso</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/azure'>azure</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: '/account/auth/blueid/callback', // 这个是callback需要稍后实现 entryPoint: '', // 这个是azure AD的一个配置, saml-based sso login url issuer: 'cobeedev', // basic saml configuration -&gt; Identifier (Entity ID) cert: '', // refer later signatureAlgorithm: 'sha256' }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require('../../controllers/users/usersManagement'); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/other/port-forwarding/">Port Forwarding - Mac</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Mac下端口转发 有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口 ###设置转发 echo &quot;rdr pass inet proto tcp from any to any port 443 -&gt; 127.0.0.1 port 9443&quot; | sudo pfctl -ef - 取消转发 sudo pfctl -s nat sudo pfctl -F all -f /etc/pf.conf……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/port-forwarding/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">Golang 中的零值</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月18日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+        </div>
+        
+        <div class="post-content">
+            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/">Golang Panic 的时候通过defer更新返回值</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月17日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+        </div>
+        
+        <div class="post-content">
+            在panic的函数中更新返回值 在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出 有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。 func test() (r int) { defer func() { if……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/">Watson Assistant Easy Tool</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月15日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/watson'>watson</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/sdk'>sdk</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Watson assistant 根据官方文档，已经提供了sdk, 自己的这个package只是使用 官方的sdk基础上，做了小小的封闭。代码托管在github上 watson 目前只有一个assitant package,提供方法来开始一个session并且发送message从而得到结果。 使用方法也比较简单，NewSessio……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/">Multiple Angular Material Table Sort</a>
             </h1>
         </header>
@@ -171,7 +300,7 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/go'>go</a>
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
             
             <a href='https://jerrywang1981.github.io/categories/gorm'>gorm</a>
             
@@ -210,143 +339,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">18 Matplotlib Demo</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月9日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/matplotlib'>matplotlib</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook matplot_demo……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">17 Pandas Demo</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月9日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook pandas_demo.ipynb……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/">Hugo Theme 背景图形鼠标跟随效果</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/javascript'>javascript</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/hugo'>hugo</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/theme'>theme</a>
-            
-        </div>
-        
-        <div class="post-content">
-            就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&quot;script&quot;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &quot;zIndex&quot;, -1), o: n(i, &quot;opacity&quot;, .5), c: n(i, &quot;color&quot;, &quot;0,0,0&quot;), n: n(i, &quot;count&quot;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">16 Pandas Demo part 1</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook refer to file pandas_demo.ipynb……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">15 Numpy Demo</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/numpy'>numpy</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook the file numpy_demo.ipynb……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -378,6 +370,10 @@
     
     <li >
         <a href="https://jerrywang1981.github.io/categories/it/page/5/">5</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/categories/it/page/6/">6</a>
     </li>
     
 
@@ -437,6 +433,26 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs">Golang Cron Jobs</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" title="Gin Jwt Middleware">Gin Jwt Middleware</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps">Liberty Profile Tls V1 Gaps</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" title="React for Beginners">React for Beginners</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/" title="添加第三方jar到Spring Boot application">添加第三方jar到Spring Boot application</a>
     </li>
     
@@ -454,26 +470,6 @@
     
     <li>
         <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值">Golang Panic 的时候通过defer更新返回值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
     </li>
     
 </ul>
@@ -497,21 +493,23 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/go/">go (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (47)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (52)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
     
@@ -525,7 +523,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (4)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -540,6 +538,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
     
@@ -580,7 +580,7 @@
     
     <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/go/">go</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
@@ -593,6 +593,8 @@
     <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
     
@@ -623,6 +625,8 @@
     <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
     
     <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
     
     <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
     
@@ -662,7 +666,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
     </div>
 </footer>
 

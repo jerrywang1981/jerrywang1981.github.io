@@ -6,10 +6,51 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2020 15:55:30 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Feb 2021 16:10:08 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminate Golang App</title>
+      <link>https://jerrywang1981.github.io/post/go/terminate-golang-app/</link>
+      <pubDate>Sat, 06 Feb 2021 16:10:08 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/terminate-golang-app/</guid>
+      <description>channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&amp;gt;SIGINT, kill -9 -&amp;gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &amp;lt;-sigChan log.Info(&amp;quot;exit&amp;quot;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</description>
+    </item>
     
-	<atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Cron Jobs</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-cron-jobs/</link>
+      <pubDate>Sat, 06 Feb 2021 16:06:53 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/golang-cron-jobs/</guid>
+      <description>cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &amp;quot;0 2 * * ?&amp;quot; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&amp;quot;Send reminder for org member expiration job started&amp;quot;) defer func() { log.Info(&amp;quot;Send reminder for org member expiration job finished&amp;quot;) }() log.Info(&amp;quot;started to remind expired org members&amp;quot;) err = task.RemindExpiredOrgMember(14) if err !=</description>
+    </item>
     
+    <item>
+      <title>Gin Jwt Middleware</title>
+      <link>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</link>
+      <pubDate>Sat, 06 Feb 2021 14:56:43 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</guid>
+      <description>JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&amp;quot;error: %v&amp;quot;, err) return nil, fmt.Errorf(&amp;quot;failed to parse the token string: %s&amp;quot;, tokenString) } log.Printf(&amp;quot;claims: %v&amp;quot;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;amp;&amp;amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&amp;quot;failed to valiate the token&amp;quot;), &amp;quot;failed&amp;quot;) } }</description>
+    </item>
+    
+    <item>
+      <title>Liberty Profile Tls V1 Gaps</title>
+      <link>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</link>
+      <pubDate>Thu, 12 Nov 2020 19:31:52 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</guid>
+      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;quot;defaultSSLConfig&amp;quot; sslProtocol=&amp;quot;TLSv1.2&amp;quot; keyStoreRef=&amp;quot;defaultKeyStore&amp;quot; securityLevel=&amp;quot;CUSTOM&amp;quot; enabledCiphers=&amp;quot;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;quot;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
+    </item>
+    
+    <item>
+      <title>React for Beginners</title>
+      <link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
+      <pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
+      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;quot;this is demo&amp;quot;, products: [ { id: 1, name: &amp;quot;ok&amp;quot;, }, { id: 2, name: &amp;quot;bad&amp;quot;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
+    </item>
     
     <item>
       <title>添加第三方jar到Spring Boot application</title>
@@ -80,7 +121,7 @@
       <pubDate>Tue, 18 Aug 2020 09:09:46 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/zero-value-in-golang/</guid>
-      <description>zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&amp;hellip;) 0.0 所有的float类型 (float32/float64/&amp;hellip;) false boolean类型 &amp;quot;&amp;rdquo; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &amp;quot;&amp;rdquo; ,不是 str == nil nil interface, slices,</description>
+      <description>zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&amp;hellip;) 0.0 所有的float类型 (float32/float64/&amp;hellip;) false boolean类型 &amp;quot;&amp;quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &amp;quot;&amp;quot; ,不是 str == nil nil interface, slices,</description>
     </item>
     
     <item>
@@ -406,7 +447,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Thu, 23 Apr 2020 13:51:39 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/01-python-data-type/</guid>
-      <description>基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号&#39;或双引号&amp;quot;括起来的任意文本 如果字符串内部包含&amp;rsquo;,&amp;quot;, 可以用转义字符\来标识 转义 \ 不转义 &amp;lsquo;&amp;lsquo;&amp;lsquo;text&amp;rsquo;&#39;&#39;, &amp;ldquo;&amp;ldquo;&amp;ldquo;text&amp;rdquo;&amp;quot;&amp;quot;, r&#39;text\n&amp;rsquo; 布尔值</description>
+      <description>基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号&amp;rsquo;或双引号&amp;quot;括起来的任意文本 如果字符串内部包含&#39;,&amp;quot;, 可以用转义字符\来标识 转义 \ 不转义 &amp;lsquo;&amp;lsquo;&amp;lsquo;text&amp;rsquo;&#39;&amp;rsquo;, &amp;ldquo;&amp;ldquo;&amp;ldquo;text&amp;rdquo;&amp;quot;&amp;rdquo;, r&amp;rsquo;text\n&amp;rsquo; 布尔值</description>
     </item>
     
     <item>

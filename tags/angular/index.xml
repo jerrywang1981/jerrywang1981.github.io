@@ -6,11 +6,7 @@
     <description>Recent content in angular on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Multiple Angular Material Table Sort</title>
       <link>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</link>

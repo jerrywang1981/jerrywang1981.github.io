@@ -6,11 +6,7 @@
     <description>Recent content in csv on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/categories/csv/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/csv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang 导出 csv 乱码的问题</title>
       <link>https://jerrywang1981.github.io/post/go/golang-export-csv/</link>

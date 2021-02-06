@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.62.2" />
+	<meta name="generator" content="Hugo 0.80.0" />
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,6 +73,133 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method">Class Object Method</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月2日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == '__main__': a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker">Neovim Docker</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月2日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vim'>vim</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/neovim'>neovim</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/" title="Db2 Backup Tool">Db2 Backup Tool</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/db2'>db2</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/" title="05 Python Dictionary">05 Python Dictionary</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月25日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Dictionary ###创建方式 a = dict() a = {} a = {'a': 1, 'b': 2} a = dict(a=1,b=2) a = [('a', 1), ('b', 2)] b = dict(a) a = zip('abc', [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), 'y')……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/04-python-tuple/" title="04 Python Tuple">04 Python Tuple</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月24日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算 元组在参数中的应用 创建tuple的方式……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/04-python-tuple/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/03-python-list/" title="03 Python List">03 Python List</a>
             </h1>
         </header>
@@ -140,7 +267,7 @@
         </div>
         
         <div class="post-content">
-            基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号'或双引号&quot;括起来的任意文本 如果字符串内部包含&rsquo;,&quot;, 可以用转义字符\来标识 转义 \ 不转义 &lsquo;&lsquo;&lsquo;text&rsquo;'', &ldquo;&ldquo;&ldquo;text&rdquo;&quot;&quot;, r'text\n&rsquo; 布尔值……
+            基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号&rsquo;或双引号&quot;括起来的任意文本 如果字符串内部包含',&quot;, 可以用转义字符\来标识 转义 \ 不转义 &lsquo;&lsquo;&lsquo;text&rsquo;'&rsquo;, &ldquo;&ldquo;&ldquo;text&rdquo;&quot;&rdquo;, r&rsquo;text\n&rsquo; 布尔值……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/01-python-data-type/">阅读全文</a></p>
     </article>
@@ -195,83 +322,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/liberty'>liberty</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &lt;ssl id=&#34;defaultSSLConfig&#34; keyStoreRef=&#34;defaultKeyStore&#34; securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/python-nest/" title="Python Nest">Python Nest</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/vim-online-video/" title="Vim Online Video">Vim Online Video</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年4月11日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vim'>vim</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/vim-online-video/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -304,7 +354,15 @@
         <a href="https://jerrywang1981.github.io/page/5/">5</a>
     </li>
     
+    <li >
+        <a href="https://jerrywang1981.github.io/page/6/">6</a>
+    </li>
+    
 
+    
+    <li class="next">
+        <a href="https://jerrywang1981.github.io/page/6/">下一页</a>
+    </li>
     
 </ol>
 
@@ -357,6 +415,26 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs">Golang Cron Jobs</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" title="Gin Jwt Middleware">Gin Jwt Middleware</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps">Liberty Profile Tls V1 Gaps</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" title="React for Beginners">React for Beginners</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/" title="添加第三方jar到Spring Boot application">添加第三方jar到Spring Boot application</a>
     </li>
     
@@ -374,26 +452,6 @@
     
     <li>
         <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac">Port Forwarding - Mac</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值">Golang Panic 的时候通过defer更新返回值</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
     </li>
     
 </ul>
@@ -417,21 +475,23 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/go/">go (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (47)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (52)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/life/">life (1)</a></li>
     
@@ -445,7 +505,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (4)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -460,6 +520,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
     
@@ -500,7 +562,7 @@
     
     <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/go/">go</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
     
     <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
     
@@ -513,6 +575,8 @@
     <a href="https://jerrywang1981.github.io/tags/java/">java</a>
     
     <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
     
     <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
     
@@ -543,6 +607,8 @@
     <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
     
     <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
     
     <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
     
@@ -582,7 +648,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
     </div>
 </footer>
 
