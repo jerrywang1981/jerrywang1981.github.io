@@ -6,15 +6,7 @@
     <description>Recent content in react on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-<<<<<<< HEAD
     <lastBuildDate>Fri, 25 Sep 2020 07:56:47 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
-=======
-    <lastBuildDate>Fri, 25 Sep 2020 07:56:47 +0800</lastBuildDate>
-    
-	<atom:link href="https://jerrywang1981.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
-    
-    
->>>>>>> ac68cac2a904d2a673cfc98fe6d199562c900732
     <item>
       <title>React for Beginners</title>
       <link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
@@ -25,8 +17,4 @@
     </item>
     
   </channel>
-<<<<<<< HEAD
 </rss>
-=======
-</rss>
->>>>>>> ac68cac2a904d2a673cfc98fe6d199562c900732
