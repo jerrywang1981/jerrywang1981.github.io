@@ -6,7 +6,16 @@
     <description>Recent content in it on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 06 Feb 2021 16:10:08 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 20:40:45 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Oauth2 Github</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</link>
+      <pubDate>Fri, 09 Apr 2021 20:40:45 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</guid>
+      <description>Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&amp;quot;AUTH_URL&amp;quot;) // github authorization url TOKEN_URL = os.Getenv(&amp;quot;TOKEN_URL&amp;quot;) // github token url CLIENT_ID = os.Getenv(&amp;quot;CLIENT_ID&amp;quot;) // client id CLIENT_SECRET = os.Getenv(&amp;quot;CLIENT_SECRET&amp;quot;) // client secret REDIRECT_URL = os.Getenv(&amp;quot;REDIRECT_URL&amp;quot;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&amp;quot;openid&amp;quot;, &amp;quot;email&amp;quot;, &amp;quot;site_admin&amp;quot;, &amp;quot;repo&amp;quot;, &amp;quot;admin:org&amp;quot;, &amp;quot;user&amp;quot;}, } Login</description>
+    </item>
+    
     <item>
       <title>Terminate Golang App</title>
       <link>https://jerrywang1981.github.io/post/go/terminate-golang-app/</link>
