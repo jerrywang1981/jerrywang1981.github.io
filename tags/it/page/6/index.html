@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://jerrywang1981.github.io/tags/it/index.xml" title="村边的池塘" />
+    <link rel="alternate" type="application/rss+xml+https://jerrywang1981.github.io/tags/it/index.xml" href="村边的池塘" title="%!s(MISSING)" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -78,6 +78,31 @@
     </h3>
     
 
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/01-singleton/">01 单例模式</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月12日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+        </div>
+        
+        <div class="post-content">
+            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
+        </div>
+    </article>
     
     <article class="post">
         <header>
@@ -205,34 +230,6 @@
 
                 <div id="secondary">
     <section class="widget">
-        <div class="card">
-    <a href="https://github.com/jerrywang1981">
-        <div class="card-image">
-            <img class="lazy" src="/img/jerry.png" data-original="/img/jerry.png" />
-        </div>
-        <div class="card-body">
-            <div class="card-title">
-                <h3>
-                    Jerry Wang
-                </h3>
-            </div>
-            <div class="card-date">
-                <time>
-                </time>
-            </div>
-
-            <div class="card-exceprt">
-                <p>
-
-                </p>
-            </div>
-        </div>
-    </a>
-  </div>
-
-    </section>
-
-    <section class="widget">
         <form id="search" action='https://jerrywang1981.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
@@ -240,7 +237,7 @@
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
-
+    
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
@@ -314,7 +311,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (53)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (54)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -333,6 +330,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/movie/">movie (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
@@ -369,6 +368,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/tv/">tv (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     
@@ -423,6 +424,8 @@
     
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
+    <a href="https://jerrywang1981.github.io/tags/movie/">movie</a>
+    
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
@@ -459,6 +462,8 @@
     
     <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
     
+    <a href="https://jerrywang1981.github.io/tags/tv/">tv</a>
+    
     <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
     
     <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
@@ -477,13 +482,15 @@
         </ul>
     </section>
 </div>
-
             </div>
         </div>
     </div>
     <footer id="footer">
     <div class="container">
         &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
     </div>
 </footer>
 
@@ -491,7 +498,6 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src='/js/background-shape.js?v=0.0.0' async=""></script>
 
 
 
@@ -499,7 +505,6 @@
 
 
     <script src='/js/douban.js'></script>
-
 
 </body>
 

@@ -6,7 +6,16 @@
     <description>Recent content in it on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 09 Apr 2021 20:40:45 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 09:13:34 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>推荐的电影电视剧</title>
+      <link>https://jerrywang1981.github.io/life/movies-tvs/</link>
+      <pubDate>Wed, 08 Dec 2021 09:13:34 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/life/movies-tvs/</guid>
+      <description>电视剧 戈壁母亲 最美的青春 父母爱情 士兵突击 潜伏 白鹿原</description>
+    </item>
+    
     <item>
       <title>Golang Oauth2 Github</title>
       <link>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</link>

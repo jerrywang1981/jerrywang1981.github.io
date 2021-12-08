@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>movie on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/movie/</link>
+    <description>Recent content in movie on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 08 Dec 2021 09:13:34 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/movie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>推荐的电影电视剧</title>
+      <link>https://jerrywang1981.github.io/life/movies-tvs/</link>
+      <pubDate>Wed, 08 Dec 2021 09:13:34 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/life/movies-tvs/</guid>
+      <description>电视剧 戈壁母亲 最美的青春 父母爱情 士兵突击 潜伏 白鹿原</description>
+    </item>
+    
+  </channel>
+</rss>

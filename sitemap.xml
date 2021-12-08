@@ -1,728 +1,453 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://jerrywang1981.github.io/categories/</loc>
-    <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/it/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/categories/it/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/life/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/movie/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/categories/movie/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/tv/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/categories/tv/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/life/movies-tvs/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/</loc>
+    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/golang/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/golang/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/tags/it/</loc>
-    <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/categories/it/</loc>
-    <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/oauth2/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/oauth2/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/tags/</loc>
-    <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/</loc>
-    <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/terminate-golang-app/</loc>
     <lastmod>2021-02-06T16:10:08+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/golang-cron-jobs/</loc>
     <lastmod>2021-02-06T16:06:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/gin/</loc>
     <lastmod>2021-02-06T14:56:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/gin/</loc>
     <lastmod>2021-02-06T14:56:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</loc>
     <lastmod>2021-02-06T14:56:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/jwt/</loc>
     <lastmod>2021-02-06T14:56:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/jwt/</loc>
     <lastmod>2021-02-06T14:56:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/java/</loc>
     <lastmod>2020-11-12T19:31:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/java/</loc>
     <lastmod>2020-11-12T19:31:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/liberty/</loc>
     <lastmod>2020-11-12T19:31:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/liberty/</loc>
     <lastmod>2020-11-12T19:31:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</loc>
     <lastmod>2020-11-12T19:31:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/node/</loc>
     <lastmod>2020-09-25T07:56:47+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/node/</loc>
     <lastmod>2020-09-25T07:56:47+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/react/</loc>
     <lastmod>2020-09-25T07:56:47+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/react/</loc>
     <lastmod>2020-09-25T07:56:47+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/react/react-for-beginners/</loc>
     <lastmod>2020-09-25T07:56:47+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/maven/</loc>
     <lastmod>2020-09-11T15:55:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/maven/</loc>
     <lastmod>2020-09-11T15:55:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/spring/</loc>
     <lastmod>2020-09-11T15:55:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/spring/</loc>
     <lastmod>2020-09-11T15:55:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/java/add-third-party-jar-to-spring-boot/</loc>
     <lastmod>2020-09-11T15:55:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/postgres/</loc>
     <lastmod>2020-09-11T15:14:50+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/postgres/</loc>
     <lastmod>2020-09-11T15:14:50+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</loc>
     <lastmod>2020-09-11T15:14:50+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/</loc>
     <lastmod>2020-09-11T10:38:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/linux/</loc>
     <lastmod>2020-09-11T10:38:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/linux/</loc>
     <lastmod>2020-09-11T10:38:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/ssh/</loc>
     <lastmod>2020-09-11T10:38:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/ssh/</loc>
     <lastmod>2020-09-11T10:38:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/vue/</loc>
     <lastmod>2020-09-10T07:52:49+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/vue/</loc>
     <lastmod>2020-09-10T07:52:49+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</loc>
     <lastmod>2020-09-10T07:52:49+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/java/spring-boot-file-download/</loc>
     <lastmod>2020-09-10T07:52:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/azure/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/azure/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/saml/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/saml/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/sso/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/sso/</loc>
     <lastmod>2020-08-27T22:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/other/port-forwarding/</loc>
     <lastmod>2020-08-27T21:27:22+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/zero-value-in-golang/</loc>
     <lastmod>2020-08-18T09:09:46+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/</loc>
     <lastmod>2020-08-17T20:53:08+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/sdk/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/sdk/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/watson/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/watson/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/</loc>
     <lastmod>2020-08-15T18:41:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/angular/</loc>
     <lastmod>2020-08-04T15:44:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/angular/</loc>
     <lastmod>2020-08-04T15:44:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</loc>
     <lastmod>2020-08-04T15:44:13+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</loc>
     <lastmod>2020-08-04T15:26:25+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/docker/</loc>
     <lastmod>2020-07-24T08:33:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/docker/</loc>
     <lastmod>2020-07-24T08:33:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/</loc>
     <lastmod>2020-07-24T08:33:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/go-gorm/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/gorm/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/gorm/</loc>
     <lastmod>2020-07-23T08:25:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</loc>
     <lastmod>2020-06-24T08:26:03+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/matplotlib/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/matplotlib/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/python/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/python/</loc>
     <lastmod>2020-06-09T09:08:07+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</loc>
     <lastmod>2020-06-09T09:05:34+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/pandas/</loc>
     <lastmod>2020-06-09T09:05:34+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/pandas/</loc>
     <lastmod>2020-06-09T09:05:34+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/hugo/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/hugo/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/javascript/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/javascript/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/theme/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/theme/</loc>
     <lastmod>2020-06-03T21:30:06+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</loc>
     <lastmod>2020-06-03T16:30:03+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/15-numpy-demo/</loc>
     <lastmod>2020-06-03T16:28:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/numpy/</loc>
     <lastmod>2020-06-03T16:28:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/numpy/</loc>
     <lastmod>2020-06-03T16:28:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/14-anaconda/</loc>
     <lastmod>2020-06-03T16:27:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/13-python-context-manager/</loc>
     <lastmod>2020-05-31T13:58:44+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/12-python-smtp/</loc>
     <lastmod>2020-05-31T13:52:03+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/11-python-mro/</loc>
     <lastmod>2020-05-31T13:50:50+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/10-dunder-methods/</loc>
     <lastmod>2020-05-31T13:49:16+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/machine-learning/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/machine-learning/</loc>
     <lastmod>2020-05-27T10:27:04+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/09-python-decorators/</loc>
     <lastmod>2020-05-27T10:17:38+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</loc>
     <lastmod>2020-05-19T21:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/postgresql/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/postgresql/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/sequelize/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/sequelize/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/</loc>
     <lastmod>2020-05-19T20:00:37+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/07-python-function/</loc>
     <lastmod>2020-05-16T09:17:08+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/06-condition-loop/</loc>
     <lastmod>2020-05-16T09:14:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</loc>
     <lastmod>2020-05-14T21:20:50+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/encoding/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/encoding/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/golang-export-csv/</loc>
     <lastmod>2020-05-12T22:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/ocr/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/ocr/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/pdf/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/pdf/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</loc>
     <lastmod>2020-05-11T21:51:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/python-go-rpc/</loc>
     <lastmod>2020-05-04T00:11:12+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/class-object-method/</loc>
     <lastmod>2020-05-02T21:59:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/neovim/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/neovim/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/vim/neovim-docker/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/vim/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/vim/</loc>
     <lastmod>2020-05-02T21:23:53+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/life/stay-at-hotel/</loc>
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/life/</loc>
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/life/</loc>
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jerrywang1981.github.io/life/</loc>
-    <lastmod>2020-05-02T21:22:26+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/tags/db2/</loc>
     <lastmod>2020-04-25T20:28:35+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/db2/</loc>
     <lastmod>2020-04-25T20:28:35+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/db2-backup-tool/</loc>
     <lastmod>2020-04-25T20:28:35+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/05-Python-Dictionary/</loc>
     <lastmod>2020-04-25T18:35:30+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/04-python-tuple/</loc>
     <lastmod>2020-04-24T21:54:58+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/03-python-list/</loc>
     <lastmod>2020-04-24T21:05:59+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/02-python-variable/</loc>
     <lastmod>2020-04-23T14:23:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/01-python-data-type/</loc>
     <lastmod>2020-04-23T13:51:39+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/02-prototype/</loc>
     <lastmod>2020-04-12T13:22:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/go/01-singleton/</loc>
     <lastmod>2020-04-12T12:26:51+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</loc>
     <lastmod>2020-04-11T21:17:25+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/python/python-nest/</loc>
     <lastmod>2020-04-11T21:15:14+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/post/vim/vim-online-video/</loc>
     <lastmod>2020-04-11T21:09:42+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/about/</loc>
     <lastmod>2020-04-11T19:52:18+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/archives/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jerrywang1981.github.io/search/</loc>
   </url>
-  
 </urlset>

@@ -101,7 +101,7 @@
 官方的sdk基础上，做了小小的封闭。代码托管在github上 <a href="https://github.com/jerrywang1981/watson">watson</a></p>
 <p>目前只有一个assitant package,提供方法来开始一个session并且发送message从而得到结果。</p>
 <p>使用方法也比较简单，NewSession之后就可以发送消息了</p>
-<pre><code>package assistant
+<pre tabindex="0"><code>package assistant
 
 import &quot;testing&quot;
 
@@ -121,7 +121,7 @@ func TestAssistant(t *testing.T) {
 	t.Logf(&quot;%+v&quot;, output)
 }
 </code></pre><p>返回的结果也是和实际返回的一致</p>
-<pre><code>type Intent struct {
+<pre tabindex="0"><code>type Intent struct {
 	Intent     string  `json:&quot;intent&quot;`
 	Confidence float32 `json:&quot;confidence&quot;`
 }
@@ -140,7 +140,7 @@ type WAResult struct {
 	Output WAOutput `json:&quot;output&quot;`
 }
 </code></pre><p>实际的一个例子</p>
-<pre><code>{&quot;output&quot;:{&quot;generic&quot;:[{&quot;response_type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;I didn't understand. You can try rephrasing.&quot;}],&quot;intents&quot;:[{&quot;intent&quot;:&quot;taocan-88&quot;,&quot;confidence&quot;:0.33275983}]}}
+<pre tabindex="0"><code>{&quot;output&quot;:{&quot;generic&quot;:[{&quot;response_type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;I didn't understand. You can try rephrasing.&quot;}],&quot;intents&quot;:[{&quot;intent&quot;:&quot;taocan-88&quot;,&quot;confidence&quot;:0.33275983}]}}
 </code></pre>
         </div>
 
@@ -192,34 +192,6 @@ type WAResult struct {
 
                 <div id="secondary">
     <section class="widget">
-        <div class="card">
-    <a href="https://github.com/jerrywang1981">
-        <div class="card-image">
-            <img class="lazy" src="/img/jerry.png" data-original="/img/jerry.png" />
-        </div>
-        <div class="card-body">
-            <div class="card-title">
-                <h3>
-                    Jerry Wang
-                </h3>
-            </div>
-            <div class="card-date">
-                <time>
-                </time>
-            </div>
-
-            <div class="card-exceprt">
-                <p>
-
-                </p>
-            </div>
-        </div>
-    </a>
-  </div>
-
-    </section>
-
-    <section class="widget">
         <form id="search" action='https://jerrywang1981.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
@@ -227,7 +199,7 @@ type WAResult struct {
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
-
+    
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
@@ -301,7 +273,7 @@ type WAResult struct {
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (53)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (54)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -320,6 +292,8 @@ type WAResult struct {
     <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/movie/">movie (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
@@ -356,6 +330,8 @@ type WAResult struct {
     <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/tv/">tv (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     
@@ -410,6 +386,8 @@ type WAResult struct {
     
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
+    <a href="https://jerrywang1981.github.io/tags/movie/">movie</a>
+    
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
@@ -446,6 +424,8 @@ type WAResult struct {
     
     <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
     
+    <a href="https://jerrywang1981.github.io/tags/tv/">tv</a>
+    
     <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
     
     <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
@@ -464,13 +444,15 @@ type WAResult struct {
         </ul>
     </section>
 </div>
-
             </div>
         </div>
     </div>
     <footer id="footer">
     <div class="container">
         &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
     </div>
 </footer>
 
@@ -489,7 +471,6 @@ type WAResult struct {
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src='/js/background-shape.js?v=0.0.0' async=""></script>
 
 
 
@@ -497,7 +478,6 @@ type WAResult struct {
 
 
     <script src='/js/douban.js'></script>
-
 
 </body>
 

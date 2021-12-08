@@ -95,7 +95,7 @@
         
         <div class="post-content">
             <h2 id="无参装饰器">无参装饰器</h2>
-<pre><code>#1. decorator without arguments
+<pre tabindex="0"><code>#1. decorator without arguments
 def log_time_always(func):
     @wraps(func)
     def wrapped(*args, **kwargs):
@@ -109,7 +109,7 @@ def log_time_always(func):
 
     return wrapped
 </code></pre><h2 id="带参数的装饰器">带参数的装饰器</h2>
-<pre><code>#2. decorator with arguments, flag is True or False
+<pre tabindex="0"><code>#2. decorator with arguments, flag is True or False
 def log_time(flag):
     def wrapper(func):
         @wraps(func)
@@ -132,23 +132,23 @@ def log_time(flag):
 <li>装饰器需要能够处理一个函数</li>
 </ul>
 <h3 id="无参">无参</h3>
-<pre><code>@decorator_1
+<pre tabindex="0"><code>@decorator_1
 def f():
   pass
 
 </code></pre><p>等同于</p>
-<pre><code>def f():
+<pre tabindex="0"><code>def f():
   pass
 
 f = decorator_1(f)
 
 </code></pre><h3 id="带参">带参</h3>
-<pre><code>@decorator_2('ok')
+<pre tabindex="0"><code>@decorator_2('ok')
 def f():
   pass
 
 </code></pre><p>等同于</p>
-<pre><code>def f():
+<pre tabindex="0"><code>def f():
   pass
 
 f = decorator_1('ok')(f)
@@ -202,34 +202,6 @@ f = decorator_1('ok')(f)
 
                 <div id="secondary">
     <section class="widget">
-        <div class="card">
-    <a href="https://github.com/jerrywang1981">
-        <div class="card-image">
-            <img class="lazy" src="/img/jerry.png" data-original="/img/jerry.png" />
-        </div>
-        <div class="card-body">
-            <div class="card-title">
-                <h3>
-                    Jerry Wang
-                </h3>
-            </div>
-            <div class="card-date">
-                <time>
-                </time>
-            </div>
-
-            <div class="card-exceprt">
-                <p>
-
-                </p>
-            </div>
-        </div>
-    </a>
-  </div>
-
-    </section>
-
-    <section class="widget">
         <form id="search" action='https://jerrywang1981.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
@@ -237,7 +209,7 @@ f = decorator_1('ok')(f)
       <button type="submit" class="submit icon-search"></button>
 </form>
     </section>
-
+    
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
@@ -311,7 +283,7 @@ f = decorator_1('ok')(f)
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (53)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (54)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -330,6 +302,8 @@ f = decorator_1('ok')(f)
     <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/movie/">movie (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
@@ -366,6 +340,8 @@ f = decorator_1('ok')(f)
     <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/tv/">tv (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
     
@@ -420,6 +396,8 @@ f = decorator_1('ok')(f)
     
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
+    <a href="https://jerrywang1981.github.io/tags/movie/">movie</a>
+    
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
@@ -456,6 +434,8 @@ f = decorator_1('ok')(f)
     
     <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
     
+    <a href="https://jerrywang1981.github.io/tags/tv/">tv</a>
+    
     <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
     
     <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
@@ -474,13 +454,15 @@ f = decorator_1('ok')(f)
         </ul>
     </section>
 </div>
-
             </div>
         </div>
     </div>
     <footer id="footer">
     <div class="container">
         &copy; 2021 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
     </div>
 </footer>
 
@@ -499,7 +481,6 @@ f = decorator_1('ok')(f)
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src='/js/background-shape.js?v=0.0.0' async=""></script>
 
 
 
@@ -507,7 +488,6 @@ f = decorator_1('ok')(f)
 
 
     <script src='/js/douban.js'></script>
-
 
 </body>
 
