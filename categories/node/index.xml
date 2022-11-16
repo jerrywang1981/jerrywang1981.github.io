@@ -6,14 +6,28 @@
     <description>Recent content in node on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 25 Sep 2020 07:56:47 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 09:29:06 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blind Sql Injection</title>
+      <link>https://jerrywang1981.github.io/post/node/blind-sql-injection/</link>
+      <pubDate>Wed, 16 Nov 2022 09:29:06 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/node/blind-sql-injection/</guid>
+      <description>Security Risk: It is possible to view, modify or delete database entries and tables
+Cause: Sanitation of hazardous characters was not performed correctly on user input
+Fix: Review possible solutions for hazardous character injection
+Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.
+How to fix https://sequelize.org/v5/manual/raw-queries.html
+make sure to &amp;lsquo;replace&amp;rsquo;/&amp;lsquo;bind&amp;rsquo;</description>
+    </item>
+    
     <item>
       <title>React for Beginners</title>
       <link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
       <pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
-      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;quot;this is demo&amp;quot;, products: [ { id: 1, name: &amp;quot;ok&amp;quot;, }, { id: 2, name: &amp;quot;bad&amp;quot;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
+      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;#34;this is demo&amp;#34;, products: [ { id: 1, name: &amp;#34;ok&amp;#34;, }, { id: 2, name: &amp;#34;bad&amp;#34;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
     </item>
     
     <item>
@@ -22,7 +36,7 @@
       <pubDate>Tue, 19 May 2020 20:00:37 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/</guid>
-      <description>Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &amp;quot;users&amp;quot; users 比如这是两个table</description>
+      <description>Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &amp;#34;users&amp;#34; users 比如这是两个table</description>
     </item>
     
     <item>
@@ -31,7 +45,7 @@
       <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</guid>
-      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;</description>
+      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &amp;#39;use strict&amp;#39;;</description>
     </item>
     
     <item>

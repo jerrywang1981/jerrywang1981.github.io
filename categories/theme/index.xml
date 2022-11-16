@@ -13,7 +13,7 @@
       <pubDate>Wed, 03 Jun 2020 21:30:06 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</guid>
-      <description>就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&amp;quot;script&amp;quot;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &amp;quot;zIndex&amp;quot;, -1), o: n(i, &amp;quot;opacity&amp;quot;, .5), c: n(i, &amp;quot;color&amp;quot;, &amp;quot;0,0,0&amp;quot;), n: n(i, &amp;quot;count&amp;quot;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {</description>
+      <description>就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&amp;#34;script&amp;#34;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &amp;#34;zIndex&amp;#34;, -1), o: n(i, &amp;#34;opacity&amp;#34;, .5), c: n(i, &amp;#34;color&amp;#34;, &amp;#34;0,0,0&amp;#34;), n: n(i, &amp;#34;count&amp;#34;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {</description>
     </item>
     
   </channel>

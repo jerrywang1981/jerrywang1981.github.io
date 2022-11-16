@@ -13,7 +13,7 @@
       <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</guid>
-      <description>问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&#39;sort1&#39;) sort1: MatSort; 在页面中，需要 &amp;lt;mat-table #table [dataSource]=&amp;quot;dataSource&amp;quot; #sort1=&amp;quot;matSort&amp;quot; matSort&amp;gt;</description>
+      <description>问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&amp;#39;sort1&amp;#39;) sort1: MatSort; 在页面中，需要 &amp;lt;mat-table #table [dataSource]=&amp;#34;dataSource&amp;#34; #sort1=&amp;#34;matSort&amp;#34; matSort&amp;gt;</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</guid>
-      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;</description>
+      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &amp;#39;use strict&amp;#39;;</description>
     </item>
     
   </channel>

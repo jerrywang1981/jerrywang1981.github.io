@@ -6,14 +6,19 @@
     <description>Recent content on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 08 Dec 2021 09:13:34 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 09:29:06 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>推荐的电影电视剧</title>
-      <link>https://jerrywang1981.github.io/life/movies-tvs/</link>
-      <pubDate>Wed, 08 Dec 2021 09:13:34 +0800</pubDate>
+      <title>Blind Sql Injection</title>
+      <link>https://jerrywang1981.github.io/post/node/blind-sql-injection/</link>
+      <pubDate>Wed, 16 Nov 2022 09:29:06 +0800</pubDate>
       
-      <guid>https://jerrywang1981.github.io/life/movies-tvs/</guid>
-      <description>电视剧 戈壁母亲 最美的青春 父母爱情 士兵突击 潜伏 白鹿原</description>
+      <guid>https://jerrywang1981.github.io/post/node/blind-sql-injection/</guid>
+      <description>Security Risk: It is possible to view, modify or delete database entries and tables
+Cause: Sanitation of hazardous characters was not performed correctly on user input
+Fix: Review possible solutions for hazardous character injection
+Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.
+How to fix https://sequelize.org/v5/manual/raw-queries.html
+make sure to &amp;lsquo;replace&amp;rsquo;/&amp;lsquo;bind&amp;rsquo;</description>
     </item>
     
     <item>
@@ -22,7 +27,7 @@
       <pubDate>Fri, 09 Apr 2021 20:40:45 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</guid>
-      <description>Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&amp;quot;AUTH_URL&amp;quot;) // github authorization url TOKEN_URL = os.Getenv(&amp;quot;TOKEN_URL&amp;quot;) // github token url CLIENT_ID = os.Getenv(&amp;quot;CLIENT_ID&amp;quot;) // client id CLIENT_SECRET = os.Getenv(&amp;quot;CLIENT_SECRET&amp;quot;) // client secret REDIRECT_URL = os.Getenv(&amp;quot;REDIRECT_URL&amp;quot;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&amp;quot;openid&amp;quot;, &amp;quot;email&amp;quot;, &amp;quot;site_admin&amp;quot;, &amp;quot;repo&amp;quot;, &amp;quot;admin:org&amp;quot;, &amp;quot;user&amp;quot;}, } Login</description>
+      <description>Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&amp;#34;AUTH_URL&amp;#34;) // github authorization url TOKEN_URL = os.Getenv(&amp;#34;TOKEN_URL&amp;#34;) // github token url CLIENT_ID = os.Getenv(&amp;#34;CLIENT_ID&amp;#34;) // client id CLIENT_SECRET = os.Getenv(&amp;#34;CLIENT_SECRET&amp;#34;) // client secret REDIRECT_URL = os.Getenv(&amp;#34;REDIRECT_URL&amp;#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&amp;#34;openid&amp;#34;, &amp;#34;email&amp;#34;, &amp;#34;site_admin&amp;#34;, &amp;#34;repo&amp;#34;, &amp;#34;admin:org&amp;#34;, &amp;#34;user&amp;#34;}, } Login</description>
     </item>
     
     <item>
@@ -31,7 +36,7 @@
       <pubDate>Sat, 06 Feb 2021 16:10:08 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/terminate-golang-app/</guid>
-      <description>channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&amp;gt;SIGINT, kill -9 -&amp;gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &amp;lt;-sigChan log.Info(&amp;quot;exit&amp;quot;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</description>
+      <description>channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&amp;gt;SIGINT, kill -9 -&amp;gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &amp;lt;-sigChan log.Info(&amp;#34;exit&amp;#34;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</description>
     </item>
     
     <item>
@@ -40,7 +45,7 @@
       <pubDate>Sat, 06 Feb 2021 16:06:53 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/golang-cron-jobs/</guid>
-      <description>cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &amp;quot;0 2 * * ?&amp;quot; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&amp;quot;Send reminder for org member expiration job started&amp;quot;) defer func() { log.Info(&amp;quot;Send reminder for org member expiration job finished&amp;quot;) }() log.Info(&amp;quot;started to remind expired org members&amp;quot;) err = task.RemindExpiredOrgMember(14) if err !=</description>
+      <description>cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &amp;#34;0 2 * * ?&amp;#34; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&amp;#34;Send reminder for org member expiration job started&amp;#34;) defer func() { log.Info(&amp;#34;Send reminder for org member expiration job finished&amp;#34;) }() log.Info(&amp;#34;started to remind expired org members&amp;#34;) err = task.RemindExpiredOrgMember(14) if err !=</description>
     </item>
     
     <item>
@@ -49,7 +54,7 @@
       <pubDate>Sat, 06 Feb 2021 14:56:43 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</guid>
-      <description>JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&amp;quot;error: %v&amp;quot;, err) return nil, fmt.Errorf(&amp;quot;failed to parse the token string: %s&amp;quot;, tokenString) } log.Printf(&amp;quot;claims: %v&amp;quot;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;amp;&amp;amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&amp;quot;failed to valiate the token&amp;quot;), &amp;quot;failed&amp;quot;) } }</description>
+      <description>JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&amp;#34;error: %v&amp;#34;, err) return nil, fmt.Errorf(&amp;#34;failed to parse the token string: %s&amp;#34;, tokenString) } log.Printf(&amp;#34;claims: %v&amp;#34;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;amp;&amp;amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&amp;#34;failed to valiate the token&amp;#34;), &amp;#34;failed&amp;#34;) } }</description>
     </item>
     
     <item>
@@ -58,7 +63,7 @@
       <pubDate>Thu, 12 Nov 2020 19:31:52 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</guid>
-      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;quot;defaultSSLConfig&amp;quot; sslProtocol=&amp;quot;TLSv1.2&amp;quot; keyStoreRef=&amp;quot;defaultKeyStore&amp;quot; securityLevel=&amp;quot;CUSTOM&amp;quot; enabledCiphers=&amp;quot;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;quot;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
+      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34; sslProtocol=&amp;#34;TLSv1.2&amp;#34; keyStoreRef=&amp;#34;defaultKeyStore&amp;#34; securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
     </item>
     
     <item>
@@ -67,7 +72,7 @@
       <pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
-      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;quot;this is demo&amp;quot;, products: [ { id: 1, name: &amp;quot;ok&amp;quot;, }, { id: 2, name: &amp;quot;bad&amp;quot;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
+      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;#34;this is demo&amp;#34;, products: [ { id: 1, name: &amp;#34;ok&amp;#34;, }, { id: 2, name: &amp;#34;bad&amp;#34;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
     </item>
     
     <item>
@@ -85,7 +90,7 @@
       <pubDate>Fri, 11 Sep 2020 15:14:50 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</guid>
-      <description>背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &amp;ndash;schema-only 只备份schema. pg_dump --file &amp;quot;/root/repo/uat-copy.tar&amp;quot; --host &amp;quot;db host name&amp;quot; --port &amp;quot;23123&amp;quot; --username &amp;quot;admin&amp;quot; --password --verbose --format=t --blobs --schema-only &amp;quot;compose&amp;quot; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &amp;quot;hostname here&amp;quot; --port &amp;quot;31090&amp;quot; --username &amp;quot;usernamehere&amp;quot; --password --dbname &amp;quot;ibmclouddb&amp;quot; --verbose &amp;quot;/root/repo/uat-copy.tar&amp;quot; 不管备份还是恢复，都会要求输入密</description>
+      <description>背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &amp;ndash;schema-only 只备份schema. pg_dump --file &amp;#34;/root/repo/uat-copy.tar&amp;#34; --host &amp;#34;db host name&amp;#34; --port &amp;#34;23123&amp;#34; --username &amp;#34;admin&amp;#34; --password --verbose --format=t --blobs --schema-only &amp;#34;compose&amp;#34; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &amp;#34;hostname here&amp;#34; --port &amp;#34;31090&amp;#34; --username &amp;#34;usernamehere&amp;#34; --password --dbname &amp;#34;ibmclouddb&amp;#34; --verbose &amp;#34;/root/repo/uat-copy.tar&amp;#34; 不管备份还是恢复，都会要求输入密</description>
     </item>
     
     <item>
@@ -103,7 +108,7 @@
       <pubDate>Thu, 10 Sep 2020 07:52:49 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</guid>
-      <description>File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&amp;gt; { // response is Blob &amp;lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&#39;a&#39;) a.style.display = &#39;none&#39; a.href = url a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });</description>
+      <description>File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &amp;#39;blob&amp;#39;, timeout: 0 }).then(response =&amp;gt; { // response is Blob &amp;lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&amp;#39;a&amp;#39;) a.style.display = &amp;#39;none&amp;#39; a.href = url a.setAttribute(&amp;#39;download&amp;#39;,&amp;#39;file.xlsx&amp;#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });</description>
     </item>
     
     <item>
@@ -112,7 +117,7 @@
       <pubDate>Thu, 10 Sep 2020 07:52:13 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/java/spring-boot-file-download/</guid>
-      <description>spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&amp;quot;/api&amp;quot;) public class ReportController { @GetMapping(value = &amp;quot;/filedownload&amp;quot;) public ResponseEntity&amp;lt;InputStreamResource&amp;gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &amp;quot;attachment; filename=file.xlsx&amp;quot;) .body(new InputStreamResource(stream)); } }</description>
+      <description>spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&amp;#34;/api&amp;#34;) public class ReportController { @GetMapping(value = &amp;#34;/filedownload&amp;#34;) public ResponseEntity&amp;lt;InputStreamResource&amp;gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &amp;#34;attachment; filename=file.xlsx&amp;#34;) .body(new InputStreamResource(stream)); } }</description>
     </item>
     
     <item>
@@ -121,7 +126,7 @@
       <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</guid>
-      <description>Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现 entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &#39;cobeedev&#39;, // basic saml configuration -&amp;gt; Identifier (Entity ID) cert: &#39;&#39;, // refer later signatureAlgorithm: &#39;sha256&#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }</description>
+      <description>Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &amp;#39;/account/auth/blueid/callback&amp;#39;, // 这个是callback需要稍后实现 entryPoint: &amp;#39;&amp;#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &amp;#39;cobeedev&amp;#39;, // basic saml configuration -&amp;gt; Identifier (Entity ID) cert: &amp;#39;&amp;#39;, // refer later signatureAlgorithm: &amp;#39;sha256&amp;#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&amp;#39;../../controllers/users/usersManagement&amp;#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }</description>
     </item>
     
     <item>
@@ -130,7 +135,7 @@
       <pubDate>Thu, 27 Aug 2020 21:27:22 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/other/port-forwarding/</guid>
-      <description>Mac下端口转发 有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口 ###设置转发 echo &amp;quot;rdr pass inet proto tcp from any to any port 443 -&amp;gt; 127.0.0.1 port 9443&amp;quot; | sudo pfctl -ef - 取消转发 sudo pfctl -s nat sudo pfctl -F all -f /etc/pf.conf</description>
+      <description>Mac下端口转发 有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口 ###设置转发 echo &amp;#34;rdr pass inet proto tcp from any to any port 443 -&amp;gt; 127.0.0.1 port 9443&amp;#34; | sudo pfctl -ef - 取消转发 sudo pfctl -s nat sudo pfctl -F all -f /etc/pf.conf</description>
     </item>
     
     <item>
@@ -166,7 +171,7 @@
       <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</guid>
-      <description>问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&#39;sort1&#39;) sort1: MatSort; 在页面中，需要 &amp;lt;mat-table #table [dataSource]=&amp;quot;dataSource&amp;quot; #sort1=&amp;quot;matSort&amp;quot; matSort&amp;gt;</description>
+      <description>问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&amp;#39;sort1&amp;#39;) sort1: MatSort; 在页面中，需要 &amp;lt;mat-table #table [dataSource]=&amp;#34;dataSource&amp;#34; #sort1=&amp;#34;matSort&amp;#34; matSort&amp;gt;</description>
     </item>
     
     <item>
@@ -229,7 +234,7 @@
       <pubDate>Wed, 03 Jun 2020 21:30:06 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</guid>
-      <description>就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&amp;quot;script&amp;quot;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &amp;quot;zIndex&amp;quot;, -1), o: n(i, &amp;quot;opacity&amp;quot;, .5), c: n(i, &amp;quot;color&amp;quot;, &amp;quot;0,0,0&amp;quot;), n: n(i, &amp;quot;count&amp;quot;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {</description>
+      <description>就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&amp;#34;script&amp;#34;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &amp;#34;zIndex&amp;#34;, -1), o: n(i, &amp;#34;opacity&amp;#34;, .5), c: n(i, &amp;#34;color&amp;#34;, &amp;#34;0,0,0&amp;#34;), n: n(i, &amp;#34;count&amp;#34;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {</description>
     </item>
     
     <item>
@@ -265,7 +270,7 @@
       <pubDate>Sun, 31 May 2020 13:58:44 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/13-python-context-manager/</guid>
-      <description>python context manager use contextlib/yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&#39;in finally&#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &#39;&#39;&#39; 1. override __enter__ __exit__ 2. in __enter__, return value &#39;&#39;&#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&#39;in enter&#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&#39;in exit&#39;) self.smtp_server.quit() </description>
+      <description>python context manager use contextlib/yield @contextmanager def send_mail_context(): &amp;#39;&amp;#39;&amp;#39;context manager with send_mail_context() &amp;#39;&amp;#39;&amp;#39; try: # 1 doing work BEFORE the code goes into with block print(&amp;#39;before yield&amp;#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&amp;#39;in finally&amp;#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &amp;#39;&amp;#39;&amp;#39; 1. override __enter__ __exit__ 2. in __enter__, return value &amp;#39;&amp;#39;&amp;#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&amp;#39;in enter&amp;#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&amp;#39;in exit&amp;#39;) self.smtp_server.quit() </description>
     </item>
     
     <item>
@@ -274,7 +279,7 @@
       <pubDate>Sun, 31 May 2020 13:52:03 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/12-python-smtp/</guid>
-      <description>how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&amp;gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&amp;gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&amp;gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = [&#39;your smtp servers&#39;] def _format_addr(s): &#39;&#39;&#39; format the address &#39;&#39;&#39; name, addr = parseaddr(s) return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): &#39;&#39;&#39;plain/text text/html &#39;&#39;&#39; msg = MIMEText(body, mime_type, &#39;utf-8&#39;) msg[&#39;From&#39;] = _format_addr(from_addr) msg[&#39;To&#39;] = &amp;quot;,&amp;quot;.join([_format_addr(x) for x in to_addr]) msg[&#39;Cc&#39;] = &amp;quot;,&amp;quot;.join([_format_addr(x) for x in cc_addr]) msg[&#39;Subject&#39;] = Header(subject, &#39;utf-8&#39;).encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.</description>
+      <description>how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&amp;gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&amp;gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&amp;gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = [&amp;#39;your smtp servers&amp;#39;] def _format_addr(s): &amp;#39;&amp;#39;&amp;#39; format the address &amp;#39;&amp;#39;&amp;#39; name, addr = parseaddr(s) return formataddr((Header(name, &amp;#39;utf-8&amp;#39;).encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&amp;#39;plain&amp;#39;): &amp;#39;&amp;#39;&amp;#39;plain/text text/html &amp;#39;&amp;#39;&amp;#39; msg = MIMEText(body, mime_type, &amp;#39;utf-8&amp;#39;) msg[&amp;#39;From&amp;#39;] = _format_addr(from_addr) msg[&amp;#39;To&amp;#39;] = &amp;#34;,&amp;#34;.join([_format_addr(x) for x in to_addr]) msg[&amp;#39;Cc&amp;#39;] = &amp;#34;,&amp;#34;.join([_format_addr(x) for x in cc_addr]) msg[&amp;#39;Subject&amp;#39;] = Header(subject, &amp;#39;utf-8&amp;#39;).encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&amp;#39;plain&amp;#39;): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): &amp;#39;&amp;#39;&amp;#39;context manager with send_mail_context() &amp;#39;&amp;#39;&amp;#39; try: # 1 doing work BEFORE the code goes into with block print(&amp;#39;before yield&amp;#39;) server = smtplib.</description>
     </item>
     
     <item>
@@ -283,7 +288,7 @@
       <pubDate>Sun, 31 May 2020 13:50:50 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/11-python-mro/</guid>
-      <description>method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print(&#39;class A says hello&#39;) class B(A): pass class C(A): # class variable BP_URL = &#39;https://xxxxx&#39; def __init__(self): self.name = &#39;ok&#39; @staticmethod def print_hello(name, age): &#39;&#39;&#39; staticmethod cannot access any class or self variabel/method &#39;&#39;&#39; pass @classmethod def say(cls): &#39;&#39;&#39;class method can access class level variable/method &#39;&#39;&#39; print(cls.BP_URL) def hello(self): print(&#39;class C says hello&#39;) class D(C, B): pass if __name__ == &#39;__main__&#39;: d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) </description>
+      <description>method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print(&amp;#39;class A says hello&amp;#39;) class B(A): pass class C(A): # class variable BP_URL = &amp;#39;https://xxxxx&amp;#39; def __init__(self): self.name = &amp;#39;ok&amp;#39; @staticmethod def print_hello(name, age): &amp;#39;&amp;#39;&amp;#39; staticmethod cannot access any class or self variabel/method &amp;#39;&amp;#39;&amp;#39; pass @classmethod def say(cls): &amp;#39;&amp;#39;&amp;#39;class method can access class level variable/method &amp;#39;&amp;#39;&amp;#39; print(cls.BP_URL) def hello(self): print(&amp;#39;class C says hello&amp;#39;) class D(C, B): pass if __name__ == &amp;#39;__main__&amp;#39;: d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) </description>
     </item>
     
     <item>
@@ -292,7 +297,7 @@
       <pubDate>Sun, 31 May 2020 13:49:16 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/10-dunder-methods/</guid>
-      <description>dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): &#39;&#39;&#39; a == b &#39;&#39;&#39; return super().__eq__(value) def __ge__(self, value): &#39;&#39;&#39; a &amp;gt;= b &#39;&#39;&#39; return super().__ge__(value) def __gt__(self, value): &#39;&#39;&#39; a &amp;gt; b &#39;&#39;&#39; return super().__gt__(value) def __le__(self, value): &#39;&#39;&#39; a &amp;lt; b &#39;&#39;&#39; return super().__le__(value) def __ne__(self, value): &#39;&#39;&#39; a != b &#39;&#39;&#39; return super().__ne__(value) def __str__(self): &#39;&#39;&#39;print(a) &#39;&#39;&#39; return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): &#39;&#39;&#39; len(a) &#39;&#39;&#39; return self.number * 10 def __lt__(self, other): &#39;&#39;&#39;less than a &amp;lt; b &#39;&#39;&#39; return self.number &amp;lt; other.number def __getattribute__(self, name): &#39;&#39;&#39; print(a[the_key]) &#39;&#39;&#39; return super().__getattribute__(name) def __setattr__(self, name, value): &#39;&#39;&#39; a[the_key] = 5 &#39;&#39;&#39; return super().__setattr__(name, value) def __delattr__(self, name): &#39;&#39;&#39; delete a[&#39;the_key&#39;] &#39;&#39;&#39; return super().__delattr__(name) if __name__ == &#39;__main__&#39;: &#39;&#39;&#39; &#39;&#39;&#39; # a = A(5) # b = A(6) # print(a &amp;lt; b) # print(len(a)) # a[&#39;b&#39;] = 10 # c = a[&#39;c&#39;] pass </description>
+      <description>dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): &amp;#39;&amp;#39;&amp;#39; a == b &amp;#39;&amp;#39;&amp;#39; return super().__eq__(value) def __ge__(self, value): &amp;#39;&amp;#39;&amp;#39; a &amp;gt;= b &amp;#39;&amp;#39;&amp;#39; return super().__ge__(value) def __gt__(self, value): &amp;#39;&amp;#39;&amp;#39; a &amp;gt; b &amp;#39;&amp;#39;&amp;#39; return super().__gt__(value) def __le__(self, value): &amp;#39;&amp;#39;&amp;#39; a &amp;lt; b &amp;#39;&amp;#39;&amp;#39; return super().__le__(value) def __ne__(self, value): &amp;#39;&amp;#39;&amp;#39; a != b &amp;#39;&amp;#39;&amp;#39; return super().__ne__(value) def __str__(self): &amp;#39;&amp;#39;&amp;#39;print(a) &amp;#39;&amp;#39;&amp;#39; return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): &amp;#39;&amp;#39;&amp;#39; len(a) &amp;#39;&amp;#39;&amp;#39; return self.number * 10 def __lt__(self, other): &amp;#39;&amp;#39;&amp;#39;less than a &amp;lt; b &amp;#39;&amp;#39;&amp;#39; return self.number &amp;lt; other.number def __getattribute__(self, name): &amp;#39;&amp;#39;&amp;#39; print(a[the_key]) &amp;#39;&amp;#39;&amp;#39; return super().__getattribute__(name) def __setattr__(self, name, value): &amp;#39;&amp;#39;&amp;#39; a[the_key] = 5 &amp;#39;&amp;#39;&amp;#39; return super().__setattr__(name, value) def __delattr__(self, name): &amp;#39;&amp;#39;&amp;#39; delete a[&amp;#39;the_key&amp;#39;] &amp;#39;&amp;#39;&amp;#39; return super().__delattr__(name) if __name__ == &amp;#39;__main__&amp;#39;: &amp;#39;&amp;#39;&amp;#39; &amp;#39;&amp;#39;&amp;#39; # a = A(5) # b = A(6) # print(a &amp;lt; b) # print(len(a)) # a[&amp;#39;b&amp;#39;] = 10 # c = a[&amp;#39;c&amp;#39;] pass </description>
     </item>
     
     <item>
@@ -310,7 +315,7 @@
       <pubDate>Wed, 27 May 2020 10:17:38 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/09-python-decorators/</guid>
-      <description>无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&#39;in {func.__name__}, it took {t2-t1}&#39;) return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&#39;in {func.__name__}, it took {t2-t1}&#39;) else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =</description>
+      <description>无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&amp;#39;in {func.__name__}, it took {t2-t1}&amp;#39;) return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&amp;#39;in {func.__name__}, it took {t2-t1}&amp;#39;) else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =</description>
     </item>
     
     <item>
@@ -330,7 +335,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Tue, 19 May 2020 20:00:37 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/</guid>
-      <description>Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &amp;quot;users&amp;quot; users 比如这是两个table</description>
+      <description>Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &amp;#34;users&amp;#34; users 比如这是两个table</description>
     </item>
     
     <item>
@@ -339,7 +344,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Sat, 16 May 2020 09:17:08 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/07-python-function/</guid>
-      <description>函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&#39;a&#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) print(f&#39;args = {args} &#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39; print(f&#39;args = {args} &#39;) print(f&#39;kwargs = {kwargs} &#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &#39;__main__&#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,</description>
+      <description>函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&amp;#39;a&amp;#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&amp;#39;x = {x}&amp;#39;) print(f&amp;#39;y = {y}&amp;#39;) print(f&amp;#39;args = {args} &amp;#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&amp;#39;x = {x}&amp;#39;) print(f&amp;#39;y = {y}&amp;#39;) # f-string f&amp;#39;this is string, {x}&amp;#39; print(f&amp;#39;args = {args} &amp;#39;) print(f&amp;#39;kwargs = {kwargs} &amp;#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &amp;#39;__main__&amp;#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,</description>
     </item>
     
     <item>
@@ -348,7 +353,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Sat, 16 May 2020 09:14:28 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/06-condition-loop/</guid>
-      <description>条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: a = 5 if a &amp;gt; 0: print(&#39;a &amp;gt; 0&#39;) else: print(&#39;a &amp;lt; 0&#39;) if a &amp;gt; 0: pass elif a &amp;lt; 5: pass elif a &amp;lt; 10: pass else: pass if a &amp;gt; 0: if a &amp;lt; 5: print(a) else: print(&#39;a &amp;gt; 5&#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: # while condition a = 5 while a &amp;gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&#39;------------------&#39;) for i in range(10): print(i) else: # print(&#39;done&#39;) # continue the loop print(&#39;------------------&#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &amp;lt; 5: print (count, &amp;quot; 小于 5&amp;quot;) count</description>
+      <description>条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &amp;#39;__main__&amp;#39;: a = 5 if a &amp;gt; 0: print(&amp;#39;a &amp;gt; 0&amp;#39;) else: print(&amp;#39;a &amp;lt; 0&amp;#39;) if a &amp;gt; 0: pass elif a &amp;lt; 5: pass elif a &amp;lt; 10: pass else: pass if a &amp;gt; 0: if a &amp;lt; 5: print(a) else: print(&amp;#39;a &amp;gt; 5&amp;#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &amp;#39;__main__&amp;#39;: # while condition a = 5 while a &amp;gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&amp;#39;------------------&amp;#39;) for i in range(10): print(i) else: # print(&amp;#39;done&amp;#39;) # continue the loop print(&amp;#39;------------------&amp;#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &amp;lt; 5: print (count, &amp;#34; 小于 5&amp;#34;) count</description>
     </item>
     
     <item>
@@ -357,7 +362,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</guid>
-      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;</description>
+      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &amp;#39;use strict&amp;#39;;</description>
     </item>
     
     <item>
@@ -366,7 +371,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/go/golang-export-csv/</guid>
-      <description>问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&amp;quot;data.csv&amp;quot;) if err != nil { panic(err) } defer f.Close() f.WriteString(&amp;quot;\xEF\xBB\xBF&amp;quot;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&amp;quot;col 1&amp;quot;, &amp;quot;col 2&amp;quot;, &amp;quot;col 3&amp;quot;}) writer.Flush()</description>
+      <description>问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&amp;#34;data.csv&amp;#34;) if err != nil { panic(err) } defer f.Close() f.WriteString(&amp;#34;\xEF\xBB\xBF&amp;#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&amp;#34;col 1&amp;#34;, &amp;#34;col 2&amp;#34;, &amp;#34;col 3&amp;#34;}) writer.Flush()</description>
     </item>
     
     <item>
@@ -393,7 +398,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Sat, 02 May 2020 21:59:33 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/class-object-method/</guid>
-      <description>对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor</description>
+      <description>对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &amp;#39;__main__&amp;#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor</description>
     </item>
     
     <item>
@@ -429,7 +434,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Sat, 25 Apr 2020 18:35:30 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/05-Python-Dictionary/</guid>
-      <description>Dictionary ###创建方式 a = dict() a = {} a = {&#39;a&#39;: 1, &#39;b&#39;: 2} a = dict(a=1,b=2) a = [(&#39;a&#39;, 1), (&#39;b&#39;, 2)] b = dict(a) a = zip(&#39;abc&#39;, [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), &#39;y&#39;)</description>
+      <description>Dictionary ###创建方式 a = dict() a = {} a = {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 2} a = dict(a=1,b=2) a = [(&amp;#39;a&amp;#39;, 1), (&amp;#39;b&amp;#39;, 2)] b = dict(a) a = zip(&amp;#39;abc&amp;#39;, [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), &amp;#39;y&amp;#39;)</description>
     </item>
     
     <item>
@@ -447,7 +452,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Fri, 24 Apr 2020 21:05:59 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/03-python-list/</guid>
-      <description>列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False 创建列表的方式 a = [] a = [1,2,3] a = list() a = list(&#39;abcdefg&#39;) a = list(range(10)) a = [ x for x in range(20) ] append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6])</description>
+      <description>列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False 创建列表的方式 a = [] a = [1,2,3] a = list() a = list(&amp;#39;abcdefg&amp;#39;) a = list(range(10)) a = [ x for x in range(20) ] append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6])</description>
     </item>
     
     <item>
@@ -465,7 +470,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Thu, 23 Apr 2020 13:51:39 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/python/01-python-data-type/</guid>
-      <description>基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号&amp;rsquo;或双引号&amp;quot;括起来的任意文本 如果字符串内部包含&#39;,&amp;quot;, 可以用转义字符\来标识 转义 \ 不转义 &amp;lsquo;&amp;lsquo;&amp;lsquo;text&amp;rsquo;&#39;&amp;rsquo;, &amp;ldquo;&amp;ldquo;&amp;ldquo;text&amp;rdquo;&amp;quot;&amp;rdquo;, r&amp;rsquo;text\n&amp;rsquo; 布尔值</description>
+      <description>基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号&amp;rsquo;或双引号&amp;quot;括起来的任意文本 如果字符串内部包含&amp;rsquo;,&amp;quot;, 可以用转义字符\来标识 转义 \ 不转义</description>
     </item>
     
     <item>
@@ -519,7 +524,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
       <pubDate>Sat, 11 Apr 2020 19:52:18 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/about/</guid>
-      <description>个人简介 现居住大连, 自1998年来大连求学，一直在大连生活，慢慢的适应，喜欢上了这里的生活。从大连海事大学毕业后，一直从事软件开发，项目管理方面的工作。 个人爱好 对新的事物，比如技术，科技方面的，都比较感兴趣。 工作经历 从2005年开始参加工作，做IT相关的工作。做过Team Leader, 做过项</description>
+      <description>个人简介 现居住大连, 自1998年来大连求学，一直在大连生活，慢慢的适应，喜欢上了这里的生活。从大连海事大学毕业后，一直从事软件开发，项目管理方面的工作。 个人爱好 对新的事物，比如技术，科技方面的，都比较感兴趣。 工作经历 从2005年开始参加工作，做IT相关的工作。主要做系统开发维护及</description>
     </item>
     
     <item>

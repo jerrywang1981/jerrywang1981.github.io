@@ -13,7 +13,7 @@
       <pubDate>Fri, 11 Sep 2020 15:14:50 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/</guid>
-      <description>背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &amp;ndash;schema-only 只备份schema. pg_dump --file &amp;quot;/root/repo/uat-copy.tar&amp;quot; --host &amp;quot;db host name&amp;quot; --port &amp;quot;23123&amp;quot; --username &amp;quot;admin&amp;quot; --password --verbose --format=t --blobs --schema-only &amp;quot;compose&amp;quot; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &amp;quot;hostname here&amp;quot; --port &amp;quot;31090&amp;quot; --username &amp;quot;usernamehere&amp;quot; --password --dbname &amp;quot;ibmclouddb&amp;quot; --verbose &amp;quot;/root/repo/uat-copy.tar&amp;quot; 不管备份还是恢复，都会要求输入密</description>
+      <description>背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &amp;ndash;schema-only 只备份schema. pg_dump --file &amp;#34;/root/repo/uat-copy.tar&amp;#34; --host &amp;#34;db host name&amp;#34; --port &amp;#34;23123&amp;#34; --username &amp;#34;admin&amp;#34; --password --verbose --format=t --blobs --schema-only &amp;#34;compose&amp;#34; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &amp;#34;hostname here&amp;#34; --port &amp;#34;31090&amp;#34; --username &amp;#34;usernamehere&amp;#34; --password --dbname &amp;#34;ibmclouddb&amp;#34; --verbose &amp;#34;/root/repo/uat-copy.tar&amp;#34; 不管备份还是恢复，都会要求输入密</description>
     </item>
     
     <item>

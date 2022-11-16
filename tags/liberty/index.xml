@@ -13,7 +13,7 @@
       <pubDate>Thu, 12 Nov 2020 19:31:52 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</guid>
-      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;quot;defaultSSLConfig&amp;quot; sslProtocol=&amp;quot;TLSv1.2&amp;quot; keyStoreRef=&amp;quot;defaultKeyStore&amp;quot; securityLevel=&amp;quot;CUSTOM&amp;quot; enabledCiphers=&amp;quot;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;quot;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
+      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34; sslProtocol=&amp;#34;TLSv1.2&amp;#34; keyStoreRef=&amp;#34;defaultKeyStore&amp;#34; securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
     </item>
     
     <item>

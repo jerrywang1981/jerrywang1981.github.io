@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jerrywang1981.github.io/post/node/blind-sql-injection/</loc>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
+  </url><url>
     <loc>https://jerrywang1981.github.io/categories/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/it/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/categories/it/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
-    <loc>https://jerrywang1981.github.io/life/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/tags/node/</loc>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
-    <loc>https://jerrywang1981.github.io/tags/movie/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/categories/node/</loc>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
-    <loc>https://jerrywang1981.github.io/categories/movie/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <loc>https://jerrywang1981.github.io/post/</loc>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/security/</loc>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/categories/security/</loc>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/tags/tv/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/categories/tv/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/life/movies-tvs/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/</loc>
-    <lastmod>2021-12-08T09:13:34+08:00</lastmod>
+    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/golang/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
@@ -48,9 +48,6 @@
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/categories/oauth2/</loc>
-    <lastmod>2021-04-09T20:40:45+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/post/</loc>
     <lastmod>2021-04-09T20:40:45+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/post/go/terminate-golang-app/</loc>
@@ -88,12 +85,6 @@
   </url><url>
     <loc>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</loc>
     <lastmod>2020-11-12T19:31:52+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/tags/node/</loc>
-    <lastmod>2020-09-25T07:56:47+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/categories/node/</loc>
-    <lastmod>2020-09-25T07:56:47+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/react/</loc>
     <lastmod>2020-09-25T07:56:47+08:00</lastmod>
@@ -402,6 +393,9 @@
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/categories/life/</loc>
+    <lastmod>2020-05-02T21:22:26+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/life/</loc>
     <lastmod>2020-05-02T21:22:26+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/db2/</loc>

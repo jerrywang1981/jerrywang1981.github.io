@@ -13,7 +13,7 @@
       <pubDate>Thu, 10 Sep 2020 07:52:49 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</guid>
-      <description>File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&amp;gt; { // response is Blob &amp;lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&#39;a&#39;) a.style.display = &#39;none&#39; a.href = url a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });</description>
+      <description>File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &amp;#39;blob&amp;#39;, timeout: 0 }).then(response =&amp;gt; { // response is Blob &amp;lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&amp;#39;a&amp;#39;) a.style.display = &amp;#39;none&amp;#39; a.href = url a.setAttribute(&amp;#39;download&amp;#39;,&amp;#39;file.xlsx&amp;#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });</description>
     </item>
     
   </channel>
