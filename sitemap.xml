@@ -2,37 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jerrywang1981.github.io/post/node/blind-sql-injection/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
-  </url><url>
     <loc>https://jerrywang1981.github.io/categories/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/it/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/categories/it/</loc>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/post/</loc>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/</loc>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/post/other/address-difficult-situation/</loc>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/</loc>
+    <lastmod>2023-02-27T11:16:14+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/</loc>
+    <lastmod>2023-02-27T09:27:53+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</loc>
+    <lastmod>2023-02-27T09:15:23+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/k8s/</loc>
+    <lastmod>2023-02-27T09:15:23+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/categories/k8s/</loc>
+    <lastmod>2023-02-27T09:15:23+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/tags/security/</loc>
+    <lastmod>2023-02-27T09:15:23+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/categories/security/</loc>
+    <lastmod>2023-02-27T09:15:23+08:00</lastmod>
+  </url><url>
+    <loc>https://jerrywang1981.github.io/post/node/blind-sql-injection/</loc>
     <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/node/</loc>
     <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/categories/node/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/post/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/tags/security/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/categories/security/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/tags/</loc>
-    <lastmod>2022-11-16T09:29:06+08:00</lastmod>
-  </url><url>
-    <loc>https://jerrywang1981.github.io/</loc>
     <lastmod>2022-11-16T09:29:06+08:00</lastmod>
   </url><url>
     <loc>https://jerrywang1981.github.io/tags/golang/</loc>

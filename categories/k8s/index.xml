@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/k8s/</link>
+    <description>Recent content in k8s on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 27 Feb 2023 09:15:23 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cookie With Insecure or Improper or Missing SameSite Attribute</title>
+      <link>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</link>
+      <pubDate>Mon, 27 Feb 2023 09:15:23 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</guid>
+      <description>Issue Cookie with Insecure or Improper or Missing SameSite attribute
+Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
+Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute
+Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values
+for K8s, you may edit the ingress configuration, set samesite value
+nginx.ingress.kubernetes.io/session-cookie-samesite: &amp;#34;Strict&amp;#34; </description>
+    </item>
+    
+  </channel>
+</rss>
