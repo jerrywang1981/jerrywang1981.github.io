@@ -73,6 +73,60 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月11日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/linux'>linux</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/ssh'>ssh</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            配置方法，做个小记录 server 上要配置允许 用户电脑 在 .ssh/config 文件中 Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_rsa Host xxx HostName xx.xx.xx.xx User jerry 把pub key传到server ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x 可以了……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot">Vue File Download From Spring Boot</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月10日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vue'>vue</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/spring'>spring</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&gt; { // response is Blob &lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&#39;a&#39;) a.style.display = &#39;none&#39; a.href = url a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
             </h1>
         </header>
@@ -276,62 +330,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年7月24日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/docker'>docker</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">阅读全文</a></p>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-gorm/" title="Go Gorm 操作数据库">Go Gorm 操作数据库</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年7月23日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/gorm'>gorm</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/postgres'>postgres</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -429,6 +427,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
     </li>
     
@@ -460,14 +466,6 @@
         <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found">Cacheable SSL Page Found</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" title="Cookie With Insecure or Improper or Missing SameSite Attribute">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -497,7 +495,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (63)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (65)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -523,7 +521,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (8)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -565,7 +563,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (8)</a></li>
     
 </ul>
     </section>

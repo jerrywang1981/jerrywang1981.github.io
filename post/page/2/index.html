@@ -75,6 +75,74 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" title="Cookie With Insecure or Improper or Missing SameSite Attribute">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2023年2月27日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/k8s'>k8s</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/security'>security</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Issue Cookie with Insecure or Improper or Missing SameSite attribute
+Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
+Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute
+Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values
+for K8s, you may edit the ingress configuration, set samesite value
+nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34; ……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2022年11月16日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/security'>security</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Security Risk: It is possible to view, modify or delete database entries and tables
+Cause: Sanitation of hazardous characters was not performed correctly on user input
+Fix: Review possible solutions for hazardous character injection
+Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.
+How to fix https://sequelize.org/v5/manual/raw-queries.html
+make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" title="Golang Oauth2 Github">Golang Oauth2 Github</a>
             </h1>
         </header>
@@ -302,64 +370,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年9月11日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/linux'>linux</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/ssh'>ssh</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            配置方法，做个小记录 server 上要配置允许 用户电脑 在 .ssh/config 文件中 Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_rsa Host xxx HostName xx.xx.xx.xx User jerry 把pub key传到server ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x 可以了……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot">Vue File Download From Spring Boot</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年9月10日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vue'>vue</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/spring'>spring</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&gt; { // response is Blob &lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&#39;a&#39;) a.style.display = &#39;none&#39; a.href = url a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -456,6 +466,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
     </li>
     
@@ -487,14 +505,6 @@
         <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found">Cacheable SSL Page Found</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" title="Cookie With Insecure or Improper or Missing SameSite Attribute">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -524,7 +534,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (63)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (65)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -550,7 +560,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (8)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -592,7 +602,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (8)</a></li>
     
 </ul>
     </section>

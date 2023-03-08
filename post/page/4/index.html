@@ -75,6 +75,66 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年7月24日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/docker'>docker</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/go-gorm/" title="Go Gorm 操作数据库">Go Gorm 操作数据库</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年7月23日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/gorm'>gorm</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/postgres'>postgres</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip">Multiple Line in Mat Tooltip</a>
             </h1>
         </header>
@@ -300,60 +360,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月31日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = [&#39;your smtp servers&#39;] def _format_addr(s): &#39;&#39;&#39; format the address &#39;&#39;&#39; name, addr = parseaddr(s) return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): &#39;&#39;&#39;plain/text text/html &#39;&#39;&#39; msg = MIMEText(body, mime_type, &#39;utf-8&#39;) msg[&#39;From&#39;] = _format_addr(from_addr) msg[&#39;To&#39;] = &#34;,&#34;.join([_format_addr(x) for x in to_addr]) msg[&#39;Cc&#39;] = &#34;,&#34;.join([_format_addr(x) for x in cc_addr]) msg[&#39;Subject&#39;] = Header(subject, &#39;utf-8&#39;).encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/" title="11 Python Mro">11 Python Mro</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月31日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print(&#39;class A says hello&#39;) class B(A): pass class C(A): # class variable BP_URL = &#39;https://xxxxx&#39; def __init__(self): self.name = &#39;ok&#39; @staticmethod def print_hello(name, age): &#39;&#39;&#39; staticmethod cannot access any class or self variabel/method &#39;&#39;&#39; pass @classmethod def say(cls): &#39;&#39;&#39;class method can access class level variable/method &#39;&#39;&#39; print(cls.BP_URL) def hello(self): print(&#39;class C says hello&#39;) class D(C, B): pass if __name__ == &#39;__main__&#39;: d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) ……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -450,6 +456,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
     </li>
     
@@ -481,14 +495,6 @@
         <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found">Cacheable SSL Page Found</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" title="Cookie With Insecure or Improper or Missing SameSite Attribute">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -518,7 +524,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (63)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (65)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -544,7 +550,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (8)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -586,7 +592,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (8)</a></li>
     
 </ul>
     </section>
