@@ -75,6 +75,62 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" title="Golang Oauth2 Github">Golang Oauth2 Github</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年4月9日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/oauth2'>oauth2</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url TOKEN_URL = os.Getenv(&#34;TOKEN_URL&#34;) // github token url CLIENT_ID = os.Getenv(&#34;CLIENT_ID&#34;) // client id CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret REDIRECT_URL = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;}, } Login……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年2月6日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &lt;-sigChan log.Info(&#34;exit&#34;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs">Golang Cron Jobs</a>
             </h1>
         </header>
@@ -304,66 +360,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年9月10日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/spring'>spring</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/java'>java</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&#34;/api&#34;) public class ReportController { @GetMapping(value = &#34;/filedownload&#34;) public ResponseEntity&lt;InputStreamResource&gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &#34;attachment; filename=file.xlsx&#34;) .body(new InputStreamResource(stream)); } }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/">阅读全文</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年8月27日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/saml'>saml</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/sso'>sso</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/azure'>azure</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现 entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &#39;cobeedev&#39;, // basic saml configuration -&gt; Identifier (Entity ID) cert: &#39;&#39;, // refer later signatureAlgorithm: &#39;sha256&#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -460,6 +456,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/novel/quan-pin-dai/" title="全频带阻塞干扰">全频带阻塞干扰</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/xiangcunjiaoshi/" title="乡村教师">乡村教师</a>
     </li>
     
@@ -491,14 +495,6 @@
         <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" title="Golang Oauth2 Github">Golang Oauth2 Github</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -528,7 +524,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (61)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (63)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -554,7 +550,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (6)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -596,7 +592,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (6)</a></li>
     
 </ul>
     </section>

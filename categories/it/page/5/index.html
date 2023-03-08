@@ -82,6 +82,56 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">10 Dunder Methods</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): &#39;&#39;&#39; a == b &#39;&#39;&#39; return super().__eq__(value) def __ge__(self, value): &#39;&#39;&#39; a &gt;= b &#39;&#39;&#39; return super().__ge__(value) def __gt__(self, value): &#39;&#39;&#39; a &gt; b &#39;&#39;&#39; return super().__gt__(value) def __le__(self, value): &#39;&#39;&#39; a &lt; b &#39;&#39;&#39; return super().__le__(value) def __ne__(self, value): &#39;&#39;&#39; a != b &#39;&#39;&#39; return super().__ne__(value) def __str__(self): &#39;&#39;&#39;print(a) &#39;&#39;&#39; return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): &#39;&#39;&#39; len(a) &#39;&#39;&#39; return self.number * 10 def __lt__(self, other): &#39;&#39;&#39;less than a &lt; b &#39;&#39;&#39; return self.number &lt; other.number def __getattribute__(self, name): &#39;&#39;&#39; print(a[the_key]) &#39;&#39;&#39; return super().__getattribute__(name) def __setattr__(self, name, value): &#39;&#39;&#39; a[the_key] = 5 &#39;&#39;&#39; return super().__setattr__(name, value) def __delattr__(self, name): &#39;&#39;&#39; delete a[&#39;the_key&#39;] &#39;&#39;&#39; return super().__delattr__(name) if __name__ == &#39;__main__&#39;: &#39;&#39;&#39; &#39;&#39;&#39; # a = A(5) # b = A(6) # print(a &lt; b) # print(len(a)) # a[&#39;b&#39;] = 10 # c = a[&#39;c&#39;] pass ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/machine-learning'>machine learning</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Too many or too few labels 如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题 label之间要不包含 label 名字不要出现在train/test的路径中 所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">09 Python Decorators</a>
             </h1>
         </header>
@@ -297,58 +347,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月4日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月2日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -447,6 +445,14 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
+    </li>
+    
+    <li>
+        <a href="https://jerrywang1981.github.io/post/novel/quan-pin-dai/" title="全频带阻塞干扰">全频带阻塞干扰</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/xiangcunjiaoshi/" title="乡村教师">乡村教师</a>
     </li>
     
@@ -478,14 +484,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" title="Golang Oauth2 Github">Golang Oauth2 Github</a>
-    </li>
-    
-    <li>
-        <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -515,7 +513,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (61)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (63)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -541,7 +539,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (6)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -583,7 +581,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (6)</a></li>
     
 </ul>
     </section>
