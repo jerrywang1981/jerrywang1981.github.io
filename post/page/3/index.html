@@ -75,6 +75,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/" title="Postgres 备份与恢复">Postgres 备份与恢复</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月11日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/postgres'>postgres</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。 备份 可以使用 pg_dump 来备份，或者加上 &ndash;schema-only 只备份schema. pg_dump --file &#34;/root/repo/uat-copy.tar&#34; --host &#34;db host name&#34; --port &#34;23123&#34; --username &#34;admin&#34; --password --verbose --format=t --blobs --schema-only &#34;compose&#34; 恢复 同样的，可以使用pg_restore来恢复 pg_restore --host &#34;hostname here&#34; --port &#34;31090&#34; --username &#34;usernamehere&#34; --password --dbname &#34;ibmclouddb&#34; --verbose &#34;/root/repo/uat-copy.tar&#34; 不管备份还是恢复，都会要求输入密……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
             </h1>
         </header>
@@ -325,33 +352,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf">Angular Material Table Paginator ngIf</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年8月4日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            问题 一般来说，按angular material的官方文档, 在afterViewInit里面 可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的 @ViewChild(MatPaginator) paginator: MatPaginator; 可能就不好用了。因为还没有渲染，对应……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -448,6 +448,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
     </li>
     
@@ -483,10 +487,6 @@
         <a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/" title="如何处理有难度的场景">如何处理有难度的场景</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found">Cacheable SSL Page Found</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -516,7 +516,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (65)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (66)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -542,7 +542,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (9)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -584,7 +584,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (9)</a></li>
     
 </ul>
     </section>

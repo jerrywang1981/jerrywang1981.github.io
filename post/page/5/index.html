@@ -75,6 +75,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            python context manager use contextlib/yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&#39;in finally&#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &#39;&#39;&#39; 1. override __enter__ __exit__ 2. in __enter__, return value &#39;&#39;&#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&#39;in enter&#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&#39;in exit&#39;) self.smtp_server.quit() ……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp">12 Python Smtp</a>
             </h1>
         </header>
@@ -321,35 +348,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory">Angular Javascript Heap Out of Memory</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月14日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/node'>node</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -446,6 +444,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
     </li>
     
@@ -481,10 +483,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/" title="如何处理有难度的场景">如何处理有难度的场景</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found">Cacheable SSL Page Found</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -514,7 +512,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (65)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (66)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -540,7 +538,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (9)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -582,7 +580,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (9)</a></li>
     
 </ul>
     </section>

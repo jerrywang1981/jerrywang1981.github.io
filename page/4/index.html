@@ -73,6 +73,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf">Angular Material Table Paginator ngIf</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月4日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            问题 一般来说，按angular material的官方文档, 在afterViewInit里面 可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的 @ViewChild(MatPaginator) paginator: MatPaginator; 可能就不好用了。因为还没有渲染，对应……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
             </h1>
         </header>
@@ -313,31 +338,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/14-anaconda/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager">13 Python Context Manager</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月31日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            python context manager use contextlib/yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&#39;in finally&#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &#39;&#39;&#39; 1. override __enter__ __exit__ 2. in __enter__, return value &#39;&#39;&#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&#39;in enter&#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&#39;in exit&#39;) self.smtp_server.quit() ……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -435,6 +435,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
     </li>
     
@@ -470,10 +474,6 @@
         <a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/" title="如何处理有难度的场景">如何处理有难度的场景</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found">Cacheable SSL Page Found</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -503,7 +503,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (65)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (66)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -529,7 +529,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (9)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -571,7 +571,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (9)</a></li>
     
 </ul>
     </section>
