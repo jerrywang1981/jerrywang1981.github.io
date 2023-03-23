@@ -75,6 +75,37 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" title="Gin Jwt Middleware">Gin Jwt Middleware</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年2月6日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/jwt'>jwt</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/gin'>gin</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&#34;error: %v&#34;, err) return nil, fmt.Errorf(&#34;failed to parse the token string: %s&#34;, tokenString) } log.Printf(&#34;claims: %v&#34;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&#34;failed to valiate the token&#34;), &#34;failed&#34;) } }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps">Liberty Profile Tls V1 Gaps</a>
             </h1>
         </header>
@@ -331,33 +362,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年8月18日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -395,6 +399,10 @@
     
     <li >
         <a href="https://jerrywang1981.github.io/post/page/7/">7</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/post/page/8/">8</a>
     </li>
     
 
@@ -454,6 +462,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/shan/" title="山">山</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/shan-yang-ren-lei/" title="赡养人类">赡养人类</a>
     </li>
     
@@ -489,10 +501,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/xiangcunjiaoshi/" title="乡村教师">乡村教师</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/jing-ge/" title="鲸歌">鲸歌</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -522,7 +530,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (69)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (70)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -548,7 +556,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (12)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (13)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -590,7 +598,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (12)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (13)</a></li>
     
 </ul>
     </section>
