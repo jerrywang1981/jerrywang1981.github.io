@@ -6,7 +6,18 @@
     <description>Recent content in node on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 16 Nov 2022 09:29:06 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Mar 2023 18:52:12 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Axios Error Request Body Larger Than MaxBodyLength Limit</title>
+      <link>https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/</link>
+      <pubDate>Tue, 28 Mar 2023 18:52:12 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/</guid>
+      <description>Axios error Request Body Larger Than MaxBodyLength Limit
+solution config axios maxContentLength/maxBodyLength to a large number or Infinity
+const options = { url, //method: &amp;#39;post&amp;#39;, //... maxContentLength: Infinity, maxBodyLength: Infinity, }; </description>
+    </item>
+    
     <item>
       <title>Blind Sql Injection</title>
       <link>https://jerrywang1981.github.io/post/node/blind-sql-injection/</link>

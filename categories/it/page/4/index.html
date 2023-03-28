@@ -82,6 +82,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">Azure AD SAML SSO with Node Application</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年8月27日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/saml'>saml</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/sso'>sso</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/azure'>azure</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现 entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &#39;cobeedev&#39;, // basic saml configuration -&gt; Identifier (Entity ID) cert: &#39;&#39;, // refer later signatureAlgorithm: &#39;sha256&#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/other/port-forwarding/">Port Forwarding - Mac</a>
             </h1>
         </header>
@@ -310,33 +339,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">18 Matplotlib Demo</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月9日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/matplotlib'>matplotlib</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook matplot_demo……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -439,6 +441,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/si-xiang-zhe/" title="思想者">思想者</a>
     </li>
     
@@ -474,10 +480,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/quan-pin-dai/" title="全频带阻塞干扰">全频带阻塞干扰</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -488,6 +490,8 @@
 <ul class="widget-list">
     
     <li><a href="https://jerrywang1981.github.io/categories/angular/">angular (4)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/axios/">axios (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/azure/">azure (1)</a></li>
     
@@ -507,7 +511,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (71)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (72)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -531,7 +535,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (14)</a></li>
     
@@ -585,6 +589,8 @@
 <div class="tagcloud">
     
     <a href="https://jerrywang1981.github.io/tags/angular/">angular</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/axios/">axios</a>
     
     <a href="https://jerrywang1981.github.io/tags/azure/">azure</a>
     
