@@ -73,6 +73,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators">09 Python Decorators</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月27日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&#39;in {func.__name__}, it took {t2-t1}&#39;) return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&#39;in {func.__name__}, it took {t2-t1}&#39;) else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment">08 Python Virtual Environment</a>
             </h1>
         </header>
@@ -315,31 +340,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker">Neovim Docker</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月2日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vim'>vim</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/neovim'>neovim</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -441,6 +441,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/si-xiang-zhe/" title="思想者">思想者</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/shan/" title="山">山</a>
     </li>
     
@@ -476,10 +480,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/novel/quan-pin-dai/" title="全频带阻塞干扰">全频带阻塞干扰</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/xiangcunjiaoshi/" title="乡村教师">乡村教师</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -509,7 +509,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (70)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (71)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -535,7 +535,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (5)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (13)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (14)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -577,7 +577,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (13)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (14)</a></li>
     
 </ul>
     </section>
