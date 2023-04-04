@@ -73,6 +73,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月10日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/spring'>spring</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/java'>java</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&#34;/api&#34;) public class ReportController { @GetMapping(value = &#34;/filedownload&#34;) public ResponseEntity&lt;InputStreamResource&gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &#34;attachment; filename=file.xlsx&#34;) .body(new InputStreamResource(stream)); } }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application">Azure AD SAML SSO with Node Application</a>
             </h1>
         </header>
@@ -305,31 +332,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip">Multiple Line in Mat Tooltip</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月24日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            angular material matTooltip 如果想多行显示，可以把tooltip的内容用空格分开，同时样式 ::ng-deep .mat-tooltip { white-space: pre-line !important; }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -431,6 +433,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
     </li>
     
@@ -466,10 +472,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -501,13 +503,15 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (72)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (73)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/k83/">k83 (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/k8s/">k8s (1)</a></li>
     
@@ -524,6 +528,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/nginx/">nginx (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
@@ -623,6 +629,8 @@
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/nginx/">nginx</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     

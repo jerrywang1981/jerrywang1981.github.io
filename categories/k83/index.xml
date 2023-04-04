@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k83 on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/k83/</link>
+    <description>Recent content in k83 on 村边的池塘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 04 Apr 2023 16:34:00 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/k83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413 Request Entity Too Large</title>
+      <link>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</link>
+      <pubDate>Tue, 04 Apr 2023 16:34:00 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</guid>
+      <description>Error message 413 request entity too large How to fix Nginx increase client_max_body_size
+Kubenetes Ingress increase proxy-body-size
+reference -&amp;gt; https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/</description>
+    </item>
+    
+  </channel>
+</rss>

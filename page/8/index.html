@@ -73,6 +73,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式">01 单例模式</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
             </h1>
         </header>
@@ -244,6 +269,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
     </li>
     
@@ -279,10 +308,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -314,13 +339,15 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (72)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (73)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/k83/">k83 (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/k8s/">k8s (1)</a></li>
     
@@ -337,6 +364,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/nginx/">nginx (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
@@ -436,6 +465,8 @@
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/nginx/">nginx</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     

@@ -75,6 +75,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" title="Golang Oauth2 Github">Golang Oauth2 Github</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年4月9日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/oauth2'>oauth2</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url TOKEN_URL = os.Getenv(&#34;TOKEN_URL&#34;) // github token url CLIENT_ID = os.Getenv(&#34;CLIENT_ID&#34;) // client id CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret REDIRECT_URL = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;}, } Login……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App">Terminate Golang App</a>
             </h1>
         </header>
@@ -331,35 +360,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download">Spring Boot File Download</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年9月10日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/spring'>spring</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/java'>java</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&#34;/api&#34;) public class ReportController { @GetMapping(value = &#34;/filedownload&#34;) public ResponseEntity&lt;InputStreamResource&gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &#34;attachment; filename=file.xlsx&#34;) .body(new InputStreamResource(stream)); } }……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -460,6 +460,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
     </li>
     
@@ -495,10 +499,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -530,13 +530,15 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (72)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (73)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/k83/">k83 (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/k8s/">k8s (1)</a></li>
     
@@ -553,6 +555,8 @@
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/nginx/">nginx (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
@@ -652,6 +656,8 @@
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/nginx/">nginx</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     

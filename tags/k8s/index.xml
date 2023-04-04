@@ -6,7 +6,18 @@
     <description>Recent content in k8s on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 27 Feb 2023 09:15:23 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Apr 2023 16:34:00 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413 Request Entity Too Large</title>
+      <link>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</link>
+      <pubDate>Tue, 04 Apr 2023 16:34:00 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</guid>
+      <description>Error message 413 request entity too large How to fix Nginx increase client_max_body_size
+Kubenetes Ingress increase proxy-body-size
+reference -&amp;gt; https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/</description>
+    </item>
+    
     <item>
       <title>Cookie With Insecure or Improper or Missing SameSite Attribute</title>
       <link>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</link>

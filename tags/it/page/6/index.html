@@ -82,6 +82,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">10 Dunder Methods</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月31日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): &#39;&#39;&#39; a == b &#39;&#39;&#39; return super().__eq__(value) def __ge__(self, value): &#39;&#39;&#39; a &gt;= b &#39;&#39;&#39; return super().__ge__(value) def __gt__(self, value): &#39;&#39;&#39; a &gt; b &#39;&#39;&#39; return super().__gt__(value) def __le__(self, value): &#39;&#39;&#39; a &lt; b &#39;&#39;&#39; return super().__le__(value) def __ne__(self, value): &#39;&#39;&#39; a != b &#39;&#39;&#39; return super().__ne__(value) def __str__(self): &#39;&#39;&#39;print(a) &#39;&#39;&#39; return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): &#39;&#39;&#39; len(a) &#39;&#39;&#39; return self.number * 10 def __lt__(self, other): &#39;&#39;&#39;less than a &lt; b &#39;&#39;&#39; return self.number &lt; other.number def __getattribute__(self, name): &#39;&#39;&#39; print(a[the_key]) &#39;&#39;&#39; return super().__getattribute__(name) def __setattr__(self, name, value): &#39;&#39;&#39; a[the_key] = 5 &#39;&#39;&#39; return super().__setattr__(name, value) def __delattr__(self, name): &#39;&#39;&#39; delete a[&#39;the_key&#39;] &#39;&#39;&#39; return super().__delattr__(name) if __name__ == &#39;__main__&#39;: &#39;&#39;&#39; &#39;&#39;&#39; # a = A(5) # b = A(6) # print(a &lt; b) # print(len(a)) # a[&#39;b&#39;] = 10 # c = a[&#39;c&#39;] pass ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
             </h1>
         </header>
@@ -322,33 +347,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月4日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-        </div>
-        
-        <div class="post-content">
-            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -451,6 +449,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
     </li>
     
@@ -486,10 +488,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
         <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/tun-shi-zhe/" title="人和吞食者">人和吞食者</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -521,13 +519,15 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (72)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (73)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/k83/">k83 (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/k8s/">k8s (1)</a></li>
     
@@ -544,6 +544,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    
+    <li><a href="https://jerrywang1981.github.io/categories/nginx/">nginx (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
@@ -643,6 +645,8 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
     
     <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/nginx/">nginx</a>
     
     <a href="https://jerrywang1981.github.io/tags/node/">node</a>
     
