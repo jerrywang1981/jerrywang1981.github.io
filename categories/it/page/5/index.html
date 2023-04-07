@@ -82,36 +82,177 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/">Multiple Line in Mat Tooltip</a>
+                <a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/">Sequelize Bulk Create to return with primary key in Postgre</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年6月24日
+            2020年5月19日
         </date>
         
         <div class="post-meta meta-category">
             |
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/sequelize'>sequelize</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/postgresql'>postgresql</a>
+            
+        </div>
+        
+        <div class="post-content">
+            Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &#34;users&#34; users 比如这是两个table……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/07-python-function/">07 Python 函数</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&#39;a&#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) print(f&#39;args = {args} &#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39; print(f&#39;args = {args} &#39;) print(f&#39;kwargs = {kwargs} &#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &#39;__main__&#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">06 Python 控制，循环</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月16日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: a = 5 if a &gt; 0: print(&#39;a &gt; 0&#39;) else: print(&#39;a &lt; 0&#39;) if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print(&#39;a &gt; 5&#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&#39;------------------&#39;) for i in range(10): print(i) else: # print(&#39;done&#39;) # continue the loop print(&#39;------------------&#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &#34; 小于 5&#34;) count……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">Angular Javascript Heap Out of Memory</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月14日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
             
             <a href='https://jerrywang1981.github.io/categories/angular'>angular</a>
             
         </div>
         
         <div class="post-content">
-            angular material matTooltip 如果想多行显示，可以把tooltip的内容用空格分开，同时样式 ::ng-deep .mat-tooltip { white-space: pre-line !important; }……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/">阅读全文</a></p>
+            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">18 Matplotlib Demo</a>
+                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年6月9日
+            2020年5月12日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/csv'>csv</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/encoding'>encoding</a>
+            
+        </div>
+        
+        <div class="post-content">
+            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&#34;data.csv&#34;) if err != nil { panic(err) } defer f.Close() f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;}) writer.Flush()……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">转换Pdf成图片</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月11日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/ocr'>ocr</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/pdf'>pdf</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年5月4日
         </date>
         
         <div class="post-meta meta-category">
@@ -121,134 +262,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
-            <a href='https://jerrywang1981.github.io/categories/matplotlib'>matplotlib</a>
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
             
         </div>
         
         <div class="post-content">
-            the code in jupyter notebook matplot_demo……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">阅读全文</a></p>
+            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">17 Pandas Demo</a>
+                <a href="https://jerrywang1981.github.io/post/python/class-object-method/">Class Object Method</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年6月9日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook pandas_demo.ipynb……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/">Hugo Theme 背景图形鼠标跟随效果</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/javascript'>javascript</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/hugo'>hugo</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/theme'>theme</a>
-            
-        </div>
-        
-        <div class="post-content">
-            就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&#34;script&#34;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &#34;zIndex&#34;, -1), o: n(i, &#34;opacity&#34;, .5), c: n(i, &#34;color&#34;, &#34;0,0,0&#34;), n: n(i, &#34;count&#34;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">16 Pandas Demo part 1</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook refer to file pandas_demo.ipynb……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">15 Numpy Demo</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/numpy'>numpy</a>
-            
-        </div>
-        
-        <div class="post-content">
-            the code in jupyter notebook the file numpy_demo.ipynb……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/14-anaconda/">14 Anaconda</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年6月3日
+            2020年5月2日
         </date>
         
         <div class="post-meta meta-category">
@@ -261,19 +292,46 @@
         </div>
         
         <div class="post-content">
-            How to install new package conda install xxx list env conda env list activate one env conda activate xx deactivate env conda deactivate ……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/14-anaconda/">阅读全文</a></p>
+            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">13 Python Context Manager</a>
+                <a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">Db2 Backup Tool</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年5月31日
+            2020年4月25日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/db2'>db2</a>
+            
+        </div>
+        
+        <div class="post-content">
+            为什么要做这个小工具 有时候，我们可能要把数据库一些表的数据导出，然后load到另外一个数据库，虽然有很多的工具可以选择， 但是可能用的不太顺手。所以就想，是不是能够自动生成export.sql文件。基本上来说，就是通过table，查询到 表结构，把所有的列选择出来，export到de……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/db2-backup-tool/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">05 Python Dictionary</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月25日
         </date>
         
         <div class="post-meta meta-category">
@@ -286,58 +344,8 @@
         </div>
         
         <div class="post-content">
-            python context manager use contextlib/yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&#39;in finally&#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &#39;&#39;&#39; 1. override __enter__ __exit__ 2. in __enter__, return value &#39;&#39;&#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&#39;in enter&#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&#39;in exit&#39;) self.smtp_server.quit() ……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">12 Python Smtp</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月31日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = [&#39;your smtp servers&#39;] def _format_addr(s): &#39;&#39;&#39; format the address &#39;&#39;&#39; name, addr = parseaddr(s) return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): &#39;&#39;&#39;plain/text text/html &#39;&#39;&#39; msg = MIMEText(body, mime_type, &#39;utf-8&#39;) msg[&#39;From&#39;] = _format_addr(from_addr) msg[&#39;To&#39;] = &#34;,&#34;.join([_format_addr(x) for x in to_addr]) msg[&#39;Cc&#39;] = &#34;,&#34;.join([_format_addr(x) for x in cc_addr]) msg[&#39;Subject&#39;] = Header(subject, &#39;utf-8&#39;).encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/">11 Python Mro</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年5月31日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print(&#39;class A says hello&#39;) class B(A): pass class C(A): # class variable BP_URL = &#39;https://xxxxx&#39; def __init__(self): self.name = &#39;ok&#39; @staticmethod def print_hello(name, age): &#39;&#39;&#39; staticmethod cannot access any class or self variabel/method &#39;&#39;&#39; pass @classmethod def say(cls): &#39;&#39;&#39;class method can access class level variable/method &#39;&#39;&#39; print(cls.BP_URL) def hello(self): print(&#39;class C says hello&#39;) class D(C, B): pass if __name__ == &#39;__main__&#39;: d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) ……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/">阅读全文</a></p>
+            Dictionary ###创建方式 a = dict() a = {} a = {&#39;a&#39;: 1, &#39;b&#39;: 2} a = dict(a=1,b=2) a = [(&#39;a&#39;, 1), (&#39;b&#39;, 2)] b = dict(a) a = zip(&#39;abc&#39;, [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), &#39;y&#39;)……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/">阅读全文</a></p>
         </div>
     </article>
     
@@ -376,14 +384,6 @@
     
     <li >
         <a href="https://jerrywang1981.github.io/categories/it/page/6/">6</a>
-    </li>
-    
-    <li >
-        <a href="https://jerrywang1981.github.io/categories/it/page/7/">7</a>
-    </li>
-    
-    <li >
-        <a href="https://jerrywang1981.github.io/categories/it/page/8/">8</a>
     </li>
     
 
@@ -443,6 +443,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
     </li>
     
@@ -478,10 +482,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -513,7 +513,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (73)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -543,7 +543,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (15)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -585,7 +585,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (15)</a></li>
     
 </ul>
     </section>

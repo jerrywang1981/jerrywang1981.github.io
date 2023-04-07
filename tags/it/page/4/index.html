@@ -82,11 +82,11 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/">Spring Boot File Download</a>
+                <a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">16 Pandas Demo part 1</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年9月10日
+            2020年6月3日
         </date>
         
         <div class="post-meta meta-category">
@@ -94,26 +94,26 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/spring'>spring</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
-            <a href='https://jerrywang1981.github.io/categories/java'>java</a>
+            <a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a>
             
         </div>
         
         <div class="post-content">
-            spring boot application 提供下载的代码，可以返回一个Resource @RestController @RequiredArgsConstructor @RequestMapping(&#34;/api&#34;) public class ReportController { @GetMapping(value = &#34;/filedownload&#34;) public ResponseEntity&lt;InputStreamResource&gt; downloadFile(HttpServletRequest request) { // ....................... // ....................... // ....................... ByteArrayInputStream stream = xxxxxx;// get the stream return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM) .header(HttpHeaders.CONTENT_DISPOSITION, &#34;attachment; filename=file.xlsx&#34;) .body(new InputStreamResource(stream)); } }……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/">阅读全文</a></p>
+            the code in jupyter notebook refer to file pandas_demo.ipynb……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/16-pandas-demo-1/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">Azure AD SAML SSO with Node Application</a>
+                <a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">15 Numpy Demo</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月27日
+            2020年6月3日
         </date>
         
         <div class="post-meta meta-category">
@@ -121,28 +121,26 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/saml'>saml</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
-            <a href='https://jerrywang1981.github.io/categories/sso'>sso</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/azure'>azure</a>
+            <a href='https://jerrywang1981.github.io/categories/numpy'>numpy</a>
             
         </div>
         
         <div class="post-content">
-            Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现 entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &#39;cobeedev&#39;, // basic saml configuration -&gt; Identifier (Entity ID) cert: &#39;&#39;, // refer later signatureAlgorithm: &#39;sha256&#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/">阅读全文</a></p>
+            the code in jupyter notebook the file numpy_demo.ipynb……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/15-numpy-demo/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/port-forwarding/">Port Forwarding - Mac</a>
+                <a href="https://jerrywang1981.github.io/post/python/14-anaconda/">14 Anaconda</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月27日
+            2020年6月3日
         </date>
         
         <div class="post-meta meta-category">
@@ -150,22 +148,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
+            
         </div>
         
         <div class="post-content">
-            Mac下端口转发 有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口 ###设置转发 echo &#34;rdr pass inet proto tcp from any to any port 443 -&gt; 127.0.0.1 port 9443&#34; | sudo pfctl -ef - 取消转发 sudo pfctl -s nat sudo pfctl -F all -f /etc/pf.conf……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/port-forwarding/">阅读全文</a></p>
+            How to install new package conda install xxx list env conda env list activate one env conda activate xx deactivate env conda deactivate ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/14-anaconda/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">Golang 中的零值</a>
+                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">13 Python Context Manager</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月18日
+            2020年5月31日
         </date>
         
         <div class="post-meta meta-category">
@@ -173,24 +173,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
         </div>
         
         <div class="post-content">
-            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">阅读全文</a></p>
+            python context manager use contextlib/yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&#39;in finally&#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &#39;&#39;&#39; 1. override __enter__ __exit__ 2. in __enter__, return value &#39;&#39;&#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&#39;in enter&#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&#39;in exit&#39;) self.smtp_server.quit() ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/">Golang Panic 的时候通过defer更新返回值</a>
+                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">12 Python Smtp</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月17日
+            2020年5月31日
         </date>
         
         <div class="post-meta meta-category">
@@ -198,24 +198,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
         </div>
         
         <div class="post-content">
-            在panic的函数中更新返回值 在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出 有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。 func test() (r int) { defer func() { if……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/">阅读全文</a></p>
+            how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = [&#39;your smtp servers&#39;] def _format_addr(s): &#39;&#39;&#39; format the address &#39;&#39;&#39; name, addr = parseaddr(s) return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): &#39;&#39;&#39;plain/text text/html &#39;&#39;&#39; msg = MIMEText(body, mime_type, &#39;utf-8&#39;) msg[&#39;From&#39;] = _format_addr(from_addr) msg[&#39;To&#39;] = &#34;,&#34;.join([_format_addr(x) for x in to_addr]) msg[&#39;Cc&#39;] = &#34;,&#34;.join([_format_addr(x) for x in cc_addr]) msg[&#39;Subject&#39;] = Header(subject, &#39;utf-8&#39;).encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): &#39;&#39;&#39;context manager with send_mail_context() &#39;&#39;&#39; try: # 1 doing work BEFORE the code goes into with block print(&#39;before yield&#39;) server = smtplib.……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/">Watson Assistant Easy Tool</a>
+                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/">11 Python Mro</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月15日
+            2020年5月31日
         </date>
         
         <div class="post-meta meta-category">
@@ -223,26 +223,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/watson'>watson</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/sdk'>sdk</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
         </div>
         
         <div class="post-content">
-            Watson assistant 根据官方文档，已经提供了sdk, 自己的这个package只是使用 官方的sdk基础上，做了小小的封闭。代码托管在github上 watson 目前只有一个assitant package,提供方法来开始一个session并且发送message从而得到结果。 使用方法也比较简单，NewSessio……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/">阅读全文</a></p>
+            method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print(&#39;class A says hello&#39;) class B(A): pass class C(A): # class variable BP_URL = &#39;https://xxxxx&#39; def __init__(self): self.name = &#39;ok&#39; @staticmethod def print_hello(name, age): &#39;&#39;&#39; staticmethod cannot access any class or self variabel/method &#39;&#39;&#39; pass @classmethod def say(cls): &#39;&#39;&#39;class method can access class level variable/method &#39;&#39;&#39; print(cls.BP_URL) def hello(self): print(&#39;class C says hello&#39;) class D(C, B): pass if __name__ == &#39;__main__&#39;: d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/">Multiple Angular Material Table Sort</a>
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">10 Dunder Methods</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月4日
+            2020年5月31日
         </date>
         
         <div class="post-meta meta-category">
@@ -250,24 +248,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/angular'>angular</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
         </div>
         
         <div class="post-content">
-            问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&#39;sort1&#39;) sort1: MatSort; 在页面中，需要 &lt;mat-table #table [dataSource]=&#34;dataSource&#34; #sort1=&#34;matSort&#34; matSort&gt;……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/">阅读全文</a></p>
+            dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): &#39;&#39;&#39; a == b &#39;&#39;&#39; return super().__eq__(value) def __ge__(self, value): &#39;&#39;&#39; a &gt;= b &#39;&#39;&#39; return super().__ge__(value) def __gt__(self, value): &#39;&#39;&#39; a &gt; b &#39;&#39;&#39; return super().__gt__(value) def __le__(self, value): &#39;&#39;&#39; a &lt; b &#39;&#39;&#39; return super().__le__(value) def __ne__(self, value): &#39;&#39;&#39; a != b &#39;&#39;&#39; return super().__ne__(value) def __str__(self): &#39;&#39;&#39;print(a) &#39;&#39;&#39; return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): &#39;&#39;&#39; len(a) &#39;&#39;&#39; return self.number * 10 def __lt__(self, other): &#39;&#39;&#39;less than a &lt; b &#39;&#39;&#39; return self.number &lt; other.number def __getattribute__(self, name): &#39;&#39;&#39; print(a[the_key]) &#39;&#39;&#39; return super().__getattribute__(name) def __setattr__(self, name, value): &#39;&#39;&#39; a[the_key] = 5 &#39;&#39;&#39; return super().__setattr__(name, value) def __delattr__(self, name): &#39;&#39;&#39; delete a[&#39;the_key&#39;] &#39;&#39;&#39; return super().__delattr__(name) if __name__ == &#39;__main__&#39;: &#39;&#39;&#39; &#39;&#39;&#39; # a = A(5) # b = A(6) # print(a &lt; b) # print(len(a)) # a[&#39;b&#39;] = 10 # c = a[&#39;c&#39;] pass ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">Angular Material Table Paginator ngIf</a>
+                <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">Darknet Too Many or Too Few Labels</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年8月4日
+            2020年5月27日
         </date>
         
         <div class="post-meta meta-category">
@@ -275,24 +273,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/angular'>angular</a>
+            <a href='https://jerrywang1981.github.io/categories/machine-learning'>machine learning</a>
             
         </div>
         
         <div class="post-content">
-            问题 一般来说，按angular material的官方文档, 在afterViewInit里面 可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的 @ViewChild(MatPaginator) paginator: MatPaginator; 可能就不好用了。因为还没有渲染，对应……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">阅读全文</a></p>
+            Too many or too few labels 如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题 label之间要不包含 label 名字不要出现在train/test的路径中 所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">Go Download From Private Repo in Docker</a>
+                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">09 Python Decorators</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年7月24日
+            2020年5月27日
         </date>
         
         <div class="post-meta meta-category">
@@ -300,26 +298,24 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/docker'>docker</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
         </div>
         
         <div class="post-content">
-            问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">阅读全文</a></p>
+            无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&#39;in {func.__name__}, it took {t2-t1}&#39;) return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&#39;in {func.__name__}, it took {t2-t1}&#39;) else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/">阅读全文</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-gorm/">Go Gorm 操作数据库</a>
+                <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">08 Python Virtual Environment</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年7月23日
+            2020年5月19日
         </date>
         
         <div class="post-meta meta-category">
@@ -327,17 +323,15 @@
             
             <a href='https://jerrywang1981.github.io/categories/it'>it</a>
             
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/gorm'>gorm</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/postgres'>postgres</a>
+            <a href='https://jerrywang1981.github.io/categories/python'>python</a>
             
         </div>
         
         <div class="post-content">
-            Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/">阅读全文</a></p>
+            Details refer to offical document
+Virtual environment To create new virtual environment usually in folder venv
+python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/">阅读全文</a></p>
         </div>
     </article>
     
@@ -376,14 +370,6 @@
     
     <li >
         <a href="https://jerrywang1981.github.io/tags/it/page/6/">6</a>
-    </li>
-    
-    <li >
-        <a href="https://jerrywang1981.github.io/tags/it/page/7/">7</a>
-    </li>
-    
-    <li >
-        <a href="https://jerrywang1981.github.io/tags/it/page/8/">8</a>
     </li>
     
 
@@ -443,6 +429,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
     </li>
     
@@ -478,10 +468,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/ming-yun/" title="命运">命运</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -513,7 +499,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (73)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -543,7 +529,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (15)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
     
@@ -585,7 +571,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (15)</a></li>
     
 </ul>
     </section>
