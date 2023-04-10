@@ -82,6 +82,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/">Ctrl P to search files in fzf.vim</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2023年4月10日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/vim'>vim</a>
+            
+        </div>
+        
+        <div class="post-content">
+            configure ctrl + p to search files if in git repo, then call :GFiles, otherwise call :Files function &lt;SID&gt;CtrlP() let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;) let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;) if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34; :Files else :GFiles endif endfunction nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt; ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/fzf-vim/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/">Neovim Docker</a>
             </h1>
         </header>
@@ -183,6 +208,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
     </li>
     
@@ -218,10 +247,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -253,7 +278,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -319,7 +344,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     

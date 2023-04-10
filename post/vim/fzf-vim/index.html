@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>vue | 村边的池塘</title>
-    <meta property="og:title" content="vue - 村边的池塘">
+    <title>Ctrl P to search files in fzf.vim | 村边的池塘</title>
+    <meta property="og:title" content="Ctrl P to search files in fzf.vim - 村边的池塘">
     <meta property="og:type" content="article">
         
+    <meta property="article:published_time" content='2023-04-10T14:34:26&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2023-04-10T14:34:26&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice, cloud">
-    <meta name="description" content="vue">
+    <meta name="description" content="Ctrl P to search files in fzf.vim">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/categories/vue/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/post/vim/fzf-vim/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+https://jerrywang1981.github.io/categories/vue/index.xml" href="村边的池塘" title="%!s(MISSING)" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -49,7 +52,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -71,48 +74,89 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        分类
-        <span class="keyword">vue</span>
-        中的文章
-    </h3>
-    
-
-    
     <article class="post">
         <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/">Vue File Download From Spring Boot</a>
-            </h1>
+            <h1 class="post-title">Ctrl P to search files in fzf.vim</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年9月10日
+            2023年4月10日
         </date>
         
-        <div class="post-meta meta-category">
-            |
+        <div class="post-meta">
+            <span>|</span>
             
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
             
-            <a href='https://jerrywang1981.github.io/categories/vue'>vue</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/spring'>spring</a>
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/vim'>vim</a></span>
             
         </div>
         
+        
+        
         <div class="post-content">
-            File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&gt; { // response is Blob &lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&#39;a&#39;) a.style.display = &#39;none&#39; a.href = url a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/">阅读全文</a></p>
+            <h2 id="configure-ctrl--p-to-search-files">configure ctrl + p to search files</h2>
+<ul>
+<li>if in git repo, then call :GFiles, otherwise call :Files</li>
+</ul>
+<pre tabindex="0"><code>function &lt;SID&gt;CtrlP()
+  let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;)
+  let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;)
+  if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34;
+    :Files
+  else
+    :GFiles
+  endif
+endfunction
+
+
+nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
+</code></pre>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/vim/vim-online-video/">Vim Online Video</a></li>
+        
+        <li><a href="/post/k8s/413-Request-Entity-Too-Large/">413 Request Entity Too Large</a></li>
+        
+        <li><a href="/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/">Axios Error Request Body Larger Than MaxBodyLength Limit</a></li>
+        
+        <li><a href="/post/other/address-difficult-situation/">如何处理有难度的场景</a></li>
+        
+        <li><a href="/post/security/Cacheable-SSL-Page-Found/">Cacheable SSL Page Found</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://jerrywang1981.github.io/tags/it'>it</a></li>
+                
+                <li><a href='https://jerrywang1981.github.io/tags/vim'>vim</a></li>
+                
+            </ul>
+            
         </div>
     </article>
     
-
     
 
-
-
-
-
+    
+    
 </div>
 
                 </div>
@@ -427,6 +471,17 @@
     </div>
 </footer>
 
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 <a id="rocket" href="#top"></a>

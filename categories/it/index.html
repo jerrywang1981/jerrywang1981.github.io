@@ -82,6 +82,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/">Ctrl P to search files in fzf.vim</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2023年4月10日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/vim'>vim</a>
+            
+        </div>
+        
+        <div class="post-content">
+            configure ctrl + p to search files if in git repo, then call :GFiles, otherwise call :Files function &lt;SID&gt;CtrlP() let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;) let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;) if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34; :Files else :GFiles endif endfunction nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt; ……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/fzf-vim/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/">413 Request Entity Too Large</a>
             </h1>
         </header>
@@ -328,35 +353,6 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">Gin Jwt Middleware</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2021年2月6日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/jwt'>jwt</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/gin'>gin</a>
-            
-        </div>
-        
-        <div class="post-content">
-            JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&#34;error: %v&#34;, err) return nil, fmt.Errorf(&#34;failed to parse the token string: %s&#34;, tokenString) } log.Printf(&#34;claims: %v&#34;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&#34;failed to valiate the token&#34;), &#34;failed&#34;) } }……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -447,6 +443,10 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
     </li>
     
@@ -482,10 +482,6 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
         <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -517,7 +513,7 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -583,7 +579,7 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     

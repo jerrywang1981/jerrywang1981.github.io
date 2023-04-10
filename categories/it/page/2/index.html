@@ -82,6 +82,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">Gin Jwt Middleware</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2021年2月6日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/jwt'>jwt</a>
+            
+            <a href='https://jerrywang1981.github.io/categories/gin'>gin</a>
+            
+        </div>
+        
+        <div class="post-content">
+            JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&#34;error: %v&#34;, err) return nil, fmt.Errorf(&#34;failed to parse the token string: %s&#34;, tokenString) } log.Printf(&#34;claims: %v&#34;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&#34;failed to valiate the token&#34;), &#34;failed&#34;) } }……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/">Liberty Profile Tls V1 Gaps</a>
             </h1>
         </header>
@@ -320,31 +349,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">Golang 中的零值</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年8月18日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-        </div>
-        
-        <div class="post-content">
-            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -439,6 +443,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
     </li>
     
@@ -474,10 +482,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -509,7 +513,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -575,7 +579,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     

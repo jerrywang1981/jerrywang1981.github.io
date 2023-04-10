@@ -75,6 +75,40 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" title="Cookie With Insecure or Improper or Missing SameSite Attribute">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2023年2月27日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/k8s'>k8s</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/security'>security</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            Issue Cookie with Insecure or Improper or Missing SameSite attribute
+Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
+Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute
+Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values
+for K8s, you may edit the ingress configuration, set samesite value
+nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34; ……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection">Blind Sql Injection</a>
             </h1>
         </header>
@@ -336,35 +370,6 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年9月11日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/linux'>linux</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/ssh'>ssh</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            配置方法，做个小记录 server 上要配置允许 用户电脑 在 .ssh/config 文件中 Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_rsa Host xxx HostName xx.xx.xx.xx User jerry 把pub key传到server ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x 可以了……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -465,6 +470,10 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
     </li>
     
@@ -500,10 +509,6 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
         <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -535,7 +540,7 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -601,7 +606,7 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     

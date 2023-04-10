@@ -6,7 +6,25 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 07 Apr 2023 08:46:41 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Apr 2023 14:34:26 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>it</title>
+      <link>https://jerrywang1981.github.io/categories/it/</link>
+      <pubDate>Mon, 10 Apr 2023 14:34:26 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://jerrywang1981.github.io/categories/vim/</link>
+      <pubDate>Mon, 10 Apr 2023 14:34:26 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/vim/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>novel</title>
       <link>https://jerrywang1981.github.io/categories/novel/</link>
@@ -22,15 +40,6 @@
       <pubDate>Fri, 07 Apr 2023 08:46:41 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>it</title>
-      <link>https://jerrywang1981.github.io/categories/it/</link>
-      <pubDate>Tue, 04 Apr 2023 16:34:00 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/it/</guid>
       <description></description>
     </item>
     
@@ -409,15 +418,6 @@
       <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/neovim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vim</title>
-      <link>https://jerrywang1981.github.io/categories/vim/</link>
-      <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/vim/</guid>
       <description></description>
     </item>
     

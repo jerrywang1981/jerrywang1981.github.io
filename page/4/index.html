@@ -73,6 +73,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password">Auto Login Server Without Password</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月11日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/linux'>linux</a></span>
+            
+            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/ssh'>ssh</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            配置方法，做个小记录 server 上要配置允许 用户电脑 在 .ssh/config 文件中 Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_rsa Host xxx HostName xx.xx.xx.xx User jerry 把pub key传到server ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x 可以了……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot">Vue File Download From Spring Boot</a>
             </h1>
         </header>
@@ -303,33 +330,6 @@
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年7月24日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/docker'>docker</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -431,6 +431,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+    </li>
+    
+    <li>
         <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
     </li>
     
@@ -466,10 +470,6 @@
         <a href="https://jerrywang1981.github.io/post/novel/zhuo-guo-tai-yang/" title="中国太阳">中国太阳</a>
     </li>
     
-    <li>
-        <a href="https://jerrywang1981.github.io/post/novel/liu-lang-di-qiu/" title="流浪地球">流浪地球</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -501,7 +501,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (59)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
     
@@ -567,7 +567,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
     
