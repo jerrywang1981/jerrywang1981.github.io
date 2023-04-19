@@ -6,7 +6,34 @@
     <description>Recent content in Categories on 村边的池塘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 12 Apr 2023 09:03:49 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Apr 2023 11:34:54 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>daily</title>
+      <link>https://jerrywang1981.github.io/categories/daily/</link>
+      <pubDate>Tue, 18 Apr 2023 11:34:54 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/daily/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>funny</title>
+      <link>https://jerrywang1981.github.io/categories/funny/</link>
+      <pubDate>Tue, 18 Apr 2023 11:34:54 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/funny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://jerrywang1981.github.io/categories/life/</link>
+      <pubDate>Tue, 18 Apr 2023 11:34:54 +0800</pubDate>
+      
+      <guid>https://jerrywang1981.github.io/categories/life/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>novel</title>
       <link>https://jerrywang1981.github.io/categories/novel/</link>
@@ -418,15 +445,6 @@
       <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
       
       <guid>https://jerrywang1981.github.io/categories/neovim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://jerrywang1981.github.io/categories/life/</link>
-      <pubDate>Sat, 02 May 2020 21:22:26 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/categories/life/</guid>
       <description></description>
     </item>
     
