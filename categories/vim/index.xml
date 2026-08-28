@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>vim on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/categories/vim/</link>
-    <description>Recent content in vim on 村边的池塘</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 10 Apr 2023 14:34:26 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ctrl P to search files in fzf.vim</title>
-      <link>https://jerrywang1981.github.io/post/vim/fzf-vim/</link>
-      <pubDate>Mon, 10 Apr 2023 14:34:26 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/vim/fzf-vim/</guid>
-      <description>configure ctrl + p to search files if in git repo, then call :GFiles, otherwise call :Files function &amp;lt;SID&amp;gt;CtrlP() let l:j1 = system(&amp;#34;git -C &amp;#34; . getcwd() . &amp;#34; rev-parse --is-inside-work-tree&amp;#34;) let l:j2 = system(&amp;#34;git -C &amp;#34; . getcwd() . &amp;#34; rev-parse --is-bare-repository&amp;#34;) if l:j1 !~ &amp;#34;true&amp;#34; &amp;amp;&amp;amp; l:j2 !~ &amp;#34;true&amp;#34; :Files else :GFiles endif endfunction nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-p&amp;gt; :call &amp;lt;SID&amp;gt;CtrlP()&amp;lt;CR&amp;gt; nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fb :Buffers&amp;lt;CR&amp;gt; nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fh :History&amp;lt;CR&amp;gt; nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fs :Rg&amp;lt;CR&amp;gt; nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fS :Rg &amp;lt;c-r&amp;gt;&amp;lt;c-w&amp;gt;&amp;lt;CR&amp;gt; </description>
-    </item>
-    
-    <item>
-      <title>Neovim Docker</title>
-      <link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
-      <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
-      <description>推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other</description>
-    </item>
-    
-    <item>
-      <title>Vim Online Video</title>
-      <link>https://jerrywang1981.github.io/post/vim/vim-online-video/</link>
-      <pubDate>Sat, 11 Apr 2020 21:09:42 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/vim/vim-online-video/</guid>
-      <description>在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Vim on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/categories/vim/</link>
+		<description>Recent content in Vim on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 10 Apr 2023 14:34:26 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ctrl P to search files in fzf.vim</title>
+				<link>https://jerrywang1981.github.io/post/vim/fzf-vim/</link>
+				<pubDate>Mon, 10 Apr 2023 14:34:26 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/vim/fzf-vim/</guid>
+				<description>&lt;h2 id=&#34;configure-ctrl--p-to-search-files&#34;&gt;configure ctrl + p to search files&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;if in git repo, then call :GFiles, otherwise call :Files&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;function &amp;lt;SID&amp;gt;CtrlP()&#xA;  let l:j1 = system(&amp;#34;git -C &amp;#34; . getcwd() . &amp;#34; rev-parse --is-inside-work-tree&amp;#34;)&#xA;  let l:j2 = system(&amp;#34;git -C &amp;#34; . getcwd() . &amp;#34; rev-parse --is-bare-repository&amp;#34;)&#xA;  if l:j1 !~ &amp;#34;true&amp;#34; &amp;amp;&amp;amp; l:j2 !~ &amp;#34;true&amp;#34;&#xA;    :Files&#xA;  else&#xA;    :GFiles&#xA;  endif&#xA;endfunction&#xA;&#xA;&#xA;nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-p&amp;gt; :call &amp;lt;SID&amp;gt;CtrlP()&amp;lt;CR&amp;gt;&#xA;nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fb :Buffers&amp;lt;CR&amp;gt;&#xA;nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fh :History&amp;lt;CR&amp;gt;&#xA;nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fs :Rg&amp;lt;CR&amp;gt;&#xA;nnoremap &amp;lt;silent&amp;gt; &amp;lt;leader&amp;gt;fS :Rg &amp;lt;c-r&amp;gt;&amp;lt;c-w&amp;gt;&amp;lt;CR&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>Neovim Docker</title>
+				<link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
+				<pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
+				<description>&lt;p&gt;推荐一下自己做的一个docker image, 基于ubuntu,包含&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;neovim&lt;/li&gt;&#xA;&lt;li&gt;python&lt;/li&gt;&#xA;&lt;li&gt;python 3&lt;/li&gt;&#xA;&lt;li&gt;nodejs&lt;/li&gt;&#xA;&lt;li&gt;npm&lt;/li&gt;&#xA;&lt;li&gt;golang&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Plugin 包括&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LeaderF&lt;/li&gt;&#xA;&lt;li&gt;coc.nvim&lt;/li&gt;&#xA;&lt;li&gt;other&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Vim Online Video</title>
+				<link>https://jerrywang1981.github.io/post/vim/vim-online-video/</link>
+				<pubDate>Sat, 11 Apr 2020 21:09:42 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/vim/vim-online-video/</guid>
+				<description>&lt;p&gt;在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。&#xA;&lt;a href=&#34;http://vimcasts.org/episodes/&#34;&gt;vim video&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

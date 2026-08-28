@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
     <title>Posts | 村边的池塘</title>
     <meta property="og:title" content="Posts - 村边的池塘">
@@ -16,15 +17,19 @@
         
     <meta name="author" content="Jerry Wang">
     <meta property="og:url" content="https://jerrywang1981.github.io/post/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
+    <link rel="icon" href='/favicon.png' type="image/png">
+    <link rel="alternate icon" href='/favicon.png' type="image/svg+xml">
+
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+https://jerrywang1981.github.io/post/index.xml" href="村边的池塘" title="%!s(MISSING)" />
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" href="https://jerrywang1981.github.io/post/index.xml" title="村边的池塘" />
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
 
+    
 
     
     
@@ -49,9 +54,11 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">Home</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
+                    
+                    <a  href="https://jerrywang1981.github.io/novel/" title="小说">小说</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
@@ -75,26 +82,38 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值">Golang 中的零值</a>
+                <a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" title="Golang 中的零值" target="_blank">Golang 中的零值</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年8月18日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-        </div>
-        
+  <time datetime="2020-08-18T01:09:46Z" class="post-meta meta-date dt-published">
+    2020-08-18
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
         <div class="post-content">
-            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
+            <h2 id="zero-value-零值">zero value (零值)</h2>
+<p>在golang中，零值会在很多地方隐式的用到，所以把零值列出来。</p>
+<ul>
+<li>0 所有的integer类型 (int32/int64/&hellip;)</li>
+<li>0.0 所有的float类型 (float32/float64/&hellip;)</li>
+<li>false boolean类型</li>
+<li>&quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil</li>
+<li>nil interface, slices, channels, maps, pointers and functions. 按java中的说法，基本上是所有的传引用类型的</li>
+</ul>
+<p>array/struct 是里面的所有元素或者field的零值， 所以array / struct是不能和nil比较的。</p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -102,26 +121,43 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值">Golang Panic 的时候通过defer更新返回值</a>
+                <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值" target="_blank">Golang Panic 的时候通过defer更新返回值</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年8月17日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-        </div>
-        
+  <time datetime="2020-08-17T12:53:08Z" class="post-meta meta-date dt-published">
+    2020-08-17
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
         <div class="post-content">
-            在panic的函数中更新返回值 在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出 有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。 func test() (r int) { defer func() { if……
+            <h2 id="在panic的函数中更新返回值">在panic的函数中更新返回值</h2>
+<p>在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出
+有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。</p>
+<pre tabindex="0"><code>func test() (r int) {
+  defer func() {
+		if err := recover(); err != nil {
+			log.Println(&#34;Error:&#34;, err)
+      r = -1
+		}
+  }()
+  panic(&#34;error&#34;)
+  return 1;
+}
+</code></pre><p>比如这个代码，肯定会有个panic,当然如果没有那行panic代码的话，全部正确处理，应该是返回1， 但是有了panic后，在返回之前
+会通过recover来得到这个panic, 最后更新返回值变量r为-1，从而在即使这个函数有了panic也会返回一个-1给调用者。</p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -129,28 +165,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool">Watson Assistant Easy Tool</a>
+                <a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" title="Watson Assistant Easy Tool" target="_blank">Watson Assistant Easy Tool</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年8月15日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/watson'>watson</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/sdk'>sdk</a></span>
-            
-        </div>
-        
+  <time datetime="2020-08-15T10:41:04Z" class="post-meta meta-date dt-published">
+    2020-08-15
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/watson' target="_blank">watson</a>
+  
+    <a href='/categories/sdk' target="_blank">sdk</a>
+  
+</div>
+
+
         <div class="post-content">
-            Watson assistant 根据官方文档，已经提供了sdk, 自己的这个package只是使用 官方的sdk基础上，做了小小的封闭。代码托管在github上 watson 目前只有一个assitant package,提供方法来开始一个session并且发送message从而得到结果。 使用方法也比较简单，NewSessio……
+            <h2 id="watson-assistant">Watson assistant</h2>
+<p>根据官方文档，已经提供了<a href="https://cloud.ibm.com/docs/assistant-data?topic=watson-using-sdks">sdk</a>, 自己的这个package只是使用
+官方的sdk基础上，做了小小的封闭。代码托管在github上 <a href="https://github.com/jerrywang1981/watson">watson</a></p>
+<p>目前只有一个assitant package,提供方法来开始一个session并且发送message从而得到结果。</p>
+<p>使用方法也比较简单，NewSession之后就可以发送消息了</p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/watson-assistant-easy-tool/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -158,26 +201,36 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/" title="Multiple Angular Material Table Sort">Multiple Angular Material Table Sort</a>
+                <a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/" title="Multiple Angular Material Table Sort" target="_blank">Multiple Angular Material Table Sort</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年8月4日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
+  <time datetime="2020-08-04T07:44:13Z" class="post-meta meta-date dt-published">
+    2020-08-04
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/angular' target="_blank">angular</a>
+  
+</div>
+
+
         <div class="post-content">
-            问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&#39;sort1&#39;) sort1: MatSort; 在页面中，需要 &lt;mat-table #table [dataSource]=&#34;dataSource&#34; #sort1=&#34;matSort&#34; matSort&gt;……
+            <h2 id="问题">问题</h2>
+<p>在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild</p>
+<h2 id="方案">方案</h2>
+<p>使用ViewChild的时候，需要使用id</p>
+<pre tabindex="0"><code>@ViewChild(&#39;sort1&#39;) sort1: MatSort;
+</code></pre><p>在页面中，需要</p>
+<pre tabindex="0"><code>    &lt;mat-table #table [dataSource]=&#34;dataSource&#34; #sort1=&#34;matSort&#34; matSort&gt;
+</code></pre>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -185,26 +238,33 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf">Angular Material Table Paginator ngIf</a>
+                <a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" title="Angular Material Table Paginator ngIf" target="_blank">Angular Material Table Paginator ngIf</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年8月4日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
+  <time datetime="2020-08-04T07:26:25Z" class="post-meta meta-date dt-published">
+    2020-08-04
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/angular' target="_blank">angular</a>
+  
+</div>
+
+
         <div class="post-content">
-            问题 一般来说，按angular material的官方文档, 在afterViewInit里面 可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的 @ViewChild(MatPaginator) paginator: MatPaginator; 可能就不好用了。因为还没有渲染，对应……
+            <h2 id="问题">问题</h2>
+<p>一般来说，按angular material的<a href="https://v5.material.angular.io/components/paginator/overview">官方文档</a>, 在afterViewInit里面
+可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的</p>
+<pre tabindex="0"><code>@ViewChild(MatPaginator) paginator: MatPaginator;
+</code></pre><p>可能就不好用了。因为还没有渲染，对应的还是null, 当然在最新的版本里面，ViewChild提供 static: false。</p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -212,28 +272,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker">Go Download From Private Repo in Docker</a>
+                <a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" title="Go Download From Private Repo in Docker" target="_blank">Go Download From Private Repo in Docker</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年7月24日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/docker'>docker</a></span>
-            
-        </div>
-        
+  <time datetime="2020-07-24T00:33:43Z" class="post-meta meta-date dt-published">
+    2020-07-24
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+    <a href='/categories/docker' target="_blank">docker</a>
+  
+</div>
+
+
         <div class="post-content">
-            问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
+            <h2 id="问题">问题</h2>
+<p>有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的
+是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。</p>
+<h2 id="方法">方法</h2>
+<p>在你的Dockerfile，加入这部分，主要是提供了两个arg,方便build image的时候提供你的帐号和密码</p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -241,30 +308,35 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/go-gorm/" title="Go Gorm 操作数据库">Go Gorm 操作数据库</a>
+                <a href="https://jerrywang1981.github.io/post/go/go-gorm/" title="Go Gorm 操作数据库" target="_blank">Go Gorm 操作数据库</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年7月23日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/golang'>golang</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/gorm'>gorm</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/postgres'>postgres</a></span>
-            
-        </div>
-        
+  <time datetime="2020-07-23T00:25:59Z" class="post-meta meta-date dt-published">
+    2020-07-23
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+    <a href='/categories/gorm' target="_blank">gorm</a>
+  
+    <a href='/categories/postgres' target="_blank">postgres</a>
+  
+</div>
+
+
         <div class="post-content">
-            Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙……
+            <h2 id="gogorm-操作-postgres">Go/Gorm 操作 Postgres</h2>
+<p>虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是
+也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙伴们是相当友好了。</p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -272,26 +344,34 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip">Multiple Line in Mat Tooltip</a>
+                <a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" title="Multiple Line in Mat Tooltip" target="_blank">Multiple Line in Mat Tooltip</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年6月24日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/angular'>angular</a></span>
-            
-        </div>
-        
+  <time datetime="2020-06-24T00:26:03Z" class="post-meta meta-date dt-published">
+    2020-06-24
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/angular' target="_blank">angular</a>
+  
+</div>
+
+
         <div class="post-content">
-            angular material matTooltip 如果想多行显示，可以把tooltip的内容用空格分开，同时样式 ::ng-deep .mat-tooltip { white-space: pre-line !important; }……
+            <h2 id="angular-material-mattooltip">angular material matTooltip</h2>
+<p>如果想多行显示，可以把tooltip的内容用空格分开，同时样式</p>
+<pre tabindex="0"><code>::ng-deep .mat-tooltip  {
+    white-space: pre-line    !important;
+}
+</code></pre>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -299,28 +379,32 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo">18 Matplotlib Demo</a>
+                <a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" title="18 Matplotlib Demo" target="_blank">18 Matplotlib Demo</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年6月9日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/matplotlib'>matplotlib</a></span>
-            
-        </div>
-        
+  <time datetime="2020-06-09T01:08:07Z" class="post-meta meta-date dt-published">
+    2020-06-09
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+    <a href='/categories/matplotlib' target="_blank">matplotlib</a>
+  
+</div>
+
+
         <div class="post-content">
-            the code in jupyter notebook matplot_demo……
+            <h2 id="the-code-in-jupyter-notebook">the code in jupyter notebook</h2>
+<p><a href="matplot_demo.ipynb">matplot_demo</a></p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/18-matplotlib-demo/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -328,28 +412,32 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo">17 Pandas Demo</a>
+                <a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" title="17 Pandas Demo" target="_blank">17 Pandas Demo</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2020年6月9日
-        </date>
         
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/it'>it</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/python'>python</a></span>
-            
-            <span class="meta-category"><a href='https://jerrywang1981.github.io/categories/pandas'>pandas</a></span>
-            
-        </div>
-        
+  <time datetime="2020-06-09T01:05:34Z" class="post-meta meta-date dt-published">
+    2020-06-09
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+    <a href='/categories/pandas' target="_blank">pandas</a>
+  
+</div>
+
+
         <div class="post-content">
-            the code in jupyter notebook pandas_demo.ipynb……
+            <h2 id="the-code-in-jupyter-notebook">the code in jupyter notebook</h2>
+<p><a href="pandas_demo.ipynb">pandas_demo.ipynb</a></p>……
         </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/">阅读全文</a></p>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/17-pandas-demo-2/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -360,7 +448,7 @@
 <ol class="page-navigator">
     
     <li class="prev">
-        <a href="https://jerrywang1981.github.io/post/page/4/">上一页</a>
+        <a href="https://jerrywang1981.github.io/post/page/4/">Previous</a>
     </li>
     
 
@@ -404,7 +492,7 @@
 
     
     <li class="next">
-        <a href="https://jerrywang1981.github.io/post/page/6/">下一页</a>
+        <a href="https://jerrywang1981.github.io/post/page/6/">Next</a>
     </li>
     
 </ol>
@@ -412,6 +500,41 @@
 
 
 </div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2026 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
 
                 </div>
 
@@ -445,7 +568,7 @@
     </section>
 
     <section class="widget">
-        <form id="search" action='https://jerrywang1981.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+        <form id="search" action='https://jerrywang1981.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
       <input type="hidden" name="sitesearch" value="https://jerrywang1981.github.io/">
@@ -454,47 +577,47 @@
     </section>
 
     <section class="widget">
-        <h3 class="widget-title">最近文章</h3>
+        <h3 class="widget-title">Latest articles</h3>
 <ul class="widget-list">
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-2/" title="球状闪电 2">球状闪电 2</a>
+        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-2/" title="球状闪电 2" target="_blank">球状闪电 2</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-1/" title="球状闪电 1">球状闪电 1</a>
+        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-1/" title="球状闪电 1" target="_blank">球状闪电 1</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/yue-ye/" title="月夜">月夜</a>
+        <a href="https://jerrywang1981.github.io/post/novel/yue-ye/" title="月夜" target="_blank">月夜</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/xin-shi/" title="信使">信使</a>
+        <a href="https://jerrywang1981.github.io/post/novel/xin-shi/" title="信使" target="_blank">信使</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/zhao-wen-dao/" title="朝闻道">朝闻道</a>
+        <a href="https://jerrywang1981.github.io/post/novel/zhao-wen-dao/" title="朝闻道" target="_blank">朝闻道</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim" target="_blank">Ctrl P to search files in fzf.vim</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
+        <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮" target="_blank">地球大炮</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
+        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large" target="_blank">413 Request Entity Too Large</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
+        <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit" target="_blank">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/si-xiang-zhe/" title="思想者">思想者</a>
+        <a href="https://jerrywang1981.github.io/post/novel/si-xiang-zhe/" title="思想者" target="_blank">思想者</a>
     </li>
     
 </ul>
@@ -503,213 +626,217 @@
     
 
     <section class="widget">
-        <h3 class="widget-title">分类</h3>
+        <h3 class="widget-title"><a href='/categories/'>Categories</a></h3>
 <ul class="widget-list">
     
-    <li><a href="https://jerrywang1981.github.io/categories/angular/">angular (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/angular/">Angular (4)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/axios/">axios (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/axios/">Axios (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/azure/">azure (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/azure/">Azure (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/csv/">csv (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/csv/">Csv (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/daily/">daily (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/daily/">Daily (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/db2/">db2 (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/db2/">Db2 (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/docker/">docker (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/docker/">Docker (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/encoding/">Encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/funny/">funny (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/funny/">Funny (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">Gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">Golang (14)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gorm/">Gorm (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/hugo/">Hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">It (60)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">Java (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/javascript/">Javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">Jwt (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/k83/">k83 (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/k83/">K83 (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/k8s/">k8s (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/k8s/">K8s (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">Liberty (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/life/">life (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/life/">Life (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/linux/">linux (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/linux/">Linux (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">machine learning (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">Machine Learning (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">Matplotlib (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/maven/">Maven (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/neovim/">Neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/nginx/">nginx (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/nginx/">Nginx (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (20)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (22)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/oauth2/">oauth2 (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/oauth2/">Oauth2 (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/ocr/">Ocr (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">Pandas (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pdf/">Pdf (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/postgres/">postgres (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/postgres/">Postgres (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/postgresql/">Postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">Python (22)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/react/">React (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/saml/">Saml (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/sdk/">sdk (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/sdk/">Sdk (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/security/">security (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/security/">Security (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/sequelize/">Sequelize (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/spring/">Spring (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/ssh/">ssh (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/ssh/">Ssh (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/sso/">Sso (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/theme/">Theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">Vim (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vue/">Vue (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/watson/">Watson (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (2)</a></li>
+    
 </ul>
     </section>
 
     <section class="widget">
-        <h3 class="widget-title">标签</h3>
+        <h3 class="widget-title"><a href='/tags/'>Tags</a></h3>
 <div class="tagcloud">
     
-    <a href="https://jerrywang1981.github.io/tags/angular/">angular</a>
+    <a href="https://jerrywang1981.github.io/tags/angular/">Angular</a>
     
-    <a href="https://jerrywang1981.github.io/tags/axios/">axios</a>
+    <a href="https://jerrywang1981.github.io/tags/axios/">Axios</a>
     
-    <a href="https://jerrywang1981.github.io/tags/azure/">azure</a>
+    <a href="https://jerrywang1981.github.io/tags/azure/">Azure</a>
     
-    <a href="https://jerrywang1981.github.io/tags/csv/">csv</a>
+    <a href="https://jerrywang1981.github.io/tags/csv/">Csv</a>
     
-    <a href="https://jerrywang1981.github.io/tags/daily/">daily</a>
+    <a href="https://jerrywang1981.github.io/tags/daily/">Daily</a>
     
-    <a href="https://jerrywang1981.github.io/tags/db2/">db2</a>
+    <a href="https://jerrywang1981.github.io/tags/db2/">Db2</a>
     
-    <a href="https://jerrywang1981.github.io/tags/docker/">docker</a>
+    <a href="https://jerrywang1981.github.io/tags/docker/">Docker</a>
     
-    <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
+    <a href="https://jerrywang1981.github.io/tags/encoding/">Encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/funny/">funny</a>
+    <a href="https://jerrywang1981.github.io/tags/funny/">Funny</a>
     
-    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">Gin</a>
     
-    <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
+    <a href="https://jerrywang1981.github.io/tags/golang/">Golang</a>
     
-    <a href="https://jerrywang1981.github.io/tags/gorm/">gorm</a>
+    <a href="https://jerrywang1981.github.io/tags/gorm/">Gorm</a>
     
-    <a href="https://jerrywang1981.github.io/tags/hugo/">hugo</a>
+    <a href="https://jerrywang1981.github.io/tags/hugo/">Hugo</a>
     
-    <a href="https://jerrywang1981.github.io/tags/it/">it</a>
+    <a href="https://jerrywang1981.github.io/tags/it/">It</a>
     
-    <a href="https://jerrywang1981.github.io/tags/java/">java</a>
+    <a href="https://jerrywang1981.github.io/tags/java/">Java</a>
     
-    <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    <a href="https://jerrywang1981.github.io/tags/javascript/">Javascript</a>
     
-    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
+    <a href="https://jerrywang1981.github.io/tags/jwt/">Jwt</a>
     
-    <a href="https://jerrywang1981.github.io/tags/k8s/">k8s</a>
+    <a href="https://jerrywang1981.github.io/tags/k8s/">K8s</a>
     
-    <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
+    <a href="https://jerrywang1981.github.io/tags/liberty/">Liberty</a>
     
-    <a href="https://jerrywang1981.github.io/tags/life/">life</a>
+    <a href="https://jerrywang1981.github.io/tags/life/">Life</a>
     
-    <a href="https://jerrywang1981.github.io/tags/linux/">linux</a>
+    <a href="https://jerrywang1981.github.io/tags/linux/">Linux</a>
     
-    <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
+    <a href="https://jerrywang1981.github.io/tags/machine-learning/">Machine Learning</a>
     
-    <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
+    <a href="https://jerrywang1981.github.io/tags/matplotlib/">Matplotlib</a>
     
-    <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
+    <a href="https://jerrywang1981.github.io/tags/maven/">Maven</a>
     
-    <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
+    <a href="https://jerrywang1981.github.io/tags/neovim/">Neovim</a>
     
-    <a href="https://jerrywang1981.github.io/tags/nginx/">nginx</a>
+    <a href="https://jerrywang1981.github.io/tags/nginx/">Nginx</a>
     
-    <a href="https://jerrywang1981.github.io/tags/node/">node</a>
+    <a href="https://jerrywang1981.github.io/tags/node/">Node</a>
     
-    <a href="https://jerrywang1981.github.io/tags/novel/">novel</a>
+    <a href="https://jerrywang1981.github.io/tags/novel/">Novel</a>
     
-    <a href="https://jerrywang1981.github.io/tags/numpy/">numpy</a>
+    <a href="https://jerrywang1981.github.io/tags/numpy/">Numpy</a>
     
-    <a href="https://jerrywang1981.github.io/tags/oauth2/">oauth2</a>
+    <a href="https://jerrywang1981.github.io/tags/oauth2/">Oauth2</a>
     
-    <a href="https://jerrywang1981.github.io/tags/ocr/">ocr</a>
+    <a href="https://jerrywang1981.github.io/tags/ocr/">Ocr</a>
     
-    <a href="https://jerrywang1981.github.io/tags/pandas/">pandas</a>
+    <a href="https://jerrywang1981.github.io/tags/pandas/">Pandas</a>
     
-    <a href="https://jerrywang1981.github.io/tags/pdf/">pdf</a>
+    <a href="https://jerrywang1981.github.io/tags/pdf/">Pdf</a>
     
-    <a href="https://jerrywang1981.github.io/tags/postgres/">postgres</a>
+    <a href="https://jerrywang1981.github.io/tags/postgres/">Postgres</a>
     
-    <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
+    <a href="https://jerrywang1981.github.io/tags/postgresql/">Postgresql</a>
     
-    <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    <a href="https://jerrywang1981.github.io/tags/python/">Python</a>
     
-    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
+    <a href="https://jerrywang1981.github.io/tags/react/">React</a>
     
-    <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
+    <a href="https://jerrywang1981.github.io/tags/saml/">Saml</a>
     
-    <a href="https://jerrywang1981.github.io/tags/sdk/">sdk</a>
+    <a href="https://jerrywang1981.github.io/tags/sdk/">Sdk</a>
     
-    <a href="https://jerrywang1981.github.io/tags/security/">security</a>
+    <a href="https://jerrywang1981.github.io/tags/security/">Security</a>
     
-    <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
+    <a href="https://jerrywang1981.github.io/tags/sequelize/">Sequelize</a>
     
-    <a href="https://jerrywang1981.github.io/tags/spring/">spring</a>
+    <a href="https://jerrywang1981.github.io/tags/spring/">Spring</a>
     
-    <a href="https://jerrywang1981.github.io/tags/ssh/">ssh</a>
+    <a href="https://jerrywang1981.github.io/tags/ssh/">Ssh</a>
     
-    <a href="https://jerrywang1981.github.io/tags/sso/">sso</a>
+    <a href="https://jerrywang1981.github.io/tags/sso/">Sso</a>
     
-    <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
+    <a href="https://jerrywang1981.github.io/tags/theme/">Theme</a>
     
-    <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
+    <a href="https://jerrywang1981.github.io/tags/vim/">Vim</a>
     
-    <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
+    <a href="https://jerrywang1981.github.io/tags/vue/">Vue</a>
     
-    <a href="https://jerrywang1981.github.io/tags/watson/">watson</a>
+    <a href="https://jerrywang1981.github.io/tags/watson/">Watson</a>
     
     <a href="https://jerrywang1981.github.io/tags/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上</a>
     
 </div>
     </section>
@@ -717,9 +844,9 @@
     
 
     <section class="widget">
-        <h3 class="widget-title">其它</h3>
+        <h3 class="widget-title">Meta</h3>
         <ul class="widget-list">
-            <li><a href="https://jerrywang1981.github.io/index.xml">文章 RSS</a></li>
+            <li><a href="https://jerrywang1981.github.io/index.xml">RSS</a></li>
         </ul>
     </section>
 </div>
@@ -727,26 +854,6 @@
             </div>
         </div>
     </div>
-    <footer id="footer">
-    <div class="container">
-        &copy; 2023 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
-    </div>
-</footer>
-
-
-
-<a id="rocket" href="#top"></a>
-<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src='/js/background-shape.js?v=0.0.0' async=""></script>
-
-
-
-
-
-
-    <script src='/js/douban.js'></script>
-
-
 </body>
 
 </html>

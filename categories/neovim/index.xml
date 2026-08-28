@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>neovim on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/categories/neovim/</link>
-    <description>Recent content in neovim on 村边的池塘</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 02 May 2020 21:23:53 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/categories/neovim/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Neovim Docker</title>
-      <link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
-      <pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
-      <description>推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Neovim on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/categories/neovim/</link>
+		<description>Recent content in Neovim on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 02 May 2020 21:23:53 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/categories/neovim/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Neovim Docker</title>
+				<link>https://jerrywang1981.github.io/post/vim/neovim-docker/</link>
+				<pubDate>Sat, 02 May 2020 21:23:53 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/vim/neovim-docker/</guid>
+				<description>&lt;p&gt;推荐一下自己做的一个docker image, 基于ubuntu,包含&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;neovim&lt;/li&gt;&#xA;&lt;li&gt;python&lt;/li&gt;&#xA;&lt;li&gt;python 3&lt;/li&gt;&#xA;&lt;li&gt;nodejs&lt;/li&gt;&#xA;&lt;li&gt;npm&lt;/li&gt;&#xA;&lt;li&gt;golang&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Plugin 包括&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LeaderF&lt;/li&gt;&#xA;&lt;li&gt;coc.nvim&lt;/li&gt;&#xA;&lt;li&gt;other&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
 </rss>

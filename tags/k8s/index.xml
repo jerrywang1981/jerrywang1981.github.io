@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>k8s on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/k8s/</link>
-    <description>Recent content in k8s on 村边的池塘</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Apr 2023 16:34:00 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>413 Request Entity Too Large</title>
-      <link>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</link>
-      <pubDate>Tue, 04 Apr 2023 16:34:00 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</guid>
-      <description>Error message 413 request entity too large How to fix Nginx increase client_max_body_size
-Kubenetes Ingress increase proxy-body-size
-reference -&amp;gt; https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/</description>
-    </item>
-    
-    <item>
-      <title>Cookie With Insecure or Improper or Missing SameSite Attribute</title>
-      <link>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</link>
-      <pubDate>Mon, 27 Feb 2023 09:15:23 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</guid>
-      <description>Issue Cookie with Insecure or Improper or Missing SameSite attribute
-Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
-Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute
-Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values
-for K8s, you may edit the ingress configuration, set samesite value
-nginx.ingress.kubernetes.io/session-cookie-samesite: &amp;#34;Strict&amp;#34; </description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>K8s on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/k8s/</link>
+		<description>Recent content in K8s on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Apr 2023 16:34:00 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>413 Request Entity Too Large</title>
+				<link>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</link>
+				<pubDate>Tue, 04 Apr 2023 16:34:00 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/</guid>
+				<description>&lt;h2 id=&#34;error-message&#34;&gt;Error message&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;413 request entity too large&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;how-to-fix&#34;&gt;How to fix&lt;/h2&gt;&#xA;&lt;h3 id=&#34;nginx&#34;&gt;Nginx&lt;/h3&gt;&#xA;&lt;p&gt;increase &lt;code&gt;client_max_body_size&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;kubenetes-ingress&#34;&gt;Kubenetes Ingress&lt;/h3&gt;&#xA;&lt;p&gt;increase &lt;code&gt;proxy-body-size&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;reference -&amp;gt; &lt;a href=&#34;https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/&#34;&gt;https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Cookie With Insecure or Improper or Missing SameSite Attribute</title>
+				<link>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</link>
+				<pubDate>Mon, 27 Feb 2023 09:15:23 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</guid>
+				<description>&lt;h2 id=&#34;issue&#34;&gt;Issue&lt;/h2&gt;&#xA;&lt;p&gt;Cookie with Insecure or Improper or Missing SameSite attribute&lt;/p&gt;&#xA;&lt;h2 id=&#34;risk&#34;&gt;Risk&lt;/h2&gt;&#xA;&lt;p&gt;Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site-&#xA;Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).&lt;/p&gt;&#xA;&lt;h2 id=&#34;cause&#34;&gt;Cause&lt;/h2&gt;&#xA;&lt;p&gt;Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute&lt;/p&gt;&#xA;&lt;h2 id=&#34;fix&#34;&gt;Fix&lt;/h2&gt;&#xA;&lt;p&gt;Review possible solutions for configuring SameSite Cookie attribute to recommended values&lt;/p&gt;&#xA;&lt;p&gt;for K8s, you may edit the ingress configuration, set samesite value&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nginx.ingress.kubernetes.io/session-cookie-samesite: &amp;#34;Strict&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+	</channel>
 </rss>

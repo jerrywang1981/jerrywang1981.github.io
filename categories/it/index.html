@@ -5,26 +5,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 
-    <title>it | 村边的池塘</title>
-    <meta property="og:title" content="it - 村边的池塘">
+    <title>It | 村边的池塘</title>
+    <meta property="og:title" content="It - 村边的池塘">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="golang,java,python,node,microservice,cloud,rust,vim">
-    <meta name="description" content="it">
+    <meta name="description" content="It">
         
     <meta name="author" content="Jerry Wang">
     <meta property="og:url" content="https://jerrywang1981.github.io/categories/it/">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
+    <link rel="icon" href='/favicon.png' type="image/png">
+    <link rel="alternate icon" href='/favicon.png' type="image/svg+xml">
+
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+https://jerrywang1981.github.io/categories/it/index.xml" href="村边的池塘" title="%!s(MISSING)" />
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="alternate" type="application/rss+xml" href="https://jerrywang1981.github.io/categories/it/index.xml" title="村边的池塘" />
+    <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
 
+    
 
     
     
@@ -49,9 +54,11 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">首页</a>
+                    <a class="" href="https://jerrywang1981.github.io/">Home</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
+                    
+                    <a  href="https://jerrywang1981.github.io/novel/" title="小说">小说</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
@@ -74,7 +81,7 @@
     <h3 class="archive-title">
         分类
         <span class="keyword">it</span>
-        中的文章
+        articles
     </h3>
     
 
@@ -82,274 +89,484 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/">Ctrl P to search files in fzf.vim</a>
+                <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" target="_blank">Ctrl P to search files in fzf.vim</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2023年4月10日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/vim'>vim</a>
-            
-        </div>
-        
+  <time datetime="2023-04-10T06:34:26Z" class="post-meta meta-date dt-published">
+    2023-04-10
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/vim' target="_blank">vim</a>
+  
+</div>
+
+
         <div class="post-content">
-            configure ctrl + p to search files if in git repo, then call :GFiles, otherwise call :Files function &lt;SID&gt;CtrlP() let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;) let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;) if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34; :Files else :GFiles endif endfunction nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt; ……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/fzf-vim/">阅读全文</a></p>
+            <h2 id="configure-ctrl--p-to-search-files">configure ctrl + p to search files</h2>
+<ul>
+<li>if in git repo, then call :GFiles, otherwise call :Files</li>
+</ul>
+<pre tabindex="0"><code>function &lt;SID&gt;CtrlP()
+  let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;)
+  let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;)
+  if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34;
+    :Files
+  else
+    :GFiles
+  endif
+endfunction
+
+
+nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
+</code></pre>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/">413 Request Entity Too Large</a>
+                <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" target="_blank">413 Request Entity Too Large</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2023年4月4日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/k83'>k83</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/nginx'>nginx</a>
-            
-        </div>
-        
+  <time datetime="2023-04-04T08:34:00Z" class="post-meta meta-date dt-published">
+    2023-04-04
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/k83' target="_blank">k83</a>
+  
+    <a href='/categories/nginx' target="_blank">nginx</a>
+  
+</div>
+
+
         <div class="post-content">
-            Error message 413 request entity too large How to fix Nginx increase client_max_body_size
-Kubenetes Ingress increase proxy-body-size
-reference -&gt; https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/">阅读全文</a></p>
+            <h2 id="error-message">Error message</h2>
+<pre tabindex="0"><code>413 request entity too large
+</code></pre><h2 id="how-to-fix">How to fix</h2>
+<h3 id="nginx">Nginx</h3>
+<p>increase <code>client_max_body_size</code></p>
+<h3 id="kubenetes-ingress">Kubenetes Ingress</h3>
+<p>increase <code>proxy-body-size</code></p>
+<p>reference -&gt; <a href="https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/">https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/</a></p>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
+                <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" target="_blank">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2023年3月28日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/axios'>axios</a>
-            
-        </div>
-        
+  <time datetime="2023-03-28T10:52:12Z" class="post-meta meta-date dt-published">
+    2023-03-28
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/node' target="_blank">node</a>
+  
+    <a href='/categories/axios' target="_blank">axios</a>
+  
+</div>
+
+
         <div class="post-content">
-            Axios error Request Body Larger Than MaxBodyLength Limit
-solution config axios maxContentLength/maxBodyLength to a large number or Infinity
-const options = { url, //method: &#39;post&#39;, //... maxContentLength: Infinity, maxBodyLength: Infinity, }; ……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/">阅读全文</a></p>
+            <h2 id="axios-error">Axios error</h2>
+<p>Request Body Larger Than MaxBodyLength Limit</p>
+<h2 id="solution">solution</h2>
+<p>config axios maxContentLength/maxBodyLength to a large number or Infinity</p>
+<pre tabindex="0"><code>    const options = {
+      url,
+      //method: &#39;post&#39;,
+      //...
+      maxContentLength: Infinity,
+      maxBodyLength: Infinity,
+    };
+</code></pre>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/">如何处理有难度的场景</a>
+                <a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/" target="_blank">如何处理有难度的场景</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2023年2月27日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-        </div>
-        
+  <time datetime="2023-02-27T03:16:14Z" class="post-meta meta-date dt-published">
+    2023-02-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+</div>
+
+
         <div class="post-content">
-            概述 工作中经常会遇到各种各样的困难，或者是艰难场景，如果处理不好，会对同事，工作，项目造成影响。 常见的一些类型 目标冲突 一个人给出的目标与另一个人共享的目标相冲突, 比如员工的个人职业规划和安排的工作目标有冲突。 角色冲突 当某人要执行一项不属于他们通常的角色或职责的任务时，或者当他们被……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/">阅读全文</a></p>
+            <h2 id="概述">概述</h2>
+<p>工作中经常会遇到各种各样的困难，或者是艰难场景，如果处理不好，会对同事，工作，项目造成影响。</p>
+<h2 id="常见的一些类型">常见的一些类型</h2>
+<ul>
+<li>
+<p>目标冲突</p>
+<p>一个人给出的目标与另一个人共享的目标相冲突, 比如员工的个人职业规划和安排的工作目标有冲突。</p>
+</li>
+<li>
+<p>角色冲突</p>
+<p>当某人要执行一项不属于他们通常的角色或职责的任务时，或者当他们被要求做一些本应由其他人负责的事情时。
+比如要求开发人员做UAT之类的.</p>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/">Cacheable SSL Page Found</a>
+                <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" target="_blank">Cacheable SSL Page Found</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2023年2月27日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-        </div>
-        
+  <time datetime="2023-02-27T01:27:53Z" class="post-meta meta-date dt-published">
+    2023-02-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+</div>
+
+
         <div class="post-content">
-            Issue Cacheable SSL Page Found
-Risk It is possible to gather sensitive information about the web application such as usernames, passwords, machine name and/or sensitive file locations
-Cause Sensitive information might have been cached by your browser
-Fix Prevent caching of SSL pages by adding &ldquo;Cache-Control: no-store&rdquo; and &ldquo;Pragma: no-cache&rdquo; headers to their responses.
-Possible solution you can also change the HTTP method from GET to POST if it is NOT a page but a rest API.……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/">阅读全文</a></p>
+            <h2 id="issue">Issue</h2>
+<p>Cacheable SSL Page Found</p>
+<h2 id="risk">Risk</h2>
+<p>It is possible to gather sensitive information about the web application such as usernames, passwords, machine name and/or
+sensitive file locations</p>
+<h2 id="cause">Cause</h2>
+<p>Sensitive information might have been cached by your browser</p>
+<h2 id="fix">Fix</h2>
+<p>Prevent caching of SSL pages by adding &ldquo;Cache-Control: no-store&rdquo; and &ldquo;Pragma: no-cache&rdquo; headers to their responses.</p>
+<h2 id="possible-solution">Possible solution</h2>
+<p>you can also change the HTTP method from GET to POST if it is NOT a page but a rest API.</p>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
+                <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" target="_blank">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2023年2月27日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/k8s'>k8s</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/security'>security</a>
-            
-        </div>
-        
+  <time datetime="2023-02-27T01:15:23Z" class="post-meta meta-date dt-published">
+    2023-02-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/k8s' target="_blank">k8s</a>
+  
+    <a href='/categories/security' target="_blank">security</a>
+  
+</div>
+
+
         <div class="post-content">
-            Issue Cookie with Insecure or Improper or Missing SameSite attribute
-Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
-Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute
-Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values
-for K8s, you may edit the ingress configuration, set samesite value
-nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34; ……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/">阅读全文</a></p>
+            <h2 id="issue">Issue</h2>
+<p>Cookie with Insecure or Improper or Missing SameSite attribute</p>
+<h2 id="risk">Risk</h2>
+<p>Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site-
+Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).</p>
+<h2 id="cause">Cause</h2>
+<p>Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute</p>
+<h2 id="fix">Fix</h2>
+<p>Review possible solutions for configuring SameSite Cookie attribute to recommended values</p>
+<p>for K8s, you may edit the ingress configuration, set samesite value</p>
+<pre tabindex="0"><code>nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34;
+</code></pre>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/">Blind Sql Injection</a>
+                <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" target="_blank">Blind Sql Injection</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2022年11月16日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/node'>node</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/security'>security</a>
-            
-        </div>
-        
+  <time datetime="2022-11-16T01:29:06Z" class="post-meta meta-date dt-published">
+    2022-11-16
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/node' target="_blank">node</a>
+  
+    <a href='/categories/security' target="_blank">security</a>
+  
+</div>
+
+
         <div class="post-content">
-            Security Risk: It is possible to view, modify or delete database entries and tables
-Cause: Sanitation of hazardous characters was not performed correctly on user input
-Fix: Review possible solutions for hazardous character injection
-Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.
-How to fix https://sequelize.org/v5/manual/raw-queries.html
-make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/">阅读全文</a></p>
+            <h2 id="security">Security</h2>
+<ul>
+<li>
+<p>Risk: It is possible to view, modify or delete database entries and tables</p>
+</li>
+<li>
+<p>Cause: Sanitation of hazardous characters was not performed correctly on user input</p>
+</li>
+<li>
+<p>Fix: Review possible solutions for hazardous character injection</p>
+</li>
+<li>
+<p>Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values,
+indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last
+is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of
+the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the
+application is vulnerable.</p>
+</li>
+</ul>
+<h2 id="how-to-fix">How to fix</h2>
+<p><a href="https://sequelize.org/v5/manual/raw-queries.html">https://sequelize.org/v5/manual/raw-queries.html</a></p>
+<p>make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;</p>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/">Golang Oauth2 Github</a>
+                <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" target="_blank">Golang Oauth2 Github</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2021年4月9日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/oauth2'>oauth2</a>
-            
-        </div>
-        
+  <time datetime="2021-04-09T12:40:45Z" class="post-meta meta-date dt-published">
+    2021-04-09
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+    <a href='/categories/oauth2' target="_blank">oauth2</a>
+  
+</div>
+
+
         <div class="post-content">
-            Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url TOKEN_URL = os.Getenv(&#34;TOKEN_URL&#34;) // github token url CLIENT_ID = os.Getenv(&#34;CLIENT_ID&#34;) // client id CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret REDIRECT_URL = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;}, } Login……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/">阅读全文</a></p>
+            <h2 id="github-oauth2">Github Oauth2</h2>
+<h3 id="首先在github上申请一个oauth-app-获取client-id--secret">首先，在github上申请一个Oauth App, 获取client id / secret</h3>
+<p>需要这些信息，下边的代码是放在环境变量中</p>
+<pre tabindex="0"><code>    AUTH_URL      = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url
+    TOKEN_URL     = os.Getenv(&#34;TOKEN_URL&#34;) // github token url
+    CLIENT_ID     = os.Getenv(&#34;CLIENT_ID&#34;) // client id
+    CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret
+    REDIRECT_URL  = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url
+</code></pre><h3 id="在包的初始化代码中初始化">在包的初始化代码中，初始化</h3>
+<pre tabindex="0"><code>  var (
+    oauth2Config *oauth2.Config
+  )
+
+  init() {
+    oauth2Config = &amp;oauth2.Config{
+    ClientID:     CLIENT_ID,
+    ClientSecret: CLIENT_SECRET,
+    RedirectURL:  REDIRECT_URL,
+
+    // Discovery returns the OAuth2 endpoints.
+    Endpoint: oauth2.Endpoint{
+            AuthURL:   AUTH_URL,
+            TokenURL:  TOKEN_URL,
+            AuthStyle: oauth2.AuthStyleInHeader,
+    },
+
+    Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;},
+  }
+</code></pre><h3 id="login-handler">Login handler</h3>
+<pre tabindex="0"><code>  func HandleRedirect(w http.ResponseWriter, r *http.Request) {
+    //you need to generate random state here
+  http.Redirect(w, r, oauth2Config.AuthCodeURL(state), http.StatusFound)
+  }
+</code></pre><h3 id="callback-handler">callback handler</h3>
+<pre tabindex="0"><code>  func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) {
+        log.Printf(&#34;Processing response&#34;)
+        state := r.URL.Query().Get(&#34;state&#34;)
+        target, ok := stateMap[state]
+        if !ok {
+                http.Error(w, &#34;missing target in request&#34;, http.StatusBadRequest)
+        }
+
+        // remove from map
+        // delete(stateMap, state)
+
+        log.Printf(&#34;in HandleOAuth2Callback, target url : %s&#34;, target)
+
+        user, err := getUserInfo(r.FormValue(&#34;code&#34;))
+
+        // create the user if not found
+
+        tNow := time.Now()
+           claims := jwt.StandardClaims{
+                Issuer:    &#34;CCMS Application&#34;,
+                Subject:   user,
+                IssuedAt:  tNow.Unix(),
+                ExpiresAt: tNow.Add(2 * time.Hour).Unix(), // two hours
+        }
+        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+        ss, err := token.SignedString(jwtKey)
+        if err != nil {
+                http.Error(w, &#34;Failed to sign the token : &#34;+err.Error(), http.StatusInternalServerError)
+                return
+        }
+        rUrl := fmt.Sprintf(&#34;%s?token=%s&#34;, target, ss)
+        log.Printf(&#34;redirect to :%s&#34;, rUrl)
+        http.Redirect(w, r, rUrl, http.StatusFound)
+</code></pre><h3 id="the-function-to-exchange-code-to-get-access-token">the function to exchange code to get access token</h3>
+<pre tabindex="0"><code>  func getUserInfo(code string) (string, error) {
+        token, err := oauth2Config.Exchange(oauth2.NoContext, code)
+        if err != nil {
+                return &#34;&#34;, fmt.Errorf(&#34;code exchange failed: %s&#34;, err.Error())
+        }
+        ctx := context.Background()
+        log.Printf(&#34;access token: %+v&#34;, token)
+        // token.AccessToken --- this is the token you can use to call github api
+        return email, nil
+  }
+</code></pre>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/">Terminate Golang App</a>
+                <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" target="_blank">Terminate Golang App</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2021年2月6日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-        </div>
-        
+  <time datetime="2021-02-06T08:10:08Z" class="post-meta meta-date dt-published">
+    2021-02-06
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
         <div class="post-content">
-            channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &lt;-sigChan log.Info(&#34;exit&#34;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/">阅读全文</a></p>
+            <h2 id="channel-to-terminate">channel to terminate</h2>
+<p>在 main.go中, 创建一个channel接收os.Signal</p>
+<pre tabindex="0"><code> sigChan := make(chan os.Signal, 1)
+	// ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL)
+</code></pre><p>在main.go快结束的位置，加上</p>
+<pre tabindex="0"><code> &lt;-sigChan
+log.Info(&#34;exit&#34;)
+</code></pre><p>如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</p>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/">Golang Cron Jobs</a>
+                <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" target="_blank">Golang Cron Jobs</a>
             </h1>
         </header>
-        <date class="post-meta meta-date">
-            2021年2月6日
-        </date>
         
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://jerrywang1981.github.io/categories/it'>it</a>
-            
-            <a href='https://jerrywang1981.github.io/categories/golang'>golang</a>
-            
-        </div>
-        
+  <time datetime="2021-02-06T08:06:53Z" class="post-meta meta-date dt-published">
+    2021-02-06
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
         <div class="post-content">
-            cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &#34;0 2 * * ?&#34; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&#34;Send reminder for org member expiration job started&#34;) defer func() { log.Info(&#34;Send reminder for org member expiration job finished&#34;) }() log.Info(&#34;started to remind expired org members&#34;) err = task.RemindExpiredOrgMember(14) if err !=……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/">阅读全文</a></p>
+            <h2 id="cron-in-golang">cron in golang</h2>
+<p>在golang中，有个包<code>github.com/robfig/cron/v3</code>可以实现linux中类似的cron功能，使用也比较简单。
+官方文档中比较详细，这里只是简单记录一下。</p>
+<pre tabindex="0"><code>  c := cron.New()
+	schlTime := &#34;0 2 * * ?&#34;
+	// send reminder for org members
+	c.AddFunc(schlTime, func() {
+					log.Info(&#34;Send reminder for org member expiration job started&#34;)
+					defer func() {
+									log.Info(&#34;Send reminder for org member expiration job finished&#34;)
+					}()
+
+					log.Info(&#34;started to remind expired org members&#34;)
+					err = task.RemindExpiredOrgMember(14)
+					if err != nil {
+									log.Errorf(&#34;\nerror: %v\n&#34;, err)
+					}
+					log.Info(&#34;end to remind expired org members&#34;)
+	})
+  c.Start()
+	defer c.Stop()
+</code></pre>……
+            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" target="_blank">Continue reading</a></p>
         </div>
     </article>
     
@@ -389,7 +606,7 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
 
     
     <li class="next">
-        <a href="https://jerrywang1981.github.io/categories/it/page/2/">下一页</a>
+        <a href="https://jerrywang1981.github.io/categories/it/page/2/">Next</a>
     </li>
     
 </ol>
@@ -397,6 +614,41 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
 
 
 </div>
+
+                    <footer id="footer">
+    <div>
+        &copy; 2026 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>
+        
+    </div>
+    <br />
+    <div>
+        <div class="github-badge">
+            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
+        </div>
+        <div class="github-badge">
+            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
+        </div>
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
 
                 </div>
 
@@ -430,7 +682,7 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     </section>
 
     <section class="widget">
-        <form id="search" action='https://jerrywang1981.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+        <form id="search" action='https://jerrywang1981.github.io/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
       
       <input type="text" name="q" maxlength="20" placeholder="Search">
       <input type="hidden" name="sitesearch" value="https://jerrywang1981.github.io/">
@@ -439,47 +691,47 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     </section>
 
     <section class="widget">
-        <h3 class="widget-title">最近文章</h3>
+        <h3 class="widget-title">Latest articles</h3>
 <ul class="widget-list">
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-2/" title="球状闪电 2">球状闪电 2</a>
+        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-2/" title="球状闪电 2" target="_blank">球状闪电 2</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-1/" title="球状闪电 1">球状闪电 1</a>
+        <a href="https://jerrywang1981.github.io/post/novel/qiu-zhuang-shan-dian-1/" title="球状闪电 1" target="_blank">球状闪电 1</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/yue-ye/" title="月夜">月夜</a>
+        <a href="https://jerrywang1981.github.io/post/novel/yue-ye/" title="月夜" target="_blank">月夜</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/xin-shi/" title="信使">信使</a>
+        <a href="https://jerrywang1981.github.io/post/novel/xin-shi/" title="信使" target="_blank">信使</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/zhao-wen-dao/" title="朝闻道">朝闻道</a>
+        <a href="https://jerrywang1981.github.io/post/novel/zhao-wen-dao/" title="朝闻道" target="_blank">朝闻道</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim">Ctrl P to search files in fzf.vim</a>
+        <a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" title="Ctrl P to search files in fzf.vim" target="_blank">Ctrl P to search files in fzf.vim</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮">地球大炮</a>
+        <a href="https://jerrywang1981.github.io/post/novel/di-qiu-da-pao/" title="地球大炮" target="_blank">地球大炮</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large">413 Request Entity Too Large</a>
+        <a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" title="413 Request Entity Too Large" target="_blank">413 Request Entity Too Large</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
+        <a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" title="Axios Error Request Body Larger Than MaxBodyLength Limit" target="_blank">Axios Error Request Body Larger Than MaxBodyLength Limit</a>
     </li>
     
     <li>
-        <a href="https://jerrywang1981.github.io/post/novel/si-xiang-zhe/" title="思想者">思想者</a>
+        <a href="https://jerrywang1981.github.io/post/novel/si-xiang-zhe/" title="思想者" target="_blank">思想者</a>
     </li>
     
 </ul>
@@ -488,213 +740,217 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
 
     <section class="widget">
-        <h3 class="widget-title">分类</h3>
+        <h3 class="widget-title"><a href='/categories/'>Categories</a></h3>
 <ul class="widget-list">
     
-    <li><a href="https://jerrywang1981.github.io/categories/angular/">angular (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/angular/">Angular (4)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/axios/">axios (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/axios/">Axios (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/azure/">azure (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/azure/">Azure (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/csv/">csv (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/csv/">Csv (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/daily/">daily (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/daily/">Daily (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/db2/">db2 (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/db2/">Db2 (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/docker/">docker (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/docker/">Docker (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/encoding/">encoding (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/encoding/">Encoding (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/funny/">funny (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/funny/">Funny (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/gin/">gin (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gin/">Gin (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/golang/">golang (14)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/golang/">Golang (14)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/gorm/">gorm (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/gorm/">Gorm (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/hugo/">hugo (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/hugo/">Hugo (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/it/">it (60)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/it/">It (60)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/java/">java (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/java/">Java (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/javascript/">javascript (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/javascript/">Javascript (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/jwt/">jwt (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/jwt/">Jwt (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/k83/">k83 (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/k83/">K83 (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/k8s/">k8s (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/k8s/">K8s (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/liberty/">liberty (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/liberty/">Liberty (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/life/">life (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/life/">Life (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/linux/">linux (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/linux/">Linux (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">machine learning (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/machine-learning/">Machine Learning (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">matplotlib (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/matplotlib/">Matplotlib (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/maven/">maven (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/maven/">Maven (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/neovim/">neovim (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/neovim/">Neovim (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/nginx/">nginx (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/nginx/">Nginx (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/node/">node (6)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">novel (20)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (22)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/numpy/">numpy (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/oauth2/">oauth2 (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/oauth2/">Oauth2 (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/ocr/">ocr (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/ocr/">Ocr (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pandas/">pandas (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pandas/">Pandas (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/pdf/">pdf (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/pdf/">Pdf (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/postgres/">postgres (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/postgres/">Postgres (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/postgresql/">postgresql (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/postgresql/">Postgresql (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/python/">python (22)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/python/">Python (22)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/react/">react (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/react/">React (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/saml/">saml (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/saml/">Saml (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/sdk/">sdk (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/sdk/">Sdk (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/security/">security (2)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/security/">Security (2)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/sequelize/">sequelize (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/sequelize/">Sequelize (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/spring/">spring (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/spring/">Spring (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/ssh/">ssh (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/ssh/">Ssh (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/sso/">sso (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/sso/">Sso (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/theme/">theme (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/theme/">Theme (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vim/">vim (3)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vim/">Vim (3)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/vue/">vue (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/vue/">Vue (1)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/watson/">watson (1)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/watson/">Watson (1)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (2)</a></li>
+    
 </ul>
     </section>
 
     <section class="widget">
-        <h3 class="widget-title">标签</h3>
+        <h3 class="widget-title"><a href='/tags/'>Tags</a></h3>
 <div class="tagcloud">
     
-    <a href="https://jerrywang1981.github.io/tags/angular/">angular</a>
+    <a href="https://jerrywang1981.github.io/tags/angular/">Angular</a>
     
-    <a href="https://jerrywang1981.github.io/tags/axios/">axios</a>
+    <a href="https://jerrywang1981.github.io/tags/axios/">Axios</a>
     
-    <a href="https://jerrywang1981.github.io/tags/azure/">azure</a>
+    <a href="https://jerrywang1981.github.io/tags/azure/">Azure</a>
     
-    <a href="https://jerrywang1981.github.io/tags/csv/">csv</a>
+    <a href="https://jerrywang1981.github.io/tags/csv/">Csv</a>
     
-    <a href="https://jerrywang1981.github.io/tags/daily/">daily</a>
+    <a href="https://jerrywang1981.github.io/tags/daily/">Daily</a>
     
-    <a href="https://jerrywang1981.github.io/tags/db2/">db2</a>
+    <a href="https://jerrywang1981.github.io/tags/db2/">Db2</a>
     
-    <a href="https://jerrywang1981.github.io/tags/docker/">docker</a>
+    <a href="https://jerrywang1981.github.io/tags/docker/">Docker</a>
     
-    <a href="https://jerrywang1981.github.io/tags/encoding/">encoding</a>
+    <a href="https://jerrywang1981.github.io/tags/encoding/">Encoding</a>
     
-    <a href="https://jerrywang1981.github.io/tags/funny/">funny</a>
+    <a href="https://jerrywang1981.github.io/tags/funny/">Funny</a>
     
-    <a href="https://jerrywang1981.github.io/tags/gin/">gin</a>
+    <a href="https://jerrywang1981.github.io/tags/gin/">Gin</a>
     
-    <a href="https://jerrywang1981.github.io/tags/golang/">golang</a>
+    <a href="https://jerrywang1981.github.io/tags/golang/">Golang</a>
     
-    <a href="https://jerrywang1981.github.io/tags/gorm/">gorm</a>
+    <a href="https://jerrywang1981.github.io/tags/gorm/">Gorm</a>
     
-    <a href="https://jerrywang1981.github.io/tags/hugo/">hugo</a>
+    <a href="https://jerrywang1981.github.io/tags/hugo/">Hugo</a>
     
-    <a href="https://jerrywang1981.github.io/tags/it/">it</a>
+    <a href="https://jerrywang1981.github.io/tags/it/">It</a>
     
-    <a href="https://jerrywang1981.github.io/tags/java/">java</a>
+    <a href="https://jerrywang1981.github.io/tags/java/">Java</a>
     
-    <a href="https://jerrywang1981.github.io/tags/javascript/">javascript</a>
+    <a href="https://jerrywang1981.github.io/tags/javascript/">Javascript</a>
     
-    <a href="https://jerrywang1981.github.io/tags/jwt/">jwt</a>
+    <a href="https://jerrywang1981.github.io/tags/jwt/">Jwt</a>
     
-    <a href="https://jerrywang1981.github.io/tags/k8s/">k8s</a>
+    <a href="https://jerrywang1981.github.io/tags/k8s/">K8s</a>
     
-    <a href="https://jerrywang1981.github.io/tags/liberty/">liberty</a>
+    <a href="https://jerrywang1981.github.io/tags/liberty/">Liberty</a>
     
-    <a href="https://jerrywang1981.github.io/tags/life/">life</a>
+    <a href="https://jerrywang1981.github.io/tags/life/">Life</a>
     
-    <a href="https://jerrywang1981.github.io/tags/linux/">linux</a>
+    <a href="https://jerrywang1981.github.io/tags/linux/">Linux</a>
     
-    <a href="https://jerrywang1981.github.io/tags/machine-learning/">machine learning</a>
+    <a href="https://jerrywang1981.github.io/tags/machine-learning/">Machine Learning</a>
     
-    <a href="https://jerrywang1981.github.io/tags/matplotlib/">matplotlib</a>
+    <a href="https://jerrywang1981.github.io/tags/matplotlib/">Matplotlib</a>
     
-    <a href="https://jerrywang1981.github.io/tags/maven/">maven</a>
+    <a href="https://jerrywang1981.github.io/tags/maven/">Maven</a>
     
-    <a href="https://jerrywang1981.github.io/tags/neovim/">neovim</a>
+    <a href="https://jerrywang1981.github.io/tags/neovim/">Neovim</a>
     
-    <a href="https://jerrywang1981.github.io/tags/nginx/">nginx</a>
+    <a href="https://jerrywang1981.github.io/tags/nginx/">Nginx</a>
     
-    <a href="https://jerrywang1981.github.io/tags/node/">node</a>
+    <a href="https://jerrywang1981.github.io/tags/node/">Node</a>
     
-    <a href="https://jerrywang1981.github.io/tags/novel/">novel</a>
+    <a href="https://jerrywang1981.github.io/tags/novel/">Novel</a>
     
-    <a href="https://jerrywang1981.github.io/tags/numpy/">numpy</a>
+    <a href="https://jerrywang1981.github.io/tags/numpy/">Numpy</a>
     
-    <a href="https://jerrywang1981.github.io/tags/oauth2/">oauth2</a>
+    <a href="https://jerrywang1981.github.io/tags/oauth2/">Oauth2</a>
     
-    <a href="https://jerrywang1981.github.io/tags/ocr/">ocr</a>
+    <a href="https://jerrywang1981.github.io/tags/ocr/">Ocr</a>
     
-    <a href="https://jerrywang1981.github.io/tags/pandas/">pandas</a>
+    <a href="https://jerrywang1981.github.io/tags/pandas/">Pandas</a>
     
-    <a href="https://jerrywang1981.github.io/tags/pdf/">pdf</a>
+    <a href="https://jerrywang1981.github.io/tags/pdf/">Pdf</a>
     
-    <a href="https://jerrywang1981.github.io/tags/postgres/">postgres</a>
+    <a href="https://jerrywang1981.github.io/tags/postgres/">Postgres</a>
     
-    <a href="https://jerrywang1981.github.io/tags/postgresql/">postgresql</a>
+    <a href="https://jerrywang1981.github.io/tags/postgresql/">Postgresql</a>
     
-    <a href="https://jerrywang1981.github.io/tags/python/">python</a>
+    <a href="https://jerrywang1981.github.io/tags/python/">Python</a>
     
-    <a href="https://jerrywang1981.github.io/tags/react/">react</a>
+    <a href="https://jerrywang1981.github.io/tags/react/">React</a>
     
-    <a href="https://jerrywang1981.github.io/tags/saml/">saml</a>
+    <a href="https://jerrywang1981.github.io/tags/saml/">Saml</a>
     
-    <a href="https://jerrywang1981.github.io/tags/sdk/">sdk</a>
+    <a href="https://jerrywang1981.github.io/tags/sdk/">Sdk</a>
     
-    <a href="https://jerrywang1981.github.io/tags/security/">security</a>
+    <a href="https://jerrywang1981.github.io/tags/security/">Security</a>
     
-    <a href="https://jerrywang1981.github.io/tags/sequelize/">sequelize</a>
+    <a href="https://jerrywang1981.github.io/tags/sequelize/">Sequelize</a>
     
-    <a href="https://jerrywang1981.github.io/tags/spring/">spring</a>
+    <a href="https://jerrywang1981.github.io/tags/spring/">Spring</a>
     
-    <a href="https://jerrywang1981.github.io/tags/ssh/">ssh</a>
+    <a href="https://jerrywang1981.github.io/tags/ssh/">Ssh</a>
     
-    <a href="https://jerrywang1981.github.io/tags/sso/">sso</a>
+    <a href="https://jerrywang1981.github.io/tags/sso/">Sso</a>
     
-    <a href="https://jerrywang1981.github.io/tags/theme/">theme</a>
+    <a href="https://jerrywang1981.github.io/tags/theme/">Theme</a>
     
-    <a href="https://jerrywang1981.github.io/tags/vim/">vim</a>
+    <a href="https://jerrywang1981.github.io/tags/vim/">Vim</a>
     
-    <a href="https://jerrywang1981.github.io/tags/vue/">vue</a>
+    <a href="https://jerrywang1981.github.io/tags/vue/">Vue</a>
     
-    <a href="https://jerrywang1981.github.io/tags/watson/">watson</a>
+    <a href="https://jerrywang1981.github.io/tags/watson/">Watson</a>
     
     <a href="https://jerrywang1981.github.io/tags/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣</a>
+    
+    <a href="https://jerrywang1981.github.io/tags/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上</a>
     
 </div>
     </section>
@@ -702,9 +958,9 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
     
 
     <section class="widget">
-        <h3 class="widget-title">其它</h3>
+        <h3 class="widget-title">Meta</h3>
         <ul class="widget-list">
-            <li><a href="https://jerrywang1981.github.io/index.xml">文章 RSS</a></li>
+            <li><a href="https://jerrywang1981.github.io/index.xml">RSS</a></li>
         </ul>
     </section>
 </div>
@@ -712,26 +968,6 @@ make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
             </div>
         </div>
     </div>
-    <footer id="footer">
-    <div class="container">
-        &copy; 2023 <a href="https://jerrywang1981.github.io/">村边的池塘 By Jerry Wang</a>.
-    </div>
-</footer>
-
-
-
-<a id="rocket" href="#top"></a>
-<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-<script type="text/javascript" src='/js/background-shape.js?v=0.0.0' async=""></script>
-
-
-
-
-
-
-    <script src='/js/douban.js'></script>
-
-
 </body>
 
 </html>

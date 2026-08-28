@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>saml on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/saml/</link>
-    <description>Recent content in saml on 村边的池塘</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 27 Aug 2020 22:05:59 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/saml/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Azure AD SAML SSO with Node Application</title>
-      <link>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</link>
-      <pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</guid>
-      <description>Azure AD saml sso 代码 主要是参考文档 安装 passport-saml npm install passport-saml use passport passport.use(new SamlStrategy( { path: &amp;#39;/account/auth/blueid/callback&amp;#39;, // 这个是callback需要稍后实现 entryPoint: &amp;#39;&amp;#39;, // 这个是azure AD的一个配置, saml-based sso login url issuer: &amp;#39;cobeedev&amp;#39;, // basic saml configuration -&amp;gt; Identifier (Entity ID) cert: &amp;#39;&amp;#39;, // refer later signatureAlgorithm: &amp;#39;sha256&amp;#39; }, async function(profile, done) { // in this function, you can process profile to get necessary information console.log(profile); // lazy require const usersManagement = require(&amp;#39;../../controllers/users/usersManagement&amp;#39;); const ssoUser = jsonUtil.profile2User(profile); let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); // if user was not found in db // process the scenario if (!dbUser) { await usersManagement.processAzureSSOUser(ssoUser); dbUser = await usersManagement.getUserByAzureMail(ssoUser.email); }</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Saml on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/saml/</link>
+		<description>Recent content in Saml on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 27 Aug 2020 22:05:59 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/saml/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Azure AD SAML SSO with Node Application</title>
+				<link>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</link>
+				<pubDate>Thu, 27 Aug 2020 22:05:59 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/</guid>
+				<description>&lt;h2 id=&#34;azure-ad-saml-sso&#34;&gt;Azure AD saml sso&lt;/h2&gt;&#xA;&lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;&#xA;&lt;p&gt;主要是参考&lt;a href=&#34;https://www.npmjs.com/package/passport-saml&#34;&gt;文档&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;安装 passport-saml&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install passport-saml&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;use passport&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;passport.use(new SamlStrategy(&#xA;  {&#xA;    path: &amp;#39;/account/auth/blueid/callback&amp;#39;, // 这个是callback需要稍后实现&#xA;    entryPoint: &amp;#39;&amp;#39;, // 这个是azure AD的一个配置, saml-based sso login url&#xA;    issuer: &amp;#39;cobeedev&amp;#39;, // basic saml configuration -&amp;gt; Identifier (Entity ID)&#xA;    cert: &amp;#39;&amp;#39;, // refer later&#xA;    signatureAlgorithm: &amp;#39;sha256&amp;#39;&#xA;  },&#xA;  async function(profile, done) {&#xA;  // in this function, you can process profile to get necessary information&#xA;    console.log(profile);&#xA;    // lazy require&#xA;    const usersManagement = require(&amp;#39;../../controllers/users/usersManagement&amp;#39;);&#xA;    const ssoUser = jsonUtil.profile2User(profile);&#xA;    let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email);&#xA;    // if user was not found in db&#xA;    // process the scenario&#xA;    if (!dbUser) {&#xA;      await usersManagement.processAzureSSOUser(ssoUser);&#xA;      dbUser = await usersManagement.getUserByAzureMail(ssoUser.email);&#xA;    }&#xA;    return done(null,{&#xA;      ...dbUser,&#xA;      azureUser: ssoUser&#xA;    });&#xA;  }&#xA;));&#xA;&#xA;&#x9;app.use(passport.initialize());&#xA;&#x9;app.use(passport.session());&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;实现 callback&#xA;get request to saml login page, and post request to handle callback&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-node&#34; data-lang=&#34;node&#34;&gt;router.get(&amp;#39;/blueid&amp;#39;, passport.authorize(&amp;#39;saml&amp;#39;, { }));&#xA;router.post(&amp;#39;/blueid/callback&amp;#39;, function (req, res, next) {&#xA;  console.log(&amp;#39;in callback&amp;#39;);&#xA;  var redirect_url = &amp;#39;/account/getprojects&amp;#39;;&#xA;  if(req.session.originalUrl){&#xA;    let url=req.session.originalUrl;&#xA;    let ida=url.indexOf(&amp;#39;url=&amp;#39;)&#xA;    if(ida!=-1){&#xA;      redirect_url+=&amp;#34;?&amp;#34;+url.slice(ida,url.length)&#xA;      req.session.originalUrl=redirect_url&#xA;    }&#xA;  }&#xA;  passport.authenticate(&amp;#39;saml&amp;#39;, {&#xA;    successRedirect: redirect_url,&#xA;    failureRedirect: &amp;#39;/#/account/notregistered&amp;#39;&#xA;  })(req, res, next);&#xA;});&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;about the cert, refer to &lt;a href=&#34;https://www.npmjs.com/package/passport-saml#security-and-signatures&#34;&gt;doc&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
 </rss>

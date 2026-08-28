@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>react on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/react/</link>
-    <description>Recent content in react on 村边的池塘</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Fri, 25 Sep 2020 07:56:47 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>React for Beginners</title>
-      <link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
-      <pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
-      <description>Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &amp;#34;this is demo&amp;#34;, products: [ { id: 1, name: &amp;#34;ok&amp;#34;, }, { id: 2, name: &amp;#34;bad&amp;#34;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>React on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/react/</link>
+		<description>Recent content in React on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 25 Sep 2020 07:56:47 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>React for Beginners</title>
+				<link>https://jerrywang1981.github.io/post/react/react-for-beginners/</link>
+				<pubDate>Fri, 25 Sep 2020 07:56:47 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/react/react-for-beginners/</guid>
+				<description>&lt;h2 id=&#34;prerequesite&#34;&gt;Prerequesite&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;node&lt;/li&gt;&#xA;&lt;li&gt;javascript&lt;/li&gt;&#xA;&lt;li&gt;html&lt;/li&gt;&#xA;&lt;li&gt;css&lt;/li&gt;&#xA;&lt;li&gt;es6&lt;/li&gt;&#xA;&lt;li&gt;code editor&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;create-react-app&#34;&gt;create-react-app&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;npm install -g create-react-app&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;create-react-app app-name&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;react-component&#34;&gt;React component&lt;/h2&gt;&#xA;&lt;h3 id=&#34;state&#34;&gt;state&lt;/h3&gt;&#xA;&lt;p&gt;class component里面管理状态使用state&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Counter extends Component {&#xA;  state = {&#xA;    counter: 10,&#xA;    title: &amp;#34;this is demo&amp;#34;,&#xA;    products: [&#xA;      {&#xA;        id: 1,&#xA;        name: &amp;#34;ok&amp;#34;,&#xA;      },&#xA;      {&#xA;        id: 2,&#xA;        name: &amp;#34;bad&amp;#34;,&#xA;      },&#xA;    ],&#xA;  };&#xA;  // ..... other&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;render&#34;&gt;render&lt;/h3&gt;&#xA;&lt;h3 id=&#34;jsx&#34;&gt;jsx&lt;/h3&gt;&#xA;&lt;h3 id=&#34;expression&#34;&gt;expression&lt;/h3&gt;&#xA;&lt;h3 id=&#34;attributes&#34;&gt;attributes&lt;/h3&gt;&#xA;&lt;h3 id=&#34;listarray&#34;&gt;list/array&lt;/h3&gt;&#xA;&lt;h3 id=&#34;conditional-rendering&#34;&gt;conditional rendering&lt;/h3&gt;&#xA;&lt;h3 id=&#34;handle-events&#34;&gt;handle events&lt;/h3&gt;&#xA;&lt;h3 id=&#34;binding-event-handlers&#34;&gt;binding event handlers&lt;/h3&gt;&#xA;&lt;h3 id=&#34;updating-state&#34;&gt;updating state&lt;/h3&gt;&#xA;&lt;h3 id=&#34;event-arguments&#34;&gt;event arguments&lt;/h3&gt;&#xA;&lt;h3 id=&#34;passing-data-to-component&#34;&gt;passing data to component&lt;/h3&gt;&#xA;&lt;h3 id=&#34;passing-children&#34;&gt;passing children&lt;/h3&gt;&#xA;&lt;h3 id=&#34;debug-react-app&#34;&gt;debug react app&lt;/h3&gt;&#xA;&lt;h3 id=&#34;props-vs-state&#34;&gt;props vs state&lt;/h3&gt;&#xA;&lt;h3 id=&#34;raising-and-handle-events&#34;&gt;raising and handle events&lt;/h3&gt;&#xA;&lt;h3 id=&#34;multiple-component-in-sync&#34;&gt;multiple component in sync&lt;/h3&gt;&#xA;&lt;h3 id=&#34;lifting-state-up&#34;&gt;lifting state up&lt;/h3&gt;&#xA;&lt;h3 id=&#34;functional-component&#34;&gt;functional component&lt;/h3&gt;&#xA;&lt;h3 id=&#34;destructure-arguments&#34;&gt;destructure arguments&lt;/h3&gt;&#xA;&lt;h3 id=&#34;lifecycle-hooks&#34;&gt;lifecycle hooks&lt;/h3&gt;</description>
+			</item>
+	</channel>
 </rss>

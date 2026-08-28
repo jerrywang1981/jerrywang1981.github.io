@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>theme on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/theme/</link>
-    <description>Recent content in theme on 村边的池塘</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Wed, 03 Jun 2020 21:30:06 +0800</lastBuildDate><atom:link href="https://jerrywang1981.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo Theme 背景图形鼠标跟随效果</title>
-      <link>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</link>
-      <pubDate>Wed, 03 Jun 2020 21:30:06 +0800</pubDate>
-      
-      <guid>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</guid>
-      <description>就是现在网页的背景效果，是从网上抄的 需要把文件放到个js里面，然后在foolter里面引用。 代码如下, 本质是个IIFE !function () { function n(n, e, t) { return n.getAttribute(e) || t } function e(n) { return document.getElementsByTagName(n) } function t() { var t = e(&amp;#34;script&amp;#34;), o = t.length, i = t[o - 1]; return { l: o, z: n(i, &amp;#34;zIndex&amp;#34;, -1), o: n(i, &amp;#34;opacity&amp;#34;, .5), c: n(i, &amp;#34;color&amp;#34;, &amp;#34;0,0,0&amp;#34;), n: n(i, &amp;#34;count&amp;#34;, 99) } } function o() { a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight } function i() {</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Theme on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/theme/</link>
+		<description>Recent content in Theme on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 03 Jun 2020 21:30:06 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hugo Theme 背景图形鼠标跟随效果</title>
+				<link>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</link>
+				<pubDate>Wed, 03 Jun 2020 21:30:06 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/javascript/hugo-template-background-with-shapes/</guid>
+				<description>&lt;h2 id=&#34;就是现在网页的背景效果是从网上抄的&#34;&gt;就是现在网页的背景效果，是从网上抄的&lt;/h2&gt;&#xA;&lt;h3 id=&#34;需要把文件放到个js里面然后在foolter里面引用&#34;&gt;需要把文件放到个js里面，然后在foolter里面引用。&lt;/h3&gt;&#xA;&lt;p&gt;代码如下, 本质是个IIFE&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;!function () {&#xA;&#xA;    function n(n, e, t) {&#xA;&#xA;        return n.getAttribute(e) || t&#xA;&#xA;    }&#xA;&#xA;    function e(n) {&#xA;&#xA;        return document.getElementsByTagName(n)&#xA;&#xA;    }&#xA;&#xA;    function t() {&#xA;&#xA;        var t = e(&amp;#34;script&amp;#34;), o = t.length, i = t[o - 1];&#xA;&#xA;        return {&#xA;&#xA;            l: o, z: n(i, &amp;#34;zIndex&amp;#34;, -1), o: n(i, &amp;#34;opacity&amp;#34;, .5), c: n(i, &amp;#34;color&amp;#34;, &amp;#34;0,0,0&amp;#34;), n: n(i, &amp;#34;count&amp;#34;, 99)&#xA;&#xA;        }&#xA;&#xA;    }&#xA;&#xA;    function o() {&#xA;&#xA;        a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,&#xA;&#xA;            c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight&#xA;&#xA;    }&#xA;&#xA;    function i() {&#xA;&#xA;        r.clearRect(0, 0, a, c);&#xA;&#xA;        var n, e, t, o, m, l;&#xA;&#xA;        s.forEach(function (i, x) {&#xA;&#xA;            for (i.x += i.xa, i.y += i.ya, i.xa *= i.x &amp;gt; a || i.x &amp;lt; 0 ? -1 : 1, i.ya *= i.y &amp;gt; c || i.y &amp;lt; 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e &amp;lt; u.length; e++)n = u[e],&#xA;&#xA;                null !== n.x &amp;amp;&amp;amp; null !== n.y &amp;amp;&amp;amp; (o = i.x - n.x, m = i.y - n.y,&#xA;&#xA;                    l = o * o + m * m, l &amp;lt; n.max &amp;amp;&amp;amp; (n === y &amp;amp;&amp;amp; l &amp;gt;= n.max / 2 &amp;amp;&amp;amp; (i.x -= .03 * o, i.y -= .03 * m),&#xA;&#xA;                        t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = &amp;#34;rgba(&amp;#34; + d.c + &amp;#34;,&amp;#34; + (t + .2) + &amp;#34;)&amp;#34;, r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))&#xA;&#xA;        }),&#xA;&#xA;            x(i)&#xA;&#xA;    }&#xA;&#xA;    var a, c, u, m = document.createElement(&amp;#34;canvas&amp;#34;),&#xA;&#xA;        d = t(), l = &amp;#34;c_n&amp;#34; + d.l, r = m.getContext(&amp;#34;2d&amp;#34;),&#xA;&#xA;        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||&#xA;&#xA;            function (n) {&#xA;&#xA;                window.setTimeout(n, 1e3 / 45)&#xA;&#xA;            },&#xA;&#xA;        w = Math.random, y = {x: null, y: null, max: 2e4}; m.id = l, m.style.cssText = &amp;#34;position:fixed;top:0;left:0;z-index:&amp;#34; + d.z + &amp;#34;;opacity:&amp;#34; + d.o, e(&amp;#34;body&amp;#34;)[0].appendChild(m), o(), window.οnresize = o,&#xA;&#xA;            window.onmousemove = function (n) {&#xA;&#xA;                n = n || window.event, y.x = n.clientX, y.y = n.clientY&#xA;&#xA;            },&#xA;&#xA;            window.onmouseout = function () {&#xA;&#xA;                y.x = null, y.y = null&#xA;&#xA;            };&#xA;&#xA;    for (var s = [], f = 0; d.n &amp;gt; f; f++) {&#xA;&#xA;        var h = w() * a, g = w() * c, v = 2 * w() - 1, p = 2 * w() - 1; s.push({x: h, y: g, xa: v, ya: p, max: 6e3})&#xA;&#xA;    }&#xA;&#xA;    u = s.concat([y]),&#xA;&#xA;        setTimeout(function () {i()}, 100)&#xA;&#xA;}();&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+	</channel>
 </rss>
