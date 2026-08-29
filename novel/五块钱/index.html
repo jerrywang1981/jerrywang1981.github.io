@@ -7,20 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Go Download From Private Repo in Docker | 村边的池塘</title>
-    <meta property="og:title" content="Go Download From Private Repo in Docker - 村边的池塘">
+    <title>五块钱 | 村边的池塘</title>
+    <meta property="og:title" content="五块钱 - 村边的池塘">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-07-24T08:33:43&#43;08:00'>
+    <meta property="article:published_time" content='2026-08-29T14:45:10&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-07-24T08:33:43&#43;08:00'>
+    <meta property="article:modified_time" content='2026-08-29T14:45:10&#43;08:00'>
         
     <meta name="Keywords" content="golang,java,python,node,microservice,cloud,rust,vim">
-    <meta name="description" content="Go Download From Private Repo in Docker">
+    <meta name="description" content="五块钱">
         
     <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/">
+    <meta property="og:url" content="https://jerrywang1981.github.io/novel/%E4%BA%94%E5%9D%97%E9%92%B1/">
     <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
     <link rel="icon" href='/favicon.png' type="image/png">
     <link rel="alternate icon" href='/favicon.png' type="image/svg+xml">
@@ -57,7 +57,7 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="current" href="https://jerrywang1981.github.io/">Home</a>
+                    <a class="" href="https://jerrywang1981.github.io/">Home</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -83,22 +83,20 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">Go Download From Private Repo in Docker</h1>
+            <h1 class="post-title">五块钱</h1>
         </header>
         
-  <time datetime="2020-07-24T00:33:43Z" class="post-meta meta-date dt-published">
-    2020-07-24
+  <time datetime="2026-08-29T06:45:10Z" class="post-meta meta-date dt-published">
+    2026-08-29
   </time>
 
 
 <div class="post-meta meta-category">
   <span>&nbsp;|</span>
   
-    <a href='/categories/it' target="_blank">it</a>
+    <a href='/categories/novel' target="_blank">novel</a>
   
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-    <a href='/categories/docker' target="_blank">docker</a>
+    <a href='/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A' target="_blank">我们走在大路上</a>
   
 </div>
 
@@ -106,21 +104,15 @@
         
         
         <div class="post-content">
-            <h2 id="问题">问题</h2>
-<p>有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的
-是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。</p>
-<h2 id="方法">方法</h2>
-<p>在你的Dockerfile，加入这部分，主要是提供了两个arg,方便build image的时候提供你的帐号和密码</p>
-<pre tabindex="0"><code># These credentials are needed for the &#34;go mod download&#34; step in order to
-# download dependencies from repositories at the github.ibm.com server.
-ARG githubUser
-ARG githubToken
-RUN echo &#34;machine github.ibm.com login ${githubUser} password ${githubToken}&#34; &gt; ~/.netrc \
-    &amp;&amp; GOPRIVATE=github.ibm.com go mod download \
-    &amp;&amp; rm ~/.netrc
-</code></pre><p>当然build image的时候要提供上正确的</p>
-<pre tabindex="0"><code>docker build --build-arg githubUser=xxx@cn.ibm.com --build-arg githubToken=xxx -t your_tag .
-</code></pre><p>这样的话，在<code>go mod download</code> 的时候，才能从github.ibm.com下载到代码。</p>
+            <p>我所在的小村庄叫前徕庄铺，是在费县东边岩坡乡的一个小村庄，在国道G327的路边。正像你猜的那样，有前徕庄铺，是不是也有后徕庄铺，是的，你没猜错，只是不叫后徕庄铺，叫北徕庄铺。解放前北徕庄铺有些大地主，附近的地都是他们的，有些佃户租地种，慢慢的也在南边定下来，就有了前徕庄铺。再向西北不远，有另外一个村庄叫任和庄，那就是我奶奶的老家。</p>
+<p>从我记事起，奶奶就是小脚老太太，带着个黑帽子，走路弯着背，用小脚在坑坑洼洼的泥路上小心翼翼地走。奶奶每次都嘴上喊着大孙子，手里拿着我喜欢的东西。在农村，可能是因为我是长房长孙，所以享受了这种待遇。用我妈的话说：“你奶奶每次赶集都要带着你，就是想去和别人pian一下这个大孙子” (pian是方言，就是炫耀的意思)，所以每次赶集，我也能做到想要什么有什么。有时候奶奶要和别人说话聊天，我在旁边等不急，她就会给我一块钱，让我拿着，说一会自己买好东西。</p>
+<p>每次过年的时候，都要去爷爷奶奶家拜年，爷爷给完压岁钱后，奶奶总是会再给我们几个孙子孙女每人五元钱，说是让我们自己买糖吃。过年的时候大人们会备好一桌酒菜，从早上喝到下午，我们小孩子肯定坐不住，早早的就说吃饱了，然后跑出去放鞭炮去了。我们会在路边找那些没有响的鞭炮，每人手里拿根香，找到没响的鞭炮后，就会点着扔到池塘里面炸冰块，或者向天上扔看谁的又高又响。等到下午，那些大人们也喝的满脸通红，有的也醉了，有的吐了，也有的打起来了，反正各种事都有。今年听说小舅子把姑爷打了，明年又听说谁家老丈人和姑爷干起来了，更有的回去的路上掉沟里的。有一年，我小姑父拉着我的手，和我说：“建军，你们老王家欺负人，你大爷和你叔合伙欺负人。”, 我也听的一头雾水，后来才知道他们打牌赌钱，把钱给赢走了。</p>
+<p>爷爷有时候去外地，奶奶会过来把我接她家住，说自己睡觉害怕，让我过去陪她。我不想去奶奶家睡，她们有电灯不用，还点油灯，睡觉还特别早。我说我这么小，有坏人我也干不了什么啊。奶奶说有坏人的时候，我说喊建军，外边有人，你去看看，你别出声，你就弄点动静出来，坏人也不知道你是小孩，以为是个大人，就会跑了。后来有时候爷爷在家也会把我接过去，我后来想可能是爸爸妈妈他们想再给我要个弟弟妹妹，怕我碍事，才把我打发到奶奶家的。</p>
+<p>我知道奶奶姓任，因为她是任和庄的嘛，那个村庄姓任的多。我问奶奶你叫什么名字啊，奶奶说叫王任氏，还有个真正的名字，解放后叫任相英，她自己打趣道，“任相英，赚相英, 到处占便宜” (赚相英是方言占便宜的意思)，她有活下来的六个孩子，三男三女，我有大姑，二姑，然后三个男的和最小的小姑。感觉他们那个年代真是能生，不过年龄差的也大，我大姑结婚了，小姑还是小孩子，大姑家的孩子都和小姑差不多大。</p>
+<p>等我大些的时候，只知道奶奶还有个弟弟，有没有妹妹不清楚，因为我从来没见过，我只见过这个所谓的舅姥爷。每次奶奶想去任和庄看弟弟的时候，就会来和我说，让我骑自行车送她去。那个时候的自行车，后座可以坐人。都是我先骑起来，骑的慢点，奶奶跟着后边一路小跑，然后一跳就坐到后座上了。路上不全是马路，会有些坑坑洼洼的土路。如果奶奶觉得车要倒了，有危险了，她会自己跳下来。到了后，他们两个会拉些我听不懂的，我也没办法，只能等着吃了午饭后，看看他们什么时候说完好早点回家。</p>
+<p>奶奶是解放前生人的，有小脚，所以肯定干不了重活了，只能在家里操持家务，做饭看孩子之类的。等到我妈她们就不会有小脚了，至少也上完小学会写自己的名字了，能到地里面干活了。不过我妈有四个孩子，想想也是够累的。我妈说我四岁前可省事了，因为小时候长的好看，村里面有些妇女会早上把我接到家去玩，然后我爸妈出去干活，下午回来人家又把我送回家，一天就在外面，今天这家看，明天另外一家看，可省事了，我也不知道她说的真的假的。</p>
+<p>我爸爸叔叔姑姑这些人也不敢和奶奶顶嘴，估计是小时候没省挨揍，都是奶奶说什么是什么。妈妈因为爸爸不敢反抗奶奶，没少打架。姐姐发高烧，奶奶非要信封建迷信，给乱吃东西，结果把姐姐脑子给烧坏了， 妈妈都快气死了。爷爷去世的时候，大人按部就班地办丧礼，小姑哭的死去活来的，一直怪她这些哥哥们这的那的，奶奶过去给她数落了一顿，她才收敛了很多。</p>
+<p>奶奶走的很突然，有一天，一个邻居突然到家来报信，说奶奶不行了。我们才赶紧从村南头向北边奶奶家跑。到了已经晚了，是倒在地上。看起来像是晚上起来的时候，或者从床上掉地上了，老年人一骨折，基本就不行了。孝子孝孙们又风风光光地大办了一场，不能说是喜丧吧，至少没给儿女太多负担，有时候我都在想，如果心梗脑梗或者别的什么原因，能寿终正寝，对自己和别人来说，也是一种幸福吧。</p>
 
         </div>
 
@@ -133,15 +125,15 @@ RUN echo &#34;machine github.ibm.com login ${githubUser} password ${githubToken}
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/go/go-gorm/">Go Gorm 操作数据库</a></li>
+        <li><a href="/novel/%E5%AD%A6%E6%A0%A1%E7%9A%84%E6%93%8D%E5%9C%BA/">学校的操场</a></li>
         
-        <li><a href="/post/go/golang-export-csv/">Golang 导出 csv 乱码的问题</a></li>
+        <li><a href="/novel/%E4%B8%80%E4%B8%AA%E9%B8%A1%E8%9B%8B/">一个鸡蛋</a></li>
         
-        <li><a href="/post/go/convert-pdf-to-images/">转换Pdf成图片</a></li>
+        <li><a href="/novel/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A-%E5%BA%8F/">我们走在大路上 序</a></li>
         
-        <li><a href="/post/go/python-go-rpc/">Golang 中通过gRPC调用Python实现的功能</a></li>
+        <li><a href="/post/novel/qiu-zhuang-shan-dian-2/">球状闪电 2</a></li>
         
-        <li><a href="/post/go/db2-backup-tool/">Db2 Backup Tool</a></li>
+        <li><a href="/post/novel/qiu-zhuang-shan-dian-1/">球状闪电 1</a></li>
         
     </ul>
 </div>
@@ -151,11 +143,9 @@ RUN echo &#34;machine github.ibm.com login ${githubUser} password ${githubToken}
             
             <ul class="clearfix">
                 
-                <li><a href='/tags/it' target="_blank">it</a></li>
+                <li><a href='/tags/novel' target="_blank">novel</a></li>
                 
-                <li><a href='/tags/golang' target="_blank">golang</a></li>
-                
-                <li><a href='/tags/docker' target="_blank">docker</a></li>
+                <li><a href='/tags/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A' target="_blank">我们走在大路上</a></li>
                 
             </ul>
             
@@ -209,80 +199,6 @@ RUN echo &#34;machine github.ibm.com login ${githubUser} password ${githubToken}
 
 
 
-<style type="text/css">
-div.highlight {
-    position: relative;
-    margin: 1em 0px;
-}
-
-.copy-code {
-    display: none;
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(78, 78, 78, 0.8);
-    border-radius: var(--radius);
-    padding: 0 5px;
-    font: inherit;
-    user-select: none;
-    cursor: pointer;
-    border: 0;
-    --radius: 8px;
-}
-
-div.highlight:hover .copy-code,pre:hover .copy-code {
-    display: block;
-}
-
-</style>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
 
 
 
