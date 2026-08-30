@@ -57,7 +57,7 @@
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
-                    <a  href="https://jerrywang1981.github.io/novel/" title="小说">小说</a>
+                    <a  href="https://jerrywang1981.github.io/novel/" title="散文">散文</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
@@ -76,6 +76,315 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory" target="_blank">Angular Javascript Heap Out of Memory</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-14T13:20:50Z" class="post-meta meta-date dt-published">
+    2020-05-14
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/node' target="_blank">node</a>
+  
+    <a href='/categories/angular' target="_blank">angular</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <p>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改</p>
+<pre tabindex="0"><code>node_modules/.bin/ng
+</code></pre><p>加上 <code>--max_old_space_size</code></p>
+<pre tabindex="0"><code>#!/usr/bin/env node --max_old_space_size=4096
+&#39;use strict&#39;;
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题" target="_blank">Golang 导出 csv 乱码的问题</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-12T14:26:51Z" class="post-meta meta-date dt-published">
+    2020-05-12
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+    <a href='/categories/csv' target="_blank">csv</a>
+  
+    <a href='/categories/encoding' target="_blank">encoding</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="问题提出">问题提出</h2>
+<p>golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。</p>
+<h2 id="解决方案">解决方案</h2>
+<pre tabindex="0"><code>  f, err := os.Create(&#34;data.csv&#34;)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码
+  writer := csv.NewWriter(f)
+	writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;})
+	writer.Flush() 
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片" target="_blank">转换Pdf成图片</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-11T13:51:52Z" class="post-meta meta-date dt-published">
+    2020-05-11
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+    <a href='/categories/ocr' target="_blank">ocr</a>
+  
+    <a href='/categories/pdf' target="_blank">pdf</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="背景">背景</h2>
+<p>在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面
+保存成图片。</p>
+<h2 id="代码库pdf2image">代码库<a href="https://github.com/jerrywang1981/pdf2images">pdf2image</a></h2>
+<h2 id="实现">实现</h2>
+<h3 id="python">Python</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="docker">docker</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="golang">golang</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h2 id="也可以">也可以</h2>
+<p>直接下载可执行文件直接执行 -&gt; <a href="https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image">https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</a></p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能" target="_blank">Golang 中通过gRPC调用Python实现的功能</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-03T16:11:12Z" class="post-meta meta-date dt-published">
+    2020-05-04
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h3 id="背景">背景</h3>
+<p>有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。
+方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个
+选择就是gRPC</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method" target="_blank">Class Object Method</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-02T13:59:33Z" class="post-meta meta-date dt-published">
+    2020-05-02
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="对象中通过类或者实例的方法调用方式的不同">对象中通过类或者实例的方法调用方式的不同</h2>
+<h3 id="如果通过类中取得的方法需要传入实例">如果通过类中取得的方法，需要传入实例</h3>
+<pre tabindex="0"><code>class A(object):
+    def test(self, *args):
+        print(*args)
+
+if __name__ == &#39;__main__&#39;:
+    a = A()
+    a.test(7, 8, 9)
+    # method from class object
+    m1 = A.test
+    m1(a, 7, 8, 9, 10)
+    # method from instance object
+    m2 = a.test
+    m2(7, 8, 9, 10)
+</code></pre><h4 id="也就是说-实例方法的第一个参数是实例本身如果写decorator的时候要特别注意">也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意</h4>
+<p>比如print_args这个decorator, 需要打印参数，就需要把第一个参数给选出来不作处理</p>
+<pre tabindex="0"><code>
+def print_args(func):
+    def wrapper(*args):
+        _, *rest = args
+        print(&#34;args: &#34;, *rest)
+        func(*args)
+    return wrapper
+
+class A(object):
+
+    @print_args
+    def test(self, *args):
+        print(*args)
+
+if __name__ == &#39;__main__&#39;:
+    a = A()
+    a.test(7, 8, 9)
+    # method from class object
+    m1 = A.test
+    m1(a, 7, 8, 9, 10)
+    # method from instance object
+    m2 = a.test
+    m2(7, 8, 9, 10)
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker" target="_blank">Neovim Docker</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-02T13:23:53Z" class="post-meta meta-date dt-published">
+    2020-05-02
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/vim' target="_blank">vim</a>
+  
+    <a href='/categories/neovim' target="_blank">neovim</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <p>推荐一下自己做的一个docker image, 基于ubuntu,包含</p>
+<ul>
+<li>neovim</li>
+<li>python</li>
+<li>python 3</li>
+<li>nodejs</li>
+<li>npm</li>
+<li>golang</li>
+</ul>
+<p>Plugin 包括</p>
+<ul>
+<li>LeaderF</li>
+<li>coc.nvim</li>
+<li>other</li>
+</ul>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/life/stay-at-hotel/" title="Hello" target="_blank">Hello</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-02T13:22:26Z" class="post-meta meta-date dt-published">
+    2020-05-02
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/life' target="_blank">life</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <p>终于有机会住酒店了，孩子从外地回来，需要居家隔离，自己只好先在酒店凑和几天了</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/life/stay-at-hotel/" target="_blank">Continue reading</a></p>
+    </article>
+    
     
     
     <article class="post">
@@ -197,491 +506,6 @@ b = dict(a)
 <h3 id="创建tuple的方式">创建tuple的方式</h3>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/04-python-tuple/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/03-python-list/" title="03 Python List" target="_blank">03 Python List</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-24T13:05:59Z" class="post-meta meta-date dt-published">
-    2020-04-24
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="列表">列表</h2>
-<p>序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推</p>
-<ul>
-<li>索引访问</li>
-<li>长度</li>
-<li>空或者False</li>
-</ul>
-<h3 id="创建列表的方式">创建列表的方式</h3>
-<pre tabindex="0"><code>a = []
-</code></pre><pre tabindex="0"><code>a = [1,2,3]
-</code></pre><pre tabindex="0"><code>a = list()
-</code></pre><pre tabindex="0"><code>a = list(&#39;abcdefg&#39;)
-</code></pre><pre tabindex="0"><code>a = list(range(10))
-</code></pre><pre tabindex="0"><code>a = [ x for x in range(20) ]
-</code></pre><ul>
-<li>append</li>
-</ul>
-<pre tabindex="0"><code>In [17]: a=[1,2,3]
-
-In [18]: a.append(4)
-
-In [19]: a
-Out[19]: [1, 2, 3, 4]
-
-In [20]:
-</code></pre><ul>
-<li>extend</li>
-</ul>
-<pre tabindex="0"><code>In [21]: a
-Out[21]: [1, 2, 3, 4]
-
-In [22]: a.extend([5,6])
-
-In [23]: a
-Out[23]: [1, 2, 3, 4, 5, 6]
-
-In [24]:
-</code></pre><ul>
-<li>pop</li>
-</ul>
-<pre tabindex="0"><code>In [25]: a
-Out[25]: [1, 2, 3, 4, 5, 6]
-
-In [26]: a.pop(2)
-Out[26]: 3
-
-In [27]: a
-Out[27]: [1, 2, 4, 5, 6]
-
-In [28]:
-</code></pre><ul>
-<li>reverse (in place)</li>
-</ul>
-<pre tabindex="0"><code>In [29]: a
-Out[29]: [1, 2, 4, 5, 6]
-
-In [30]: a.reverse()
-
-In [31]: a
-Out[31]: [6, 5, 4, 2, 1]
-
-In [32]:
-</code></pre><ul>
-<li>sort (in place)</li>
-</ul>
-<pre tabindex="0"><code>In [51]: a
-Out[51]: [6, 5, 4, 2, 1]
-
-In [52]: a.sort()
-
-In [53]: a
-Out[53]: [1, 2, 4, 5, 6]
-
-In [54]:
-</code></pre><ul>
-<li>reversed</li>
-</ul>
-<pre tabindex="0"><code>In [58]: a
-Out[58]: [1, 2, 4, 5, 6]
-
-In [59]: list(reversed(a))
-Out[59]: [6, 5, 4, 2, 1]
-
-In [60]:
-</code></pre><ul>
-<li>sorted</li>
-</ul>
-<pre tabindex="0"><code>In [61]: sorted(a)
-Out[61]: [1, 2, 4, 5, 6]
-
-In [62]:
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/03-python-list/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/02-python-variable/" title="02 Python Variable" target="_blank">02 Python Variable</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-23T06:23:52Z" class="post-meta meta-date dt-published">
-    2020-04-23
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h1 id="变量">变量</h1>
-<h2 id="命名">命名</h2>
-<ul>
-<li>变量名必须是大小写英文、数字和_的组合，且不能用数字开头
-允许的变量名：a, a1, B_5, ____5, _C</li>
-<li>静态语言，动态语言</li>
-<li>大小写敏感</li>
-<li>Dunder</li>
-</ul>
-<h1 id="规范">规范</h1>
-<ul>
-<li>
-<p>snake_case e.g. <code>a_b</code>, <code>total_count</code></p>
-<ul>
-<li>变量</li>
-<li>函数名</li>
-<li>模块</li>
-<li>包</li>
-</ul>
-</li>
-<li>
-<p>CamelCase e.g. <code>Person</code>, <code>TeamMember</code></p>
-<ul>
-<li>类名</li>
-</ul>
-</li>
-</ul>
-<h1 id="常量">常量</h1>
-<ul>
-<li>一般用大写, <code>PI=3.14</code></li>
-</ul>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/02-python-variable/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/01-python-data-type/" title="01 Python Data Type" target="_blank">01 Python Data Type</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-23T05:51:39Z" class="post-meta meta-date dt-published">
-    2020-04-23
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h1 id="基本数据类型">基本数据类型</h1>
-<h2 id="整数">整数</h2>
-<ul>
-<li>
-<p>int</p>
-</li>
-<li>
-<p>十进制： <code>-1, 0, 1000, -8000, 88</code></p>
-</li>
-<li>
-<p>八进制：<code>0o10, 0o27</code></p>
-</li>
-<li>
-<p>十六进制：<code>0x10, 0xff</code></p>
-</li>
-<li>
-<p>数学运算 <code>+ - * / // %</code></p>
-</li>
-</ul>
-<h2 id="浮点数">浮点数</h2>
-<ul>
-<li>
-<p>float</p>
-</li>
-<li>
-<p>比如：<code>1.23, 2.6e3</code></p>
-</li>
-</ul>
-<h2 id="字符串">字符串</h2>
-<ul>
-<li>
-<p>str</p>
-</li>
-<li>
-<p>字符串是以单引号&rsquo;或双引号&quot;括起来的任意文本</p>
-</li>
-<li>
-<p>如果字符串内部包含&rsquo;,&quot;, 可以用转义字符\来标识</p>
-</li>
-<li>
-<p>转义 \</p>
-</li>
-<li>
-<p>不转义 &lsquo;&lsquo;&rsquo;text&rsquo;&rsquo;&rsquo;, &ldquo;&ldquo;&ldquo;text&rdquo;&rdquo;&rdquo;, r&rsquo;text\n&rsquo;</p>
-</li>
-</ul>
-<h2 id="布尔值">布尔值</h2>
-<ul>
-<li>
-<p>bool</p>
-</li>
-<li>
-<p>True, False</p>
-</li>
-<li>
-<p>比较</p>
-<ul>
-<li><code>== != &gt; &lt; &lt;= &gt;=</code></li>
-<li>is</li>
-</ul>
-</li>
-<li>
-<p>逻辑运算</p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/01-python-data-type/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/02-prototype/" title="02 原型模式" target="_blank">02 原型模式</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-12T05:22:43Z" class="post-meta meta-date dt-published">
-    2020-04-12
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="原型模式">原型模式</h2>
-<p>参考文章
-<a href="https://www.runoob.com/design-pattern/prototype-pattern.html">原型模式</a></p>
-<pre tabindex="0"><code>package prototype_pattern
-
-type Person struct {
-	Name string
-	Age  int
-}
-
-type Cloner interface {
-	Clone() interface{}
-}
-
-func (s *Person) Clone() interface{} {
-	var n Person
-	n.Name = s.Name
-	n.Age = s.Age
-	return n
-}
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/02-prototype/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式" target="_blank">01 单例模式</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-12T04:26:51Z" class="post-meta meta-date dt-published">
-    2020-04-12
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="单例模式">单例模式</h2>
-<p>从网上找的 <a href="https://www.runoob.com/design-pattern/singleton-pattern.html">单例模式</a></p>
-<h2 id="golang实现">golang实现</h2>
-<p>参考的文章<a href="https://www.liwenzhou.com/posts/Go/singleton_in_go/">Go语言中的单例模式</a></p>
-<p>代码：</p>
-<div class="highlight"><div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">package</span><span style="color:#fff"> </span><span style="color:#1f2328">example</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span><span style="color:#fff"> </span><span style="color:#1f2328">(</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#0a3069">&#34;sync&#34;</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#1f2328">)</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a">// the singleton struct/object</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">type</span><span style="color:#fff"> </span><span style="color:#1f2328">singleton</span><span style="color:#fff"> </span><span style="color:#cf222e">struct</span><span style="color:#1f2328">{}</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">var</span><span style="color:#fff"> </span><span style="color:#1f2328">instance</span><span style="color:#fff"> </span><span style="color:#0550ae">*</span><span style="color:#1f2328">singleton</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">var</span><span style="color:#fff"> </span><span style="color:#1f2328">once</span><span style="color:#fff"> </span><span style="color:#1f2328">sync</span><span style="color:#1f2328">.</span><span style="color:#1f2328">Once</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">func</span><span style="color:#fff"> </span><span style="color:#6639ba">GetSingleInstance</span><span style="color:#1f2328">()</span><span style="color:#fff"> </span><span style="color:#0550ae">*</span><span style="color:#1f2328">singleton</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#1f2328">once</span><span style="color:#1f2328">.</span><span style="color:#6639ba">Do</span><span style="color:#1f2328">(</span><span style="color:#cf222e">func</span><span style="color:#1f2328">()</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">		</span><span style="color:#1f2328">instance</span><span style="color:#fff"> </span><span style="color:#1f2328">=</span><span style="color:#fff"> </span><span style="color:#0550ae">&amp;</span><span style="color:#1f2328">singleton</span><span style="color:#1f2328">{}</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#1f2328">})</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#1f2328">instance</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span><span style="color:#fff">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits" target="_blank">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-11T13:17:25Z" class="post-meta meta-date dt-published">
-    2020-04-11
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/liberty' target="_blank">liberty</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h4 id="liberty-profile-这个要修复可能要修改两个地方">Liberty Profile 这个要修复，可能要修改两个地方。</h4>
-<ul>
-<li>server.xml 加入</li>
-</ul>
-<div class="highlight"><div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#0550ae">&lt;ssl</span> <span style="color:#1f2328">id=</span><span style="color:#0a3069">&#34;defaultSSLConfig&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">keyStoreRef=</span><span style="color:#0a3069">&#34;defaultKeyStore&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">securityLevel=</span><span style="color:#0a3069">&#34;CUSTOM&#34;</span> <span style="color:#1f2328">enabledCiphers=</span><span style="color:#0a3069">&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;</span><span style="color:#0550ae">/&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>jvm.options加入</li>
-</ul>
-<pre tabindex="0"><code>-Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/python-nest/" title="Python Nest" target="_blank">Python Nest</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-04-11T13:15:14Z" class="post-meta meta-date dt-published">
-    2020-04-11
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/node' target="_blank">node</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h1 id="背景">背景</h1>
-<p>最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调用nest 微服务来取得一些数据。这就比较尴尬了，在网上由于没有找到对应的python库，所以自己实现了一个。</p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -929,7 +753,7 @@ func (s *Person) Clone() interface{} {
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (24)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (25)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -973,7 +797,7 @@ func (s *Person) Clone() interface{} {
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (5)</a></li>
     
 </ul>
     </section>

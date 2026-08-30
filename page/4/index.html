@@ -57,7 +57,7 @@
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
-                    <a  href="https://jerrywang1981.github.io/novel/" title="小说">小说</a>
+                    <a  href="https://jerrywang1981.github.io/novel/" title="散文">散文</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
@@ -76,6 +76,339 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" title="Cacheable SSL Page Found" target="_blank">Cacheable SSL Page Found</a>
+            </h1>
+        </header>
+        
+  <time datetime="2023-02-27T01:27:53Z" class="post-meta meta-date dt-published">
+    2023-02-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="issue">Issue</h2>
+<p>Cacheable SSL Page Found</p>
+<h2 id="risk">Risk</h2>
+<p>It is possible to gather sensitive information about the web application such as usernames, passwords, machine name and/or
+sensitive file locations</p>
+<h2 id="cause">Cause</h2>
+<p>Sensitive information might have been cached by your browser</p>
+<h2 id="fix">Fix</h2>
+<p>Prevent caching of SSL pages by adding &ldquo;Cache-Control: no-store&rdquo; and &ldquo;Pragma: no-cache&rdquo; headers to their responses.</p>
+<h2 id="possible-solution">Possible solution</h2>
+<p>you can also change the HTTP method from GET to POST if it is NOT a page but a rest API.</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" title="Cookie With Insecure or Improper or Missing SameSite Attribute" target="_blank">Cookie With Insecure or Improper or Missing SameSite Attribute</a>
+            </h1>
+        </header>
+        
+  <time datetime="2023-02-27T01:15:23Z" class="post-meta meta-date dt-published">
+    2023-02-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/k8s' target="_blank">k8s</a>
+  
+    <a href='/categories/security' target="_blank">security</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="issue">Issue</h2>
+<p>Cookie with Insecure or Improper or Missing SameSite attribute</p>
+<h2 id="risk">Risk</h2>
+<p>Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site-
+Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).</p>
+<h2 id="cause">Cause</h2>
+<p>Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute</p>
+<h2 id="fix">Fix</h2>
+<p>Review possible solutions for configuring SameSite Cookie attribute to recommended values</p>
+<p>for K8s, you may edit the ingress configuration, set samesite value</p>
+<pre tabindex="0"><code>nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34;
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" title="Blind Sql Injection" target="_blank">Blind Sql Injection</a>
+            </h1>
+        </header>
+        
+  <time datetime="2022-11-16T01:29:06Z" class="post-meta meta-date dt-published">
+    2022-11-16
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/node' target="_blank">node</a>
+  
+    <a href='/categories/security' target="_blank">security</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="security">Security</h2>
+<ul>
+<li>
+<p>Risk: It is possible to view, modify or delete database entries and tables</p>
+</li>
+<li>
+<p>Cause: Sanitation of hazardous characters was not performed correctly on user input</p>
+</li>
+<li>
+<p>Fix: Review possible solutions for hazardous character injection</p>
+</li>
+<li>
+<p>Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values,
+indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last
+is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of
+the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the
+application is vulnerable.</p>
+</li>
+</ul>
+<h2 id="how-to-fix">How to fix</h2>
+<p><a href="https://sequelize.org/v5/manual/raw-queries.html">https://sequelize.org/v5/manual/raw-queries.html</a></p>
+<p>make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" title="Golang Oauth2 Github" target="_blank">Golang Oauth2 Github</a>
+            </h1>
+        </header>
+        
+  <time datetime="2021-04-09T12:40:45Z" class="post-meta meta-date dt-published">
+    2021-04-09
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+    <a href='/categories/oauth2' target="_blank">oauth2</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="github-oauth2">Github Oauth2</h2>
+<h3 id="首先在github上申请一个oauth-app-获取client-id--secret">首先，在github上申请一个Oauth App, 获取client id / secret</h3>
+<p>需要这些信息，下边的代码是放在环境变量中</p>
+<pre tabindex="0"><code>    AUTH_URL      = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url
+    TOKEN_URL     = os.Getenv(&#34;TOKEN_URL&#34;) // github token url
+    CLIENT_ID     = os.Getenv(&#34;CLIENT_ID&#34;) // client id
+    CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret
+    REDIRECT_URL  = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url
+</code></pre><h3 id="在包的初始化代码中初始化">在包的初始化代码中，初始化</h3>
+<pre tabindex="0"><code>  var (
+    oauth2Config *oauth2.Config
+  )
+
+  init() {
+    oauth2Config = &amp;oauth2.Config{
+    ClientID:     CLIENT_ID,
+    ClientSecret: CLIENT_SECRET,
+    RedirectURL:  REDIRECT_URL,
+
+    // Discovery returns the OAuth2 endpoints.
+    Endpoint: oauth2.Endpoint{
+            AuthURL:   AUTH_URL,
+            TokenURL:  TOKEN_URL,
+            AuthStyle: oauth2.AuthStyleInHeader,
+    },
+
+    Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;},
+  }
+</code></pre><h3 id="login-handler">Login handler</h3>
+<pre tabindex="0"><code>  func HandleRedirect(w http.ResponseWriter, r *http.Request) {
+    //you need to generate random state here
+  http.Redirect(w, r, oauth2Config.AuthCodeURL(state), http.StatusFound)
+  }
+</code></pre><h3 id="callback-handler">callback handler</h3>
+<pre tabindex="0"><code>  func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) {
+        log.Printf(&#34;Processing response&#34;)
+        state := r.URL.Query().Get(&#34;state&#34;)
+        target, ok := stateMap[state]
+        if !ok {
+                http.Error(w, &#34;missing target in request&#34;, http.StatusBadRequest)
+        }
+
+        // remove from map
+        // delete(stateMap, state)
+
+        log.Printf(&#34;in HandleOAuth2Callback, target url : %s&#34;, target)
+
+        user, err := getUserInfo(r.FormValue(&#34;code&#34;))
+
+        // create the user if not found
+
+        tNow := time.Now()
+           claims := jwt.StandardClaims{
+                Issuer:    &#34;CCMS Application&#34;,
+                Subject:   user,
+                IssuedAt:  tNow.Unix(),
+                ExpiresAt: tNow.Add(2 * time.Hour).Unix(), // two hours
+        }
+        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+        ss, err := token.SignedString(jwtKey)
+        if err != nil {
+                http.Error(w, &#34;Failed to sign the token : &#34;+err.Error(), http.StatusInternalServerError)
+                return
+        }
+        rUrl := fmt.Sprintf(&#34;%s?token=%s&#34;, target, ss)
+        log.Printf(&#34;redirect to :%s&#34;, rUrl)
+        http.Redirect(w, r, rUrl, http.StatusFound)
+</code></pre><h3 id="the-function-to-exchange-code-to-get-access-token">the function to exchange code to get access token</h3>
+<pre tabindex="0"><code>  func getUserInfo(code string) (string, error) {
+        token, err := oauth2Config.Exchange(oauth2.NoContext, code)
+        if err != nil {
+                return &#34;&#34;, fmt.Errorf(&#34;code exchange failed: %s&#34;, err.Error())
+        }
+        ctx := context.Background()
+        log.Printf(&#34;access token: %+v&#34;, token)
+        // token.AccessToken --- this is the token you can use to call github api
+        return email, nil
+  }
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App" target="_blank">Terminate Golang App</a>
+            </h1>
+        </header>
+        
+  <time datetime="2021-02-06T08:10:08Z" class="post-meta meta-date dt-published">
+    2021-02-06
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="channel-to-terminate">channel to terminate</h2>
+<p>在 main.go中, 创建一个channel接收os.Signal</p>
+<pre tabindex="0"><code> sigChan := make(chan os.Signal, 1)
+	// ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL)
+</code></pre><p>在main.go快结束的位置，加上</p>
+<pre tabindex="0"><code> &lt;-sigChan
+log.Info(&#34;exit&#34;)
+</code></pre><p>如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs" target="_blank">Golang Cron Jobs</a>
+            </h1>
+        </header>
+        
+  <time datetime="2021-02-06T08:06:53Z" class="post-meta meta-date dt-published">
+    2021-02-06
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="cron-in-golang">cron in golang</h2>
+<p>在golang中，有个包<code>github.com/robfig/cron/v3</code>可以实现linux中类似的cron功能，使用也比较简单。
+官方文档中比较详细，这里只是简单记录一下。</p>
+<pre tabindex="0"><code>  c := cron.New()
+	schlTime := &#34;0 2 * * ?&#34;
+	// send reminder for org members
+	c.AddFunc(schlTime, func() {
+					log.Info(&#34;Send reminder for org member expiration job started&#34;)
+					defer func() {
+									log.Info(&#34;Send reminder for org member expiration job finished&#34;)
+					}()
+
+					log.Info(&#34;started to remind expired org members&#34;)
+					err = task.RemindExpiredOrgMember(14)
+					if err != nil {
+									log.Errorf(&#34;\nerror: %v\n&#34;, err)
+					}
+					log.Info(&#34;end to remind expired org members&#34;)
+	})
+  c.Start()
+	defer c.Stop()
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" target="_blank">Continue reading</a></p>
+    </article>
+    
     
     
     <article class="post">
@@ -326,328 +659,6 @@ jwt.StandardClaims的情况。</p>
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/" title="Postgres 备份与恢复" target="_blank">Postgres 备份与恢复</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-09-11T07:14:50Z" class="post-meta meta-date dt-published">
-    2020-09-11
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/postgres' target="_blank">postgres</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="背景">背景</h2>
-<p>有时候我们需要备份 schema或者包括数据，然后恢复到另外一个postgres db中。</p>
-<h2 id="备份">备份</h2>
-<p>可以使用 <code>pg_dump</code> 来备份，或者加上 &ndash;schema-only 只备份schema.</p>
-<pre tabindex="0"><code>pg_dump --file &#34;/root/repo/uat-copy.tar&#34; --host &#34;db host name&#34; --port &#34;23123&#34; --username &#34;admin&#34; --password --verbose --format=t --blobs --schema-only &#34;compose&#34;
-</code></pre><h2 id="恢复">恢复</h2>
-<p>同样的，可以使用<code>pg_restore</code>来恢复</p>
-<pre tabindex="0"><code>pg_restore --host &#34;hostname here&#34; --port &#34;31090&#34; --username &#34;usernamehere&#34; --password --dbname &#34;ibmclouddb&#34; --verbose &#34;/root/repo/uat-copy.tar&#34;
-</code></pre><p>不管备份还是恢复，都会要求输入密码。</p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/db/postgres-backup-and-restore/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" title="Auto Login Server Without Password" target="_blank">Auto Login Server Without Password</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-09-11T02:38:33Z" class="post-meta meta-date dt-published">
-    2020-09-11
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/linux' target="_blank">linux</a>
-  
-    <a href='/categories/ssh' target="_blank">ssh</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="配置方法做个小记录">配置方法，做个小记录</h2>
-<h3 id="server-上要配置允许">server 上要配置允许</h3>
-<h3 id="用户电脑">用户电脑</h3>
-<p>在
-.ssh/config
-文件中</p>
-<pre tabindex="0"><code>Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa
-
-Host xxx
-  HostName xx.xx.xx.xx
-  User jerry
-</code></pre><p>把pub key传到server</p>
-<pre tabindex="0"><code>ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x
-</code></pre><p>可以了</p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" title="Vue File Download From Spring Boot" target="_blank">Vue File Download From Spring Boot</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-09-09T23:52:49Z" class="post-meta meta-date dt-published">
-    2020-09-10
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/vue' target="_blank">vue</a>
-  
-    <a href='/categories/spring' target="_blank">spring</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="file-download">File download</h2>
-<p>如果spring boot的写法是我在另外一个<a href="../java/spring-boot-file-download.md">文章</a>, 返回的response其实是一个Blob,
-这一点要记住</p>
-<pre tabindex="0"><code>          this.axios.get(url, { responseType: &#39;blob&#39;, timeout: 0 }).then(response =&gt; {
-              // response is Blob &lt;-------
-                const url = window.URL.createObjectURL(response)
-                const a = document.createElement(&#39;a&#39;)
-                a.style.display = &#39;none&#39;
-                a.href = url
-                a.setAttribute(&#39;download&#39;,&#39;file.xlsx&#39;)
-                document.body.appendChild(a)
-                a.click()
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-          });
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" title="Spring Boot File Download" target="_blank">Spring Boot File Download</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-09-09T23:52:13Z" class="post-meta meta-date dt-published">
-    2020-09-10
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/spring' target="_blank">spring</a>
-  
-    <a href='/categories/java' target="_blank">java</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="spring-boot-application">spring boot application</h2>
-<p>提供下载的代码，可以返回一个Resource</p>
-<pre tabindex="0"><code>@RestController
-@RequiredArgsConstructor
-@RequestMapping(&#34;/api&#34;)
-public class ReportController {
-
-
-
-    @GetMapping(value = &#34;/filedownload&#34;)
-    public ResponseEntity&lt;InputStreamResource&gt; downloadFile(HttpServletRequest request) {
-
-        // .......................
-        // .......................
-        // .......................
-
-        ByteArrayInputStream stream = xxxxxx;// get the stream
-
-        return ResponseEntity.ok().contentType(MediaType.APPLICATION_OCTET_STREAM)
-                .header(HttpHeaders.CONTENT_DISPOSITION, &#34;attachment; filename=file.xlsx&#34;)
-                .body(new InputStreamResource(stream));
-
-    }
-
-}
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/spring-boot-file-download/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application" target="_blank">Azure AD SAML SSO with Node Application</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-08-27T14:05:59Z" class="post-meta meta-date dt-published">
-    2020-08-27
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/saml' target="_blank">saml</a>
-  
-    <a href='/categories/sso' target="_blank">sso</a>
-  
-    <a href='/categories/azure' target="_blank">azure</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="azure-ad-saml-sso">Azure AD saml sso</h2>
-<h3 id="代码">代码</h3>
-<p>主要是参考<a href="https://www.npmjs.com/package/passport-saml">文档</a></p>
-<ul>
-<li>安装 passport-saml</li>
-</ul>
-<pre tabindex="0"><code>npm install passport-saml
-</code></pre><ul>
-<li>use passport</li>
-</ul>
-<pre tabindex="0"><code>passport.use(new SamlStrategy(
-  {
-    path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现
-    entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url
-    issuer: &#39;cobeedev&#39;, // basic saml configuration -&gt; Identifier (Entity ID)
-    cert: &#39;&#39;, // refer later
-    signatureAlgorithm: &#39;sha256&#39;
-  },
-  async function(profile, done) {
-  // in this function, you can process profile to get necessary information
-    console.log(profile);
-    // lazy require
-    const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;);
-    const ssoUser = jsonUtil.profile2User(profile);
-    let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email);
-    // if user was not found in db
-    // process the scenario
-    if (!dbUser) {
-      await usersManagement.processAzureSSOUser(ssoUser);
-      dbUser = await usersManagement.getUserByAzureMail(ssoUser.email);
-    }
-    return done(null,{
-      ...dbUser,
-      azureUser: ssoUser
-    });
-  }
-));
-
-	app.use(passport.initialize());
-	app.use(passport.session());
-</code></pre><ul>
-<li>实现 callback
-get request to saml login page, and post request to handle callback</li>
-</ul>
-<pre tabindex="0"><code class="language-node" data-lang="node">router.get(&#39;/blueid&#39;, passport.authorize(&#39;saml&#39;, { }));
-router.post(&#39;/blueid/callback&#39;, function (req, res, next) {
-  console.log(&#39;in callback&#39;);
-  var redirect_url = &#39;/account/getprojects&#39;;
-  if(req.session.originalUrl){
-    let url=req.session.originalUrl;
-    let ida=url.indexOf(&#39;url=&#39;)
-    if(ida!=-1){
-      redirect_url+=&#34;?&#34;+url.slice(ida,url.length)
-      req.session.originalUrl=redirect_url
-    }
-  }
-  passport.authenticate(&#39;saml&#39;, {
-    successRedirect: redirect_url,
-    failureRedirect: &#39;/#/account/notregistered&#39;
-  })(req, res, next);
-});
-</code></pre><ul>
-<li>about the cert, refer to <a href="https://www.npmjs.com/package/passport-saml#security-and-signatures">doc</a></li>
-</ul>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/port-forwarding/" title="Port Forwarding - Mac" target="_blank">Port Forwarding - Mac</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-08-27T13:27:22Z" class="post-meta meta-date dt-published">
-    2020-08-27
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="mac下端口转发">Mac下端口转发</h2>
-<p>有时候要在本地起https,需要把443端口转发到8080或者其他的3000端口</p>
-<p>###设置转发</p>
-<pre tabindex="0"><code>echo &#34;rdr pass inet proto tcp from any to any port 443 -&gt; 127.0.0.1 port 9443&#34; | sudo pfctl -ef -
-</code></pre><h3 id="取消转发">取消转发</h3>
-<pre tabindex="0"><code>sudo pfctl -s nat
-sudo pfctl -F all -f /etc/pf.conf
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/port-forwarding/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -891,7 +902,7 @@ sudo pfctl -F all -f /etc/pf.conf
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (24)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (25)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -935,7 +946,7 @@ sudo pfctl -F all -f /etc/pf.conf
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (5)</a></li>
     
 </ul>
     </section>

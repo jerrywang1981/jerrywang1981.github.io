@@ -57,7 +57,7 @@
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
-                    <a  href="https://jerrywang1981.github.io/novel/" title="小说">小说</a>
+                    <a  href="https://jerrywang1981.github.io/novel/" title="散文">散文</a>
                     
                     <a  href="https://jerrywang1981.github.io/archives/" title="归档">归档</a>
                     
@@ -76,6 +76,571 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" title="13 Python Context Manager" target="_blank">13 Python Context Manager</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-31T05:58:44Z" class="post-meta meta-date dt-published">
+    2020-05-31
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="python-context-manager">python context manager</h2>
+<h3 id="use-contextlibyield">use contextlib/yield</h3>
+<pre tabindex="0"><code>@contextmanager
+def send_mail_context():
+    &#39;&#39;&#39;context manager
+
+    with send_mail_context()
+    &#39;&#39;&#39;
+    try:
+        # 1 doing work BEFORE the code goes into with block
+        print(&#39;before yield&#39;)
+        server = smtplib.SMTP(SMTP_SERVERS[0], 25)
+        # 2 yield back to with/caller
+        yield server
+    except Exception as e:
+        print(e)
+    finally:
+        # 4. doing cleanup work
+        server.quit()
+        print(&#39;in finally&#39;)
+</code></pre><h3 id="use-class-__enter__-__exit__">use class <code>__enter__</code>, <code>__exit__</code></h3>
+<pre tabindex="0"><code># 2 implement contextmanager with class
+class SMTPCT(object):
+    &#39;&#39;&#39;
+
+    1. override __enter__ __exit__
+    2. in __enter__, return value
+    &#39;&#39;&#39;
+    def __init__(self):
+        self.smtp_server = None
+
+    def __enter__(self):
+        # 1 doing work BEFORE the code goes into with block
+        print(&#39;in enter&#39;)
+        self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25)
+        # 2 return back to with/caller
+        return self.smtp_server
+
+    def __exit__(self, type, value, traceback):
+        # 4. doing cleanup work
+        print(&#39;in exit&#39;)
+        self.smtp_server.quit()
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/13-python-context-manager/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" title="12 Python Smtp" target="_blank">12 Python Smtp</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-31T05:52:03Z" class="post-meta meta-date dt-published">
+    2020-05-31
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="how-to-send-mail-in-python">how to send mail in python</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# smtplib -&gt; https://docs.python.org/3/library/smtplib.html
+import smtplib
+# contextlib -&gt; https://docs.python.org/3/library/contextlib.html
+from contextlib import contextmanager
+# email -&gt; https://docs.python.org/3/library/email.examples.html#email-examples
+from email import encoders
+from email.header import Header
+from email.mime.text import MIMEText
+from email.utils import parseaddr, formataddr
+
+SMTP_SERVERS = [&#39;your smtp servers&#39;]
+
+
+def _format_addr(s):
+    &#39;&#39;&#39; format the address
+
+    &#39;&#39;&#39;
+    name, addr = parseaddr(s)
+    return formataddr((Header(name, &#39;utf-8&#39;).encode(), addr))
+
+
+def generate_mail(from_addr,
+                  to_addr,
+                  cc_addr,
+                  subject,
+                  body,
+                  mime_type=&#39;plain&#39;):
+    &#39;&#39;&#39;plain/text text/html
+    &#39;&#39;&#39;
+    msg = MIMEText(body, mime_type, &#39;utf-8&#39;)
+    msg[&#39;From&#39;] = _format_addr(from_addr)
+    msg[&#39;To&#39;] = &#34;,&#34;.join([_format_addr(x) for x in to_addr])
+    msg[&#39;Cc&#39;] = &#34;,&#34;.join([_format_addr(x) for x in cc_addr])
+    msg[&#39;Subject&#39;] = Header(subject, &#39;utf-8&#39;).encode()
+    return msg
+
+
+def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&#39;plain&#39;):
+    server = smtplib.SMTP(SMTP_SERVERS[0], 25)
+    server.set_debuglevel(1)
+    msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type)
+    server.sendmail(from_addr, to_addr + cc_addr, msg.as_string())
+    server.quit()
+
+# 1. to implement context manager, use decorator @contextmanager
+# and yield
+
+@contextmanager
+def send_mail_context():
+    &#39;&#39;&#39;context manager
+
+    with send_mail_context()
+    &#39;&#39;&#39;
+    try:
+        # 1 doing work BEFORE the code goes into with block
+        print(&#39;before yield&#39;)
+        server = smtplib.SMTP(SMTP_SERVERS[0], 25)
+        # 2 yield back to with/caller
+        yield server
+    except Exception as e:
+        print(e)
+    finally:
+        # 4. doing cleanup work
+        server.quit()
+        print(&#39;in finally&#39;)
+
+
+# 2 implement contextmanager with class
+class SMTPCT(object):
+    &#39;&#39;&#39;
+
+    1. override __enter__ __exit__
+    2. in __enter__, return value
+    &#39;&#39;&#39;
+    def __init__(self):
+        self.smtp_server = None
+
+    def __enter__(self):
+        # 1 doing work BEFORE the code goes into with block
+        print(&#39;in enter&#39;)
+        self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25)
+        # 2 return back to with/caller
+        return self.smtp_server
+
+    def __exit__(self, type, value, traceback):
+        # 4. doing cleanup work
+        print(&#39;in exit&#39;)
+        self.smtp_server.quit()
+
+
+def send_mail_in_context_class(from_addr,
+                               to_addr,
+                               cc_addr,
+                               subject,
+                               body,
+                               mime_type=&#39;plain&#39;):
+    msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type)
+    with SMTPCT() as server:
+        # 3. do the actual job
+        server.sendmail(from_addr, to_addr + cc_addr, msg.as_string())
+        print(&#39;in with block&#39;)
+    print(&#39;sent&#39;)
+
+
+def send_mail_in_context_yield(from_addr,
+                         to_addr,
+                         cc_addr,
+                         subject,
+                         body,
+                         mime_type=&#39;plain&#39;):
+    msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type)
+    with send_mail_context() as server:
+        # 3. do the actual job
+        server.sendmail(from_addr, to_addr + cc_addr, msg.as_string())
+        print(&#39;in with block&#39;)
+    print(&#39;sent&#39;)
+
+
+if __name__ == &#39;__main__&#39;:
+    pass
+    # 1. send mail with contextmanager implemented in class
+    #  send_mail_in_context_class(&#39;your_from_address&#39;,
+                               #  [&#39;to_address&#39;], [],
+                               #  &#39;test&#39;, &#39;this is test mail&#39;)
+    # 2. send mail with contextmanager implemented with yield
+    #  send_mail_in_context_yield(&#39;your_from_address&#39;,
+                               #  [&#39;to_addr&#39;], [],
+                               #  &#39;test&#39;, &#39;this is test mail&#39;)
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/12-python-smtp/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/11-python-mro/" title="11 Python Mro" target="_blank">11 Python Mro</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-31T05:50:50Z" class="post-meta meta-date dt-published">
+    2020-05-31
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="method-resolution-order">method resolution order</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# method resolution order
+# mro
+
+class A(object):
+    def hello(self):
+        print(&#39;class A says hello&#39;)
+
+class B(A):
+    pass
+
+class C(A):
+
+    # class variable
+    BP_URL = &#39;https://xxxxx&#39;
+
+    def __init__(self):
+        self.name = &#39;ok&#39;
+
+    @staticmethod
+    def print_hello(name, age):
+        &#39;&#39;&#39; staticmethod
+
+        cannot access any class or self variabel/method
+        &#39;&#39;&#39;
+        pass
+
+    @classmethod
+    def say(cls):
+        &#39;&#39;&#39;class method
+
+        can access class level variable/method
+        &#39;&#39;&#39;
+        print(cls.BP_URL)
+
+
+    def hello(self):
+        print(&#39;class C says hello&#39;)
+
+class D(C, B):
+    pass
+
+if __name__ == &#39;__main__&#39;:
+    d = D()
+    d.hello()
+    # to print the mro of one class
+    print(d.__class__.__mro__)
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/11-python-mro/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" title="10 Dunder Methods" target="_blank">10 Dunder Methods</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-31T05:49:16Z" class="post-meta meta-date dt-published">
+    2020-05-31
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="dunder-methods">dunder methods</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# double underscore variable/function
+# dunder
+
+class A(object):
+    def __init__(self, number):
+        self.number = number
+
+    def __eq__(self, value):
+        &#39;&#39;&#39;
+
+        a == b
+        &#39;&#39;&#39;
+        return super().__eq__(value)
+
+    def __ge__(self, value):
+        &#39;&#39;&#39;
+
+        a &gt;= b
+        &#39;&#39;&#39;
+        return super().__ge__(value)
+
+    def __gt__(self, value):
+        &#39;&#39;&#39;
+
+        a &gt; b
+        &#39;&#39;&#39;
+        return super().__gt__(value)
+
+    def __le__(self, value):
+        &#39;&#39;&#39;
+
+        a &lt; b
+        &#39;&#39;&#39;
+        return super().__le__(value)
+
+    def __ne__(self, value):
+        &#39;&#39;&#39; a != b
+        &#39;&#39;&#39;
+        return super().__ne__(value)
+
+    def __str__(self):
+        &#39;&#39;&#39;print(a)
+        &#39;&#39;&#39;
+        return super().__str__()
+
+    def __repr__(self):
+        return super().__repr__()
+
+    def __len__(self):
+        &#39;&#39;&#39;
+
+        len(a)
+        &#39;&#39;&#39;
+        return self.number * 10
+
+    def __lt__(self, other):
+        &#39;&#39;&#39;less than
+
+        a &lt; b
+
+        &#39;&#39;&#39;
+        return self.number &lt; other.number
+
+    def __getattribute__(self, name):
+        &#39;&#39;&#39;
+        print(a[the_key])
+        &#39;&#39;&#39;
+        return super().__getattribute__(name)
+
+    def __setattr__(self, name, value):
+        &#39;&#39;&#39;
+
+        a[the_key] = 5
+        &#39;&#39;&#39;
+        return super().__setattr__(name, value)
+
+    def __delattr__(self, name):
+        &#39;&#39;&#39;
+
+        delete a[&#39;the_key&#39;]
+
+        &#39;&#39;&#39;
+        return super().__delattr__(name)
+
+
+if __name__ == &#39;__main__&#39;:
+    &#39;&#39;&#39;
+
+    &#39;&#39;&#39;
+    #  a = A(5)
+    #  b = A(6)
+    #  print(a &lt; b)
+    #  print(len(a))
+    #  a[&#39;b&#39;] = 10
+    #  c = a[&#39;c&#39;]
+    pass
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/10-dunder-methods/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/" title="Darknet Too Many or Too Few Labels" target="_blank">Darknet Too Many or Too Few Labels</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-27T02:27:04Z" class="post-meta meta-date dt-published">
+    2020-05-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/machine-learning' target="_blank">machine learning</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="too-many-or-too-few-labels">Too many or too few labels</h2>
+<p>如果在使用darknet过程中，遇到这个错误，很可能你的labels文件里面的label定义的有问题</p>
+<ul>
+<li>label之间要不包含</li>
+<li>label 名字不要出现在train/test的路径中</li>
+</ul>
+<p>所以如果定义一个label是a, 很可能就不行，train里面包含a，所以还是定义的稍微长点。</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/ml/darknet-too-many-or-too-few-labels/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators" target="_blank">09 Python Decorators</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-27T02:17:38Z" class="post-meta meta-date dt-published">
+    2020-05-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="无参装饰器">无参装饰器</h2>
+<pre tabindex="0"><code>#1. decorator without arguments
+def log_time_always(func):
+    @wraps(func)
+    def wrapped(*args, **kwargs):
+        #1. get current time
+        t1 = datetime.now()
+        #2. run the function
+        func(*args, **kwargs)
+        #3. get current time
+        t2 = datetime.now()
+        print(f&#39;in {func.__name__}, it took {t2-t1}&#39;)
+
+    return wrapped
+</code></pre><h2 id="带参数的装饰器">带参数的装饰器</h2>
+<pre tabindex="0"><code>#2. decorator with arguments, flag is True or False
+def log_time(flag):
+    def wrapper(func):
+        @wraps(func)
+        def wrapped(*args, **kwargs):
+            # if flag is true, we need to log the time
+            if flag:
+                #1. get current time
+                t1 = datetime.now()
+                #2. run the function
+                func(*args, **kwargs)
+                #3. get current time
+                t2 = datetime.now()
+                print(f&#39;in {func.__name__}, it took {t2-t1}&#39;)
+            else:
+                func(*args, **kwargs)
+        return wrapped
+    return wrapper
+</code></pre><h2 id="本质">本质</h2>
+<ul>
+<li>装饰器需要能够处理一个函数</li>
+</ul>
+<h3 id="无参">无参</h3>
+<pre tabindex="0"><code>@decorator_1
+def f():
+  pass
+</code></pre><p>等同于</p>
+<pre tabindex="0"><code>def f():
+  pass
+
+f = decorator_1(f)
+</code></pre><h3 id="带参">带参</h3>
+<pre tabindex="0"><code>@decorator_2(&#39;ok&#39;)
+def f():
+  pass
+</code></pre><p>等同于</p>
+<pre tabindex="0"><code>def f():
+  pass
+
+f = decorator_1(&#39;ok&#39;)(f)
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" target="_blank">Continue reading</a></p>
+    </article>
+    
     
     
     <article class="post">
@@ -335,287 +900,6 @@ if __name__ == &#39;__main__&#39;:
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" title="Angular Javascript Heap Out of Memory" target="_blank">Angular Javascript Heap Out of Memory</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-14T13:20:50Z" class="post-meta meta-date dt-published">
-    2020-05-14
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/node' target="_blank">node</a>
-  
-    <a href='/categories/angular' target="_blank">angular</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <p>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改</p>
-<pre tabindex="0"><code>node_modules/.bin/ng
-</code></pre><p>加上 <code>--max_old_space_size</code></p>
-<pre tabindex="0"><code>#!/usr/bin/env node --max_old_space_size=4096
-&#39;use strict&#39;;
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" title="Golang 导出 csv 乱码的问题" target="_blank">Golang 导出 csv 乱码的问题</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-12T14:26:51Z" class="post-meta meta-date dt-published">
-    2020-05-12
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-    <a href='/categories/csv' target="_blank">csv</a>
-  
-    <a href='/categories/encoding' target="_blank">encoding</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="问题提出">问题提出</h2>
-<p>golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。</p>
-<h2 id="解决方案">解决方案</h2>
-<pre tabindex="0"><code>  f, err := os.Create(&#34;data.csv&#34;)
-	if err != nil {
-		panic(err)
-	}
-	defer f.Close()
-
-	f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码
-  writer := csv.NewWriter(f)
-	writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;})
-	writer.Flush() 
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" title="转换Pdf成图片" target="_blank">转换Pdf成图片</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-11T13:51:52Z" class="post-meta meta-date dt-published">
-    2020-05-11
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-    <a href='/categories/ocr' target="_blank">ocr</a>
-  
-    <a href='/categories/pdf' target="_blank">pdf</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="背景">背景</h2>
-<p>在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面
-保存成图片。</p>
-<h2 id="代码库pdf2image">代码库<a href="https://github.com/jerrywang1981/pdf2images">pdf2image</a></h2>
-<h2 id="实现">实现</h2>
-<h3 id="python">Python</h3>
-<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
-<h3 id="docker">docker</h3>
-<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
-<h3 id="golang">golang</h3>
-<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
-<h2 id="也可以">也可以</h2>
-<p>直接下载可执行文件直接执行 -&gt; <a href="https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image">https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</a></p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" title="Golang 中通过gRPC调用Python实现的功能" target="_blank">Golang 中通过gRPC调用Python实现的功能</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-03T16:11:12Z" class="post-meta meta-date dt-published">
-    2020-05-04
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h3 id="背景">背景</h3>
-<p>有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。
-方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个
-选择就是gRPC</p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/python/class-object-method/" title="Class Object Method" target="_blank">Class Object Method</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-02T13:59:33Z" class="post-meta meta-date dt-published">
-    2020-05-02
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/python' target="_blank">python</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="对象中通过类或者实例的方法调用方式的不同">对象中通过类或者实例的方法调用方式的不同</h2>
-<h3 id="如果通过类中取得的方法需要传入实例">如果通过类中取得的方法，需要传入实例</h3>
-<pre tabindex="0"><code>class A(object):
-    def test(self, *args):
-        print(*args)
-
-if __name__ == &#39;__main__&#39;:
-    a = A()
-    a.test(7, 8, 9)
-    # method from class object
-    m1 = A.test
-    m1(a, 7, 8, 9, 10)
-    # method from instance object
-    m2 = a.test
-    m2(7, 8, 9, 10)
-</code></pre><h4 id="也就是说-实例方法的第一个参数是实例本身如果写decorator的时候要特别注意">也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意</h4>
-<p>比如print_args这个decorator, 需要打印参数，就需要把第一个参数给选出来不作处理</p>
-<pre tabindex="0"><code>
-def print_args(func):
-    def wrapper(*args):
-        _, *rest = args
-        print(&#34;args: &#34;, *rest)
-        func(*args)
-    return wrapper
-
-class A(object):
-
-    @print_args
-    def test(self, *args):
-        print(*args)
-
-if __name__ == &#39;__main__&#39;:
-    a = A()
-    a.test(7, 8, 9)
-    # method from class object
-    m1 = A.test
-    m1(a, 7, 8, 9, 10)
-    # method from instance object
-    m2 = a.test
-    m2(7, 8, 9, 10)
-</code></pre>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker" target="_blank">Neovim Docker</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-02T13:23:53Z" class="post-meta meta-date dt-published">
-    2020-05-02
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/vim' target="_blank">vim</a>
-  
-    <a href='/categories/neovim' target="_blank">neovim</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <p>推荐一下自己做的一个docker image, 基于ubuntu,包含</p>
-<ul>
-<li>neovim</li>
-<li>python</li>
-<li>python 3</li>
-<li>nodejs</li>
-<li>npm</li>
-<li>golang</li>
-</ul>
-<p>Plugin 包括</p>
-<ul>
-<li>LeaderF</li>
-<li>coc.nvim</li>
-<li>other</li>
-</ul>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -859,7 +1143,7 @@ if __name__ == &#39;__main__&#39;:
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (24)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (25)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -903,7 +1187,7 @@ if __name__ == &#39;__main__&#39;:
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (4)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (5)</a></li>
     
 </ul>
     </section>
