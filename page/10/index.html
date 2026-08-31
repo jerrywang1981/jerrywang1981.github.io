@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
+	<meta name="generator" content="Hugo 0.162.1">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Gin | 村边的池塘</title>
-    <meta property="og:title" content="Gin - 村边的池塘">
-    <meta property="og:type" content="article">
-        
-        
+    <title>村边的池塘 | 火鸡程序猿</title>
+    <meta property="og:title" content="村边的池塘 | 火鸡程序猿">
+    <meta property="og:type" content="website">
     <meta name="Keywords" content="golang,java,python,node,microservice,cloud,rust,vim">
-    <meta name="description" content="Gin">
-        
-    <meta name="author" content="Jerry Wang">
-    <meta property="og:url" content="https://jerrywang1981.github.io/tags/gin/">
+    <meta name="description" content="自由自在的地方">
+    <meta property="og:url" content="https://jerrywang1981.github.io/">
     <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon">
     <link rel="icon" href='/favicon.png' type="image/png">
     <link rel="alternate icon" href='/favicon.png' type="image/svg+xml">
@@ -24,7 +21,7 @@
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="https://jerrywang1981.github.io/tags/gin/index.xml" title="村边的池塘" />
+    <link rel="alternate" type="application/rss+xml" href="https://jerrywang1981.github.io/index.xml" title="村边的池塘" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -46,15 +43,17 @@
         <div class="col-group">
             <div class="site-name ">
                 
-                    <a id="logo" href="https://jerrywang1981.github.io/">
-                        村边的池塘
-                    </a>
+                    <h1>
+                        <a id="logo" href="https://jerrywang1981.github.io/">
+                            村边的池塘
+                        </a>
+                    </h1>
                 
                 <p class="description">火鸡程序猿</p>
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://jerrywang1981.github.io/">Home</a>
+                    <a class="current" href="https://jerrywang1981.github.io/">Home</a>
                     
                     <a  href="https://jerrywang1981.github.io/life/" title="生活">生活</a>
                     
@@ -78,72 +77,92 @@
                     
 <div class="res-cons">
     
-    <h3 class="archive-title">
-        包含标签
-        <span class="keyword">gin</span>
-        articles
-    </h3>
-    
-
     
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" target="_blank">Gin Jwt Middleware</a>
+                <a href="https://jerrywang1981.github.io/post/vim/vim-online-video/" title="Vim Online Video" target="_blank">Vim Online Video</a>
             </h1>
         </header>
         
-  <time datetime="2021-02-06T06:56:43Z" class="post-meta meta-date dt-published">
-    2021-02-06
+  <time datetime="2020-04-11T13:09:42Z" class="post-meta meta-date dt-published">
+    2020-04-11
   </time>
 
 
 <div class="post-meta meta-category">
   <span>&nbsp;|</span>
   
+    <a href='/categories/vim' target="_blank">vim</a>
+  
     <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-    <a href='/categories/jwt' target="_blank">jwt</a>
-  
-    <a href='/categories/gin' target="_blank">gin</a>
   
 </div>
 
 
         <div class="post-content">
-            <h2 id="jwt-in-golang">JWT in golang</h2>
-<p>golang中的jwt包一般是使用 <code>github.com/dgrijalva/jwt-go</code>, 而且godoc中已经有些example，这里只是记录一下使用
-jwt.StandardClaims的情况。</p>
-<pre tabindex="0"><code>func parseToken(tokenString string) (*jwt.StandardClaims, error) {
-        token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) {
-                return jwtKey, nil
-        })
-
-        if err != nil {
-                log.Errorf(&#34;error: %v&#34;, err)
-                return nil, fmt.Errorf(&#34;failed to parse the token string: %s&#34;, tokenString)
-        }
-
-        log.Printf(&#34;claims: %v&#34;, token.Claims)
-
-        if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid {
-                return claims, nil
-        } else {
-                return nil, errors.Wrap(fmt.Errorf(&#34;failed to valiate the token&#34;), &#34;failed&#34;)
-        }
-}
-</code></pre><p>这个方法会把一个string通过jwt的parsewithclaims恢复成StandardClaims,如果有错误会返回相应的error,这样的话，在middleware中可以
-在req header中取到jwt然后尝试parse一下从而知道请求中的是valid的。</p>……
-            <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" target="_blank">Continue reading</a></p>
+            <p>在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。
+<a href="http://vimcasts.org/episodes/">vim video</a></p>……
         </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/vim-online-video/" target="_blank">Continue reading</a></p>
     </article>
     
-
+    
     
 
 
+
+<ol class="page-navigator">
+    
+    <li class="prev">
+        <a href="https://jerrywang1981.github.io/page/9/">Previous</a>
+    </li>
+    
+
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/">1</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/2/">2</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/3/">3</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/4/">4</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/5/">5</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/6/">6</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/7/">7</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/8/">8</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/9/">9</a>
+    </li>
+    
+    <li  class="current">
+        <a href="https://jerrywang1981.github.io/page/10/">10</a>
+    </li>
+    
+
+    
+</ol>
 
 
 

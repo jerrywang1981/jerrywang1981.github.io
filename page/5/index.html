@@ -81,6 +81,53 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" title="Liberty Profile Tls V1 Gaps" target="_blank">Liberty Profile Tls V1 Gaps</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-11-12T11:31:52Z" class="post-meta meta-date dt-published">
+    2020-11-12
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/java' target="_blank">java</a>
+  
+    <a href='/categories/liberty' target="_blank">liberty</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="gap---tls-version-1011-detected">Gap - TLS version 1.0/1.1 detected</h2>
+<p>如果在做security scan的时候，有这两个gap,需要修改两个地方</p>
+<ul>
+<li>liberty profile server.xml</li>
+</ul>
+<p>add <code>sslProtocol=&quot;TLSv1.2&quot;</code> to ssl</p>
+<pre tabindex="0"><code>&lt;ssl id=&#34;defaultSSLConfig&#34;
+	sslProtocol=&#34;TLSv1.2&#34;
+     keyStoreRef=&#34;defaultKeyStore&#34;
+     securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt;
+</code></pre><ul>
+<li>server.env</li>
+</ul>
+<p>add</p>
+<pre tabindex="0"><code>JVM_ARGS=-Dhttps.protocols=TLSv1.2
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" title="React for Beginners" target="_blank">React for Beginners</a>
             </h1>
         </header>
@@ -584,50 +631,6 @@ sudo pfctl -F all -f /etc/pf.conf
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" title="Golang Panic 的时候通过defer更新返回值" target="_blank">Golang Panic 的时候通过defer更新返回值</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-08-17T12:53:08Z" class="post-meta meta-date dt-published">
-    2020-08-17
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/golang' target="_blank">golang</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="在panic的函数中更新返回值">在panic的函数中更新返回值</h2>
-<p>在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出
-有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。</p>
-<pre tabindex="0"><code>func test() (r int) {
-  defer func() {
-		if err := recover(); err != nil {
-			log.Println(&#34;Error:&#34;, err)
-      r = -1
-		}
-  }()
-  panic(&#34;error&#34;)
-  return 1;
-}
-</code></pre><p>比如这个代码，肯定会有个panic,当然如果没有那行panic代码的话，全部正确处理，应该是返回1， 但是有了panic后，在返回之前
-会通过recover来得到这个panic, 最后更新返回值变量r为-1，从而在即使这个函数有了panic也会返回一个-1给调用者。</p>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -673,6 +676,10 @@ sudo pfctl -F all -f /etc/pf.conf
     
     <li >
         <a href="https://jerrywang1981.github.io/page/9/">9</a>
+    </li>
+    
+    <li >
+        <a href="https://jerrywang1981.github.io/page/10/">10</a>
     </li>
     
 
@@ -871,7 +878,7 @@ sudo pfctl -F all -f /etc/pf.conf
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (27)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (28)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -915,7 +922,7 @@ sudo pfctl -F all -f /etc/pf.conf
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (7)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (8)</a></li>
     
 </ul>
     </section>
