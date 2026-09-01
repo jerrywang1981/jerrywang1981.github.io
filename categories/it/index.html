@@ -109,27 +109,7 @@
 
 
         <div class="post-content">
-            <h2 id="configure-ctrl--p-to-search-files">configure ctrl + p to search files</h2>
-<ul>
-<li>if in git repo, then call :GFiles, otherwise call :Files</li>
-</ul>
-<pre tabindex="0"><code>function &lt;SID&gt;CtrlP()
-  let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;)
-  let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;)
-  if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34;
-    :Files
-  else
-    :GFiles
-  endif
-endfunction
-
-
-nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt;
-nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt;
-nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt;
-nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt;
-nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
-</code></pre>……
+            configure ctrl + p to search files if in git repo, then call :GFiles, otherwise call :Files function &lt;SID&gt;CtrlP() let l:j1 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-inside-work-tree&#34;) let l:j2 = system(&#34;git -C &#34; . getcwd() . &#34; rev-parse --is-bare-repository&#34;) if l:j1 !~ &#34;true&#34; &amp;&amp; l:j2 !~ &#34;true&#34; :Files else :GFiles endif endfunction nnoremap &lt;silent&gt; &lt;C-p&gt; :call &lt;SID&gt;CtrlP()&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fb :Buffers&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fh :History&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fs :Rg&lt;CR&gt; nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt; ……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/fzf-vim/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -159,14 +139,9 @@ nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
 
 
         <div class="post-content">
-            <h2 id="error-message">Error message</h2>
-<pre tabindex="0"><code>413 request entity too large
-</code></pre><h2 id="how-to-fix">How to fix</h2>
-<h3 id="nginx">Nginx</h3>
-<p>increase <code>client_max_body_size</code></p>
-<h3 id="kubenetes-ingress">Kubenetes Ingress</h3>
-<p>increase <code>proxy-body-size</code></p>
-<p>reference -&gt; <a href="https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/">https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/</a></p>……
+            Error message 413 request entity too large How to fix Nginx increase client_max_body_size
+Kubenetes Ingress increase proxy-body-size
+reference -&gt; https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/k8s/413-Request-Entity-Too-Large/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -196,18 +171,9 @@ nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
 
 
         <div class="post-content">
-            <h2 id="axios-error">Axios error</h2>
-<p>Request Body Larger Than MaxBodyLength Limit</p>
-<h2 id="solution">solution</h2>
-<p>config axios maxContentLength/maxBodyLength to a large number or Infinity</p>
-<pre tabindex="0"><code>    const options = {
-      url,
-      //method: &#39;post&#39;,
-      //...
-      maxContentLength: Infinity,
-      maxBodyLength: Infinity,
-    };
-</code></pre>……
+            Axios error Request Body Larger Than MaxBodyLength Limit
+solution config axios maxContentLength/maxBodyLength to a large number or Infinity
+const options = { url, //method: &#39;post&#39;, //... maxContentLength: Infinity, maxBodyLength: Infinity, }; ……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -233,18 +199,7 @@ nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
 
 
         <div class="post-content">
-            <h2 id="概述">概述</h2>
-<p>工作中经常会遇到各种各样的困难，或者是艰难场景，如果处理不好，会对同事，工作，项目造成影响。</p>
-<h2 id="常见的一些类型">常见的一些类型</h2>
-<ul>
-<li>
-<p>目标冲突</p>
-<p>一个人给出的目标与另一个人共享的目标相冲突, 比如员工的个人职业规划和安排的工作目标有冲突。</p>
-</li>
-<li>
-<p>角色冲突</p>
-<p>当某人要执行一项不属于他们通常的角色或职责的任务时，或者当他们被要求做一些本应由其他人负责的事情时。
-比如要求开发人员做UAT之类的.</p>……
+            概述 工作中经常会遇到各种各样的困难，或者是艰难场景，如果处理不好，会对同事，工作，项目造成影响。 常见的一些类型 目标冲突 一个人给出的目标与另一个人共享的目标相冲突, 比如员工的个人职业规划和安排的工作目标有冲突。 角色冲突 当某人要执行一项不属于他们通常的角色或职责的任务时，或者当他们被……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/address-difficult-situation/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -270,17 +225,11 @@ nnoremap &lt;silent&gt; &lt;leader&gt;fS :Rg &lt;c-r&gt;&lt;c-w&gt;&lt;CR&gt;
 
 
         <div class="post-content">
-            <h2 id="issue">Issue</h2>
-<p>Cacheable SSL Page Found</p>
-<h2 id="risk">Risk</h2>
-<p>It is possible to gather sensitive information about the web application such as usernames, passwords, machine name and/or
-sensitive file locations</p>
-<h2 id="cause">Cause</h2>
-<p>Sensitive information might have been cached by your browser</p>
-<h2 id="fix">Fix</h2>
-<p>Prevent caching of SSL pages by adding &ldquo;Cache-Control: no-store&rdquo; and &ldquo;Pragma: no-cache&rdquo; headers to their responses.</p>
-<h2 id="possible-solution">Possible solution</h2>
-<p>you can also change the HTTP method from GET to POST if it is NOT a page but a rest API.</p>……
+            Issue Cacheable SSL Page Found
+Risk It is possible to gather sensitive information about the web application such as usernames, passwords, machine name and/or sensitive file locations
+Cause Sensitive information might have been cached by your browser
+Fix Prevent caching of SSL pages by adding &ldquo;Cache-Control: no-store&rdquo; and &ldquo;Pragma: no-cache&rdquo; headers to their responses.
+Possible solution you can also change the HTTP method from GET to POST if it is NOT a page but a rest API.……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cacheable-SSL-Page-Found/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -310,18 +259,12 @@ sensitive file locations</p>
 
 
         <div class="post-content">
-            <h2 id="issue">Issue</h2>
-<p>Cookie with Insecure or Improper or Missing SameSite attribute</p>
-<h2 id="risk">Risk</h2>
-<p>Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site-
-Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).</p>
-<h2 id="cause">Cause</h2>
-<p>Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute</p>
-<h2 id="fix">Fix</h2>
-<p>Review possible solutions for configuring SameSite Cookie attribute to recommended values</p>
-<p>for K8s, you may edit the ingress configuration, set samesite value</p>
-<pre tabindex="0"><code>nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34;
-</code></pre>……
+            Issue Cookie with Insecure or Improper or Missing SameSite attribute
+Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
+Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute
+Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values
+for K8s, you may edit the ingress configuration, set samesite value
+nginx.ingress.kubernetes.io/session-cookie-samesite: &#34;Strict&#34; ……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -351,28 +294,12 @@ Request-Forgery (CSRF) attacks if there are no additional protections in place (
 
 
         <div class="post-content">
-            <h2 id="security">Security</h2>
-<ul>
-<li>
-<p>Risk: It is possible to view, modify or delete database entries and tables</p>
-</li>
-<li>
-<p>Cause: Sanitation of hazardous characters was not performed correctly on user input</p>
-</li>
-<li>
-<p>Fix: Review possible solutions for hazardous character injection</p>
-</li>
-<li>
-<p>Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values,
-indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last
-is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of
-the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the
-application is vulnerable.</p>
-</li>
-</ul>
-<h2 id="how-to-fix">How to fix</h2>
-<p><a href="https://sequelize.org/v5/manual/raw-queries.html">https://sequelize.org/v5/manual/raw-queries.html</a></p>
-<p>make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;</p>……
+            Security Risk: It is possible to view, modify or delete database entries and tables
+Cause: Sanitation of hazardous characters was not performed correctly on user input
+Fix: Review possible solutions for hazardous character injection
+Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.
+How to fix https://sequelize.org/v5/manual/raw-queries.html
+make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -402,85 +329,7 @@ application is vulnerable.</p>
 
 
         <div class="post-content">
-            <h2 id="github-oauth2">Github Oauth2</h2>
-<h3 id="首先在github上申请一个oauth-app-获取client-id--secret">首先，在github上申请一个Oauth App, 获取client id / secret</h3>
-<p>需要这些信息，下边的代码是放在环境变量中</p>
-<pre tabindex="0"><code>    AUTH_URL      = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url
-    TOKEN_URL     = os.Getenv(&#34;TOKEN_URL&#34;) // github token url
-    CLIENT_ID     = os.Getenv(&#34;CLIENT_ID&#34;) // client id
-    CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret
-    REDIRECT_URL  = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url
-</code></pre><h3 id="在包的初始化代码中初始化">在包的初始化代码中，初始化</h3>
-<pre tabindex="0"><code>  var (
-    oauth2Config *oauth2.Config
-  )
-
-  init() {
-    oauth2Config = &amp;oauth2.Config{
-    ClientID:     CLIENT_ID,
-    ClientSecret: CLIENT_SECRET,
-    RedirectURL:  REDIRECT_URL,
-
-    // Discovery returns the OAuth2 endpoints.
-    Endpoint: oauth2.Endpoint{
-            AuthURL:   AUTH_URL,
-            TokenURL:  TOKEN_URL,
-            AuthStyle: oauth2.AuthStyleInHeader,
-    },
-
-    Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;},
-  }
-</code></pre><h3 id="login-handler">Login handler</h3>
-<pre tabindex="0"><code>  func HandleRedirect(w http.ResponseWriter, r *http.Request) {
-    //you need to generate random state here
-  http.Redirect(w, r, oauth2Config.AuthCodeURL(state), http.StatusFound)
-  }
-</code></pre><h3 id="callback-handler">callback handler</h3>
-<pre tabindex="0"><code>  func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) {
-        log.Printf(&#34;Processing response&#34;)
-        state := r.URL.Query().Get(&#34;state&#34;)
-        target, ok := stateMap[state]
-        if !ok {
-                http.Error(w, &#34;missing target in request&#34;, http.StatusBadRequest)
-        }
-
-        // remove from map
-        // delete(stateMap, state)
-
-        log.Printf(&#34;in HandleOAuth2Callback, target url : %s&#34;, target)
-
-        user, err := getUserInfo(r.FormValue(&#34;code&#34;))
-
-        // create the user if not found
-
-        tNow := time.Now()
-           claims := jwt.StandardClaims{
-                Issuer:    &#34;CCMS Application&#34;,
-                Subject:   user,
-                IssuedAt:  tNow.Unix(),
-                ExpiresAt: tNow.Add(2 * time.Hour).Unix(), // two hours
-        }
-        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-        ss, err := token.SignedString(jwtKey)
-        if err != nil {
-                http.Error(w, &#34;Failed to sign the token : &#34;+err.Error(), http.StatusInternalServerError)
-                return
-        }
-        rUrl := fmt.Sprintf(&#34;%s?token=%s&#34;, target, ss)
-        log.Printf(&#34;redirect to :%s&#34;, rUrl)
-        http.Redirect(w, r, rUrl, http.StatusFound)
-</code></pre><h3 id="the-function-to-exchange-code-to-get-access-token">the function to exchange code to get access token</h3>
-<pre tabindex="0"><code>  func getUserInfo(code string) (string, error) {
-        token, err := oauth2Config.Exchange(oauth2.NoContext, code)
-        if err != nil {
-                return &#34;&#34;, fmt.Errorf(&#34;code exchange failed: %s&#34;, err.Error())
-        }
-        ctx := context.Background()
-        log.Printf(&#34;access token: %+v&#34;, token)
-        // token.AccessToken --- this is the token you can use to call github api
-        return email, nil
-  }
-</code></pre>……
+            Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url TOKEN_URL = os.Getenv(&#34;TOKEN_URL&#34;) // github token url CLIENT_ID = os.Getenv(&#34;CLIENT_ID&#34;) // client id CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret REDIRECT_URL = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;}, } Login……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -508,15 +357,7 @@ application is vulnerable.</p>
 
 
         <div class="post-content">
-            <h2 id="channel-to-terminate">channel to terminate</h2>
-<p>在 main.go中, 创建一个channel接收os.Signal</p>
-<pre tabindex="0"><code> sigChan := make(chan os.Signal, 1)
-	// ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL
-	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL)
-</code></pre><p>在main.go快结束的位置，加上</p>
-<pre tabindex="0"><code> &lt;-sigChan
-log.Info(&#34;exit&#34;)
-</code></pre><p>如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</p>……
+            channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &lt;-sigChan log.Info(&#34;exit&#34;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -544,28 +385,7 @@ log.Info(&#34;exit&#34;)
 
 
         <div class="post-content">
-            <h2 id="cron-in-golang">cron in golang</h2>
-<p>在golang中，有个包<code>github.com/robfig/cron/v3</code>可以实现linux中类似的cron功能，使用也比较简单。
-官方文档中比较详细，这里只是简单记录一下。</p>
-<pre tabindex="0"><code>  c := cron.New()
-	schlTime := &#34;0 2 * * ?&#34;
-	// send reminder for org members
-	c.AddFunc(schlTime, func() {
-					log.Info(&#34;Send reminder for org member expiration job started&#34;)
-					defer func() {
-									log.Info(&#34;Send reminder for org member expiration job finished&#34;)
-					}()
-
-					log.Info(&#34;started to remind expired org members&#34;)
-					err = task.RemindExpiredOrgMember(14)
-					if err != nil {
-									log.Errorf(&#34;\nerror: %v\n&#34;, err)
-					}
-					log.Info(&#34;end to remind expired org members&#34;)
-	})
-  c.Start()
-	defer c.Stop()
-</code></pre>……
+            cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &#34;0 2 * * ?&#34; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&#34;Send reminder for org member expiration job started&#34;) defer func() { log.Info(&#34;Send reminder for org member expiration job finished&#34;) }() log.Info(&#34;started to remind expired org members&#34;) err = task.RemindExpiredOrgMember(14) if err !=……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -638,6 +458,9 @@ log.Info(&#34;exit&#34;)
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+  
 
 
 
@@ -799,7 +622,7 @@ log.Info(&#34;exit&#34;)
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (28)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -843,7 +666,7 @@ log.Info(&#34;exit&#34;)
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
     
 </ul>
     </section>

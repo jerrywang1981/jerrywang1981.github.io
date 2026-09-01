@@ -111,85 +111,7 @@
 
 
         <div class="post-content">
-            <h2 id="github-oauth2">Github Oauth2</h2>
-<h3 id="首先在github上申请一个oauth-app-获取client-id--secret">首先，在github上申请一个Oauth App, 获取client id / secret</h3>
-<p>需要这些信息，下边的代码是放在环境变量中</p>
-<pre tabindex="0"><code>    AUTH_URL      = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url
-    TOKEN_URL     = os.Getenv(&#34;TOKEN_URL&#34;) // github token url
-    CLIENT_ID     = os.Getenv(&#34;CLIENT_ID&#34;) // client id
-    CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret
-    REDIRECT_URL  = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url
-</code></pre><h3 id="在包的初始化代码中初始化">在包的初始化代码中，初始化</h3>
-<pre tabindex="0"><code>  var (
-    oauth2Config *oauth2.Config
-  )
-
-  init() {
-    oauth2Config = &amp;oauth2.Config{
-    ClientID:     CLIENT_ID,
-    ClientSecret: CLIENT_SECRET,
-    RedirectURL:  REDIRECT_URL,
-
-    // Discovery returns the OAuth2 endpoints.
-    Endpoint: oauth2.Endpoint{
-            AuthURL:   AUTH_URL,
-            TokenURL:  TOKEN_URL,
-            AuthStyle: oauth2.AuthStyleInHeader,
-    },
-
-    Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;},
-  }
-</code></pre><h3 id="login-handler">Login handler</h3>
-<pre tabindex="0"><code>  func HandleRedirect(w http.ResponseWriter, r *http.Request) {
-    //you need to generate random state here
-  http.Redirect(w, r, oauth2Config.AuthCodeURL(state), http.StatusFound)
-  }
-</code></pre><h3 id="callback-handler">callback handler</h3>
-<pre tabindex="0"><code>  func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) {
-        log.Printf(&#34;Processing response&#34;)
-        state := r.URL.Query().Get(&#34;state&#34;)
-        target, ok := stateMap[state]
-        if !ok {
-                http.Error(w, &#34;missing target in request&#34;, http.StatusBadRequest)
-        }
-
-        // remove from map
-        // delete(stateMap, state)
-
-        log.Printf(&#34;in HandleOAuth2Callback, target url : %s&#34;, target)
-
-        user, err := getUserInfo(r.FormValue(&#34;code&#34;))
-
-        // create the user if not found
-
-        tNow := time.Now()
-           claims := jwt.StandardClaims{
-                Issuer:    &#34;CCMS Application&#34;,
-                Subject:   user,
-                IssuedAt:  tNow.Unix(),
-                ExpiresAt: tNow.Add(2 * time.Hour).Unix(), // two hours
-        }
-        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-        ss, err := token.SignedString(jwtKey)
-        if err != nil {
-                http.Error(w, &#34;Failed to sign the token : &#34;+err.Error(), http.StatusInternalServerError)
-                return
-        }
-        rUrl := fmt.Sprintf(&#34;%s?token=%s&#34;, target, ss)
-        log.Printf(&#34;redirect to :%s&#34;, rUrl)
-        http.Redirect(w, r, rUrl, http.StatusFound)
-</code></pre><h3 id="the-function-to-exchange-code-to-get-access-token">the function to exchange code to get access token</h3>
-<pre tabindex="0"><code>  func getUserInfo(code string) (string, error) {
-        token, err := oauth2Config.Exchange(oauth2.NoContext, code)
-        if err != nil {
-                return &#34;&#34;, fmt.Errorf(&#34;code exchange failed: %s&#34;, err.Error())
-        }
-        ctx := context.Background()
-        log.Printf(&#34;access token: %+v&#34;, token)
-        // token.AccessToken --- this is the token you can use to call github api
-        return email, nil
-  }
-</code></pre>……
+            Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url TOKEN_URL = os.Getenv(&#34;TOKEN_URL&#34;) // github token url CLIENT_ID = os.Getenv(&#34;CLIENT_ID&#34;) // client id CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret REDIRECT_URL = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;}, } Login……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -226,6 +148,9 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+  
 
 
 
@@ -387,7 +312,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (28)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -431,7 +356,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
     
 </ul>
     </section>

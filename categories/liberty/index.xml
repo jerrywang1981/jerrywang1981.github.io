@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Liberty on 村边的池塘</title>
-		<link>https://jerrywang1981.github.io/categories/liberty/</link>
-		<description>Recent content in Liberty on 村边的池塘</description>
-		<generator>Hugo</generator>
-		<language>zh-CN</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 12 Nov 2020 19:31:52 +0800</lastBuildDate>
-		
-			<atom:link href="https://jerrywang1981.github.io/categories/liberty/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Liberty Profile Tls V1 Gaps</title>
-				<link>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</link>
-				<pubDate>Thu, 12 Nov 2020 19:31:52 +0800</pubDate>
-				<guid>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</guid>
-				<description>&lt;h2 id=&#34;gap---tls-version-1011-detected&#34;&gt;Gap - TLS version 1.0/1.1 detected&lt;/h2&gt;&#xA;&lt;p&gt;如果在做security scan的时候，有这两个gap,需要修改两个地方&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;liberty profile server.xml&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;add &lt;code&gt;sslProtocol=&amp;quot;TLSv1.2&amp;quot;&lt;/code&gt; to ssl&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34;&#xA;&#x9;sslProtocol=&amp;#34;TLSv1.2&amp;#34;&#xA;     keyStoreRef=&amp;#34;defaultKeyStore&amp;#34;&#xA;     securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;server.env&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;add&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;JVM_ARGS=-Dhttps.protocols=TLSv1.2&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-			</item>
-			<item>
-				<title>SSL TLS Diffie Hellman Modulus 1024 Bits</title>
-				<link>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</link>
-				<pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
-				<guid>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</guid>
-				<description>&lt;h4 id=&#34;liberty-profile-这个要修复可能要修改两个地方&#34;&gt;Liberty Profile 这个要修复，可能要修改两个地方。&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;server.xml 加入&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&#xA;&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;1&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;2&#xA;&lt;/span&gt;&lt;span style=&#34;white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;&amp;lt;ssl&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;defaultSSLConfig&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#1f2328&#34;&gt;keyStoreRef=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;defaultKeyStore&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#1f2328&#34;&gt;securityLevel=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;CUSTOM&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#1f2328&#34;&gt;enabledCiphers=&lt;/span&gt;&lt;span style=&#34;color:#0a3069&#34;&gt;&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#0550ae&#34;&gt;/&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;jvm.options加入&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &amp;lt;768&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Liberty on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/liberty/</link>
+    <description>Recent content in Liberty on 村边的池塘</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 12 Nov 2020 19:31:52 +0800</lastBuildDate>
+    <atom:link href="https://jerrywang1981.github.io/categories/liberty/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Liberty Profile Tls V1 Gaps</title>
+      <link>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</link>
+      <pubDate>Thu, 12 Nov 2020 19:31:52 +0800</pubDate>
+      <guid>https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/</guid>
+      <description>Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&amp;quot;TLSv1.2&amp;quot; to ssl &amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34; sslProtocol=&amp;#34;TLSv1.2&amp;#34; keyStoreRef=&amp;#34;defaultKeyStore&amp;#34; securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2</description>
+    </item>
+    <item>
+      <title>SSL TLS Diffie Hellman Modulus 1024 Bits</title>
+      <link>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</link>
+      <pubDate>Sat, 11 Apr 2020 21:17:25 +0800</pubDate>
+      <guid>https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/</guid>
+      <description>Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &amp;lt;ssl id=&amp;#34;defaultSSLConfig&amp;#34; keyStoreRef=&amp;#34;defaultKeyStore&amp;#34; securityLevel=&amp;#34;CUSTOM&amp;#34; enabledCiphers=&amp;#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &amp;#34;/&amp;gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &amp;lt;768</description>
+    </item>
+  </channel>
 </rss>

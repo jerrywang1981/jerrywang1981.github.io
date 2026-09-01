@@ -111,18 +111,9 @@
 
 
         <div class="post-content">
-            <h2 id="axios-error">Axios error</h2>
-<p>Request Body Larger Than MaxBodyLength Limit</p>
-<h2 id="solution">solution</h2>
-<p>config axios maxContentLength/maxBodyLength to a large number or Infinity</p>
-<pre tabindex="0"><code>    const options = {
-      url,
-      //method: &#39;post&#39;,
-      //...
-      maxContentLength: Infinity,
-      maxBodyLength: Infinity,
-    };
-</code></pre>……
+            Axios error Request Body Larger Than MaxBodyLength Limit
+solution config axios maxContentLength/maxBodyLength to a large number or Infinity
+const options = { url, //method: &#39;post&#39;, //... maxContentLength: Infinity, maxBodyLength: Infinity, }; ……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/axios-error-Request-body-larger-than-maxBodyLength-limit/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -152,28 +143,12 @@
 
 
         <div class="post-content">
-            <h2 id="security">Security</h2>
-<ul>
-<li>
-<p>Risk: It is possible to view, modify or delete database entries and tables</p>
-</li>
-<li>
-<p>Cause: Sanitation of hazardous characters was not performed correctly on user input</p>
-</li>
-<li>
-<p>Fix: Review possible solutions for hazardous character injection</p>
-</li>
-<li>
-<p>Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values,
-indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last
-is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of
-the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the
-application is vulnerable.</p>
-</li>
-</ul>
-<h2 id="how-to-fix">How to fix</h2>
-<p><a href="https://sequelize.org/v5/manual/raw-queries.html">https://sequelize.org/v5/manual/raw-queries.html</a></p>
-<p>make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;</p>……
+            Security Risk: It is possible to view, modify or delete database entries and tables
+Cause: Sanitation of hazardous characters was not performed correctly on user input
+Fix: Review possible solutions for hazardous character injection
+Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.
+How to fix https://sequelize.org/v5/manual/raw-queries.html
+make sure to &lsquo;replace&rsquo;/&lsquo;bind&rsquo;……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/blind-sql-injection/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -203,58 +178,7 @@ application is vulnerable.</p>
 
 
         <div class="post-content">
-            <h2 id="prerequesite">Prerequesite</h2>
-<ul>
-<li>node</li>
-<li>javascript</li>
-<li>html</li>
-<li>css</li>
-<li>es6</li>
-<li>code editor</li>
-</ul>
-<h2 id="create-react-app">create-react-app</h2>
-<pre tabindex="0"><code>npm install -g create-react-app
-</code></pre><pre tabindex="0"><code>create-react-app app-name
-</code></pre><h2 id="react-component">React component</h2>
-<h3 id="state">state</h3>
-<p>class component里面管理状态使用state</p>
-<pre tabindex="0"><code>class Counter extends Component {
-  state = {
-    counter: 10,
-    title: &#34;this is demo&#34;,
-    products: [
-      {
-        id: 1,
-        name: &#34;ok&#34;,
-      },
-      {
-        id: 2,
-        name: &#34;bad&#34;,
-      },
-    ],
-  };
-  // ..... other
-}
-</code></pre><h3 id="render">render</h3>
-<h3 id="jsx">jsx</h3>
-<h3 id="expression">expression</h3>
-<h3 id="attributes">attributes</h3>
-<h3 id="listarray">list/array</h3>
-<h3 id="conditional-rendering">conditional rendering</h3>
-<h3 id="handle-events">handle events</h3>
-<h3 id="binding-event-handlers">binding event handlers</h3>
-<h3 id="updating-state">updating state</h3>
-<h3 id="event-arguments">event arguments</h3>
-<h3 id="passing-data-to-component">passing data to component</h3>
-<h3 id="passing-children">passing children</h3>
-<h3 id="debug-react-app">debug react app</h3>
-<h3 id="props-vs-state">props vs state</h3>
-<h3 id="raising-and-handle-events">raising and handle events</h3>
-<h3 id="multiple-component-in-sync">multiple component in sync</h3>
-<h3 id="lifting-state-up">lifting state up</h3>
-<h3 id="functional-component">functional component</h3>
-<h3 id="destructure-arguments">destructure arguments</h3>
-<h3 id="lifecycle-hooks">lifecycle hooks</h3>……
+            Prerequesite node javascript html css es6 code editor create-react-app npm install -g create-react-app create-react-app app-name React component state class component里面管理状态使用state class Counter extends Component { state = { counter: 10, title: &#34;this is demo&#34;, products: [ { id: 1, name: &#34;ok&#34;, }, { id: 2, name: &#34;bad&#34;, }, ], }; // ..... other } render jsx expression attributes list/array conditional rendering handle events binding event handlers updating state event arguments passing data to component passing children debug react app props vs state raising and handle events multiple component in sync lifting state up functional component destructure arguments lifecycle hooks……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/react/react-for-beginners/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -286,13 +210,7 @@ application is vulnerable.</p>
 
 
         <div class="post-content">
-            <h2 id="sequelize-data-model">Sequelize data model</h2>
-<p>在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, <code>{ returning: true }</code></p>
-<pre tabindex="0"><code>    return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true });
-</code></pre><h2 id="另外-postgresql中table-name包含双引号和不包含的竟然是不一样的两个table">另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table</h2>
-<pre tabindex="0"><code>&#34;users&#34;
-users
-</code></pre><p>比如这是两个table</p>……
+            Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &#34;users&#34; users 比如这是两个table……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -322,12 +240,7 @@ users
 
 
         <div class="post-content">
-            <p>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改</p>
-<pre tabindex="0"><code>node_modules/.bin/ng
-</code></pre><p>加上 <code>--max_old_space_size</code></p>
-<pre tabindex="0"><code>#!/usr/bin/env node --max_old_space_size=4096
-&#39;use strict&#39;;
-</code></pre>……
+            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -357,8 +270,7 @@ users
 
 
         <div class="post-content">
-            <h1 id="背景">背景</h1>
-<p>最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调用nest 微服务来取得一些数据。这就比较尴尬了，在网上由于没有找到对应的python库，所以自己实现了一个。</p>……
+            背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -395,6 +307,9 @@ users
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+  
 
 
 
@@ -556,7 +471,7 @@ users
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (28)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -600,7 +515,7 @@ users
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (8)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
     
 </ul>
     </section>

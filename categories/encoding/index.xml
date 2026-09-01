@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Encoding on 村边的池塘</title>
-		<link>https://jerrywang1981.github.io/categories/encoding/</link>
-		<description>Recent content in Encoding on 村边的池塘</description>
-		<generator>Hugo</generator>
-		<language>zh-CN</language>
-		
-		
-		
-		
-			<lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate>
-		
-			<atom:link href="https://jerrywang1981.github.io/categories/encoding/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Golang 导出 csv 乱码的问题</title>
-				<link>https://jerrywang1981.github.io/post/go/golang-export-csv/</link>
-				<pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
-				<guid>https://jerrywang1981.github.io/post/go/golang-export-csv/</guid>
-				<description>&lt;h2 id=&#34;问题提出&#34;&gt;问题提出&lt;/h2&gt;&#xA;&lt;p&gt;golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。&lt;/p&gt;&#xA;&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  f, err := os.Create(&amp;#34;data.csv&amp;#34;)&#xA;&#x9;if err != nil {&#xA;&#x9;&#x9;panic(err)&#xA;&#x9;}&#xA;&#x9;defer f.Close()&#xA;&#xA;&#x9;f.WriteString(&amp;#34;\xEF\xBB\xBF&amp;#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码&#xA;  writer := csv.NewWriter(f)&#xA;&#x9;writer.Write([]string{&amp;#34;col 1&amp;#34;, &amp;#34;col 2&amp;#34;, &amp;#34;col 3&amp;#34;})&#xA;&#x9;writer.Flush() &#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Encoding on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/categories/encoding/</link>
+    <description>Recent content in Encoding on 村边的池塘</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 12 May 2020 22:26:51 +0800</lastBuildDate>
+    <atom:link href="https://jerrywang1981.github.io/categories/encoding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang 导出 csv 乱码的问题</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-export-csv/</link>
+      <pubDate>Tue, 12 May 2020 22:26:51 +0800</pubDate>
+      <guid>https://jerrywang1981.github.io/post/go/golang-export-csv/</guid>
+      <description>问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&amp;#34;data.csv&amp;#34;) if err != nil { panic(err) } defer f.Close() f.WriteString(&amp;#34;\xEF\xBB\xBF&amp;#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&amp;#34;col 1&amp;#34;, &amp;#34;col 2&amp;#34;, &amp;#34;col 3&amp;#34;}) writer.Flush()</description>
+    </item>
+  </channel>
 </rss>
