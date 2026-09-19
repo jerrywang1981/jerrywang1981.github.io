@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Security on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/security/</link>
-    <description>Recent content in Security on 村边的池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 27 Feb 2023 09:15:23 +0800</lastBuildDate>
-    <atom:link href="https://jerrywang1981.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cookie With Insecure or Improper or Missing SameSite Attribute</title>
-      <link>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</link>
-      <pubDate>Mon, 27 Feb 2023 09:15:23 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</guid>
-      <description>Issue Cookie with Insecure or Improper or Missing SameSite attribute&#xA;Risk Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site- Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).&#xA;Cause Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute&#xA;Fix Review possible solutions for configuring SameSite Cookie attribute to recommended values&#xA;for K8s, you may edit the ingress configuration, set samesite value&#xA;nginx.ingress.kubernetes.io/session-cookie-samesite: &amp;#34;Strict&amp;#34; </description>
-    </item>
-    <item>
-      <title>Blind Sql Injection</title>
-      <link>https://jerrywang1981.github.io/post/node/blind-sql-injection/</link>
-      <pubDate>Wed, 16 Nov 2022 09:29:06 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/node/blind-sql-injection/</guid>
-      <description>Security Risk: It is possible to view, modify or delete database entries and tables&#xA;Cause: Sanitation of hazardous characters was not performed correctly on user input&#xA;Fix: Review possible solutions for hazardous character injection&#xA;Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values, indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the application is vulnerable.&#xA;How to fix https://sequelize.org/v5/manual/raw-queries.html&#xA;make sure to &amp;lsquo;replace&amp;rsquo;/&amp;lsquo;bind&amp;rsquo;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Security on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/security/</link>
+		<description>Recent content in Security on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 27 Feb 2023 09:15:23 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cookie With Insecure or Improper or Missing SameSite Attribute</title>
+				<link>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</link>
+				<pubDate>Mon, 27 Feb 2023 09:15:23 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/security/Cookie-with-Insecure-or-Improper-or-Missing-SameSite-attribute/</guid>
+				<description>&lt;h2 id=&#34;issue&#34;&gt;Issue&lt;/h2&gt;&#xA;&lt;p&gt;Cookie with Insecure or Improper or Missing SameSite attribute&lt;/p&gt;&#xA;&lt;h2 id=&#34;risk&#34;&gt;Risk&lt;/h2&gt;&#xA;&lt;p&gt;Prevent cookie information leakage by restricting cookies to first-party or same-site context, Attacks can extend to Cross-Site-&#xA;Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).&lt;/p&gt;&#xA;&lt;h2 id=&#34;cause&#34;&gt;Cause&lt;/h2&gt;&#xA;&lt;p&gt;Sensitive Cookie with Improper or Insecure or Missing SameSite Attribute&lt;/p&gt;&#xA;&lt;h2 id=&#34;fix&#34;&gt;Fix&lt;/h2&gt;&#xA;&lt;p&gt;Review possible solutions for configuring SameSite Cookie attribute to recommended values&lt;/p&gt;&#xA;&lt;p&gt;for K8s, you may edit the ingress configuration, set samesite value&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;nginx.ingress.kubernetes.io/session-cookie-samesite: &amp;#34;Strict&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>Blind Sql Injection</title>
+				<link>https://jerrywang1981.github.io/post/node/blind-sql-injection/</link>
+				<pubDate>Wed, 16 Nov 2022 09:29:06 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/node/blind-sql-injection/</guid>
+				<description>&lt;h2 id=&#34;security&#34;&gt;Security&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Risk: It is possible to view, modify or delete database entries and tables&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Cause: Sanitation of hazardous characters was not performed correctly on user input&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Fix: Review possible solutions for hazardous character injection&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Reasoning: The test result seems to indicate a vulnerability because it shows that values can be appended to parameter values,&#xA;indicating that they were embedded in an SQL query. In this test, three (or sometimes four) requests are sent. The last&#xA;is logically equal to the original, and the next-to-last is different. Any others are for control purposes. A comparison of&#xA;the last two responses with the first (the last is similar to it, and the next-to-last is different) indicates that the&#xA;application is vulnerable.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-to-fix&#34;&gt;How to fix&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://sequelize.org/v5/manual/raw-queries.html&#34;&gt;https://sequelize.org/v5/manual/raw-queries.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;make sure to &amp;lsquo;replace&amp;rsquo;/&amp;lsquo;bind&amp;rsquo;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

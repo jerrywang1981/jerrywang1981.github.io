@@ -109,9 +109,26 @@
 
 
         <div class="post-content">
-            Details refer to offical document
-Virtual environment To create new virtual environment usually in folder venv
-python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt ……
+            <h2 id="details">Details</h2>
+<p>refer to <a href="https://docs.python.org/3/tutorial/venv.html">offical document</a></p>
+<h2 id="virtual-environment">Virtual environment</h2>
+<h3 id="to-create-new-virtual-environment">To create new virtual environment</h3>
+<p>usually in folder venv</p>
+<pre tabindex="0"><code>python -m venv yourfoldername
+</code></pre><h3 id="enter-virtual-environment">enter virtual environment</h3>
+<pre tabindex="0"><code>source venv/bin/activate
+</code></pre><h3 id="exit-virtual-environment">exit virtual environment</h3>
+<pre tabindex="0"><code>deactivate
+</code></pre><h2 id="pip-usage">Pip usage</h2>
+<h3 id="install-package">install package</h3>
+<pre tabindex="0"><code>pip install packagename
+</code></pre><h3 id="list-installed-packages">list installed packages</h3>
+<pre tabindex="0"><code>pip list
+</code></pre><h3 id="save-installed-packages-to-requirementstxt">save installed packages to requirements.txt</h3>
+<pre tabindex="0"><code>pip freeze &gt; requirements.txt
+</code></pre><h3 id="install-packages-from-requirementstxt">install packages from requirements.txt</h3>
+<pre tabindex="0"><code>pip install -r requirements.txt
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -139,7 +156,56 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&#39;a&#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) print(f&#39;args = {args} &#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39; print(f&#39;args = {args} &#39;) print(f&#39;kwargs = {kwargs} &#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &#39;__main__&#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
+            <h2 id="函数">函数</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# def func, snake case
+# return value
+
+# no args, no return
+def add_two_number():
+    print(&#39;a&#39;)
+
+# 1 arg
+def add_two_number_1(x):
+    return x + 5 # return value
+
+# return multiple value 
+def two_number_2(x, y):
+    c = x + y
+    d = x - y
+    return c, d
+
+# args
+def add_number(x, y, *args):
+    print(f&#39;x = {x}&#39;)
+    print(f&#39;y = {y}&#39;)
+    print(f&#39;args = {args} &#39;)
+
+# kwargs
+# 
+def add_number_1(x, y, *args, **kwargs):
+    print(f&#39;x = {x}&#39;)
+    print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39;
+    print(f&#39;args = {args} &#39;)
+    print(f&#39;kwargs = {kwargs} &#39;)
+# wrong
+# def add_number_2(**kwargs, *args, x, y)
+    # pass
+
+# default
+def add_number_3(x, y, c=10, d = True):
+    print(c)
+
+if __name__ == &#39;__main__&#39;:
+    # add_two_number()
+    # print(add_two_number_1(6))
+    # print(two_number_2(10, 5))
+    # add_number(1,2, 3, 4, 5, 6)
+    # add_number_1(1,2,3,4,5, total=5, ok=6)
+    add_number_3(1,2, 20)
+</code></pre><p>##高级用法</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -167,7 +233,66 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: a = 5 if a &gt; 0: print(&#39;a &gt; 0&#39;) else: print(&#39;a &lt; 0&#39;) if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print(&#39;a &gt; 5&#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&#39;------------------&#39;) for i in range(10): print(i) else: # print(&#39;done&#39;) # continue the loop print(&#39;------------------&#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &#34; 小于 5&#34;) count……
+            <h2 id="条件控制">条件控制</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+if __name__ == &#39;__main__&#39;:
+    a = 5
+    if a &gt; 0:
+        print(&#39;a &gt; 0&#39;)
+    else:
+        print(&#39;a &lt; 0&#39;)
+
+    if a &gt; 0:
+        pass
+    elif a &lt; 5:
+        pass
+    elif a &lt; 10:
+        pass
+    else:
+        pass
+
+    if a &gt; 0:
+        if a &lt; 5:
+            print(a)
+        else:
+            print(&#39;a &gt; 5&#39;)
+</code></pre><h2 id="循环控制">循环控制</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+if __name__ == &#39;__main__&#39;:
+    # while condition
+    a = 5
+    while a &gt; 0:
+        # print(a)
+        a = a -1
+    # for in
+    for i in range(10):
+        print(i)
+
+    # break the loop
+    
+    print(&#39;------------------&#39;)
+    for i in range(10):
+        print(i)
+    else: # 
+        print(&#39;done&#39;)
+        
+    # continue the loop
+    print(&#39;------------------&#39;)
+    for i in range(10):
+        if i == 5:
+            continue 
+        print(i)
+    count = 0
+    while count &lt; 5:
+       print (count, &#34; 小于 5&#34;)
+       count = count + 1
+    else:
+       print (count, &#34; 大于或等于 5&#34;)
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -201,7 +326,19 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
+            <h2 id="背景">背景</h2>
+<p>在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面
+保存成图片。</p>
+<h2 id="代码库pdf2image">代码库<a href="https://github.com/jerrywang1981/pdf2images">pdf2image</a></h2>
+<h2 id="实现">实现</h2>
+<h3 id="python">Python</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="docker">docker</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="golang">golang</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h2 id="也可以">也可以</h2>
+<p>直接下载可执行文件直接执行 -&gt; <a href="https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image">https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</a></p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -231,7 +368,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+            <h3 id="背景">背景</h3>
+<p>有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。
+方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个
+选择就是gRPC</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -259,7 +399,47 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+            <h2 id="对象中通过类或者实例的方法调用方式的不同">对象中通过类或者实例的方法调用方式的不同</h2>
+<h3 id="如果通过类中取得的方法需要传入实例">如果通过类中取得的方法，需要传入实例</h3>
+<pre tabindex="0"><code>class A(object):
+    def test(self, *args):
+        print(*args)
+
+if __name__ == &#39;__main__&#39;:
+    a = A()
+    a.test(7, 8, 9)
+    # method from class object
+    m1 = A.test
+    m1(a, 7, 8, 9, 10)
+    # method from instance object
+    m2 = a.test
+    m2(7, 8, 9, 10)
+</code></pre><h4 id="也就是说-实例方法的第一个参数是实例本身如果写decorator的时候要特别注意">也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意</h4>
+<p>比如print_args这个decorator, 需要打印参数，就需要把第一个参数给选出来不作处理</p>
+<pre tabindex="0"><code>
+def print_args(func):
+    def wrapper(*args):
+        _, *rest = args
+        print(&#34;args: &#34;, *rest)
+        func(*args)
+    return wrapper
+
+class A(object):
+
+    @print_args
+    def test(self, *args):
+        print(*args)
+
+if __name__ == &#39;__main__&#39;:
+    a = A()
+    a.test(7, 8, 9)
+    # method from class object
+    m1 = A.test
+    m1(a, 7, 8, 9, 10)
+    # method from instance object
+    m2 = a.test
+    m2(7, 8, 9, 10)
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -287,7 +467,18 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            Dictionary ###创建方式 a = dict() a = {} a = {&#39;a&#39;: 1, &#39;b&#39;: 2} a = dict(a=1,b=2) a = [(&#39;a&#39;, 1), (&#39;b&#39;, 2)] b = dict(a) a = zip(&#39;abc&#39;, [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), &#39;y&#39;)……
+            <h2 id="dictionary">Dictionary</h2>
+<p>###创建方式</p>
+<pre tabindex="0"><code>a = dict()
+</code></pre><pre tabindex="0"><code>a = {}
+</code></pre><pre tabindex="0"><code>a = {&#39;a&#39;: 1, &#39;b&#39;: 2}
+</code></pre><pre tabindex="0"><code>a = dict(a=1,b=2)
+</code></pre><pre tabindex="0"><code>a = [(&#39;a&#39;, 1), (&#39;b&#39;, 2)]
+b = dict(a)
+</code></pre><pre tabindex="0"><code>a = zip(&#39;abc&#39;, [1,2,3])
+</code></pre><pre tabindex="0"><code>a = { x:x*2 for x in range(10) }
+</code></pre><pre tabindex="0"><code>a = dict.fromkeys(range(3), &#39;y&#39;)
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/05-Python-Dictionary/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -315,7 +506,23 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算 元组在参数中的应用 创建tuple的方式……
+            <h2 id="tuple">Tuple</h2>
+<p>Python 的元组与列表类似，不同之处在于元组的元素不能修改。</p>
+<ul>
+<li>
+<p>不可变</p>
+</li>
+<li>
+<p>空元组, 一个元素元组</p>
+</li>
+<li>
+<p>元组运算</p>
+</li>
+<li>
+<p>元组在参数中的应用</p>
+</li>
+</ul>
+<h3 id="创建tuple的方式">创建tuple的方式</h3>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/04-python-tuple/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -343,7 +550,98 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False 创建列表的方式 a = [] a = [1,2,3] a = list() a = list(&#39;abcdefg&#39;) a = list(range(10)) a = [ x for x in range(20) ] append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6])……
+            <h2 id="列表">列表</h2>
+<p>序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推</p>
+<ul>
+<li>索引访问</li>
+<li>长度</li>
+<li>空或者False</li>
+</ul>
+<h3 id="创建列表的方式">创建列表的方式</h3>
+<pre tabindex="0"><code>a = []
+</code></pre><pre tabindex="0"><code>a = [1,2,3]
+</code></pre><pre tabindex="0"><code>a = list()
+</code></pre><pre tabindex="0"><code>a = list(&#39;abcdefg&#39;)
+</code></pre><pre tabindex="0"><code>a = list(range(10))
+</code></pre><pre tabindex="0"><code>a = [ x for x in range(20) ]
+</code></pre><ul>
+<li>append</li>
+</ul>
+<pre tabindex="0"><code>In [17]: a=[1,2,3]
+
+In [18]: a.append(4)
+
+In [19]: a
+Out[19]: [1, 2, 3, 4]
+
+In [20]:
+</code></pre><ul>
+<li>extend</li>
+</ul>
+<pre tabindex="0"><code>In [21]: a
+Out[21]: [1, 2, 3, 4]
+
+In [22]: a.extend([5,6])
+
+In [23]: a
+Out[23]: [1, 2, 3, 4, 5, 6]
+
+In [24]:
+</code></pre><ul>
+<li>pop</li>
+</ul>
+<pre tabindex="0"><code>In [25]: a
+Out[25]: [1, 2, 3, 4, 5, 6]
+
+In [26]: a.pop(2)
+Out[26]: 3
+
+In [27]: a
+Out[27]: [1, 2, 4, 5, 6]
+
+In [28]:
+</code></pre><ul>
+<li>reverse (in place)</li>
+</ul>
+<pre tabindex="0"><code>In [29]: a
+Out[29]: [1, 2, 4, 5, 6]
+
+In [30]: a.reverse()
+
+In [31]: a
+Out[31]: [6, 5, 4, 2, 1]
+
+In [32]:
+</code></pre><ul>
+<li>sort (in place)</li>
+</ul>
+<pre tabindex="0"><code>In [51]: a
+Out[51]: [6, 5, 4, 2, 1]
+
+In [52]: a.sort()
+
+In [53]: a
+Out[53]: [1, 2, 4, 5, 6]
+
+In [54]:
+</code></pre><ul>
+<li>reversed</li>
+</ul>
+<pre tabindex="0"><code>In [58]: a
+Out[58]: [1, 2, 4, 5, 6]
+
+In [59]: list(reversed(a))
+Out[59]: [6, 5, 4, 2, 1]
+
+In [60]:
+</code></pre><ul>
+<li>sorted</li>
+</ul>
+<pre tabindex="0"><code>In [61]: sorted(a)
+Out[61]: [1, 2, 4, 5, 6]
+
+In [62]:
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/03-python-list/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -371,7 +669,37 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            变量 命名 变量名必须是大小写英文、数字和_的组合，且不能用数字开头 允许的变量名：a, a1, B_5, ____5, _C 静态语言，动态语言 大小写敏感 Dunder 规范 snake_case e.g. a_b, total_count 变量 函数名 模块 包 CamelCase e.g. Person, TeamMember 类名 常量 一般用大写, PI=3.14……
+            <h1 id="变量">变量</h1>
+<h2 id="命名">命名</h2>
+<ul>
+<li>变量名必须是大小写英文、数字和_的组合，且不能用数字开头
+允许的变量名：a, a1, B_5, ____5, _C</li>
+<li>静态语言，动态语言</li>
+<li>大小写敏感</li>
+<li>Dunder</li>
+</ul>
+<h1 id="规范">规范</h1>
+<ul>
+<li>
+<p>snake_case e.g. <code>a_b</code>, <code>total_count</code></p>
+<ul>
+<li>变量</li>
+<li>函数名</li>
+<li>模块</li>
+<li>包</li>
+</ul>
+</li>
+<li>
+<p>CamelCase e.g. <code>Person</code>, <code>TeamMember</code></p>
+<ul>
+<li>类名</li>
+</ul>
+</li>
+</ul>
+<h1 id="常量">常量</h1>
+<ul>
+<li>一般用大写, <code>PI=3.14</code></li>
+</ul>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/02-python-variable/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -436,9 +764,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-
-
-  
 
 
 
@@ -600,7 +925,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -644,7 +969,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
     
 </ul>
     </section>

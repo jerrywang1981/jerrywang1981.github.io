@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Resumes on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/resume/</link>
-    <description>Recent content in Resumes on 村边的池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Wed, 22 Mar 2023 11:02:54 +0800</lastBuildDate>
-    <atom:link href="https://jerrywang1981.github.io/resume/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Jerry Wang</title>
-      <link>https://jerrywang1981.github.io/resume/en/jerrywang/</link>
-      <pubDate>Wed, 22 Mar 2023 11:02:54 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/resume/en/jerrywang/</guid>
-      <description>Profile Name: Jian Jun Wang Mail: jerrywang1981@outlook.com github: https://github.com/jerrywang1981/ Education Master of C.S in Digital Image Processing, Dalian Maritime University, CN, 2005&#xA;Languages English - Fluent Chinese (Simplified) - Fluent Key skills Software Development Java / SpringBoot /Spring Cloud / Kotlin Node / Express / Sequelize React/Angular/Vue IBM Cloud / Watson / Azure Devops / CI / CD Work experience Worked as developer/team lead/project manager in IBM since 2005&#xA;Assignment history </description>
-    </item>
-  </channel>
+	<channel>
+		<title>Resumes on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/resume/</link>
+		<description>Recent content in Resumes on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 22 Mar 2023 11:02:54 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/resume/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Jerry Wang</title>
+				<link>https://jerrywang1981.github.io/resume/en/jerrywang/</link>
+				<pubDate>Wed, 22 Mar 2023 11:02:54 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/resume/en/jerrywang/</guid>
+				<description>&lt;h2 id=&#34;profile&#34;&gt;Profile&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Name: Jian Jun Wang&lt;/li&gt;&#xA;&lt;li&gt;Mail: &lt;a href=&#34;mailto:jerrywang1981@outlook.com&#34;&gt;jerrywang1981@outlook.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;github: &lt;a href=&#34;https://github.com/jerrywang1981/&#34;&gt;https://github.com/jerrywang1981/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;&#xA;&lt;p&gt;Master of C.S in Digital Image Processing, Dalian Maritime University, CN, 2005&lt;/p&gt;&#xA;&lt;h2 id=&#34;languages&#34;&gt;Languages&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;English - Fluent&lt;/li&gt;&#xA;&lt;li&gt;Chinese (Simplified) - Fluent&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-skills&#34;&gt;Key skills&lt;/h2&gt;&#xA;&lt;h3 id=&#34;software-development&#34;&gt;Software Development&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Java / SpringBoot /Spring Cloud / Kotlin&lt;/li&gt;&#xA;&lt;li&gt;Node / Express / Sequelize&lt;/li&gt;&#xA;&lt;li&gt;React/Angular/Vue&lt;/li&gt;&#xA;&lt;li&gt;IBM Cloud / Watson / Azure&lt;/li&gt;&#xA;&lt;li&gt;Devops / CI / CD&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;work-experience&#34;&gt;Work experience&lt;/h2&gt;&#xA;&lt;p&gt;Worked as developer/team lead/project manager in IBM since 2005&lt;/p&gt;&#xA;&lt;h2 id=&#34;assignment-history&#34;&gt;Assignment history&lt;/h2&gt;</description>
+			</item>
+	</channel>
 </rss>

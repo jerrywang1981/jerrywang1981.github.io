@@ -111,7 +111,22 @@
 
 
         <div class="post-content">
-            Gap - TLS version 1.0/1.1 detected 如果在做security scan的时候，有这两个gap,需要修改两个地方 liberty profile server.xml add sslProtocol=&quot;TLSv1.2&quot; to ssl &lt;ssl id=&#34;defaultSSLConfig&#34; sslProtocol=&#34;TLSv1.2&#34; keyStoreRef=&#34;defaultKeyStore&#34; securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt; server.env add JVM_ARGS=-Dhttps.protocols=TLSv1.2……
+            <h2 id="gap---tls-version-1011-detected">Gap - TLS version 1.0/1.1 detected</h2>
+<p>如果在做security scan的时候，有这两个gap,需要修改两个地方</p>
+<ul>
+<li>liberty profile server.xml</li>
+</ul>
+<p>add <code>sslProtocol=&quot;TLSv1.2&quot;</code> to ssl</p>
+<pre tabindex="0"><code>&lt;ssl id=&#34;defaultSSLConfig&#34;
+	sslProtocol=&#34;TLSv1.2&#34;
+     keyStoreRef=&#34;defaultKeyStore&#34;
+     securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt;
+</code></pre><ul>
+<li>server.env</li>
+</ul>
+<p>add</p>
+<pre tabindex="0"><code>JVM_ARGS=-Dhttps.protocols=TLSv1.2
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/liberty-profile-tls-v1-gaps/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -139,7 +154,27 @@
 
 
         <div class="post-content">
-            Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &lt;ssl id=&#34;defaultSSLConfig&#34; keyStoreRef=&#34;defaultKeyStore&#34; securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768……
+            <h4 id="liberty-profile-这个要修复可能要修改两个地方">Liberty Profile 这个要修复，可能要修改两个地方。</h4>
+<ul>
+<li>server.xml 加入</li>
+</ul>
+<div class="highlight"><div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#0550ae">&lt;ssl</span> <span style="color:#1f2328">id=</span><span style="color:#0a3069">&#34;defaultSSLConfig&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">keyStoreRef=</span><span style="color:#0a3069">&#34;defaultKeyStore&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">securityLevel=</span><span style="color:#0a3069">&#34;CUSTOM&#34;</span> <span style="color:#1f2328">enabledCiphers=</span><span style="color:#0a3069">&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;</span><span style="color:#0550ae">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>jvm.options加入</li>
+</ul>
+<pre tabindex="0"><code>-Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -176,9 +211,6 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-
-
-  
 
 
 
@@ -340,7 +372,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -384,7 +416,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
     
 </ul>
     </section>

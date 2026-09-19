@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Vue on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/vue/</link>
-    <description>Recent content in Vue on 村边的池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2020 07:52:49 +0800</lastBuildDate>
-    <atom:link href="https://jerrywang1981.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Vue File Download From Spring Boot</title>
-      <link>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</link>
-      <pubDate>Thu, 10 Sep 2020 07:52:49 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</guid>
-      <description>File download 如果spring boot的写法是我在另外一个文章, 返回的response其实是一个Blob, 这一点要记住 this.axios.get(url, { responseType: &amp;#39;blob&amp;#39;, timeout: 0 }).then(response =&amp;gt; { // response is Blob &amp;lt;------- const url = window.URL.createObjectURL(response) const a = document.createElement(&amp;#39;a&amp;#39;) a.style.display = &amp;#39;none&amp;#39; a.href = url a.setAttribute(&amp;#39;download&amp;#39;,&amp;#39;file.xlsx&amp;#39;) document.body.appendChild(a) a.click() document.body.removeChild(a); window.URL.revokeObjectURL(url); });</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Vue on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/vue/</link>
+		<description>Recent content in Vue on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 10 Sep 2020 07:52:49 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Vue File Download From Spring Boot</title>
+				<link>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</link>
+				<pubDate>Thu, 10 Sep 2020 07:52:49 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/vue/file-download-from-spring-boot/</guid>
+				<description>&lt;h2 id=&#34;file-download&#34;&gt;File download&lt;/h2&gt;&#xA;&lt;p&gt;如果spring boot的写法是我在另外一个&lt;a href=&#34;../java/spring-boot-file-download.md&#34;&gt;文章&lt;/a&gt;, 返回的response其实是一个Blob,&#xA;这一点要记住&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;          this.axios.get(url, { responseType: &amp;#39;blob&amp;#39;, timeout: 0 }).then(response =&amp;gt; {&#xA;              // response is Blob &amp;lt;-------&#xA;                const url = window.URL.createObjectURL(response)&#xA;                const a = document.createElement(&amp;#39;a&amp;#39;)&#xA;                a.style.display = &amp;#39;none&amp;#39;&#xA;                a.href = url&#xA;                a.setAttribute(&amp;#39;download&amp;#39;,&amp;#39;file.xlsx&amp;#39;)&#xA;                document.body.appendChild(a)&#xA;                a.click()&#xA;                document.body.removeChild(a);&#xA;                window.URL.revokeObjectURL(url);&#xA;          });&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gin on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/gin/</link>
-    <description>Recent content in Gin on 村边的池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 06 Feb 2021 14:56:43 +0800</lastBuildDate>
-    <atom:link href="https://jerrywang1981.github.io/tags/gin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Gin Jwt Middleware</title>
-      <link>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</link>
-      <pubDate>Sat, 06 Feb 2021 14:56:43 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</guid>
-      <description>JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&amp;#34;error: %v&amp;#34;, err) return nil, fmt.Errorf(&amp;#34;failed to parse the token string: %s&amp;#34;, tokenString) } log.Printf(&amp;#34;claims: %v&amp;#34;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;amp;&amp;amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&amp;#34;failed to valiate the token&amp;#34;), &amp;#34;failed&amp;#34;) } }</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Gin on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/gin/</link>
+		<description>Recent content in Gin on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 06 Feb 2021 14:56:43 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/gin/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Gin Jwt Middleware</title>
+				<link>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</link>
+				<pubDate>Sat, 06 Feb 2021 14:56:43 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/go/gin-jwt-middleware/</guid>
+				<description>&lt;h2 id=&#34;jwt-in-golang&#34;&gt;JWT in golang&lt;/h2&gt;&#xA;&lt;p&gt;golang中的jwt包一般是使用 &lt;code&gt;github.com/dgrijalva/jwt-go&lt;/code&gt;, 而且godoc中已经有些example，这里只是记录一下使用&#xA;jwt.StandardClaims的情况。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;func parseToken(tokenString string) (*jwt.StandardClaims, error) {&#xA;        token, err := jwt.ParseWithClaims(tokenString, &amp;amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) {&#xA;                return jwtKey, nil&#xA;        })&#xA;&#xA;        if err != nil {&#xA;                log.Errorf(&amp;#34;error: %v&amp;#34;, err)&#xA;                return nil, fmt.Errorf(&amp;#34;failed to parse the token string: %s&amp;#34;, tokenString)&#xA;        }&#xA;&#xA;        log.Printf(&amp;#34;claims: %v&amp;#34;, token.Claims)&#xA;&#xA;        if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;amp;&amp;amp; token.Valid {&#xA;                return claims, nil&#xA;        } else {&#xA;                return nil, errors.Wrap(fmt.Errorf(&amp;#34;failed to valiate the token&amp;#34;), &amp;#34;failed&amp;#34;)&#xA;        }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个方法会把一个string通过jwt的parsewithclaims恢复成StandardClaims,如果有错误会返回相应的error,这样的话，在middleware中可以&#xA;在req header中取到jwt然后尝试parse一下从而知道请求中的是valid的。&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.131.0">
+	<meta name="generator" content="Hugo 0.162.1">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,6 +81,56 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" title="SSL TLS Diffie Hellman Modulus 1024 Bits" target="_blank">SSL TLS Diffie Hellman Modulus 1024 Bits</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-04-11T13:17:25Z" class="post-meta meta-date dt-published">
+    2020-04-11
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/liberty' target="_blank">liberty</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h4 id="liberty-profile-这个要修复可能要修改两个地方">Liberty Profile 这个要修复，可能要修改两个地方。</h4>
+<ul>
+<li>server.xml 加入</li>
+</ul>
+<div class="highlight"><div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#0550ae">&lt;ssl</span> <span style="color:#1f2328">id=</span><span style="color:#0a3069">&#34;defaultSSLConfig&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">keyStoreRef=</span><span style="color:#0a3069">&#34;defaultKeyStore&#34;</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">securityLevel=</span><span style="color:#0a3069">&#34;CUSTOM&#34;</span> <span style="color:#1f2328">enabledCiphers=</span><span style="color:#0a3069">&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;</span><span style="color:#0550ae">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>jvm.options加入</li>
+</ul>
+<pre tabindex="0"><code>-Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/python-nest/" title="Python Nest" target="_blank">Python Nest</a>
             </h1>
         </header>
@@ -103,7 +153,8 @@
 
 
         <div class="post-content">
-            背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调……
+            <h1 id="背景">背景</h1>
+<p>最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调用nest 微服务来取得一些数据。这就比较尴尬了，在网上由于没有找到对应的python库，所以自己实现了一个。</p>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/" target="_blank">Continue reading</a></p>
     </article>
@@ -133,7 +184,8 @@
 
 
         <div class="post-content">
-            在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video……
+            <p>在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。
+<a href="http://vimcasts.org/episodes/">vim video</a></p>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/vim-online-video/" target="_blank">Continue reading</a></p>
     </article>
@@ -222,9 +274,6 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-
-
-  
 
 
 
@@ -386,7 +435,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -430,7 +479,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
     
 </ul>
     </section>

@@ -111,7 +111,85 @@
 
 
         <div class="post-content">
-            Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url TOKEN_URL = os.Getenv(&#34;TOKEN_URL&#34;) // github token url CLIENT_ID = os.Getenv(&#34;CLIENT_ID&#34;) // client id CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret REDIRECT_URL = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;}, } Login……
+            <h2 id="github-oauth2">Github Oauth2</h2>
+<h3 id="首先在github上申请一个oauth-app-获取client-id--secret">首先，在github上申请一个Oauth App, 获取client id / secret</h3>
+<p>需要这些信息，下边的代码是放在环境变量中</p>
+<pre tabindex="0"><code>    AUTH_URL      = os.Getenv(&#34;AUTH_URL&#34;) // github authorization url
+    TOKEN_URL     = os.Getenv(&#34;TOKEN_URL&#34;) // github token url
+    CLIENT_ID     = os.Getenv(&#34;CLIENT_ID&#34;) // client id
+    CLIENT_SECRET = os.Getenv(&#34;CLIENT_SECRET&#34;) // client secret
+    REDIRECT_URL  = os.Getenv(&#34;REDIRECT_URL&#34;) // the redirect url
+</code></pre><h3 id="在包的初始化代码中初始化">在包的初始化代码中，初始化</h3>
+<pre tabindex="0"><code>  var (
+    oauth2Config *oauth2.Config
+  )
+
+  init() {
+    oauth2Config = &amp;oauth2.Config{
+    ClientID:     CLIENT_ID,
+    ClientSecret: CLIENT_SECRET,
+    RedirectURL:  REDIRECT_URL,
+
+    // Discovery returns the OAuth2 endpoints.
+    Endpoint: oauth2.Endpoint{
+            AuthURL:   AUTH_URL,
+            TokenURL:  TOKEN_URL,
+            AuthStyle: oauth2.AuthStyleInHeader,
+    },
+
+    Scopes: []string{&#34;openid&#34;, &#34;email&#34;, &#34;site_admin&#34;, &#34;repo&#34;, &#34;admin:org&#34;, &#34;user&#34;},
+  }
+</code></pre><h3 id="login-handler">Login handler</h3>
+<pre tabindex="0"><code>  func HandleRedirect(w http.ResponseWriter, r *http.Request) {
+    //you need to generate random state here
+  http.Redirect(w, r, oauth2Config.AuthCodeURL(state), http.StatusFound)
+  }
+</code></pre><h3 id="callback-handler">callback handler</h3>
+<pre tabindex="0"><code>  func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) {
+        log.Printf(&#34;Processing response&#34;)
+        state := r.URL.Query().Get(&#34;state&#34;)
+        target, ok := stateMap[state]
+        if !ok {
+                http.Error(w, &#34;missing target in request&#34;, http.StatusBadRequest)
+        }
+
+        // remove from map
+        // delete(stateMap, state)
+
+        log.Printf(&#34;in HandleOAuth2Callback, target url : %s&#34;, target)
+
+        user, err := getUserInfo(r.FormValue(&#34;code&#34;))
+
+        // create the user if not found
+
+        tNow := time.Now()
+           claims := jwt.StandardClaims{
+                Issuer:    &#34;CCMS Application&#34;,
+                Subject:   user,
+                IssuedAt:  tNow.Unix(),
+                ExpiresAt: tNow.Add(2 * time.Hour).Unix(), // two hours
+        }
+        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+        ss, err := token.SignedString(jwtKey)
+        if err != nil {
+                http.Error(w, &#34;Failed to sign the token : &#34;+err.Error(), http.StatusInternalServerError)
+                return
+        }
+        rUrl := fmt.Sprintf(&#34;%s?token=%s&#34;, target, ss)
+        log.Printf(&#34;redirect to :%s&#34;, rUrl)
+        http.Redirect(w, r, rUrl, http.StatusFound)
+</code></pre><h3 id="the-function-to-exchange-code-to-get-access-token">the function to exchange code to get access token</h3>
+<pre tabindex="0"><code>  func getUserInfo(code string) (string, error) {
+        token, err := oauth2Config.Exchange(oauth2.NoContext, code)
+        if err != nil {
+                return &#34;&#34;, fmt.Errorf(&#34;code exchange failed: %s&#34;, err.Error())
+        }
+        ctx := context.Background()
+        log.Printf(&#34;access token: %+v&#34;, token)
+        // token.AccessToken --- this is the token you can use to call github api
+        return email, nil
+  }
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-oauth2-github/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -139,7 +217,15 @@
 
 
         <div class="post-content">
-            channel to terminate 在 main.go中, 创建一个channel接收os.Signal sigChan := make(chan os.Signal, 1) // ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL) 在main.go快结束的位置，加上 &lt;-sigChan log.Info(&#34;exit&#34;) 如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。……
+            <h2 id="channel-to-terminate">channel to terminate</h2>
+<p>在 main.go中, 创建一个channel接收os.Signal</p>
+<pre tabindex="0"><code> sigChan := make(chan os.Signal, 1)
+	// ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL)
+</code></pre><p>在main.go快结束的位置，加上</p>
+<pre tabindex="0"><code> &lt;-sigChan
+log.Info(&#34;exit&#34;)
+</code></pre><p>如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -167,7 +253,28 @@
 
 
         <div class="post-content">
-            cron in golang 在golang中，有个包github.com/robfig/cron/v3可以实现linux中类似的cron功能，使用也比较简单。 官方文档中比较详细，这里只是简单记录一下。 c := cron.New() schlTime := &#34;0 2 * * ?&#34; // send reminder for org members c.AddFunc(schlTime, func() { log.Info(&#34;Send reminder for org member expiration job started&#34;) defer func() { log.Info(&#34;Send reminder for org member expiration job finished&#34;) }() log.Info(&#34;started to remind expired org members&#34;) err = task.RemindExpiredOrgMember(14) if err !=……
+            <h2 id="cron-in-golang">cron in golang</h2>
+<p>在golang中，有个包<code>github.com/robfig/cron/v3</code>可以实现linux中类似的cron功能，使用也比较简单。
+官方文档中比较详细，这里只是简单记录一下。</p>
+<pre tabindex="0"><code>  c := cron.New()
+	schlTime := &#34;0 2 * * ?&#34;
+	// send reminder for org members
+	c.AddFunc(schlTime, func() {
+					log.Info(&#34;Send reminder for org member expiration job started&#34;)
+					defer func() {
+									log.Info(&#34;Send reminder for org member expiration job finished&#34;)
+					}()
+
+					log.Info(&#34;started to remind expired org members&#34;)
+					err = task.RemindExpiredOrgMember(14)
+					if err != nil {
+									log.Errorf(&#34;\nerror: %v\n&#34;, err)
+					}
+					log.Info(&#34;end to remind expired org members&#34;)
+	})
+  c.Start()
+	defer c.Stop()
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -199,7 +306,29 @@
 
 
         <div class="post-content">
-            JWT in golang golang中的jwt包一般是使用 github.com/dgrijalva/jwt-go, 而且godoc中已经有些example，这里只是记录一下使用 jwt.StandardClaims的情况。 func parseToken(tokenString string) (*jwt.StandardClaims, error) { token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) { return jwtKey, nil }) if err != nil { log.Errorf(&#34;error: %v&#34;, err) return nil, fmt.Errorf(&#34;failed to parse the token string: %s&#34;, tokenString) } log.Printf(&#34;claims: %v&#34;, token.Claims) if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid { return claims, nil } else { return nil, errors.Wrap(fmt.Errorf(&#34;failed to valiate the token&#34;), &#34;failed&#34;) } }……
+            <h2 id="jwt-in-golang">JWT in golang</h2>
+<p>golang中的jwt包一般是使用 <code>github.com/dgrijalva/jwt-go</code>, 而且godoc中已经有些example，这里只是记录一下使用
+jwt.StandardClaims的情况。</p>
+<pre tabindex="0"><code>func parseToken(tokenString string) (*jwt.StandardClaims, error) {
+        token, err := jwt.ParseWithClaims(tokenString, &amp;jwt.StandardClaims{}, func(t *jwt.Token) (interface{}, error) {
+                return jwtKey, nil
+        })
+
+        if err != nil {
+                log.Errorf(&#34;error: %v&#34;, err)
+                return nil, fmt.Errorf(&#34;failed to parse the token string: %s&#34;, tokenString)
+        }
+
+        log.Printf(&#34;claims: %v&#34;, token.Claims)
+
+        if claims, ok := token.Claims.(*jwt.StandardClaims); ok &amp;&amp; token.Valid {
+                return claims, nil
+        } else {
+                return nil, errors.Wrap(fmt.Errorf(&#34;failed to valiate the token&#34;), &#34;failed&#34;)
+        }
+}
+</code></pre><p>这个方法会把一个string通过jwt的parsewithclaims恢复成StandardClaims,如果有错误会返回相应的error,这样的话，在middleware中可以
+在req header中取到jwt然后尝试parse一下从而知道请求中的是valid的。</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/gin-jwt-middleware/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -227,7 +356,16 @@
 
 
         <div class="post-content">
-            zero value (零值) 在golang中，零值会在很多地方隐式的用到，所以把零值列出来。 0 所有的integer类型 (int32/int64/&hellip;) 0.0 所有的float类型 (float32/float64/&hellip;) false boolean类型 &quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil nil interface, slices,……
+            <h2 id="zero-value-零值">zero value (零值)</h2>
+<p>在golang中，零值会在很多地方隐式的用到，所以把零值列出来。</p>
+<ul>
+<li>0 所有的integer类型 (int32/int64/&hellip;)</li>
+<li>0.0 所有的float类型 (float32/float64/&hellip;)</li>
+<li>false boolean类型</li>
+<li>&quot;&quot; string类型， 这点要特别注意，从java过来的开发人员容易认为 nil是把 string和nil比较， 应该 str == &quot;&quot; ,不是 str == nil</li>
+<li>nil interface, slices, channels, maps, pointers and functions. 按java中的说法，基本上是所有的传引用类型的</li>
+</ul>
+<p>array/struct 是里面的所有元素或者field的零值， 所以array / struct是不能和nil比较的。</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/zero-value-in-golang/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -255,7 +393,21 @@
 
 
         <div class="post-content">
-            在panic的函数中更新返回值 在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出 有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。 func test() (r int) { defer func() { if……
+            <h2 id="在panic的函数中更新返回值">在panic的函数中更新返回值</h2>
+<p>在golang中我们知道可以用defer, panic, recover来处理一些情况，比如，一般panic的话，如果在函数中没有处理，就会向上继续抛出
+有时候，我们希望在出错的情况下，能够返回一个值。这个时候，defer就会比较好的处理这种情况。</p>
+<pre tabindex="0"><code>func test() (r int) {
+  defer func() {
+		if err := recover(); err != nil {
+			log.Println(&#34;Error:&#34;, err)
+      r = -1
+		}
+  }()
+  panic(&#34;error&#34;)
+  return 1;
+}
+</code></pre><p>比如这个代码，肯定会有个panic,当然如果没有那行panic代码的话，全部正确处理，应该是返回1， 但是有了panic后，在返回之前
+会通过recover来得到这个panic, 最后更新返回值变量r为-1，从而在即使这个函数有了panic也会返回一个-1给调用者。</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-panic-recover-defer-update-return/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -285,7 +437,11 @@
 
 
         <div class="post-content">
-            问题 有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的 是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。 方法 在你的Docke……
+            <h2 id="问题">问题</h2>
+<p>有时候开发的go project会用到一些私有仓库，或者自己搭的。比如用到了github.ibm.com里面的代码，如果在go.mod里面设置的
+是github.ibm.com的网址的话，会发现build docker image的时候，提示access rights的问题。</p>
+<h2 id="方法">方法</h2>
+<p>在你的Dockerfile，加入这部分，主要是提供了两个arg,方便build image的时候提供你的帐号和密码</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-download-from-private-repo-in-docker/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -317,7 +473,9 @@
 
 
         <div class="post-content">
-            Go/Gorm 操作 Postgres 虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是 也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙……
+            <h2 id="gogorm-操作-postgres">Go/Gorm 操作 Postgres</h2>
+<p>虽然go提供了database/sql包来操作数据库，但是如果有个ORM的包，可以直接操作model来操作数据库，就像node里面的sequelize,是不是
+也是挺好的。Gorm就实现了这个功能，这个包目前是github上star数最多的go orm包，包括中文资料，对小伙伴们是相当友好了。</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/go-gorm/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -349,7 +507,20 @@
 
 
         <div class="post-content">
-            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&#34;data.csv&#34;) if err != nil { panic(err) } defer f.Close() f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;}) writer.Flush()……
+            <h2 id="问题提出">问题提出</h2>
+<p>golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。</p>
+<h2 id="解决方案">解决方案</h2>
+<pre tabindex="0"><code>  f, err := os.Create(&#34;data.csv&#34;)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码
+  writer := csv.NewWriter(f)
+	writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;})
+	writer.Flush() 
+</code></pre>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -383,7 +554,19 @@
 
 
         <div class="post-content">
-            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
+            <h2 id="背景">背景</h2>
+<p>在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面
+保存成图片。</p>
+<h2 id="代码库pdf2image">代码库<a href="https://github.com/jerrywang1981/pdf2images">pdf2image</a></h2>
+<h2 id="实现">实现</h2>
+<h3 id="python">Python</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="docker">docker</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="golang">golang</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h2 id="也可以">也可以</h2>
+<p>直接下载可执行文件直接执行 -&gt; <a href="https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image">https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</a></p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -440,9 +623,6 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-
-
-  
 
 
 
@@ -604,7 +784,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -648,7 +828,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
     
 </ul>
     </section>

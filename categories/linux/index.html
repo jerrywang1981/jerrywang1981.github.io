@@ -111,7 +111,23 @@
 
 
         <div class="post-content">
-            配置方法，做个小记录 server 上要配置允许 用户电脑 在 .ssh/config 文件中 Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_rsa Host xxx HostName xx.xx.xx.xx User jerry 把pub key传到server ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x 可以了……
+            <h2 id="配置方法做个小记录">配置方法，做个小记录</h2>
+<h3 id="server-上要配置允许">server 上要配置允许</h3>
+<h3 id="用户电脑">用户电脑</h3>
+<p>在
+.ssh/config
+文件中</p>
+<pre tabindex="0"><code>Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
+Host xxx
+  HostName xx.xx.xx.xx
+  User jerry
+</code></pre><p>把pub key传到server</p>
+<pre tabindex="0"><code>ssh-copy-id -i ~/.ssh/id_rsa.pub xx@xx.xx.xx.x
+</code></pre><p>可以了</p>……
             <p class="readmore"><a href="https://jerrywang1981.github.io/post/linux/auto-login-server-without-password/" target="_blank">Continue reading</a></p>
         </div>
     </article>
@@ -148,9 +164,6 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-
-
-  
 
 
 
@@ -312,7 +325,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -356,7 +369,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
     
 </ul>
     </section>

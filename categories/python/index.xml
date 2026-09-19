@@ -1,166 +1,171 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/categories/python/</link>
-    <description>Recent content in Python on 村边的池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jun 2020 09:08:07 +0800</lastBuildDate>
-    <atom:link href="https://jerrywang1981.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>18 Matplotlib Demo</title>
-      <link>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</link>
-      <pubDate>Tue, 09 Jun 2020 09:08:07 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</guid>
-      <description>the code in jupyter notebook matplot_demo</description>
-    </item>
-    <item>
-      <title>17 Pandas Demo</title>
-      <link>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</link>
-      <pubDate>Tue, 09 Jun 2020 09:05:34 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</guid>
-      <description>the code in jupyter notebook pandas_demo.ipynb</description>
-    </item>
-    <item>
-      <title>16 Pandas Demo part 1</title>
-      <link>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</link>
-      <pubDate>Wed, 03 Jun 2020 16:30:03 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</guid>
-      <description>the code in jupyter notebook refer to file pandas_demo.ipynb</description>
-    </item>
-    <item>
-      <title>15 Numpy Demo</title>
-      <link>https://jerrywang1981.github.io/post/python/15-numpy-demo/</link>
-      <pubDate>Wed, 03 Jun 2020 16:28:51 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/15-numpy-demo/</guid>
-      <description>the code in jupyter notebook the file numpy_demo.ipynb</description>
-    </item>
-    <item>
-      <title>14 Anaconda</title>
-      <link>https://jerrywang1981.github.io/post/python/14-anaconda/</link>
-      <pubDate>Wed, 03 Jun 2020 16:27:28 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/14-anaconda/</guid>
-      <description>How to install new package conda install xxx list env conda env list activate one env conda activate xx deactivate env conda deactivate </description>
-    </item>
-    <item>
-      <title>13 Python Context Manager</title>
-      <link>https://jerrywang1981.github.io/post/python/13-python-context-manager/</link>
-      <pubDate>Sun, 31 May 2020 13:58:44 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/13-python-context-manager/</guid>
-      <description>python context manager use contextlib/yield @contextmanager def send_mail_context(): &amp;#39;&amp;#39;&amp;#39;context manager with send_mail_context() &amp;#39;&amp;#39;&amp;#39; try: # 1 doing work BEFORE the code goes into with block print(&amp;#39;before yield&amp;#39;) server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 yield back to with/caller yield server except Exception as e: print(e) finally: # 4. doing cleanup work server.quit() print(&amp;#39;in finally&amp;#39;) use class __enter__, __exit__ # 2 implement contextmanager with class class SMTPCT(object): &amp;#39;&amp;#39;&amp;#39; 1. override __enter__ __exit__ 2. in __enter__, return value &amp;#39;&amp;#39;&amp;#39; def __init__(self): self.smtp_server = None def __enter__(self): # 1 doing work BEFORE the code goes into with block print(&amp;#39;in enter&amp;#39;) self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25) # 2 return back to with/caller return self.smtp_server def __exit__(self, type, value, traceback): # 4. doing cleanup work print(&amp;#39;in exit&amp;#39;) self.smtp_server.quit() </description>
-    </item>
-    <item>
-      <title>12 Python Smtp</title>
-      <link>https://jerrywang1981.github.io/post/python/12-python-smtp/</link>
-      <pubDate>Sun, 31 May 2020 13:52:03 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/12-python-smtp/</guid>
-      <description>how to send mail in python #!/usr/bin/env python3 # -*- coding: utf-8 -*- # smtplib -&amp;gt; https://docs.python.org/3/library/smtplib.html import smtplib # contextlib -&amp;gt; https://docs.python.org/3/library/contextlib.html from contextlib import contextmanager # email -&amp;gt; https://docs.python.org/3/library/email.examples.html#email-examples from email import encoders from email.header import Header from email.mime.text import MIMEText from email.utils import parseaddr, formataddr SMTP_SERVERS = [&amp;#39;your smtp servers&amp;#39;] def _format_addr(s): &amp;#39;&amp;#39;&amp;#39; format the address &amp;#39;&amp;#39;&amp;#39; name, addr = parseaddr(s) return formataddr((Header(name, &amp;#39;utf-8&amp;#39;).encode(), addr)) def generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&amp;#39;plain&amp;#39;): &amp;#39;&amp;#39;&amp;#39;plain/text text/html &amp;#39;&amp;#39;&amp;#39; msg = MIMEText(body, mime_type, &amp;#39;utf-8&amp;#39;) msg[&amp;#39;From&amp;#39;] = _format_addr(from_addr) msg[&amp;#39;To&amp;#39;] = &amp;#34;,&amp;#34;.join([_format_addr(x) for x in to_addr]) msg[&amp;#39;Cc&amp;#39;] = &amp;#34;,&amp;#34;.join([_format_addr(x) for x in cc_addr]) msg[&amp;#39;Subject&amp;#39;] = Header(subject, &amp;#39;utf-8&amp;#39;).encode() return msg def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&amp;#39;plain&amp;#39;): server = smtplib.SMTP(SMTP_SERVERS[0], 25) server.set_debuglevel(1) msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type) server.sendmail(from_addr, to_addr + cc_addr, msg.as_string()) server.quit() # 1. to implement context manager, use decorator @contextmanager # and yield @contextmanager def send_mail_context(): &amp;#39;&amp;#39;&amp;#39;context manager with send_mail_context() &amp;#39;&amp;#39;&amp;#39; try: # 1 doing work BEFORE the code goes into with block print(&amp;#39;before yield&amp;#39;) server = smtplib.</description>
-    </item>
-    <item>
-      <title>11 Python Mro</title>
-      <link>https://jerrywang1981.github.io/post/python/11-python-mro/</link>
-      <pubDate>Sun, 31 May 2020 13:50:50 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/11-python-mro/</guid>
-      <description>method resolution order #!/usr/bin/env python3 # -*- coding: utf-8 -*- # method resolution order # mro class A(object): def hello(self): print(&amp;#39;class A says hello&amp;#39;) class B(A): pass class C(A): # class variable BP_URL = &amp;#39;https://xxxxx&amp;#39; def __init__(self): self.name = &amp;#39;ok&amp;#39; @staticmethod def print_hello(name, age): &amp;#39;&amp;#39;&amp;#39; staticmethod cannot access any class or self variabel/method &amp;#39;&amp;#39;&amp;#39; pass @classmethod def say(cls): &amp;#39;&amp;#39;&amp;#39;class method can access class level variable/method &amp;#39;&amp;#39;&amp;#39; print(cls.BP_URL) def hello(self): print(&amp;#39;class C says hello&amp;#39;) class D(C, B): pass if __name__ == &amp;#39;__main__&amp;#39;: d = D() d.hello() # to print the mro of one class print(d.__class__.__mro__) </description>
-    </item>
-    <item>
-      <title>10 Dunder Methods</title>
-      <link>https://jerrywang1981.github.io/post/python/10-dunder-methods/</link>
-      <pubDate>Sun, 31 May 2020 13:49:16 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/10-dunder-methods/</guid>
-      <description>dunder methods #!/usr/bin/env python3 # -*- coding: utf-8 -*- # double underscore variable/function # dunder class A(object): def __init__(self, number): self.number = number def __eq__(self, value): &amp;#39;&amp;#39;&amp;#39; a == b &amp;#39;&amp;#39;&amp;#39; return super().__eq__(value) def __ge__(self, value): &amp;#39;&amp;#39;&amp;#39; a &amp;gt;= b &amp;#39;&amp;#39;&amp;#39; return super().__ge__(value) def __gt__(self, value): &amp;#39;&amp;#39;&amp;#39; a &amp;gt; b &amp;#39;&amp;#39;&amp;#39; return super().__gt__(value) def __le__(self, value): &amp;#39;&amp;#39;&amp;#39; a &amp;lt; b &amp;#39;&amp;#39;&amp;#39; return super().__le__(value) def __ne__(self, value): &amp;#39;&amp;#39;&amp;#39; a != b &amp;#39;&amp;#39;&amp;#39; return super().__ne__(value) def __str__(self): &amp;#39;&amp;#39;&amp;#39;print(a) &amp;#39;&amp;#39;&amp;#39; return super().__str__() def __repr__(self): return super().__repr__() def __len__(self): &amp;#39;&amp;#39;&amp;#39; len(a) &amp;#39;&amp;#39;&amp;#39; return self.number * 10 def __lt__(self, other): &amp;#39;&amp;#39;&amp;#39;less than a &amp;lt; b &amp;#39;&amp;#39;&amp;#39; return self.number &amp;lt; other.number def __getattribute__(self, name): &amp;#39;&amp;#39;&amp;#39; print(a[the_key]) &amp;#39;&amp;#39;&amp;#39; return super().__getattribute__(name) def __setattr__(self, name, value): &amp;#39;&amp;#39;&amp;#39; a[the_key] = 5 &amp;#39;&amp;#39;&amp;#39; return super().__setattr__(name, value) def __delattr__(self, name): &amp;#39;&amp;#39;&amp;#39; delete a[&amp;#39;the_key&amp;#39;] &amp;#39;&amp;#39;&amp;#39; return super().__delattr__(name) if __name__ == &amp;#39;__main__&amp;#39;: &amp;#39;&amp;#39;&amp;#39; &amp;#39;&amp;#39;&amp;#39; # a = A(5) # b = A(6) # print(a &amp;lt; b) # print(len(a)) # a[&amp;#39;b&amp;#39;] = 10 # c = a[&amp;#39;c&amp;#39;] pass </description>
-    </item>
-    <item>
-      <title>09 Python Decorators</title>
-      <link>https://jerrywang1981.github.io/post/python/09-python-decorators/</link>
-      <pubDate>Wed, 27 May 2020 10:17:38 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/09-python-decorators/</guid>
-      <description>无参装饰器 #1. decorator without arguments def log_time_always(func): @wraps(func) def wrapped(*args, **kwargs): #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&amp;#39;in {func.__name__}, it took {t2-t1}&amp;#39;) return wrapped 带参数的装饰器 #2. decorator with arguments, flag is True or False def log_time(flag): def wrapper(func): @wraps(func) def wrapped(*args, **kwargs): # if flag is true, we need to log the time if flag: #1. get current time t1 = datetime.now() #2. run the function func(*args, **kwargs) #3. get current time t2 = datetime.now() print(f&amp;#39;in {func.__name__}, it took {t2-t1}&amp;#39;) else: func(*args, **kwargs) return wrapped return wrapper 本质 装饰器需要能够处理一个函数 无参 @decorator_1 def f(): pass 等同于 def f(): pass f =</description>
-    </item>
-    <item>
-      <title>08 Python Virtual Environment</title>
-      <link>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</link>
-      <pubDate>Tue, 19 May 2020 21:00:00 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</guid>
-      <description>Details refer to offical document&#xA;Virtual environment To create new virtual environment usually in folder venv&#xA;python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &amp;gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt </description>
-    </item>
-    <item>
-      <title>07 Python 函数</title>
-      <link>https://jerrywang1981.github.io/post/python/07-python-function/</link>
-      <pubDate>Sat, 16 May 2020 09:17:08 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/07-python-function/</guid>
-      <description>函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&amp;#39;a&amp;#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&amp;#39;x = {x}&amp;#39;) print(f&amp;#39;y = {y}&amp;#39;) print(f&amp;#39;args = {args} &amp;#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&amp;#39;x = {x}&amp;#39;) print(f&amp;#39;y = {y}&amp;#39;) # f-string f&amp;#39;this is string, {x}&amp;#39; print(f&amp;#39;args = {args} &amp;#39;) print(f&amp;#39;kwargs = {kwargs} &amp;#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &amp;#39;__main__&amp;#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,</description>
-    </item>
-    <item>
-      <title>06 Python 控制，循环</title>
-      <link>https://jerrywang1981.github.io/post/python/06-condition-loop/</link>
-      <pubDate>Sat, 16 May 2020 09:14:28 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/06-condition-loop/</guid>
-      <description>条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &amp;#39;__main__&amp;#39;: a = 5 if a &amp;gt; 0: print(&amp;#39;a &amp;gt; 0&amp;#39;) else: print(&amp;#39;a &amp;lt; 0&amp;#39;) if a &amp;gt; 0: pass elif a &amp;lt; 5: pass elif a &amp;lt; 10: pass else: pass if a &amp;gt; 0: if a &amp;lt; 5: print(a) else: print(&amp;#39;a &amp;gt; 5&amp;#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &amp;#39;__main__&amp;#39;: # while condition a = 5 while a &amp;gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&amp;#39;------------------&amp;#39;) for i in range(10): print(i) else: # print(&amp;#39;done&amp;#39;) # continue the loop print(&amp;#39;------------------&amp;#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &amp;lt; 5: print (count, &amp;#34; 小于 5&amp;#34;) count</description>
-    </item>
-    <item>
-      <title>转换Pdf成图片</title>
-      <link>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</link>
-      <pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</guid>
-      <description>背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&amp;gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</description>
-    </item>
-    <item>
-      <title>Golang 中通过gRPC调用Python实现的功能</title>
-      <link>https://jerrywang1981.github.io/post/go/python-go-rpc/</link>
-      <pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/go/python-go-rpc/</guid>
-      <description>背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就</description>
-    </item>
-    <item>
-      <title>Class Object Method</title>
-      <link>https://jerrywang1981.github.io/post/python/class-object-method/</link>
-      <pubDate>Sat, 02 May 2020 21:59:33 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/class-object-method/</guid>
-      <description>对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &amp;#39;__main__&amp;#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor</description>
-    </item>
-    <item>
-      <title>05 Python Dictionary</title>
-      <link>https://jerrywang1981.github.io/post/python/05-Python-Dictionary/</link>
-      <pubDate>Sat, 25 Apr 2020 18:35:30 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/05-Python-Dictionary/</guid>
-      <description>Dictionary ###创建方式 a = dict() a = {} a = {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 2} a = dict(a=1,b=2) a = [(&amp;#39;a&amp;#39;, 1), (&amp;#39;b&amp;#39;, 2)] b = dict(a) a = zip(&amp;#39;abc&amp;#39;, [1,2,3]) a = { x:x*2 for x in range(10) } a = dict.fromkeys(range(3), &amp;#39;y&amp;#39;)</description>
-    </item>
-    <item>
-      <title>04 Python Tuple</title>
-      <link>https://jerrywang1981.github.io/post/python/04-python-tuple/</link>
-      <pubDate>Fri, 24 Apr 2020 21:54:58 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/04-python-tuple/</guid>
-      <description>Tuple Python 的元组与列表类似，不同之处在于元组的元素不能修改。 不可变 空元组, 一个元素元组 元组运算 元组在参数中的应用 创建tuple的方式</description>
-    </item>
-    <item>
-      <title>03 Python List</title>
-      <link>https://jerrywang1981.github.io/post/python/03-python-list/</link>
-      <pubDate>Fri, 24 Apr 2020 21:05:59 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/03-python-list/</guid>
-      <description>列表 序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推 索引访问 长度 空或者False 创建列表的方式 a = [] a = [1,2,3] a = list() a = list(&amp;#39;abcdefg&amp;#39;) a = list(range(10)) a = [ x for x in range(20) ] append In [17]: a=[1,2,3] In [18]: a.append(4) In [19]: a Out[19]: [1, 2, 3, 4] In [20]: extend In [21]: a Out[21]: [1, 2, 3, 4] In [22]: a.extend([5,6])</description>
-    </item>
-    <item>
-      <title>02 Python Variable</title>
-      <link>https://jerrywang1981.github.io/post/python/02-python-variable/</link>
-      <pubDate>Thu, 23 Apr 2020 14:23:52 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/02-python-variable/</guid>
-      <description>变量 命名 变量名必须是大小写英文、数字和_的组合，且不能用数字开头 允许的变量名：a, a1, B_5, ____5, _C 静态语言，动态语言 大小写敏感 Dunder 规范 snake_case e.g. a_b, total_count 变量 函数名 模块 包 CamelCase e.g. Person, TeamMember 类名 常量 一般用大写, PI=3.14</description>
-    </item>
-    <item>
-      <title>01 Python Data Type</title>
-      <link>https://jerrywang1981.github.io/post/python/01-python-data-type/</link>
-      <pubDate>Thu, 23 Apr 2020 13:51:39 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/01-python-data-type/</guid>
-      <description>基本数据类型 整数 int 十进制： -1, 0, 1000, -8000, 88 八进制：0o10, 0o27 十六进制：0x10, 0xff 数学运算 + - * / // % 浮点数 float 比如：1.23, 2.6e3 字符串 str 字符串是以单引号&amp;rsquo;或双引号&amp;quot;括起来的任意文本 如果字符串内部包含&amp;rsquo;,&amp;quot;, 可以用转义字符\来标识 转义 \ 不转义</description>
-    </item>
-    <item>
-      <title>Python Nest</title>
-      <link>https://jerrywang1981.github.io/post/python/python-nest/</link>
-      <pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/python/python-nest/</guid>
-      <description>背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Python on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/categories/python/</link>
+		<description>Recent content in Python on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 09 Jun 2020 09:08:07 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>18 Matplotlib Demo</title>
+				<link>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</link>
+				<pubDate>Tue, 09 Jun 2020 09:08:07 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/18-matplotlib-demo/</guid>
+				<description>&lt;h2 id=&#34;the-code-in-jupyter-notebook&#34;&gt;the code in jupyter notebook&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;matplot_demo.ipynb&#34;&gt;matplot_demo&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>17 Pandas Demo</title>
+				<link>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</link>
+				<pubDate>Tue, 09 Jun 2020 09:05:34 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/17-pandas-demo-2/</guid>
+				<description>&lt;h2 id=&#34;the-code-in-jupyter-notebook&#34;&gt;the code in jupyter notebook&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;pandas_demo.ipynb&#34;&gt;pandas_demo.ipynb&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>16 Pandas Demo part 1</title>
+				<link>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</link>
+				<pubDate>Wed, 03 Jun 2020 16:30:03 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/16-pandas-demo-1/</guid>
+				<description>&lt;h2 id=&#34;the-code-in-jupyter-notebook&#34;&gt;the code in jupyter notebook&lt;/h2&gt;&#xA;&lt;p&gt;refer to file &lt;a href=&#34;pandas_demo.ipynb&#34;&gt;pandas_demo.ipynb&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>15 Numpy Demo</title>
+				<link>https://jerrywang1981.github.io/post/python/15-numpy-demo/</link>
+				<pubDate>Wed, 03 Jun 2020 16:28:51 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/15-numpy-demo/</guid>
+				<description>&lt;h2 id=&#34;the-code-in-jupyter-notebook&#34;&gt;the code in jupyter notebook&lt;/h2&gt;&#xA;&lt;p&gt;the file &lt;a href=&#34;numpy_demo.ipynb&#34;&gt;numpy_demo.ipynb&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>14 Anaconda</title>
+				<link>https://jerrywang1981.github.io/post/python/14-anaconda/</link>
+				<pubDate>Wed, 03 Jun 2020 16:27:28 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/14-anaconda/</guid>
+				<description>&lt;h2 id=&#34;how-to-install-new-package&#34;&gt;How to install new package&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda install xxx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;list-env&#34;&gt;list env&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda env list&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;activate-one-env&#34;&gt;activate one env&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda activate xx&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deactivate-env&#34;&gt;deactivate env&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda deactivate&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>13 Python Context Manager</title>
+				<link>https://jerrywang1981.github.io/post/python/13-python-context-manager/</link>
+				<pubDate>Sun, 31 May 2020 13:58:44 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/13-python-context-manager/</guid>
+				<description>&lt;h2 id=&#34;python-context-manager&#34;&gt;python context manager&lt;/h2&gt;&#xA;&lt;h3 id=&#34;use-contextlibyield&#34;&gt;use contextlib/yield&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@contextmanager&#xA;def send_mail_context():&#xA;    &amp;#39;&amp;#39;&amp;#39;context manager&#xA;&#xA;    with send_mail_context()&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    try:&#xA;        # 1 doing work BEFORE the code goes into with block&#xA;        print(&amp;#39;before yield&amp;#39;)&#xA;        server = smtplib.SMTP(SMTP_SERVERS[0], 25)&#xA;        # 2 yield back to with/caller&#xA;        yield server&#xA;    except Exception as e:&#xA;        print(e)&#xA;    finally:&#xA;        # 4. doing cleanup work&#xA;        server.quit()&#xA;        print(&amp;#39;in finally&amp;#39;)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;use-class-__enter__-__exit__&#34;&gt;use class &lt;code&gt;__enter__&lt;/code&gt;, &lt;code&gt;__exit__&lt;/code&gt;&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 2 implement contextmanager with class&#xA;class SMTPCT(object):&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;    1. override __enter__ __exit__&#xA;    2. in __enter__, return value&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    def __init__(self):&#xA;        self.smtp_server = None&#xA;&#xA;    def __enter__(self):&#xA;        # 1 doing work BEFORE the code goes into with block&#xA;        print(&amp;#39;in enter&amp;#39;)&#xA;        self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25)&#xA;        # 2 return back to with/caller&#xA;        return self.smtp_server&#xA;&#xA;    def __exit__(self, type, value, traceback):&#xA;        # 4. doing cleanup work&#xA;        print(&amp;#39;in exit&amp;#39;)&#xA;        self.smtp_server.quit()&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>12 Python Smtp</title>
+				<link>https://jerrywang1981.github.io/post/python/12-python-smtp/</link>
+				<pubDate>Sun, 31 May 2020 13:52:03 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/12-python-smtp/</guid>
+				<description>&lt;h2 id=&#34;how-to-send-mail-in-python&#34;&gt;how to send mail in python&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env python3&#xA;# -*- coding: utf-8 -*-&#xA;&#xA;# smtplib -&amp;gt; https://docs.python.org/3/library/smtplib.html&#xA;import smtplib&#xA;# contextlib -&amp;gt; https://docs.python.org/3/library/contextlib.html&#xA;from contextlib import contextmanager&#xA;# email -&amp;gt; https://docs.python.org/3/library/email.examples.html#email-examples&#xA;from email import encoders&#xA;from email.header import Header&#xA;from email.mime.text import MIMEText&#xA;from email.utils import parseaddr, formataddr&#xA;&#xA;SMTP_SERVERS = [&amp;#39;your smtp servers&amp;#39;]&#xA;&#xA;&#xA;def _format_addr(s):&#xA;    &amp;#39;&amp;#39;&amp;#39; format the address&#xA;&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    name, addr = parseaddr(s)&#xA;    return formataddr((Header(name, &amp;#39;utf-8&amp;#39;).encode(), addr))&#xA;&#xA;&#xA;def generate_mail(from_addr,&#xA;                  to_addr,&#xA;                  cc_addr,&#xA;                  subject,&#xA;                  body,&#xA;                  mime_type=&amp;#39;plain&amp;#39;):&#xA;    &amp;#39;&amp;#39;&amp;#39;plain/text text/html&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    msg = MIMEText(body, mime_type, &amp;#39;utf-8&amp;#39;)&#xA;    msg[&amp;#39;From&amp;#39;] = _format_addr(from_addr)&#xA;    msg[&amp;#39;To&amp;#39;] = &amp;#34;,&amp;#34;.join([_format_addr(x) for x in to_addr])&#xA;    msg[&amp;#39;Cc&amp;#39;] = &amp;#34;,&amp;#34;.join([_format_addr(x) for x in cc_addr])&#xA;    msg[&amp;#39;Subject&amp;#39;] = Header(subject, &amp;#39;utf-8&amp;#39;).encode()&#xA;    return msg&#xA;&#xA;&#xA;def send_mail(from_addr, to_addr, cc_addr, subject, body, mime_type=&amp;#39;plain&amp;#39;):&#xA;    server = smtplib.SMTP(SMTP_SERVERS[0], 25)&#xA;    server.set_debuglevel(1)&#xA;    msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type)&#xA;    server.sendmail(from_addr, to_addr + cc_addr, msg.as_string())&#xA;    server.quit()&#xA;&#xA;# 1. to implement context manager, use decorator @contextmanager&#xA;# and yield&#xA;&#xA;@contextmanager&#xA;def send_mail_context():&#xA;    &amp;#39;&amp;#39;&amp;#39;context manager&#xA;&#xA;    with send_mail_context()&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    try:&#xA;        # 1 doing work BEFORE the code goes into with block&#xA;        print(&amp;#39;before yield&amp;#39;)&#xA;        server = smtplib.SMTP(SMTP_SERVERS[0], 25)&#xA;        # 2 yield back to with/caller&#xA;        yield server&#xA;    except Exception as e:&#xA;        print(e)&#xA;    finally:&#xA;        # 4. doing cleanup work&#xA;        server.quit()&#xA;        print(&amp;#39;in finally&amp;#39;)&#xA;&#xA;&#xA;# 2 implement contextmanager with class&#xA;class SMTPCT(object):&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;    1. override __enter__ __exit__&#xA;    2. in __enter__, return value&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    def __init__(self):&#xA;        self.smtp_server = None&#xA;&#xA;    def __enter__(self):&#xA;        # 1 doing work BEFORE the code goes into with block&#xA;        print(&amp;#39;in enter&amp;#39;)&#xA;        self.smtp_server = smtplib.SMTP(SMTP_SERVERS[0], 25)&#xA;        # 2 return back to with/caller&#xA;        return self.smtp_server&#xA;&#xA;    def __exit__(self, type, value, traceback):&#xA;        # 4. doing cleanup work&#xA;        print(&amp;#39;in exit&amp;#39;)&#xA;        self.smtp_server.quit()&#xA;&#xA;&#xA;def send_mail_in_context_class(from_addr,&#xA;                               to_addr,&#xA;                               cc_addr,&#xA;                               subject,&#xA;                               body,&#xA;                               mime_type=&amp;#39;plain&amp;#39;):&#xA;    msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type)&#xA;    with SMTPCT() as server:&#xA;        # 3. do the actual job&#xA;        server.sendmail(from_addr, to_addr + cc_addr, msg.as_string())&#xA;        print(&amp;#39;in with block&amp;#39;)&#xA;    print(&amp;#39;sent&amp;#39;)&#xA;&#xA;&#xA;def send_mail_in_context_yield(from_addr,&#xA;                         to_addr,&#xA;                         cc_addr,&#xA;                         subject,&#xA;                         body,&#xA;                         mime_type=&amp;#39;plain&amp;#39;):&#xA;    msg = generate_mail(from_addr, to_addr, cc_addr, subject, body, mime_type)&#xA;    with send_mail_context() as server:&#xA;        # 3. do the actual job&#xA;        server.sendmail(from_addr, to_addr + cc_addr, msg.as_string())&#xA;        print(&amp;#39;in with block&amp;#39;)&#xA;    print(&amp;#39;sent&amp;#39;)&#xA;&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    pass&#xA;    # 1. send mail with contextmanager implemented in class&#xA;    #  send_mail_in_context_class(&amp;#39;your_from_address&amp;#39;,&#xA;                               #  [&amp;#39;to_address&amp;#39;], [],&#xA;                               #  &amp;#39;test&amp;#39;, &amp;#39;this is test mail&amp;#39;)&#xA;    # 2. send mail with contextmanager implemented with yield&#xA;    #  send_mail_in_context_yield(&amp;#39;your_from_address&amp;#39;,&#xA;                               #  [&amp;#39;to_addr&amp;#39;], [],&#xA;                               #  &amp;#39;test&amp;#39;, &amp;#39;this is test mail&amp;#39;)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>11 Python Mro</title>
+				<link>https://jerrywang1981.github.io/post/python/11-python-mro/</link>
+				<pubDate>Sun, 31 May 2020 13:50:50 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/11-python-mro/</guid>
+				<description>&lt;h2 id=&#34;method-resolution-order&#34;&gt;method resolution order&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env python3&#xA;# -*- coding: utf-8 -*-&#xA;&#xA;# method resolution order&#xA;# mro&#xA;&#xA;class A(object):&#xA;    def hello(self):&#xA;        print(&amp;#39;class A says hello&amp;#39;)&#xA;&#xA;class B(A):&#xA;    pass&#xA;&#xA;class C(A):&#xA;&#xA;    # class variable&#xA;    BP_URL = &amp;#39;https://xxxxx&amp;#39;&#xA;&#xA;    def __init__(self):&#xA;        self.name = &amp;#39;ok&amp;#39;&#xA;&#xA;    @staticmethod&#xA;    def print_hello(name, age):&#xA;        &amp;#39;&amp;#39;&amp;#39; staticmethod&#xA;&#xA;        cannot access any class or self variabel/method&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        pass&#xA;&#xA;    @classmethod&#xA;    def say(cls):&#xA;        &amp;#39;&amp;#39;&amp;#39;class method&#xA;&#xA;        can access class level variable/method&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        print(cls.BP_URL)&#xA;&#xA;&#xA;    def hello(self):&#xA;        print(&amp;#39;class C says hello&amp;#39;)&#xA;&#xA;class D(C, B):&#xA;    pass&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    d = D()&#xA;    d.hello()&#xA;    # to print the mro of one class&#xA;    print(d.__class__.__mro__)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>10 Dunder Methods</title>
+				<link>https://jerrywang1981.github.io/post/python/10-dunder-methods/</link>
+				<pubDate>Sun, 31 May 2020 13:49:16 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/10-dunder-methods/</guid>
+				<description>&lt;h2 id=&#34;dunder-methods&#34;&gt;dunder methods&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env python3&#xA;# -*- coding: utf-8 -*-&#xA;&#xA;# double underscore variable/function&#xA;# dunder&#xA;&#xA;class A(object):&#xA;    def __init__(self, number):&#xA;        self.number = number&#xA;&#xA;    def __eq__(self, value):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        a == b&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__eq__(value)&#xA;&#xA;    def __ge__(self, value):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        a &amp;gt;= b&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__ge__(value)&#xA;&#xA;    def __gt__(self, value):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        a &amp;gt; b&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__gt__(value)&#xA;&#xA;    def __le__(self, value):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        a &amp;lt; b&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__le__(value)&#xA;&#xA;    def __ne__(self, value):&#xA;        &amp;#39;&amp;#39;&amp;#39; a != b&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__ne__(value)&#xA;&#xA;    def __str__(self):&#xA;        &amp;#39;&amp;#39;&amp;#39;print(a)&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__str__()&#xA;&#xA;    def __repr__(self):&#xA;        return super().__repr__()&#xA;&#xA;    def __len__(self):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        len(a)&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return self.number * 10&#xA;&#xA;    def __lt__(self, other):&#xA;        &amp;#39;&amp;#39;&amp;#39;less than&#xA;&#xA;        a &amp;lt; b&#xA;&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return self.number &amp;lt; other.number&#xA;&#xA;    def __getattribute__(self, name):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        print(a[the_key])&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__getattribute__(name)&#xA;&#xA;    def __setattr__(self, name, value):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        a[the_key] = 5&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__setattr__(name, value)&#xA;&#xA;    def __delattr__(self, name):&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;        delete a[&amp;#39;the_key&amp;#39;]&#xA;&#xA;        &amp;#39;&amp;#39;&amp;#39;&#xA;        return super().__delattr__(name)&#xA;&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;&#xA;    &amp;#39;&amp;#39;&amp;#39;&#xA;    #  a = A(5)&#xA;    #  b = A(6)&#xA;    #  print(a &amp;lt; b)&#xA;    #  print(len(a))&#xA;    #  a[&amp;#39;b&amp;#39;] = 10&#xA;    #  c = a[&amp;#39;c&amp;#39;]&#xA;    pass&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>09 Python Decorators</title>
+				<link>https://jerrywang1981.github.io/post/python/09-python-decorators/</link>
+				<pubDate>Wed, 27 May 2020 10:17:38 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/09-python-decorators/</guid>
+				<description>&lt;h2 id=&#34;无参装饰器&#34;&gt;无参装饰器&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#1. decorator without arguments&#xA;def log_time_always(func):&#xA;    @wraps(func)&#xA;    def wrapped(*args, **kwargs):&#xA;        #1. get current time&#xA;        t1 = datetime.now()&#xA;        #2. run the function&#xA;        func(*args, **kwargs)&#xA;        #3. get current time&#xA;        t2 = datetime.now()&#xA;        print(f&amp;#39;in {func.__name__}, it took {t2-t1}&amp;#39;)&#xA;&#xA;    return wrapped&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;带参数的装饰器&#34;&gt;带参数的装饰器&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#2. decorator with arguments, flag is True or False&#xA;def log_time(flag):&#xA;    def wrapper(func):&#xA;        @wraps(func)&#xA;        def wrapped(*args, **kwargs):&#xA;            # if flag is true, we need to log the time&#xA;            if flag:&#xA;                #1. get current time&#xA;                t1 = datetime.now()&#xA;                #2. run the function&#xA;                func(*args, **kwargs)&#xA;                #3. get current time&#xA;                t2 = datetime.now()&#xA;                print(f&amp;#39;in {func.__name__}, it took {t2-t1}&amp;#39;)&#xA;            else:&#xA;                func(*args, **kwargs)&#xA;        return wrapped&#xA;    return wrapper&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;本质&#34;&gt;本质&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;装饰器需要能够处理一个函数&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;无参&#34;&gt;无参&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@decorator_1&#xA;def f():&#xA;  pass&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;等同于&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;def f():&#xA;  pass&#xA;&#xA;f = decorator_1(f)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;带参&#34;&gt;带参&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@decorator_2(&amp;#39;ok&amp;#39;)&#xA;def f():&#xA;  pass&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;等同于&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;def f():&#xA;  pass&#xA;&#xA;f = decorator_1(&amp;#39;ok&amp;#39;)(f)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>08 Python Virtual Environment</title>
+				<link>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</link>
+				<pubDate>Tue, 19 May 2020 21:00:00 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/08-python-virtual-environment/</guid>
+				<description>&lt;h2 id=&#34;details&#34;&gt;Details&lt;/h2&gt;&#xA;&lt;p&gt;refer to &lt;a href=&#34;https://docs.python.org/3/tutorial/venv.html&#34;&gt;offical document&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;virtual-environment&#34;&gt;Virtual environment&lt;/h2&gt;&#xA;&lt;h3 id=&#34;to-create-new-virtual-environment&#34;&gt;To create new virtual environment&lt;/h3&gt;&#xA;&lt;p&gt;usually in folder venv&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python -m venv yourfoldername&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;enter-virtual-environment&#34;&gt;enter virtual environment&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;source venv/bin/activate&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exit-virtual-environment&#34;&gt;exit virtual environment&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;deactivate&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;pip-usage&#34;&gt;Pip usage&lt;/h2&gt;&#xA;&lt;h3 id=&#34;install-package&#34;&gt;install package&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install packagename&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;list-installed-packages&#34;&gt;list installed packages&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip list&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;save-installed-packages-to-requirementstxt&#34;&gt;save installed packages to requirements.txt&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip freeze &amp;gt; requirements.txt&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-packages-from-requirementstxt&#34;&gt;install packages from requirements.txt&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install -r requirements.txt&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>07 Python 函数</title>
+				<link>https://jerrywang1981.github.io/post/python/07-python-function/</link>
+				<pubDate>Sat, 16 May 2020 09:17:08 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/07-python-function/</guid>
+				<description>&lt;h2 id=&#34;函数&#34;&gt;函数&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env python3&#xA;# -*- coding: utf-8 -*-&#xA;&#xA;# def func, snake case&#xA;# return value&#xA;&#xA;# no args, no return&#xA;def add_two_number():&#xA;    print(&amp;#39;a&amp;#39;)&#xA;&#xA;# 1 arg&#xA;def add_two_number_1(x):&#xA;    return x + 5 # return value&#xA;&#xA;# return multiple value &#xA;def two_number_2(x, y):&#xA;    c = x + y&#xA;    d = x - y&#xA;    return c, d&#xA;&#xA;# args&#xA;def add_number(x, y, *args):&#xA;    print(f&amp;#39;x = {x}&amp;#39;)&#xA;    print(f&amp;#39;y = {y}&amp;#39;)&#xA;    print(f&amp;#39;args = {args} &amp;#39;)&#xA;&#xA;# kwargs&#xA;# &#xA;def add_number_1(x, y, *args, **kwargs):&#xA;    print(f&amp;#39;x = {x}&amp;#39;)&#xA;    print(f&amp;#39;y = {y}&amp;#39;) # f-string f&amp;#39;this is string, {x}&amp;#39;&#xA;    print(f&amp;#39;args = {args} &amp;#39;)&#xA;    print(f&amp;#39;kwargs = {kwargs} &amp;#39;)&#xA;# wrong&#xA;# def add_number_2(**kwargs, *args, x, y)&#xA;    # pass&#xA;&#xA;# default&#xA;def add_number_3(x, y, c=10, d = True):&#xA;    print(c)&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    # add_two_number()&#xA;    # print(add_two_number_1(6))&#xA;    # print(two_number_2(10, 5))&#xA;    # add_number(1,2, 3, 4, 5, 6)&#xA;    # add_number_1(1,2,3,4,5, total=5, ok=6)&#xA;    add_number_3(1,2, 20)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;##高级用法&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>06 Python 控制，循环</title>
+				<link>https://jerrywang1981.github.io/post/python/06-condition-loop/</link>
+				<pubDate>Sat, 16 May 2020 09:14:28 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/06-condition-loop/</guid>
+				<description>&lt;h2 id=&#34;条件控制&#34;&gt;条件控制&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env python3&#xA;# -*- coding: utf-8 -*-&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    a = 5&#xA;    if a &amp;gt; 0:&#xA;        print(&amp;#39;a &amp;gt; 0&amp;#39;)&#xA;    else:&#xA;        print(&amp;#39;a &amp;lt; 0&amp;#39;)&#xA;&#xA;    if a &amp;gt; 0:&#xA;        pass&#xA;    elif a &amp;lt; 5:&#xA;        pass&#xA;    elif a &amp;lt; 10:&#xA;        pass&#xA;    else:&#xA;        pass&#xA;&#xA;    if a &amp;gt; 0:&#xA;        if a &amp;lt; 5:&#xA;            print(a)&#xA;        else:&#xA;            print(&amp;#39;a &amp;gt; 5&amp;#39;)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;循环控制&#34;&gt;循环控制&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env python3&#xA;# -*- coding: utf-8 -*-&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    # while condition&#xA;    a = 5&#xA;    while a &amp;gt; 0:&#xA;        # print(a)&#xA;        a = a -1&#xA;    # for in&#xA;    for i in range(10):&#xA;        print(i)&#xA;&#xA;    # break the loop&#xA;    &#xA;    print(&amp;#39;------------------&amp;#39;)&#xA;    for i in range(10):&#xA;        print(i)&#xA;    else: # &#xA;        print(&amp;#39;done&amp;#39;)&#xA;        &#xA;    # continue the loop&#xA;    print(&amp;#39;------------------&amp;#39;)&#xA;    for i in range(10):&#xA;        if i == 5:&#xA;            continue &#xA;        print(i)&#xA;    count = 0&#xA;    while count &amp;lt; 5:&#xA;       print (count, &amp;#34; 小于 5&amp;#34;)&#xA;       count = count + 1&#xA;    else:&#xA;       print (count, &amp;#34; 大于或等于 5&amp;#34;)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>转换Pdf成图片</title>
+				<link>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</link>
+				<pubDate>Mon, 11 May 2020 21:51:52 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/go/convert-pdf-to-images/</guid>
+				<description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;&#xA;&lt;p&gt;在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面&#xA;保存成图片。&lt;/p&gt;&#xA;&lt;h2 id=&#34;代码库pdf2image&#34;&gt;代码库&lt;a href=&#34;https://github.com/jerrywang1981/pdf2images&#34;&gt;pdf2image&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;实现&#34;&gt;实现&lt;/h2&gt;&#xA;&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;&#xA;&lt;p&gt;参考&lt;a href=&#34;https://github.com/jerrywang1981/pdf2images&#34;&gt;readme&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;docker&#34;&gt;docker&lt;/h3&gt;&#xA;&lt;p&gt;参考&lt;a href=&#34;https://github.com/jerrywang1981/pdf2images&#34;&gt;readme&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;golang&#34;&gt;golang&lt;/h3&gt;&#xA;&lt;p&gt;参考&lt;a href=&#34;https://github.com/jerrywang1981/pdf2images&#34;&gt;readme&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;也可以&#34;&gt;也可以&lt;/h2&gt;&#xA;&lt;p&gt;直接下载可执行文件直接执行 -&amp;gt; &lt;a href=&#34;https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image&#34;&gt;https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Golang 中通过gRPC调用Python实现的功能</title>
+				<link>https://jerrywang1981.github.io/post/go/python-go-rpc/</link>
+				<pubDate>Mon, 04 May 2020 00:11:12 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/go/python-go-rpc/</guid>
+				<description>&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;&#xA;&lt;p&gt;有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。&#xA;方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个&#xA;选择就是gRPC&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Class Object Method</title>
+				<link>https://jerrywang1981.github.io/post/python/class-object-method/</link>
+				<pubDate>Sat, 02 May 2020 21:59:33 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/class-object-method/</guid>
+				<description>&lt;h2 id=&#34;对象中通过类或者实例的方法调用方式的不同&#34;&gt;对象中通过类或者实例的方法调用方式的不同&lt;/h2&gt;&#xA;&lt;h3 id=&#34;如果通过类中取得的方法需要传入实例&#34;&gt;如果通过类中取得的方法，需要传入实例&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class A(object):&#xA;    def test(self, *args):&#xA;        print(*args)&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    a = A()&#xA;    a.test(7, 8, 9)&#xA;    # method from class object&#xA;    m1 = A.test&#xA;    m1(a, 7, 8, 9, 10)&#xA;    # method from instance object&#xA;    m2 = a.test&#xA;    m2(7, 8, 9, 10)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;也就是说-实例方法的第一个参数是实例本身如果写decorator的时候要特别注意&#34;&gt;也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意&lt;/h4&gt;&#xA;&lt;p&gt;比如print_args这个decorator, 需要打印参数，就需要把第一个参数给选出来不作处理&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&#xA;def print_args(func):&#xA;    def wrapper(*args):&#xA;        _, *rest = args&#xA;        print(&amp;#34;args: &amp;#34;, *rest)&#xA;        func(*args)&#xA;    return wrapper&#xA;&#xA;class A(object):&#xA;&#xA;    @print_args&#xA;    def test(self, *args):&#xA;        print(*args)&#xA;&#xA;if __name__ == &amp;#39;__main__&amp;#39;:&#xA;    a = A()&#xA;    a.test(7, 8, 9)&#xA;    # method from class object&#xA;    m1 = A.test&#xA;    m1(a, 7, 8, 9, 10)&#xA;    # method from instance object&#xA;    m2 = a.test&#xA;    m2(7, 8, 9, 10)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>05 Python Dictionary</title>
+				<link>https://jerrywang1981.github.io/post/python/05-Python-Dictionary/</link>
+				<pubDate>Sat, 25 Apr 2020 18:35:30 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/05-Python-Dictionary/</guid>
+				<description>&lt;h2 id=&#34;dictionary&#34;&gt;Dictionary&lt;/h2&gt;&#xA;&lt;p&gt;###创建方式&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = dict()&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = {}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 2}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = dict(a=1,b=2)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = [(&amp;#39;a&amp;#39;, 1), (&amp;#39;b&amp;#39;, 2)]&#xA;b = dict(a)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = zip(&amp;#39;abc&amp;#39;, [1,2,3])&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = { x:x*2 for x in range(10) }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = dict.fromkeys(range(3), &amp;#39;y&amp;#39;)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>04 Python Tuple</title>
+				<link>https://jerrywang1981.github.io/post/python/04-python-tuple/</link>
+				<pubDate>Fri, 24 Apr 2020 21:54:58 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/04-python-tuple/</guid>
+				<description>&lt;h2 id=&#34;tuple&#34;&gt;Tuple&lt;/h2&gt;&#xA;&lt;p&gt;Python 的元组与列表类似，不同之处在于元组的元素不能修改。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;不可变&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;空元组, 一个元素元组&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;元组运算&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;元组在参数中的应用&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;创建tuple的方式&#34;&gt;创建tuple的方式&lt;/h3&gt;</description>
+			</item>
+			<item>
+				<title>03 Python List</title>
+				<link>https://jerrywang1981.github.io/post/python/03-python-list/</link>
+				<pubDate>Fri, 24 Apr 2020 21:05:59 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/03-python-list/</guid>
+				<description>&lt;h2 id=&#34;列表&#34;&gt;列表&lt;/h2&gt;&#xA;&lt;p&gt;序列是Python中最基本的数据结构。序列中的每个元素都分配一个数字 - 它的位置，或索引，第一个索引是0，第二个索引是1，依此类推&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;索引访问&lt;/li&gt;&#xA;&lt;li&gt;长度&lt;/li&gt;&#xA;&lt;li&gt;空或者False&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;创建列表的方式&#34;&gt;创建列表的方式&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = []&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = [1,2,3]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = list()&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = list(&amp;#39;abcdefg&amp;#39;)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = list(range(10))&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = [ x for x in range(20) ]&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;append&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [17]: a=[1,2,3]&#xA;&#xA;In [18]: a.append(4)&#xA;&#xA;In [19]: a&#xA;Out[19]: [1, 2, 3, 4]&#xA;&#xA;In [20]:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;extend&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [21]: a&#xA;Out[21]: [1, 2, 3, 4]&#xA;&#xA;In [22]: a.extend([5,6])&#xA;&#xA;In [23]: a&#xA;Out[23]: [1, 2, 3, 4, 5, 6]&#xA;&#xA;In [24]:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;pop&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [25]: a&#xA;Out[25]: [1, 2, 3, 4, 5, 6]&#xA;&#xA;In [26]: a.pop(2)&#xA;Out[26]: 3&#xA;&#xA;In [27]: a&#xA;Out[27]: [1, 2, 4, 5, 6]&#xA;&#xA;In [28]:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;reverse (in place)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [29]: a&#xA;Out[29]: [1, 2, 4, 5, 6]&#xA;&#xA;In [30]: a.reverse()&#xA;&#xA;In [31]: a&#xA;Out[31]: [6, 5, 4, 2, 1]&#xA;&#xA;In [32]:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;sort (in place)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [51]: a&#xA;Out[51]: [6, 5, 4, 2, 1]&#xA;&#xA;In [52]: a.sort()&#xA;&#xA;In [53]: a&#xA;Out[53]: [1, 2, 4, 5, 6]&#xA;&#xA;In [54]:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;reversed&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [58]: a&#xA;Out[58]: [1, 2, 4, 5, 6]&#xA;&#xA;In [59]: list(reversed(a))&#xA;Out[59]: [6, 5, 4, 2, 1]&#xA;&#xA;In [60]:&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;&#xA;&lt;li&gt;sorted&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;In [61]: sorted(a)&#xA;Out[61]: [1, 2, 4, 5, 6]&#xA;&#xA;In [62]:&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>02 Python Variable</title>
+				<link>https://jerrywang1981.github.io/post/python/02-python-variable/</link>
+				<pubDate>Thu, 23 Apr 2020 14:23:52 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/02-python-variable/</guid>
+				<description>&lt;h1 id=&#34;变量&#34;&gt;变量&lt;/h1&gt;&#xA;&lt;h2 id=&#34;命名&#34;&gt;命名&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;变量名必须是大小写英文、数字和_的组合，且不能用数字开头&#xA;允许的变量名：a, a1, B_5, ____5, _C&lt;/li&gt;&#xA;&lt;li&gt;静态语言，动态语言&lt;/li&gt;&#xA;&lt;li&gt;大小写敏感&lt;/li&gt;&#xA;&lt;li&gt;Dunder&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;规范&#34;&gt;规范&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;snake_case e.g. &lt;code&gt;a_b&lt;/code&gt;, &lt;code&gt;total_count&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;变量&lt;/li&gt;&#xA;&lt;li&gt;函数名&lt;/li&gt;&#xA;&lt;li&gt;模块&lt;/li&gt;&#xA;&lt;li&gt;包&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;CamelCase e.g. &lt;code&gt;Person&lt;/code&gt;, &lt;code&gt;TeamMember&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;类名&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;常量&#34;&gt;常量&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;一般用大写, &lt;code&gt;PI=3.14&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>01 Python Data Type</title>
+				<link>https://jerrywang1981.github.io/post/python/01-python-data-type/</link>
+				<pubDate>Thu, 23 Apr 2020 13:51:39 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/01-python-data-type/</guid>
+				<description>&lt;h1 id=&#34;基本数据类型&#34;&gt;基本数据类型&lt;/h1&gt;&#xA;&lt;h2 id=&#34;整数&#34;&gt;整数&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;int&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;十进制： &lt;code&gt;-1, 0, 1000, -8000, 88&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;八进制：&lt;code&gt;0o10, 0o27&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;十六进制：&lt;code&gt;0x10, 0xff&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;数学运算 &lt;code&gt;+ - * / // %&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;浮点数&#34;&gt;浮点数&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;float&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;比如：&lt;code&gt;1.23, 2.6e3&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;字符串&#34;&gt;字符串&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;str&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;字符串是以单引号&amp;rsquo;或双引号&amp;quot;括起来的任意文本&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;如果字符串内部包含&amp;rsquo;,&amp;quot;, 可以用转义字符\来标识&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;转义 \&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;不转义 &amp;lsquo;&amp;lsquo;&amp;rsquo;text&amp;rsquo;&amp;rsquo;&amp;rsquo;, &amp;ldquo;&amp;ldquo;&amp;ldquo;text&amp;rdquo;&amp;rdquo;&amp;rdquo;, r&amp;rsquo;text\n&amp;rsquo;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;布尔值&#34;&gt;布尔值&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;bool&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;True, False&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;比较&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;== != &amp;gt; &amp;lt; &amp;lt;= &amp;gt;=&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;is&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;逻辑运算&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Python Nest</title>
+				<link>https://jerrywang1981.github.io/post/python/python-nest/</link>
+				<pubDate>Sat, 11 Apr 2020 21:15:14 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/python/python-nest/</guid>
+				<description>&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;&#xA;&lt;p&gt;最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调用nest 微服务来取得一些数据。这就比较尴尬了，在网上由于没有找到对应的python库，所以自己实现了一个。&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

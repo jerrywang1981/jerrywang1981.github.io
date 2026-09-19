@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Angular on 村边的池塘</title>
-    <link>https://jerrywang1981.github.io/tags/angular/</link>
-    <description>Recent content in Angular on 村边的池塘</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate>
-    <atom:link href="https://jerrywang1981.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Multiple Angular Material Table Sort</title>
-      <link>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</link>
-      <pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</guid>
-      <description>问题 在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild 方案 使用ViewChild的时候，需要使用id @ViewChild(&amp;#39;sort1&amp;#39;) sort1: MatSort; 在页面中，需要 &amp;lt;mat-table #table [dataSource]=&amp;#34;dataSource&amp;#34; #sort1=&amp;#34;matSort&amp;#34; matSort&amp;gt;</description>
-    </item>
-    <item>
-      <title>Angular Material Table Paginator ngIf</title>
-      <link>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</link>
-      <pubDate>Tue, 04 Aug 2020 15:26:25 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</guid>
-      <description>问题 一般来说，按angular material的官方文档, 在afterViewInit里面 可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的 @ViewChild(MatPaginator) paginator: MatPaginator; 可能就不好用了。因为还没有渲染，对应</description>
-    </item>
-    <item>
-      <title>Multiple Line in Mat Tooltip</title>
-      <link>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</link>
-      <pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</guid>
-      <description>angular material matTooltip 如果想多行显示，可以把tooltip的内容用空格分开，同时样式 ::ng-deep .mat-tooltip { white-space: pre-line !important; }</description>
-    </item>
-    <item>
-      <title>Angular Javascript Heap Out of Memory</title>
-      <link>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</link>
-      <pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
-      <guid>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</guid>
-      <description>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &amp;#39;use strict&amp;#39;;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Angular on 村边的池塘</title>
+		<link>https://jerrywang1981.github.io/tags/angular/</link>
+		<description>Recent content in Angular on 村边的池塘</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 04 Aug 2020 15:44:13 +0800</lastBuildDate>
+		
+			<atom:link href="https://jerrywang1981.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Multiple Angular Material Table Sort</title>
+				<link>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</link>
+				<pubDate>Tue, 04 Aug 2020 15:44:13 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/angular/multiple-angular-material-table-sort/</guid>
+				<description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;&#xA;&lt;p&gt;在一个component里面，如果有多个mat-table matSort,怎么使用ViewChild&lt;/p&gt;&#xA;&lt;h2 id=&#34;方案&#34;&gt;方案&lt;/h2&gt;&#xA;&lt;p&gt;使用ViewChild的时候，需要使用id&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@ViewChild(&amp;#39;sort1&amp;#39;) sort1: MatSort;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在页面中，需要&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    &amp;lt;mat-table #table [dataSource]=&amp;#34;dataSource&amp;#34; #sort1=&amp;#34;matSort&amp;#34; matSort&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>Angular Material Table Paginator ngIf</title>
+				<link>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</link>
+				<pubDate>Tue, 04 Aug 2020 15:26:25 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/angular/angular-material-table-paginator-ngif/</guid>
+				<description>&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;&#xA;&lt;p&gt;一般来说，按angular material的&lt;a href=&#34;https://v5.material.angular.io/components/paginator/overview&#34;&gt;官方文档&lt;/a&gt;, 在afterViewInit里面&#xA;可以把paginator或者sort和dataSource绑定在一起。但是如果这个table是在ngIf里面，也就是要在条件满足的情况下。这个时候的&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@ViewChild(MatPaginator) paginator: MatPaginator;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;可能就不好用了。因为还没有渲染，对应的还是null, 当然在最新的版本里面，ViewChild提供 static: false。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Multiple Line in Mat Tooltip</title>
+				<link>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</link>
+				<pubDate>Wed, 24 Jun 2020 08:26:03 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/angular/multiple-line-in-mat-tooltip/</guid>
+				<description>&lt;h2 id=&#34;angular-material-mattooltip&#34;&gt;angular material matTooltip&lt;/h2&gt;&#xA;&lt;p&gt;如果想多行显示，可以把tooltip的内容用空格分开，同时样式&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;::ng-deep .mat-tooltip  {&#xA;    white-space: pre-line    !important;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+			<item>
+				<title>Angular Javascript Heap Out of Memory</title>
+				<link>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</link>
+				<pubDate>Thu, 14 May 2020 21:20:50 +0800</pubDate>
+				<guid>https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/</guid>
+				<description>&lt;p&gt;如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;node_modules/.bin/ng&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;加上 &lt;code&gt;--max_old_space_size&lt;/code&gt;&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/usr/bin/env node --max_old_space_size=4096&#xA;&amp;#39;use strict&amp;#39;;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+			</item>
+	</channel>
 </rss>

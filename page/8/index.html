@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.131.0">
+	<meta name="generator" content="Hugo 0.162.1">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,6 +81,91 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" title="09 Python Decorators" target="_blank">09 Python Decorators</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-05-27T02:17:38Z" class="post-meta meta-date dt-published">
+    2020-05-27
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/python' target="_blank">python</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="无参装饰器">无参装饰器</h2>
+<pre tabindex="0"><code>#1. decorator without arguments
+def log_time_always(func):
+    @wraps(func)
+    def wrapped(*args, **kwargs):
+        #1. get current time
+        t1 = datetime.now()
+        #2. run the function
+        func(*args, **kwargs)
+        #3. get current time
+        t2 = datetime.now()
+        print(f&#39;in {func.__name__}, it took {t2-t1}&#39;)
+
+    return wrapped
+</code></pre><h2 id="带参数的装饰器">带参数的装饰器</h2>
+<pre tabindex="0"><code>#2. decorator with arguments, flag is True or False
+def log_time(flag):
+    def wrapper(func):
+        @wraps(func)
+        def wrapped(*args, **kwargs):
+            # if flag is true, we need to log the time
+            if flag:
+                #1. get current time
+                t1 = datetime.now()
+                #2. run the function
+                func(*args, **kwargs)
+                #3. get current time
+                t2 = datetime.now()
+                print(f&#39;in {func.__name__}, it took {t2-t1}&#39;)
+            else:
+                func(*args, **kwargs)
+        return wrapped
+    return wrapper
+</code></pre><h2 id="本质">本质</h2>
+<ul>
+<li>装饰器需要能够处理一个函数</li>
+</ul>
+<h3 id="无参">无参</h3>
+<pre tabindex="0"><code>@decorator_1
+def f():
+  pass
+</code></pre><p>等同于</p>
+<pre tabindex="0"><code>def f():
+  pass
+
+f = decorator_1(f)
+</code></pre><h3 id="带参">带参</h3>
+<pre tabindex="0"><code>@decorator_2(&#39;ok&#39;)
+def f():
+  pass
+</code></pre><p>等同于</p>
+<pre tabindex="0"><code>def f():
+  pass
+
+f = decorator_1(&#39;ok&#39;)(f)
+</code></pre>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/09-python-decorators/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" title="08 Python Virtual Environment" target="_blank">08 Python Virtual Environment</a>
             </h1>
         </header>
@@ -101,9 +186,26 @@
 
 
         <div class="post-content">
-            Details refer to offical document
-Virtual environment To create new virtual environment usually in folder venv
-python -m venv yourfoldername enter virtual environment source venv/bin/activate exit virtual environment deactivate Pip usage install package pip install packagename list installed packages pip list save installed packages to requirements.txt pip freeze &gt; requirements.txt install packages from requirements.txt pip install -r requirements.txt ……
+            <h2 id="details">Details</h2>
+<p>refer to <a href="https://docs.python.org/3/tutorial/venv.html">offical document</a></p>
+<h2 id="virtual-environment">Virtual environment</h2>
+<h3 id="to-create-new-virtual-environment">To create new virtual environment</h3>
+<p>usually in folder venv</p>
+<pre tabindex="0"><code>python -m venv yourfoldername
+</code></pre><h3 id="enter-virtual-environment">enter virtual environment</h3>
+<pre tabindex="0"><code>source venv/bin/activate
+</code></pre><h3 id="exit-virtual-environment">exit virtual environment</h3>
+<pre tabindex="0"><code>deactivate
+</code></pre><h2 id="pip-usage">Pip usage</h2>
+<h3 id="install-package">install package</h3>
+<pre tabindex="0"><code>pip install packagename
+</code></pre><h3 id="list-installed-packages">list installed packages</h3>
+<pre tabindex="0"><code>pip list
+</code></pre><h3 id="save-installed-packages-to-requirementstxt">save installed packages to requirements.txt</h3>
+<pre tabindex="0"><code>pip freeze &gt; requirements.txt
+</code></pre><h3 id="install-packages-from-requirementstxt">install packages from requirements.txt</h3>
+<pre tabindex="0"><code>pip install -r requirements.txt
+</code></pre>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/08-python-virtual-environment/" target="_blank">Continue reading</a></p>
     </article>
@@ -137,7 +239,13 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            Sequelize data model 在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, { returning: true } return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true }); 另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table &#34;users&#34; users 比如这是两个table……
+            <h2 id="sequelize-data-model">Sequelize data model</h2>
+<p>在使用 bulkCreate的时候，如果想在返回的数据中包括生成的id, 需要加上option, <code>{ returning: true }</code></p>
+<pre tabindex="0"><code>    return CertificationEndUsers.bulkCreate(usersToInsert, { returning: true });
+</code></pre><h2 id="另外-postgresql中table-name包含双引号和不包含的竟然是不一样的两个table">另外 postgresql中table name包含双引号和不包含的，竟然是不一样的两个table</h2>
+<pre tabindex="0"><code>&#34;users&#34;
+users
+</code></pre><p>比如这是两个table</p>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/sequelize-bulk-create-postgre/" target="_blank">Continue reading</a></p>
     </article>
@@ -167,7 +275,56 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            函数 #!/usr/bin/env python3 # -*- coding: utf-8 -*- # def func, snake case # return value # no args, no return def add_two_number(): print(&#39;a&#39;) # 1 arg def add_two_number_1(x): return x + 5 # return value # return multiple value def two_number_2(x, y): c = x + y d = x - y return c, d # args def add_number(x, y, *args): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) print(f&#39;args = {args} &#39;) # kwargs # def add_number_1(x, y, *args, **kwargs): print(f&#39;x = {x}&#39;) print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39; print(f&#39;args = {args} &#39;) print(f&#39;kwargs = {kwargs} &#39;) # wrong # def add_number_2(**kwargs, *args, x, y) # pass # default def add_number_3(x, y, c=10, d = True): print(c) if __name__ == &#39;__main__&#39;: # add_two_number() # print(add_two_number_1(6)) # print(two_number_2(10, 5)) # add_number(1,2, 3, 4, 5, 6) # add_number_1(1,2,3,4,5,……
+            <h2 id="函数">函数</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# def func, snake case
+# return value
+
+# no args, no return
+def add_two_number():
+    print(&#39;a&#39;)
+
+# 1 arg
+def add_two_number_1(x):
+    return x + 5 # return value
+
+# return multiple value 
+def two_number_2(x, y):
+    c = x + y
+    d = x - y
+    return c, d
+
+# args
+def add_number(x, y, *args):
+    print(f&#39;x = {x}&#39;)
+    print(f&#39;y = {y}&#39;)
+    print(f&#39;args = {args} &#39;)
+
+# kwargs
+# 
+def add_number_1(x, y, *args, **kwargs):
+    print(f&#39;x = {x}&#39;)
+    print(f&#39;y = {y}&#39;) # f-string f&#39;this is string, {x}&#39;
+    print(f&#39;args = {args} &#39;)
+    print(f&#39;kwargs = {kwargs} &#39;)
+# wrong
+# def add_number_2(**kwargs, *args, x, y)
+    # pass
+
+# default
+def add_number_3(x, y, c=10, d = True):
+    print(c)
+
+if __name__ == &#39;__main__&#39;:
+    # add_two_number()
+    # print(add_two_number_1(6))
+    # print(two_number_2(10, 5))
+    # add_number(1,2, 3, 4, 5, 6)
+    # add_number_1(1,2,3,4,5, total=5, ok=6)
+    add_number_3(1,2, 20)
+</code></pre><p>##高级用法</p>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/07-python-function/" target="_blank">Continue reading</a></p>
     </article>
@@ -197,7 +354,66 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            条件控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: a = 5 if a &gt; 0: print(&#39;a &gt; 0&#39;) else: print(&#39;a &lt; 0&#39;) if a &gt; 0: pass elif a &lt; 5: pass elif a &lt; 10: pass else: pass if a &gt; 0: if a &lt; 5: print(a) else: print(&#39;a &gt; 5&#39;) 循环控制 #!/usr/bin/env python3 # -*- coding: utf-8 -*- if __name__ == &#39;__main__&#39;: # while condition a = 5 while a &gt; 0: # print(a) a = a -1 # for in for i in range(10): print(i) # break the loop print(&#39;------------------&#39;) for i in range(10): print(i) else: # print(&#39;done&#39;) # continue the loop print(&#39;------------------&#39;) for i in range(10): if i == 5: continue print(i) count = 0 while count &lt; 5: print (count, &#34; 小于 5&#34;) count……
+            <h2 id="条件控制">条件控制</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+if __name__ == &#39;__main__&#39;:
+    a = 5
+    if a &gt; 0:
+        print(&#39;a &gt; 0&#39;)
+    else:
+        print(&#39;a &lt; 0&#39;)
+
+    if a &gt; 0:
+        pass
+    elif a &lt; 5:
+        pass
+    elif a &lt; 10:
+        pass
+    else:
+        pass
+
+    if a &gt; 0:
+        if a &lt; 5:
+            print(a)
+        else:
+            print(&#39;a &gt; 5&#39;)
+</code></pre><h2 id="循环控制">循环控制</h2>
+<pre tabindex="0"><code>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+if __name__ == &#39;__main__&#39;:
+    # while condition
+    a = 5
+    while a &gt; 0:
+        # print(a)
+        a = a -1
+    # for in
+    for i in range(10):
+        print(i)
+
+    # break the loop
+    
+    print(&#39;------------------&#39;)
+    for i in range(10):
+        print(i)
+    else: # 
+        print(&#39;done&#39;)
+        
+    # continue the loop
+    print(&#39;------------------&#39;)
+    for i in range(10):
+        if i == 5:
+            continue 
+        print(i)
+    count = 0
+    while count &lt; 5:
+       print (count, &#34; 小于 5&#34;)
+       count = count + 1
+    else:
+       print (count, &#34; 大于或等于 5&#34;)
+</code></pre>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/06-condition-loop/" target="_blank">Continue reading</a></p>
     </article>
@@ -229,7 +445,12 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改 node_modules/.bin/ng 加上 --max_old_space_size #!/usr/bin/env node --max_old_space_size=4096 &#39;use strict&#39;;……
+            <p>如果启动angular的时候有报 Javascript heap out of memory错误，可以试着修改</p>
+<pre tabindex="0"><code>node_modules/.bin/ng
+</code></pre><p>加上 <code>--max_old_space_size</code></p>
+<pre tabindex="0"><code>#!/usr/bin/env node --max_old_space_size=4096
+&#39;use strict&#39;;
+</code></pre>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/node/angular-javascript-heap-out-of-memory/" target="_blank">Continue reading</a></p>
     </article>
@@ -263,7 +484,20 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            问题提出 golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。 解决方案 f, err := os.Create(&#34;data.csv&#34;) if err != nil { panic(err) } defer f.Close() f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码 writer := csv.NewWriter(f) writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;}) writer.Flush()……
+            <h2 id="问题提出">问题提出</h2>
+<p>golang最近导出csv的时候，如果用excel打开，会有乱码。在网上查到了解决方案，记录一下。</p>
+<h2 id="解决方案">解决方案</h2>
+<pre tabindex="0"><code>  f, err := os.Create(&#34;data.csv&#34;)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	f.WriteString(&#34;\xEF\xBB\xBF&#34;) // 写入UTF-8 BOM，避免使用Microsoft Excel打开乱码
+  writer := csv.NewWriter(f)
+	writer.Write([]string{&#34;col 1&#34;, &#34;col 2&#34;, &#34;col 3&#34;})
+	writer.Flush() 
+</code></pre>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/golang-export-csv/" target="_blank">Continue reading</a></p>
     </article>
@@ -299,7 +533,19 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            背景 在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面 保存成图片。 代码库pdf2image 实现 Python 参考readme docker 参考readme golang 参考readme 也可以 直接下载可执行文件直接执行 -&gt; https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image……
+            <h2 id="背景">背景</h2>
+<p>在做文字检测和文字识别的时候，有时候客户提供的是pdf格式的文件，而不是jpg/png格式，这时候就需要把pdf里面多个页面
+保存成图片。</p>
+<h2 id="代码库pdf2image">代码库<a href="https://github.com/jerrywang1981/pdf2images">pdf2image</a></h2>
+<h2 id="实现">实现</h2>
+<h3 id="python">Python</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="docker">docker</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h3 id="golang">golang</h3>
+<p>参考<a href="https://github.com/jerrywang1981/pdf2images">readme</a></p>
+<h2 id="也可以">也可以</h2>
+<p>直接下载可执行文件直接执行 -&gt; <a href="https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image">https://github.com/jerrywang1981/pdf2images/blob/master/pdf2image</a></p>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/convert-pdf-to-images/" target="_blank">Continue reading</a></p>
     </article>
@@ -331,7 +577,10 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            背景 有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。 方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个 选择就……
+            <h3 id="背景">背景</h3>
+<p>有时候，我们在python中实现了一个功能，这功能如果用golang重新写呢，会比较麻烦，如果要在golang中调用python中的功能。
+方式有很多，主要就是两个程序如果沟通的问题，那方式就各种各样了，可以通过http协议，json/xml等格式，或者tcp, 当然还有个
+选择就是gRPC</p>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/python-go-rpc/" target="_blank">Continue reading</a></p>
     </article>
@@ -361,39 +610,49 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 
         <div class="post-content">
-            对象中通过类或者实例的方法调用方式的不同 如果通过类中取得的方法，需要传入实例 class A(object): def test(self, *args): print(*args) if __name__ == &#39;__main__&#39;: a = A() a.test(7, 8, 9) # method from class object m1 = A.test m1(a, 7, 8, 9, 10) # method from instance object m2 = a.test m2(7, 8, 9, 10) 也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意 比如print_args这个decor……
+            <h2 id="对象中通过类或者实例的方法调用方式的不同">对象中通过类或者实例的方法调用方式的不同</h2>
+<h3 id="如果通过类中取得的方法需要传入实例">如果通过类中取得的方法，需要传入实例</h3>
+<pre tabindex="0"><code>class A(object):
+    def test(self, *args):
+        print(*args)
+
+if __name__ == &#39;__main__&#39;:
+    a = A()
+    a.test(7, 8, 9)
+    # method from class object
+    m1 = A.test
+    m1(a, 7, 8, 9, 10)
+    # method from instance object
+    m2 = a.test
+    m2(7, 8, 9, 10)
+</code></pre><h4 id="也就是说-实例方法的第一个参数是实例本身如果写decorator的时候要特别注意">也就是说, 实例方法的第一个参数是实例本身，如果写decorator的时候，要特别注意</h4>
+<p>比如print_args这个decorator, 需要打印参数，就需要把第一个参数给选出来不作处理</p>
+<pre tabindex="0"><code>
+def print_args(func):
+    def wrapper(*args):
+        _, *rest = args
+        print(&#34;args: &#34;, *rest)
+        func(*args)
+    return wrapper
+
+class A(object):
+
+    @print_args
+    def test(self, *args):
+        print(*args)
+
+if __name__ == &#39;__main__&#39;:
+    a = A()
+    a.test(7, 8, 9)
+    # method from class object
+    m1 = A.test
+    m1(a, 7, 8, 9, 10)
+    # method from instance object
+    m2 = a.test
+    m2(7, 8, 9, 10)
+</code></pre>……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/class-object-method/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" title="Neovim Docker" target="_blank">Neovim Docker</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-05-02T13:23:53Z" class="post-meta meta-date dt-published">
-    2020-05-02
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/vim' target="_blank">vim</a>
-  
-    <a href='/categories/neovim' target="_blank">neovim</a>
-  
-</div>
-
-
-        <div class="post-content">
-            推荐一下自己做的一个docker image, 基于ubuntu,包含 neovim python python 3 nodejs npm golang Plugin 包括 LeaderF coc.nvim other……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/neovim-docker/" target="_blank">Continue reading</a></p>
     </article>
     
     
@@ -484,9 +743,6 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
-
-
-  
 
 
 
@@ -648,7 +904,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (29)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -692,7 +948,7 @@ python -m venv yourfoldername enter virtual environment source venv/bin/activate
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (9)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
     
 </ul>
     </section>
