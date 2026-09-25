@@ -81,6 +81,44 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" title="Terminate Golang App" target="_blank">Terminate Golang App</a>
+            </h1>
+        </header>
+        
+  <time datetime="2021-02-06T08:10:08Z" class="post-meta meta-date dt-published">
+    2021-02-06
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
+        <div class="post-content">
+            <h2 id="channel-to-terminate">channel to terminate</h2>
+<p>在 main.go中, 创建一个channel接收os.Signal</p>
+<pre tabindex="0"><code> sigChan := make(chan os.Signal, 1)
+	// ctrl+c-&gt;SIGINT, kill -9 -&gt; SIGKILL
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGKILL)
+</code></pre><p>在main.go快结束的位置，加上</p>
+<pre tabindex="0"><code> &lt;-sigChan
+log.Info(&#34;exit&#34;)
+</code></pre><p>如果用户有发送kill -9 或者ctrl+c， 会接收到这个信号。</p>……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/terminate-golang-app/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/golang-cron-jobs/" title="Golang Cron Jobs" target="_blank">Golang Cron Jobs</a>
             </h1>
         </header>
@@ -567,103 +605,6 @@ public class ReportController {
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" title="Azure AD SAML SSO with Node Application" target="_blank">Azure AD SAML SSO with Node Application</a>
-            </h1>
-        </header>
-        
-  <time datetime="2020-08-27T14:05:59Z" class="post-meta meta-date dt-published">
-    2020-08-27
-  </time>
-
-
-<div class="post-meta meta-category">
-  <span>&nbsp;|</span>
-  
-    <a href='/categories/it' target="_blank">it</a>
-  
-    <a href='/categories/saml' target="_blank">saml</a>
-  
-    <a href='/categories/sso' target="_blank">sso</a>
-  
-    <a href='/categories/azure' target="_blank">azure</a>
-  
-</div>
-
-
-        <div class="post-content">
-            <h2 id="azure-ad-saml-sso">Azure AD saml sso</h2>
-<h3 id="代码">代码</h3>
-<p>主要是参考<a href="https://www.npmjs.com/package/passport-saml">文档</a></p>
-<ul>
-<li>安装 passport-saml</li>
-</ul>
-<pre tabindex="0"><code>npm install passport-saml
-</code></pre><ul>
-<li>use passport</li>
-</ul>
-<pre tabindex="0"><code>passport.use(new SamlStrategy(
-  {
-    path: &#39;/account/auth/blueid/callback&#39;, // 这个是callback需要稍后实现
-    entryPoint: &#39;&#39;, // 这个是azure AD的一个配置, saml-based sso login url
-    issuer: &#39;cobeedev&#39;, // basic saml configuration -&gt; Identifier (Entity ID)
-    cert: &#39;&#39;, // refer later
-    signatureAlgorithm: &#39;sha256&#39;
-  },
-  async function(profile, done) {
-  // in this function, you can process profile to get necessary information
-    console.log(profile);
-    // lazy require
-    const usersManagement = require(&#39;../../controllers/users/usersManagement&#39;);
-    const ssoUser = jsonUtil.profile2User(profile);
-    let dbUser = await usersManagement.getUserByAzureMail(ssoUser.email);
-    // if user was not found in db
-    // process the scenario
-    if (!dbUser) {
-      await usersManagement.processAzureSSOUser(ssoUser);
-      dbUser = await usersManagement.getUserByAzureMail(ssoUser.email);
-    }
-    return done(null,{
-      ...dbUser,
-      azureUser: ssoUser
-    });
-  }
-));
-
-	app.use(passport.initialize());
-	app.use(passport.session());
-</code></pre><ul>
-<li>实现 callback
-get request to saml login page, and post request to handle callback</li>
-</ul>
-<pre tabindex="0"><code class="language-node" data-lang="node">router.get(&#39;/blueid&#39;, passport.authorize(&#39;saml&#39;, { }));
-router.post(&#39;/blueid/callback&#39;, function (req, res, next) {
-  console.log(&#39;in callback&#39;);
-  var redirect_url = &#39;/account/getprojects&#39;;
-  if(req.session.originalUrl){
-    let url=req.session.originalUrl;
-    let ida=url.indexOf(&#39;url=&#39;)
-    if(ida!=-1){
-      redirect_url+=&#34;?&#34;+url.slice(ida,url.length)
-      req.session.originalUrl=redirect_url
-    }
-  }
-  passport.authenticate(&#39;saml&#39;, {
-    successRedirect: redirect_url,
-    failureRedirect: &#39;/#/account/notregistered&#39;
-  })(req, res, next);
-});
-</code></pre><ul>
-<li>about the cert, refer to <a href="https://www.npmjs.com/package/passport-saml#security-and-signatures">doc</a></li>
-</ul>……
-        </div>
-        <p class="readmore"><a href="https://jerrywang1981.github.io/post/other/azure-saml-sso-node-app/" target="_blank">Continue reading</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -911,7 +852,7 @@ router.post(&#39;/blueid/callback&#39;, function (req, res, next) {
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (30)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (31)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -955,7 +896,7 @@ router.post(&#39;/blueid/callback&#39;, function (req, res, next) {
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (10)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (11)</a></li>
     
 </ul>
     </section>
