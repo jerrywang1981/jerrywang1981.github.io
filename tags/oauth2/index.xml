@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Oauth2 on 村边的池塘</title>
-		<link>https://jerrywang1981.github.io/tags/oauth2/</link>
-		<description>Recent content in Oauth2 on 村边的池塘</description>
-		<generator>Hugo</generator>
-		<language>zh-CN</language>
-		
-		
-		
-		
-			<lastBuildDate>Fri, 09 Apr 2021 20:40:45 +0800</lastBuildDate>
-		
-			<atom:link href="https://jerrywang1981.github.io/tags/oauth2/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Golang Oauth2 Github</title>
-				<link>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</link>
-				<pubDate>Fri, 09 Apr 2021 20:40:45 +0800</pubDate>
-				<guid>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</guid>
-				<description>&lt;h2 id=&#34;github-oauth2&#34;&gt;Github Oauth2&lt;/h2&gt;&#xA;&lt;h3 id=&#34;首先在github上申请一个oauth-app-获取client-id--secret&#34;&gt;首先，在github上申请一个Oauth App, 获取client id / secret&lt;/h3&gt;&#xA;&lt;p&gt;需要这些信息，下边的代码是放在环境变量中&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    AUTH_URL      = os.Getenv(&amp;#34;AUTH_URL&amp;#34;) // github authorization url&#xA;    TOKEN_URL     = os.Getenv(&amp;#34;TOKEN_URL&amp;#34;) // github token url&#xA;    CLIENT_ID     = os.Getenv(&amp;#34;CLIENT_ID&amp;#34;) // client id&#xA;    CLIENT_SECRET = os.Getenv(&amp;#34;CLIENT_SECRET&amp;#34;) // client secret&#xA;    REDIRECT_URL  = os.Getenv(&amp;#34;REDIRECT_URL&amp;#34;) // the redirect url&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;在包的初始化代码中初始化&#34;&gt;在包的初始化代码中，初始化&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  var (&#xA;    oauth2Config *oauth2.Config&#xA;  )&#xA;&#xA;  init() {&#xA;    oauth2Config = &amp;amp;oauth2.Config{&#xA;    ClientID:     CLIENT_ID,&#xA;    ClientSecret: CLIENT_SECRET,&#xA;    RedirectURL:  REDIRECT_URL,&#xA;&#xA;    // Discovery returns the OAuth2 endpoints.&#xA;    Endpoint: oauth2.Endpoint{&#xA;            AuthURL:   AUTH_URL,&#xA;            TokenURL:  TOKEN_URL,&#xA;            AuthStyle: oauth2.AuthStyleInHeader,&#xA;    },&#xA;&#xA;    Scopes: []string{&amp;#34;openid&amp;#34;, &amp;#34;email&amp;#34;, &amp;#34;site_admin&amp;#34;, &amp;#34;repo&amp;#34;, &amp;#34;admin:org&amp;#34;, &amp;#34;user&amp;#34;},&#xA;  }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;login-handler&#34;&gt;Login handler&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  func HandleRedirect(w http.ResponseWriter, r *http.Request) {&#xA;    //you need to generate random state here&#xA;  http.Redirect(w, r, oauth2Config.AuthCodeURL(state), http.StatusFound)&#xA;  }&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;callback-handler&#34;&gt;callback handler&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  func HandleOAuth2Callback(w http.ResponseWriter, r *http.Request) {&#xA;        log.Printf(&amp;#34;Processing response&amp;#34;)&#xA;        state := r.URL.Query().Get(&amp;#34;state&amp;#34;)&#xA;        target, ok := stateMap[state]&#xA;        if !ok {&#xA;                http.Error(w, &amp;#34;missing target in request&amp;#34;, http.StatusBadRequest)&#xA;        }&#xA;&#xA;        // remove from map&#xA;        // delete(stateMap, state)&#xA;&#xA;        log.Printf(&amp;#34;in HandleOAuth2Callback, target url : %s&amp;#34;, target)&#xA;&#xA;        user, err := getUserInfo(r.FormValue(&amp;#34;code&amp;#34;))&#xA;&#xA;        // create the user if not found&#xA;&#xA;        tNow := time.Now()&#xA;           claims := jwt.StandardClaims{&#xA;                Issuer:    &amp;#34;CCMS Application&amp;#34;,&#xA;                Subject:   user,&#xA;                IssuedAt:  tNow.Unix(),&#xA;                ExpiresAt: tNow.Add(2 * time.Hour).Unix(), // two hours&#xA;        }&#xA;        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)&#xA;        ss, err := token.SignedString(jwtKey)&#xA;        if err != nil {&#xA;                http.Error(w, &amp;#34;Failed to sign the token : &amp;#34;+err.Error(), http.StatusInternalServerError)&#xA;                return&#xA;        }&#xA;        rUrl := fmt.Sprintf(&amp;#34;%s?token=%s&amp;#34;, target, ss)&#xA;        log.Printf(&amp;#34;redirect to :%s&amp;#34;, rUrl)&#xA;        http.Redirect(w, r, rUrl, http.StatusFound)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;the-function-to-exchange-code-to-get-access-token&#34;&gt;the function to exchange code to get access token&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;  func getUserInfo(code string) (string, error) {&#xA;        token, err := oauth2Config.Exchange(oauth2.NoContext, code)&#xA;        if err != nil {&#xA;                return &amp;#34;&amp;#34;, fmt.Errorf(&amp;#34;code exchange failed: %s&amp;#34;, err.Error())&#xA;        }&#xA;        ctx := context.Background()&#xA;        log.Printf(&amp;#34;access token: %+v&amp;#34;, token)&#xA;        // token.AccessToken --- this is the token you can use to call github api&#xA;        return email, nil&#xA;  }&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Oauth2 on 村边的池塘</title>
+    <link>https://jerrywang1981.github.io/tags/oauth2/</link>
+    <description>Recent content in Oauth2 on 村边的池塘</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 09 Apr 2021 20:40:45 +0800</lastBuildDate>
+    <atom:link href="https://jerrywang1981.github.io/tags/oauth2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Oauth2 Github</title>
+      <link>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</link>
+      <pubDate>Fri, 09 Apr 2021 20:40:45 +0800</pubDate>
+      <guid>https://jerrywang1981.github.io/post/go/golang-oauth2-github/</guid>
+      <description>Github Oauth2 首先，在github上申请一个Oauth App, 获取client id / secret 需要这些信息，下边的代码是放在环境变量中 AUTH_URL = os.Getenv(&amp;#34;AUTH_URL&amp;#34;) // github authorization url TOKEN_URL = os.Getenv(&amp;#34;TOKEN_URL&amp;#34;) // github token url CLIENT_ID = os.Getenv(&amp;#34;CLIENT_ID&amp;#34;) // client id CLIENT_SECRET = os.Getenv(&amp;#34;CLIENT_SECRET&amp;#34;) // client secret REDIRECT_URL = os.Getenv(&amp;#34;REDIRECT_URL&amp;#34;) // the redirect url 在包的初始化代码中，初始化 var ( oauth2Config *oauth2.Config ) init() { oauth2Config = &amp;amp;oauth2.Config{ ClientID: CLIENT_ID, ClientSecret: CLIENT_SECRET, RedirectURL: REDIRECT_URL, // Discovery returns the OAuth2 endpoints. Endpoint: oauth2.Endpoint{ AuthURL: AUTH_URL, TokenURL: TOKEN_URL, AuthStyle: oauth2.AuthStyleInHeader, }, Scopes: []string{&amp;#34;openid&amp;#34;, &amp;#34;email&amp;#34;, &amp;#34;site_admin&amp;#34;, &amp;#34;repo&amp;#34;, &amp;#34;admin:org&amp;#34;, &amp;#34;user&amp;#34;}, } Login</description>
+    </item>
+  </channel>
 </rss>

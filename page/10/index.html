@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-	<meta name="generator" content="Hugo 0.162.1">
+	<meta name="generator" content="Hugo 0.131.0">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,6 +81,36 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://jerrywang1981.github.io/post/go/02-prototype/" title="02 原型模式" target="_blank">02 原型模式</a>
+            </h1>
+        </header>
+        
+  <time datetime="2020-04-12T05:22:43Z" class="post-meta meta-date dt-published">
+    2020-04-12
+  </time>
+
+
+<div class="post-meta meta-category">
+  <span>&nbsp;|</span>
+  
+    <a href='/categories/it' target="_blank">it</a>
+  
+    <a href='/categories/golang' target="_blank">golang</a>
+  
+</div>
+
+
+        <div class="post-content">
+            原型模式 参考文章 原型模式 package prototype_pattern type Person struct { Name string Age int } type Cloner interface { Clone() interface{} } func (s *Person) Clone() interface{} { var n Person n.Name = s.Name n.Age = s.Age return n }……
+        </div>
+        <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/02-prototype/" target="_blank">Continue reading</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://jerrywang1981.github.io/post/go/01-singleton/" title="01 单例模式" target="_blank">01 单例模式</a>
             </h1>
         </header>
@@ -101,56 +131,7 @@
 
 
         <div class="post-content">
-            <h2 id="单例模式">单例模式</h2>
-<p>从网上找的 <a href="https://www.runoob.com/design-pattern/singleton-pattern.html">单例模式</a></p>
-<h2 id="golang实现">golang实现</h2>
-<p>参考的文章<a href="https://www.liwenzhou.com/posts/Go/singleton_in_go/">Go语言中的单例模式</a></p>
-<p>代码：</p>
-<div class="highlight"><div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">package</span><span style="color:#fff"> </span><span style="color:#1f2328">example</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">import</span><span style="color:#fff"> </span><span style="color:#1f2328">(</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#0a3069">&#34;sync&#34;</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#1f2328">)</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a">// the singleton struct/object</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">type</span><span style="color:#fff"> </span><span style="color:#1f2328">singleton</span><span style="color:#fff"> </span><span style="color:#cf222e">struct</span><span style="color:#1f2328">{}</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">var</span><span style="color:#fff"> </span><span style="color:#1f2328">instance</span><span style="color:#fff"> </span><span style="color:#0550ae">*</span><span style="color:#1f2328">singleton</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">var</span><span style="color:#fff"> </span><span style="color:#1f2328">once</span><span style="color:#fff"> </span><span style="color:#1f2328">sync</span><span style="color:#1f2328">.</span><span style="color:#1f2328">Once</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#cf222e">func</span><span style="color:#fff"> </span><span style="color:#6639ba">GetSingleInstance</span><span style="color:#1f2328">()</span><span style="color:#fff"> </span><span style="color:#0550ae">*</span><span style="color:#1f2328">singleton</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#1f2328">once</span><span style="color:#1f2328">.</span><span style="color:#6639ba">Do</span><span style="color:#1f2328">(</span><span style="color:#cf222e">func</span><span style="color:#1f2328">()</span><span style="color:#fff"> </span><span style="color:#1f2328">{</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">		</span><span style="color:#1f2328">instance</span><span style="color:#fff"> </span><span style="color:#1f2328">=</span><span style="color:#fff"> </span><span style="color:#0550ae">&amp;</span><span style="color:#1f2328">singleton</span><span style="color:#1f2328">{}</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#1f2328">})</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#fff">	</span><span style="color:#cf222e">return</span><span style="color:#fff"> </span><span style="color:#1f2328">instance</span><span style="color:#fff">
-</span></span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span><span style="color:#fff">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div>……
+            单例模式 从网上找的 单例模式 golang实现 参考的文章Go语言中的单例模式 代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 package example import ( &#34;sync&#34; ) // the singleton struct/object type singleton struct{} var instance *singleton var once sync.Once func GetSingleInstance() *singleton { once.Do(func() { instance = &amp;singleton{} }) return instance }……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/go/01-singleton/" target="_blank">Continue reading</a></p>
     </article>
@@ -180,27 +161,7 @@
 
 
         <div class="post-content">
-            <h4 id="liberty-profile-这个要修复可能要修改两个地方">Liberty Profile 这个要修复，可能要修改两个地方。</h4>
-<ul>
-<li>server.xml 加入</li>
-</ul>
-<div class="highlight"><div style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#0550ae">&lt;ssl</span> <span style="color:#1f2328">id=</span><span style="color:#0a3069">&#34;defaultSSLConfig&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">keyStoreRef=</span><span style="color:#0a3069">&#34;defaultKeyStore&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#1f2328">securityLevel=</span><span style="color:#0a3069">&#34;CUSTOM&#34;</span> <span style="color:#1f2328">enabledCiphers=</span><span style="color:#0a3069">&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;</span><span style="color:#0550ae">/&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>jvm.options加入</li>
-</ul>
-<pre tabindex="0"><code>-Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768
-</code></pre>……
+            Liberty Profile 这个要修复，可能要修改两个地方。 server.xml 加入 1 2 3 &lt;ssl id=&#34;defaultSSLConfig&#34; keyStoreRef=&#34;defaultKeyStore&#34; securityLevel=&#34;CUSTOM&#34; enabledCiphers=&#34;TLS_RSA_WITH_AES_128_CBC_SHA TLS_RSA_WITH_AES_128_CBC_SHA256 &#34;/&gt; jvm.options加入 -Djdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize &lt;768……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/java/SSL-TLS-Diffie-Hellman-Modulus-1024-Bits/" target="_blank">Continue reading</a></p>
     </article>
@@ -232,8 +193,7 @@
 
 
         <div class="post-content">
-            <h1 id="背景">背景</h1>
-<p>最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调用nest 微服务来取得一些数据。这就比较尴尬了，在网上由于没有找到对应的python库，所以自己实现了一个。</p>……
+            背景 最近有做一个nestjs的项目，用的nestjs实现的微服务，如果所有的功能都用node/nestjs写，那倒也没有什么问题了。可是有一个功能是需要用到机器学习，代码是用python写的，需要用python实现一个微服务，供nest app来调用，同时，python代码也需要调……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/python/python-nest/" target="_blank">Continue reading</a></p>
     </article>
@@ -263,8 +223,7 @@
 
 
         <div class="post-content">
-            <p>在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。
-<a href="http://vimcasts.org/episodes/">vim video</a></p>……
+            在网上发现了vim一个系列视频，是Practical Vim的作者录制的，内容很值得学习。 vim video……
         </div>
         <p class="readmore"><a href="https://jerrywang1981.github.io/post/vim/vim-online-video/" target="_blank">Continue reading</a></p>
     </article>
@@ -353,6 +312,9 @@
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+  
 
 
 
@@ -514,7 +476,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/node/">Node (6)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (31)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/novel/">Novel (32)</a></li>
     
     <li><a href="https://jerrywang1981.github.io/categories/numpy/">Numpy (1)</a></li>
     
@@ -558,7 +520,7 @@
     
     <li><a href="https://jerrywang1981.github.io/categories/%E5%88%98%E6%85%88%E6%AC%A3/">刘慈欣 (20)</a></li>
     
-    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (11)</a></li>
+    <li><a href="https://jerrywang1981.github.io/categories/%E6%88%91%E4%BB%AC%E8%B5%B0%E5%9C%A8%E5%A4%A7%E8%B7%AF%E4%B8%8A/">我们走在大路上 (12)</a></li>
     
 </ul>
     </section>
